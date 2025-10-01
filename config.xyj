@@ -5,8 +5,8 @@
 ##############################################################################
 
 name : 西游记
-port number : 8080
-mudlib directory : /Users/leon/dev/webserver/www/xyj2000/world/
+port number : 2000
+mudlib directory : /data/mud/xyj2000/world/
 
 # debug.log and author/domain stats are stored here
 log directory : /log
