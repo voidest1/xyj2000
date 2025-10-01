@@ -26,7 +26,7 @@ void init()
 
 int do_yao(string arg)
 {
-	object m,mm,me;
+	object m,me;
 	message_vision("$N嬉皮笑脸地向灶王爷问道:我是新来的，有没有见面礼呀?\n", this_player());
 	me=this_player();
 	if ( me->query("wizgift/newbiegift") )
@@ -59,7 +59,7 @@ int accept_object(object who, object item)
 			,"0","1","2","3","4","5","6","7","8","9","0","1","2","3","4","5","6","7","8","9"
 		});
 	int cnt_char, i, len_code;
-	object npc = find_object("/d/city/npc/giftman");
+	// object npc = find_object("/d/city/npc/giftman");
 	object me = this_player();
 	if(base_name(item) == "/d/obj/drug/renshen-guo")
 	{

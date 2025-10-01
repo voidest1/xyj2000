@@ -523,7 +523,7 @@ void die()
     ::die();
 }
 
-void remove()
+void remove(string pattern)
 {
        save(); // save profit data before this object is removed.
 
