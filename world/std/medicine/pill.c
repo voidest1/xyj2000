@@ -14,7 +14,6 @@ void init()
 
 int do_eat(string arg)
 {
-	if( !id(arg) ) return notify_fail("你要吃什么？\n");
+	if( !id(arg) ) return notify_fail("浣犺鍚冧粈涔堬紵\n");
 	
 }
-

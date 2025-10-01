@@ -4,12 +4,12 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("¾ÅÍ·æâÂí", ({"jiutou fuma","fuma"}));
+       set_name("ä¹å¤´é©¸é©¬", ({"jiutou fuma","fuma"}));
 
-        set("long","¾ÅÍ·æâÂíÔ­ÔÚ±±Ú¤´óÔóÖÐÐÞÁ·£¬ºó±»ÕÐÎªæâÂí¡£\n");
-       set("gender", "ÄÐÐÔ");
+        set("long","ä¹å¤´é©¸é©¬åŽŸåœ¨åŒ—å†¥å¤§æ³½ä¸­ä¿®ç»ƒï¼ŒåŽè¢«æ‹›ä¸ºé©¸é©¬ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 20);
- 	set("title", "¾ÅÍ·³æ");
+ 	set("title", "ä¹å¤´è™«");
         set("int", 25);
        set("attitude", "heroism");
         set("combat_exp", 1200000);
@@ -45,7 +45,7 @@ void create()
 	map_skill("dodge", "moshenbu");
 	map_skill("parry", "yueya-chan");
 	map_skill("fork", "yueya-chan");
-	create_family("»ðÔÆ¶´", 2, "À¶");
+	create_family("ç«äº‘æ´ž", 2, "è“");
 
         setup();
 	carry_object("/d/qujing/bibotan/obj/moonstaff")->wield();
@@ -56,10 +56,10 @@ int attempt_apprentice(object me)
 {
   string myname=RANK_D->query_respect(me);
   command("pat "+me->query("id"));
-  command("say ºÜºÃ£¬Ê±ÏÂÕýÊÇÓÃÈËÖ®¼Ê"+myname+"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£");
+  command("say å¾ˆå¥½ï¼Œæ—¶ä¸‹æ­£æ˜¯ç”¨äººä¹‹é™…"+myname+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚");
   command("recruit " + me->query("id") );
-message("system", HIY"ÂÒÊ¯É½±Ì²¨Ì¶ÓÖ¶àÁËÒ»¸öµÜ×Ó  "+this_player()->name()+HIW"
-           ÂÒÊ¯É½±Ì²¨Ì¶µÄÊÆÁ¦¼ÓÇ¿ÁË¡£\n"NOR,users());
+message("system", HIY"ä¹±çŸ³å±±ç¢§æ³¢æ½­åˆå¤šäº†ä¸€ä¸ªå¼Ÿå­  "+this_player()->name()+HIW"
+           ä¹±çŸ³å±±ç¢§æ³¢æ½­çš„åŠ¿åŠ›åŠ å¼ºäº†ã€‚\n"NOR,users());
   return 1;
 }
 
@@ -67,9 +67,7 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) ) {
                 ob->set("class", "yaomo");
-                ob->set("title", "ÂÒÊ¯É½±Ì²¨Ì¶Ð¡Ñý");
+                ob->set("title", "ä¹±çŸ³å±±ç¢§æ³¢æ½­å°å¦–");
                 ob->set("kusong/Teach_Fuma", 1);
         }
 }
-
-ÿ

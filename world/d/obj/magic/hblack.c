@@ -66,4 +66,3 @@ int do_eat (string arg)
   destruct(ob);
   return 1;
 }
-

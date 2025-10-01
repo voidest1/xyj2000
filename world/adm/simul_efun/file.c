@@ -37,4 +37,3 @@ void assure_file(string file)
 		path += "/";
 	}
 }
-

@@ -24,4 +24,3 @@ void create()
 	setup();
 	carry_object("/d/nanhai/obj/sengpao")->wear();
 }
-

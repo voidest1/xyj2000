@@ -27,4 +27,3 @@ void create()
   carry_object("/d/obj/cloth/linen")->wear();
   carry_object("/d/obj/weapon/hammer/hammer")->wield();
 }
-

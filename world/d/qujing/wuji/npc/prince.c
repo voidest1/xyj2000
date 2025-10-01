@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Ì«×Ó", ({"tai zi", "zi", "prince"}));
-  set ("long", "ÎÚ¼¦¹úµÄÍõÌ«×Ó£¬³ÉÈËÖ®ºó²»ÔÙ³£½ø¹¬£¬³£ÒÔá÷ÁÔÎªÀÖ¡£\n");
-  set("title", "ÎÚ¼¦¹ú");
-  set("gender", "ÄÐÐÔ");
+  set_name("å¤ªå­", ({"tai zi", "zi", "prince"}));
+  set ("long", "ä¹Œé¸¡å›½çš„çŽ‹å¤ªå­ï¼Œæˆäººä¹‹åŽä¸å†å¸¸è¿›å®«ï¼Œå¸¸ä»¥ç‹©çŒŽä¸ºä¹ã€‚\n");
+  set("title", "ä¹Œé¸¡å›½");
+  set("gender", "ç”·æ€§");
   set("age", 20);
   set("combat_exp", 300000);
   set("daoxing", 150000);
@@ -55,9 +55,9 @@ int accept_object (object who, object ob)
 
 void refuse_it (object me, object who, object ob)
 {
-  message_vision ("$N¿´¼û½ðÏá°×Óñ¹çÁ³É«Ò»±ä£¬¸ßÉù½ÐµÀ£º"+
-                  "¡°ÔôÈË£¡Îá¼ÒÕä¹ú±¦ºÎÊ±ÂäÈëÄãÊÖÖÐ£¡¡±\n",me,ob);
-  message_vision ("$NÅ­·¢³å¹Ú£¬´óºÈÒ»ÉùÒªÉ±ËÀ$n£¡\n",me,who);
+  message_vision ("$Nçœ‹è§é‡‘åŽ¢ç™½çŽ‰åœ­è„¸è‰²ä¸€å˜ï¼Œé«˜å£°å«é“ï¼š"+
+                  "â€œè´¼äººï¼å¾å®¶çå›½å®ä½•æ—¶è½å…¥ä½ æ‰‹ä¸­ï¼â€\n",me,ob);
+  message_vision ("$Næ€’å‘å†²å† ï¼Œå¤§å–ä¸€å£°è¦æ€æ­»$nï¼\n",me,who);
   me->kill_ob(who);
   who->kill_ob(me);
   destruct (ob);
@@ -65,9 +65,9 @@ void refuse_it (object me, object who, object ob)
 
 void accept_it (object me, object who, object ob)
 {
-  message_vision ("$N¿´¼û½ðÏá°×Óñ¹çÁ³É«Ò»±ä£¬½û²»×¡½ÐµÀ£º"+
-                  "¡°¶÷ÈË£¡´ËÄËÎá¼ÒÕä¹ú±¦Ò²£¡¡±\n",me,ob);  
-  message_vision ("$NÌéÀá½ÔÏÂ¡£\n",me);
+  message_vision ("$Nçœ‹è§é‡‘åŽ¢ç™½çŽ‰åœ­è„¸è‰²ä¸€å˜ï¼Œç¦ä¸ä½å«é“ï¼š"+
+                  "â€œæ©äººï¼æ­¤ä¹ƒå¾å®¶çå›½å®ä¹Ÿï¼â€\n",me,ob);  
+  message_vision ("$Næ¶•æ³ªçš†ä¸‹ã€‚\n",me);
   call_out ("give_jing",2,me,who);
   destruct (ob);
 }
@@ -75,8 +75,7 @@ void accept_it (object me, object who, object ob)
 void give_jing (object me, object who)
 {
   object ob = new ("/d/qujing/wuji/obj/jing");
-  message_vision ("\n$N¶Ô$nËµµÀ£º¡°¶÷ÈË£¬ÎÒÉí±ßÒàÓÐÒ»±¦£¬ÇëÐ¦ÄÉ£¡¡±\n",me,who);   message_vision ("\nËµ×Å$NÈ¡³öÒ»Ï»×Ó£¬ÄÃ³öÒ»Ð¡Æ¿À´¡£\n",me,who);  
+  message_vision ("\n$Nå¯¹$nè¯´é“ï¼šâ€œæ©äººï¼Œæˆ‘èº«è¾¹äº¦æœ‰ä¸€å®ï¼Œè¯·ç¬‘çº³ï¼â€\n",me,who);   message_vision ("\nè¯´ç€$Nå–å‡ºä¸€åŒ£å­ï¼Œæ‹¿å‡ºä¸€å°ç“¶æ¥ã€‚\n",me,who);  
   ob->move(me);
   me->command_function("give "+who->query("id")+" jing");
 }
-ÿ

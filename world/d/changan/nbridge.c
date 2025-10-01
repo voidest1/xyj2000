@@ -31,8 +31,3 @@ void init()
    if(sizeof(filter_array(children(FILE), (:clonep:)))<1)
      new(FILE)->move(this_object());
 }
-
-
-
-
-

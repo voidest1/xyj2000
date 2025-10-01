@@ -54,4 +54,3 @@ void clearing ()
   remove_call_out ("clearing");
   call_out ("clearing",3);
 }
-

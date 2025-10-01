@@ -126,5 +126,3 @@ void give_yaopai(object ob)
     ob->set_temp("get_yaopai", 1);
     return;
 }
-
-

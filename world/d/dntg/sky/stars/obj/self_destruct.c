@@ -11,5 +11,3 @@ void init()
 	call_out("self_dest",2+random(100));
     }
 }
-
-

@@ -261,5 +261,3 @@ mapping quests_kill = ([
  1400000 : ({ "kill", "牛魔王",       "niumo wang",         "", "1" }),
  1500000 : ({ "kill", "九头狮",       "jiutou shi",         "", "1" }),
 ]);
-
-

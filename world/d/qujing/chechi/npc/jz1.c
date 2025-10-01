@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("¼àÕ¶¹Ù", ({"jianzhan guan", "guan"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("ç›‘æ–©å®˜", ({"jianzhan guan", "guan"}));
+  set("gender", "ç”·æ€§");
   set("combat_exp", 200000);
   set("daoxing", 100000);
 
@@ -47,7 +47,7 @@ int check_valid_player (object who)
     return 0;
   if (! where)
     return 0;
-  if (where->query("short") != "¼ÀË®³¡")
+  if (where->query("short") != "ç¥­æ°´åœº")
     return 0;  
 
   yangli = present("yangli daxian",where);  
@@ -80,7 +80,7 @@ void greet_player (object who)
   {
     who->set_temp("obstacle/chechi_greeted",1);
     me->command_function("hi "+who->query("id"));
-    message_vision ("$N¶Ô$nËµµÀ£º¡°ÇëÉÏÔÆÌİ£¬ÓÚÌ¨¶¥×øìøÏÔÊ¥¡£¡±\n",me,who);
+    message_vision ("$Nå¯¹$nè¯´é“ï¼šâ€œè¯·ä¸Šäº‘æ¢¯ï¼Œäºå°é¡¶åç¦…æ˜¾åœ£ã€‚â€\n",me,who);
   }
 }
 
@@ -139,13 +139,13 @@ void display_climb (object me, object who,
     return;
   if (huli)
   {
-    message_vision ("$NË³ÊÖÒ»Ö¸¡£\n",me);
-    message_vision ("$NÕĞÀ´Ò»Ï¯²ÊÔÆ£¬ÂıÂı·ÉÉÏìøÌ¨¶¥×ùÅÌ¶¨£¬¿ªÊ¼´ò×ø¡£\n\n",
+    message_vision ("$Né¡ºæ‰‹ä¸€æŒ‡ã€‚\n",me);
+    message_vision ("$Næ‹›æ¥ä¸€å¸­å½©äº‘ï¼Œæ…¢æ…¢é£ä¸Šç¦…å°é¡¶åº§ç›˜å®šï¼Œå¼€å§‹æ‰“åã€‚\n\n",
                     huli);
     huli->move(chantai1);
   }
-  message_vision ("$NË³ÊÖÒ»Ö¸¡£\n",me);
-  message_vision ("$NÕĞÀ´Ò»Ï¯²ÊÔÆ£¬ÂıÂı·ÉÉÏìøÌ¨¶¥×ùÅÌ¶¨£¬¿ªÊ¼´ò×ø¡£\n\n",
+  message_vision ("$Né¡ºæ‰‹ä¸€æŒ‡ã€‚\n",me);
+  message_vision ("$Næ‹›æ¥ä¸€å¸­å½©äº‘ï¼Œæ…¢æ…¢é£ä¸Šç¦…å°é¡¶åº§ç›˜å®šï¼Œå¼€å§‹æ‰“åã€‚\n\n",
                   who);
   who->move(chantai2);
 }
@@ -164,27 +164,27 @@ void failing (object me,object who, object where, object huli)
     return;
   if (! who)
     return;
-  if (environment(who)->query("name")!="ÔÆìøÌ¨")
+  if (environment(who)->query("name")!="äº‘ç¦…å°")
     return;
   who->move(where);
-  message_vision ("Ö»¼û$Nµ¹ÔÔ´ĞÒ»°ãË¤½«ÏÂÀ´£¬°ğµØÔÒÔÚµØÉÏ¡£\n",who);
+  message_vision ("åªè§$Nå€’æ ½è‘±ä¸€èˆ¬æ‘”å°†ä¸‹æ¥ï¼Œæ¢†åœ°ç ¸åœ¨åœ°ä¸Šã€‚\n",who);
   i = who->query_skill("dodge",1);
   if (((i>0) && (i<75)) || (wizardp(who) && i>0))
   {
-    tell_object(who,"ÄãµÄ»ù±¾Çá¹¦¸ø»î»îµØË¤µôÁËÒ»¼¶£¡\n");
+    tell_object(who,"ä½ çš„åŸºæœ¬è½»åŠŸç»™æ´»æ´»åœ°æ‘”æ‰äº†ä¸€çº§ï¼\n");
     who->set_skill("dodge",i-1);
   }
   i = who->query_skill("parry",1);
   if (((i>0) && (i<75)) || (wizardp(who) && i>0))
   {
-    tell_object(who,"ÄãµÄ²ğÕĞĞ¶Á¦Ö®·¨¸ø»î»îµØË¤µôÁËÒ»¼¶£¡\n");
+    tell_object(who,"ä½ çš„æ‹†æ‹›å¸åŠ›ä¹‹æ³•ç»™æ´»æ´»åœ°æ‘”æ‰äº†ä¸€çº§ï¼\n");
     who->set_skill("parry",i-1);
   }
   who->unconcious();
   if (! huli)
     return;
   huli->move(where);
-  message_vision ("$NÌ¤×ÅÔÆ²Ê£¬ÇáÉíÎÈÎÈÂäµØ¡£\n",huli);
+  message_vision ("$Nè¸ç€äº‘å½©ï¼Œè½»èº«ç¨³ç¨³è½åœ°ã€‚\n",huli);
 }
 
 void success_climb (object me,object who, object where,
@@ -201,17 +201,16 @@ void success (object me,object who, object where, object huli)
   if (! who)
     return;
 
-  if (environment(who)->query("name")!="ÔÆìøÌ¨")
+  if (environment(who)->query("name")!="äº‘ç¦…å°")
     return;
   who->move(where);
   if (huli)
   {
     huli->move(where);
-    message_vision ("$NÏñ³ÓíÈÒ»Ñù°ÈµØÔÒÔÚµØÉÏ£¬Ë¤µÃ±ÇÇàÁ³Ö×¡£\n\n",huli);
+    message_vision ("$Nåƒç§¤ç £ä¸€æ ·å­åœ°ç ¸åœ¨åœ°ä¸Šï¼Œæ‘”å¾—é¼»é’è„¸è‚¿ã€‚\n\n",huli);
   }
-  message_vision ("Ö»¼û$NĞ¯ÔÆ×İÉí£¬½¡²½·ÉÔ¾Ö±ÏÂ£¬ÎÈÎÈµØÂäÔÚµØÉÏ¡£\n",who);
+  message_vision ("åªè§$Næºäº‘çºµèº«ï¼Œå¥æ­¥é£è·ƒç›´ä¸‹ï¼Œç¨³ç¨³åœ°è½åœ¨åœ°ä¸Šã€‚\n",who);
   who->set("obstacle/chechi","chantai");
   who->save();
-  message_vision ("$NĞË·ÜµØµãµãÍ·£¬Ïò$n°İµÀ£º¡°Çë£¡¡±\n",me,who);
+  message_vision ("$Nå…´å¥‹åœ°ç‚¹ç‚¹å¤´ï¼Œå‘$næ‹œé“ï¼šâ€œè¯·ï¼â€\n",me,who);
 }
-ÿ

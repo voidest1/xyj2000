@@ -49,6 +49,3 @@ int valid_leave (object me, string dir)
     me->set_temp("has_paid",me->query_temp("has_paid")-1);
   return 1;
 }
-
-
-

@@ -31,4 +31,3 @@ int finish_eat()
         set("long", "一根啃得精光的羊腿骨头。\n");
         return 1;
 }
-

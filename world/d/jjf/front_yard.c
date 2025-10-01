@@ -105,4 +105,3 @@ int do_hammer(string arg)
   }
   return 1;
 }
-

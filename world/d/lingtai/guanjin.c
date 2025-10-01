@@ -26,5 +26,3 @@ set("objects", ([ /* sizeof() == 2 */
 	set("outdoors", 1);
         setup();
 }
-
-

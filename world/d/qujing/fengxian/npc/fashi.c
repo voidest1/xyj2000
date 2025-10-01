@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("²¼µÀ·¨Ê¦", ({"budao fashi", "fashi", "shi"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å¸ƒé“æ³•å¸ˆ", ({"budao fashi", "fashi", "shi"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("per", 25);
   set("attitude", "peaceful");
@@ -27,5 +27,3 @@ void create()
   carry_object("/d/obj/cloth/choupao")->wear();
   carry_object("/d/obj/weapon/sword/changjian")->wield();
 }
-
-ÿ

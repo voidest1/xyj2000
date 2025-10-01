@@ -220,4 +220,3 @@ mapping quests_cloth = ([
  2200000 : ({ "find", HIY"锦镧袈裟"NOR, "jinlan jiasha",      "", "1" }),
 
 ]);
-

@@ -6,10 +6,10 @@ inherit NPC;
 void create()
 {
   string str;
-  set_name("Ð¡Ñý", ({"xiao yao","yao"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å°å¦–", ({"xiao yao","yao"}));
+  set("gender", "ç”·æ€§");
   set("age", 20);
-  set("long","Ò»¸öÐ×Ïà±ÏÂ¶µÄÐ¡Ñý¡£\n");
+  set("long","ä¸€ä¸ªå‡¶ç›¸æ¯•éœ²çš„å°å¦–ã€‚\n");
   set("attitude", "aggressive");
   set("combat_exp", 150000);
   set("daoxing", 100000);
@@ -44,4 +44,3 @@ void create()
   str[strlen(str)-1] = '0'+random(2);
   carry_object(str)->wield();
 }
-ÿ

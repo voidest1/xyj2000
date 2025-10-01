@@ -53,4 +53,3 @@ void remove_effect(object me, int amount)
 	// mon 3/1/98. move this to after powerup is done.
         tell_object(me, "你的反五行摄气诀运行一周天完毕，将内力收回丹田。\n");
 }
-

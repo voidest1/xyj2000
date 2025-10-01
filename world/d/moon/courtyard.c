@@ -35,5 +35,3 @@ LONG);
 	setup();     
 //	"obj/board/moon_b"->foo();
 }
-
-

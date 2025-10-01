@@ -210,4 +210,3 @@ object acquire_login_ob(string id)
 	  return 0;
         }
 }
-

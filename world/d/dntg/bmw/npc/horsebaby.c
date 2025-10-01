@@ -6,17 +6,17 @@ inherit NPC;
 
 void create()
 {
-  set_name("Ð¡ÂíáÌ", ({ "ma zai", "zai" }) );
-  set("race", "Ò°ÊÞ");
+  set_name("å°é©¬å´½", ({ "ma zai", "zai" }) );
+  set("race", "é‡Žå…½");
   set("age", 2);
-  set("long", "Ò»Ö»¸ÕÉúÏÂÀ´µÄÐ¡ÂíáÌ£¬ÕýÊ¹¾¡È«ÉíµÄÁ¦ÆøÏëÕ¾ÆðÀ´¡£\n");
+  set("long", "ä¸€åªåˆšç”Ÿä¸‹æ¥çš„å°é©¬å´½ï¼Œæ­£ä½¿å°½å…¨èº«çš„åŠ›æ°”æƒ³ç«™èµ·æ¥ã€‚\n");
   set("per", 10+random(20));
   set("eff_kee", 50);
   set("eff_sen", 50);
   set("combat_exp", 0);
   set("daoxing", 0);
 
-  set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
+  set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
   set("verbs", ({ "bite"}));
 
   set("chat_chance", 10);
@@ -33,10 +33,10 @@ void init()
         set("chat_chance", 5);
 
         set("chat_msg", ({
-            "Ð¡ÂíáÌ·¢³öÇáÇáµÄ½ÐÉù¡£\n",
-            "Ð¡ÂíáÌÒ»¸ö²»Ð¡ÐÄ£¬Ë¤µ¹ÔÚµØÉÏ¡£\n",
-            "Ð¡ÂíáÌ´­×Å´ÖÆø¡£\n",
-            "Ð¡ÂíáÌÌ§ÆðÇ°ÍÈ£¬·ÜÁ¦ÏëÕ¾ÆðÀ´¡£\n",
+            "å°é©¬å´½å‘å‡ºè½»è½»çš„å«å£°ã€‚\n",
+            "å°é©¬å´½ä¸€ä¸ªä¸å°å¿ƒï¼Œæ‘”å€’åœ¨åœ°ä¸Šã€‚\n",
+            "å°é©¬å´½å–˜ç€ç²—æ°”ã€‚\n",
+            "å°é©¬å´½æŠ¬èµ·å‰è…¿ï¼Œå¥‹åŠ›æƒ³ç«™èµ·æ¥ã€‚\n",
         }) );
 
         add_action("do_feed", "feed");
@@ -51,10 +51,10 @@ int do_feed(string arg)
         
    
         if ( !arg || !(feeob=present(arg, me)) )
-           return notify_fail("ÄãÒª¸øÐ¡ÂíáÌÎ¹Ê²Ã´³Ô£¿\n");
+           return notify_fail("ä½ è¦ç»™å°é©¬å´½å–‚ä»€ä¹ˆåƒï¼Ÿ\n");
 
         else if (arg != "grass") 
-           return notify_fail("Õâ¶«Î÷Ð¡ÂíáÌ³Ô²»ÁË¡£\n");  
+           return notify_fail("è¿™ä¸œè¥¿å°é©¬å´½åƒä¸äº†ã€‚\n");  
 
         else 
                 { 
@@ -70,12 +70,12 @@ int do_feed(string arg)
 
 
                 if ( random(20) != 0 )
-                message_vision("$N¸øÐ¡ÂíáÌÎ¹ÁËÒ»Ð©Çà²Ý£¬Ð¡ÂíáÌ½ò½òÓÐÎ¶µÄ³ÔÁËÆðÀ´¡£\n", me);
+                message_vision("$Nç»™å°é©¬å´½å–‚äº†ä¸€äº›é’è‰ï¼Œå°é©¬å´½æ´¥æ´¥æœ‰å‘³çš„åƒäº†èµ·æ¥ã€‚\n", me);
 
                 else
                   {
                   object smallhorse;
-                  message_vision("Ð¡ÂíáÌ³ÔÁËÐ¡²Ý£¬Ç°ÌãÒ»Ñï£¬Õ¾ÁËÆðÀ´¡£\n" , me,);
+                  message_vision("å°é©¬å´½åƒäº†å°è‰ï¼Œå‰è¹„ä¸€æ‰¬ï¼Œç«™äº†èµ·æ¥ã€‚\n" , me,);
                   smallhorse = new (__DIR__"smallhorse");
                   smallhorse->move(environment());
                   destruct(hb);
@@ -83,4 +83,3 @@ int do_feed(string arg)
                 }
         return 1;
 }
-ÿ

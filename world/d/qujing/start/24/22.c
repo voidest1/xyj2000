@@ -52,4 +52,3 @@ void create()
         carry_object("/d/sea/obj/dragonstick")->wield();
 	carry_object("/d/obj/armor/jinjia")->wear();
 }
-

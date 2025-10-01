@@ -80,4 +80,3 @@ void reset_work (object me)
         ob->move(me);
         message_vision("丰老板笑眯眯地对$N说：辛苦啦，这是你的工钱。\n",me);
 }
-

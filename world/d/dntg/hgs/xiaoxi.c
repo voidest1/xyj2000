@@ -43,4 +43,3 @@ me->move(__DIR__"xiaoxiqian");
 message_vision("$N分开水面，爬上岸来。\n", me);
 return 1;
 }
-

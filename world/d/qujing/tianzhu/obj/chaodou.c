@@ -19,5 +19,3 @@ void create()
     set("food_supply", 1);
   }
 }
-
-

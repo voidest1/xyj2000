@@ -19,4 +19,3 @@ mapping *sort_team (mapping *team)
     }
   }
 }
-

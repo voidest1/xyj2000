@@ -32,6 +32,3 @@ int valid_leave(object me, string dir)
 	   return notify_fail("鬼判朝你大喝一声：呔！二郎爷爷的庙宇，谁敢乱闯！\n");
        return ::valid_leave(me,dir);
 }
-
-
-

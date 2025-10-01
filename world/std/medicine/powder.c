@@ -33,6 +33,3 @@ int do_pour(string arg)
 	add_amount(-1);
 	return 1;
 }
-
-
-

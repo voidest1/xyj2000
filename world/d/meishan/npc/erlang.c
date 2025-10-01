@@ -288,5 +288,3 @@ void exertheal(object me) {
   me->command("exert recover");
 
 }
-
-

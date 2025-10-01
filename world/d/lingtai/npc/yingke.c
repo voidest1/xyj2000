@@ -37,4 +37,3 @@ void greeting(object ob)
         say( "晨月说道：这位" + RANK_D->query_respect(ob) +
 "，欢迎到我们斜月三星洞来！\n");
 }
-

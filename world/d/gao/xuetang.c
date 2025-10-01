@@ -25,4 +25,3 @@ set("exits", ([ /* sizeof() == 4 */
         setup();
         replace_program(ROOM);
 }
-

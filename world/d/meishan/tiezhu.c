@@ -36,4 +36,3 @@ return notify_fail("好象身后有个人纠住你，你动也动不了！\n");
 
         return 1;
 }
-

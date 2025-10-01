@@ -25,5 +25,3 @@ int accept_fight(object me)
         command("say 打架？那您小心点，莫把老板的桌椅砸了！");
         return 1;
 }
-
-

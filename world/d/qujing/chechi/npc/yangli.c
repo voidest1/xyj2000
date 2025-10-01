@@ -5,11 +5,11 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÑòÁ¦´óÏÉ", ({"yangli daxian", "yangli", "daxian" }));
-  set("title","¹úÊ¦");
-  set("long","³µ³Ù¹úµÄÈý´óµÀÊ¿Ö®Ò»£¬ÉÆÓÚÇóË®ÆíÓê£¬±»×ðÎª¹úÊ¦¡£\n");
-  set("gender", "ÄÐÐÔ");
-  set("rank_info/respect", "¹úÊ¦");
+  set_name("ç¾ŠåŠ›å¤§ä»™", ({"yangli daxian", "yangli", "daxian" }));
+  set("title","å›½å¸ˆ");
+  set("long","è½¦è¿Ÿå›½çš„ä¸‰å¤§é“å£«ä¹‹ä¸€ï¼Œå–„äºŽæ±‚æ°´ç¥ˆé›¨ï¼Œè¢«å°Šä¸ºå›½å¸ˆã€‚\n");
+  set("gender", "ç”·æ€§");
+  set("rank_info/respect", "å›½å¸ˆ");
   set("age", 40);
   set("attitude", "peaceful");
   set("shen_type", 1);
@@ -58,7 +58,7 @@ void follow_player (object me, object who)
 {
   object room = environment(me);
 
-  if (room->query("short")!="ÈýÇåµî")
+  if (room->query("short")!="ä¸‰æ¸…æ®¿")
     return;
 
   if (! who)
@@ -78,7 +78,7 @@ void follow_player (object me, object who)
 
   me->set_temp("no_return",1);
   me->set("have_followed",1);
-  message_vision ("Ö»¼û$NÒ»±ßµ»¸æ£¬Ò»±ßÐ±ÑÛ¿´×Å$n¡£\n",me,who);
+  message_vision ("åªè§$Nä¸€è¾¹ç¥·å‘Šï¼Œä¸€è¾¹æ–œçœ¼çœ‹ç€$nã€‚\n",me,who);
   who->set("mana",0);
 
   call_out("do_follow",random(3)+3,me,who);
@@ -88,7 +88,7 @@ void do_follow (object me, object who)
 {
   object room = environment(me);
 
-  if (room->query("short")!="ÈýÇåµî")
+  if (room->query("short")!="ä¸‰æ¸…æ®¿")
     return;
 
   if (! who)
@@ -98,14 +98,14 @@ void do_follow (object me, object who)
     return;
 
   me->set_leader(who);
-  message_vision ("$N¶Ô×Å$nÒ»ÉùÀäÐ¦¡£\n",me,who);
+  message_vision ("$Nå¯¹ç€$nä¸€å£°å†·ç¬‘ã€‚\n",me,who);
   if (!who->query_temp("chechi/recognized"))
   {
     who->set_temp("chechi/recognized",1);
-    message_vision("$NºÈµÀ£º¡°´óµ¨ÍçÍ½£¬¾¹¸ÒÃ°³äÎÒµÀÊ¥ÈË£¡¿ìÈ¥¼û¹úÍõÁì×ï£¡¡±\n",
+    message_vision("$Nå–é“ï¼šâ€œå¤§èƒ†é¡½å¾’ï¼Œç«Ÿæ•¢å†’å……æˆ‘é“åœ£äººï¼å¿«åŽ»è§å›½çŽ‹é¢†ç½ªï¼â€\n",
                    me,who);
   }
-  message_vision ("$N¾ö¶¨¿ªÊ¼¸úËæ$nÒ»ÆðÐÐ¶¯¡£\n",me,who);
+  message_vision ("$Nå†³å®šå¼€å§‹è·Ÿéš$nä¸€èµ·è¡ŒåŠ¨ã€‚\n",me,who);
 }
 
 void die()
@@ -114,8 +114,7 @@ void die()
   object where = environment(me);
   object ob = new ("/d/qujing/chechi/obj/yangjiao");
 
-  message_vision ("$NÈíÈíµØµ¹ÏÂ£¬ÁôÏÂÒ»¸ù»ÒÉ«Ñò½Ç¡£\n",me);
+  message_vision ("$Nè½¯è½¯åœ°å€’ä¸‹ï¼Œç•™ä¸‹ä¸€æ ¹ç°è‰²ç¾Šè§’ã€‚\n",me);
   ob->move(where);
   destruct(me);
 }
-ÿ

@@ -6,12 +6,12 @@ inherit NPC;
 void create()
 {
   string dir;
-  set_name("½ðÊ¥¹¬", ({"jinsheng gong", "gong", "queen"}));
-  set("title", "Öì×Ï¹ú");
-  set("gender", "Å®ÐÔ");
+  set_name("é‡‘åœ£å®«", ({"jinsheng gong", "gong", "queen"}));
+  set("title", "æœ±ç´«å›½");
+  set("gender", "å¥³æ€§");
   set("age", 28);
   set("per", 26);
-  set("rank_info/respect", "ÄïÄï");
+  set("rank_info/respect", "å¨˜å¨˜");
   set("combat_exp", 100000);
   set("daoxing", 50000);
 
@@ -64,11 +64,11 @@ void test_player (object who)
   who->add("obstacle/number",1);
   who->set("obstacle/zhuzi","done");
   //who->add("combat_exp",i+4000);
-  //command("chat "+who->query("name")+"Öì×Ï¹úÊ©ÉñÁ¦ÖÎÓúÍòËê£¬½â¾È½ðÊ¥¹¬ÓÚÈýÄê¾Ã»ö£¡");
-  //command("chat "+who->query("name")+"Ë³Àû´³¹ýÎ÷ÐÐÓÖÒ»¹Ø£¡");
-  //tell_object (who,"ÄãÓ®µÃÁË"+chinese_number(4)+"Äê"+
-  //             chinese_number(i/4)+"Ìì"+
-  //             chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀÐÐ£¡\n");
+  //command("chat "+who->query("name")+"æœ±ç´«å›½æ–½ç¥žåŠ›æ²»æ„ˆä¸‡å²ï¼Œè§£æ•‘é‡‘åœ£å®«äºŽä¸‰å¹´ä¹…ç¥¸ï¼");
+  //command("chat "+who->query("name")+"é¡ºåˆ©é—¯è¿‡è¥¿è¡Œåˆä¸€å…³ï¼");
+  //tell_object (who,"ä½ èµ¢å¾—äº†"+chinese_number(4)+"å¹´"+
+  //             chinese_number(i/4)+"å¤©"+
+  //             chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
   who->save();
   command ("thank");
   call_out ("leaving",2);
@@ -82,4 +82,3 @@ void leaving ()
   command("southeast");
   destruct (me);
 }
-ÿ

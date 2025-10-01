@@ -12,4 +12,3 @@ set("long", "
         setup();
         replace_program(BULLETIN_BOARD);
 }
-

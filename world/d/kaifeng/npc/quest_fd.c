@@ -305,5 +305,3 @@ mapping quests_food = ([
  2000010 : ({ "find", YEL "仙桃" NOR, "xian tao",           "", "1" }),
  2000020 : ({ "find", YEL "仙酒" NOR, "xian jiu",           "", "1" }),
 ]);
-
-

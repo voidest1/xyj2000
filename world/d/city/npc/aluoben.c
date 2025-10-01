@@ -6,15 +6,15 @@ inherit F_VENDOR;
 
 void create()
 {
-        set_name("°¢ÂŞ±¾", ({ "a luoben", "monk", "luoben" }) );
-        set("gender", "ÄĞĞÔ" );
+        set_name("é˜¿ç½—æœ¬", ({ "a luoben", "monk", "luoben" }) );
+        set("gender", "ç”·æ€§" );
         set("age", 54);
 	set("str", 25);
 	set("per", 25);
-	set("title", "²¨Ë¹É®ÈË");
+	set("title", "æ³¢æ–¯åƒ§äºº");
 	set("long",
-	"ÕâÊÇÒ»Î»À´×ÔÎ÷ÓòµÄ¾°½ÌÉ®ÈË£¬Ó¥±ÇÉîÄ¿£¬Ğë·¢½Ô°×¡£\n"
-	"ÏóÓĞÂú¸¹µÄÑ§ÎÊ£¬Õı×øÔÚÄÇÀï±ÕÄ¿³ÁË¼¡£\n");
+	"è¿™æ˜¯ä¸€ä½æ¥è‡ªè¥¿åŸŸçš„æ™¯æ•™åƒ§äººï¼Œé¹°é¼»æ·±ç›®ï¼Œé¡»å‘çš†ç™½ã€‚\n"
+	"è±¡æœ‰æ»¡è…¹çš„å­¦é—®ï¼Œæ­£ååœ¨é‚£é‡Œé—­ç›®æ²‰æ€ã€‚\n");
         set("combat_exp", 100000);
   set("daoxing", 200000);
 
@@ -37,8 +37,8 @@ void create()
 	set("mana_factor", 10);
 
 	set("inquiry", ([
-		"here": "´óÌÆ¾°½ÌËÂ\n",
-		"name": "°¢ÂŞ±¾\n",
+		"here": "å¤§å”æ™¯æ•™å¯º\n",
+		"name": "é˜¿ç½—æœ¬\n",
 	]) );
 
         setup();
@@ -62,8 +62,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !visible(ob) || !present(ob, environment(this_object())) ) return;
-        say( "°¢ÂŞ±¾ËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-		+ "£¬ÓÃÄãµÄÕæĞÄÏòÌì¸¸Æíµ»°É¡£\n");
+        say( "é˜¿ç½—æœ¬è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+		+ "ï¼Œç”¨ä½ çš„çœŸå¿ƒå‘å¤©çˆ¶ç¥ˆç¥·å§ã€‚\n");
 }
 
 int accept_object(object who, object ob)
@@ -72,7 +72,7 @@ int accept_object(object who, object ob)
 
         val = ob->value();
         if( !val )
-                return notify_fail("°¢ÂŞ±¾²»ÊÕÎïÆ·µÄ¾èÏ×¡£\n");
+                return notify_fail("é˜¿ç½—æœ¬ä¸æ”¶ç‰©å“çš„æçŒ®ã€‚\n");
 	else if( val > 100 )
 	{
                 if( (who->query("bellicosity") > 0)
@@ -81,10 +81,8 @@ int accept_object(object who, object ob)
                 if(who->query("bellicosity")<0)
 		   who->set("bellicosity",0);
         }
-        say( "°¢ÂŞ±¾ËµµÀ£º¶àĞ»ÕâÎ»" + RANK_D->query_respect(who)
-                + "£¬Ìì¸¸Ò»¶¨»á±£ÓÓÄãµÄ¡£\n");
+        say( "é˜¿ç½—æœ¬è¯´é“ï¼šå¤šè°¢è¿™ä½" + RANK_D->query_respect(who)
+                + "ï¼Œå¤©çˆ¶ä¸€å®šä¼šä¿ä½‘ä½ çš„ã€‚\n");
 
         return 1;
 }
-
-ÿ

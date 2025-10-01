@@ -20,4 +20,3 @@ void create()
         init_bow(1);
         setup();
 }
-

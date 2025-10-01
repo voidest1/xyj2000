@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÃÖÀÕ·ğ×æ", ({"mile fozu", "mile", "fozu"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("å¼¥å‹’ä½›ç¥–", ({"mile fozu", "mile", "fozu"}));
+  set("gender", "ç”·æ€§");
   set("age", 100);
   set("attitude", "friendly");
   set("combat_exp", 1250000);
@@ -56,12 +56,10 @@ void announce_success (object who)
   who->add("obstacle/number",1);
   who->set("obstacle/xiaoxitian","done");
   //who->add("daoxing",i+3000);
-  //command("chat "+who->query("name")+"Ğ¡Î÷Ìì½ğîóÍÑÏÕ£¬Ğ¡À×ÒôËÂÕ½Ê¤»ÆÃ¼ÀÏ·ğ£¡");
-  //command("chat "+who->query("name")+"Ë³Àû´³¹ıÎ÷ĞĞÓÖÒ»¹Ø£¡");
-  //tell_object (who,"ÄãÓ®µÃÁË"+chinese_number(3)+"Äê"+
-  //             chinese_number(i/4)+"Ìì"+
-  //             chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀĞĞ£¡\n");
+  //command("chat "+who->query("name")+"å°è¥¿å¤©é‡‘é“™è„±é™©ï¼Œå°é›·éŸ³å¯ºæˆ˜èƒœé»„çœ‰è€ä½›ï¼");
+  //command("chat "+who->query("name")+"é¡ºåˆ©é—¯è¿‡è¥¿è¡Œåˆä¸€å…³ï¼");
+  //tell_object (who,"ä½ èµ¢å¾—äº†"+chinese_number(3)+"å¹´"+
+  //             chinese_number(i/4)+"å¤©"+
+  //             chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
   who->save();
 }
-
-ÿ

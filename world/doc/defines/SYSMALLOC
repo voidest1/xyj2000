@@ -6,4 +6,3 @@ most reliable one; the down side is that the alternate allocators included
 with this package are faster than most system memory allocators.
 
 Also, SYSMALLOC provides no statistics about memory usage.
-

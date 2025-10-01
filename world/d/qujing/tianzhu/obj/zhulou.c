@@ -19,4 +19,3 @@ void create()
   set("wear_msg", "$N提起细条竹篓，轻巧地背在身上。\n");
   set("unequip_msg", "$N将细条竹篓从背后卸下来，抱在怀里。\n");
 }
-

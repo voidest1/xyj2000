@@ -7,8 +7,8 @@ void create()
 {
   int i = random(9)+1;
   string str;
-  set_name("Ð¡Ñý", ({"xiao yao","yao"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å°å¦–", ({"xiao yao","yao"}));
+  set("gender", "ç”·æ€§");
   set("age", 20);
   set("combat_exp", 20000*i);
   set("attitude","aggressive");
@@ -42,4 +42,3 @@ void create()
   str[strlen(str)-1] = '0'+random(4);
   carry_object(str)->wield();
 }
-ÿ

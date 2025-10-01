@@ -5,11 +5,11 @@ int checking(object me);
 
 void create()
 {
-        set_name("Ä§Àñºì", ({ "mo lihong","mo", "guangmu", "tianwang", "wang" }) );
-        set("gender", "ÄĞĞÔ" );
-	set("title", "¹ãÄ¿ÌìÍõ");
-        set("long","¹ãÄ¿ÌìÍõÏ²¶¯²»Ï²¾²£¬²»Ô¸ÔÚÌìÉÏÊØÃÅ¡£
-ÓñµÛ±ãÅÉËûÑ²ÓÎËÄ·½£¬±£ÎÀÖÚÏÉ¼Ò°²È«¡£\n");
+        set_name("é­”ç¤¼çº¢", ({ "mo lihong","mo", "guangmu", "tianwang", "wang" }) );
+        set("gender", "ç”·æ€§" );
+	set("title", "å¹¿ç›®å¤©ç‹");
+        set("long","å¹¿ç›®å¤©ç‹å–œåŠ¨ä¸å–œé™ï¼Œä¸æ„¿åœ¨å¤©ä¸Šå®ˆé—¨ã€‚
+ç‰å¸ä¾¿æ´¾ä»–å·¡æ¸¸å››æ–¹ï¼Œä¿å«ä¼—ä»™å®¶å®‰å…¨ã€‚\n");
         set("age",40);
         set("str",30);
         set("int",25);
@@ -62,7 +62,7 @@ void greeting(object ob)
         if( !ob || environment(ob) != environment() ) 
 		return;
 	if( (string)ob->query("id") == (string)me->query("revenge_target")){
-		command("say ´óµ¨" + ob->query("name") + "£¬µ¨¸ÒÄ±º¦ÏÉ¼Ò£¬ÄÇÀïÅÜ£¡\n");
+		command("say å¤§èƒ†" + ob->query("name") + "ï¼Œèƒ†æ•¢è°‹å®³ä»™å®¶ï¼Œé‚£é‡Œè·‘ï¼\n");
 		this_object()->kill_ob(ob);
 		set_leader(ob);
 		ob->fihgt_ob(this_object());
@@ -123,8 +123,6 @@ int checking(object me)
 }
 int do_back(object me)
 {
-	message_vision("$N·ß·ßµÄºßÁËÒ»ÉùµÀ£ºÏÂ´Î±ğÈÃÀÏ×Ó´şµ½£¡\n", me);
+	message_vision("$Næ„¤æ„¤çš„å“¼äº†ä¸€å£°é“ï¼šä¸‹æ¬¡åˆ«è®©è€å­é€®åˆ°ï¼\n", me);
         return 1;
 }
-
-ÿ

@@ -105,4 +105,3 @@ void dest()
 	    destruct(child[i]);
 	}
 }
-

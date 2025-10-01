@@ -78,4 +78,3 @@ int query_kar()
 	if(final > 40) final=40;
 	return final;
 }
-

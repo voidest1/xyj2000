@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-	set_name("É®ÈË", ({"seng ren","seng"}));
+	set_name("åƒ§äºº", ({"seng ren","seng"}));
 
-	set("gender", "ÄÐÐÔ");
+	set("gender", "ç”·æ€§");
 	set("attitude", "friendly");
 	set("class", "bonze");
 
@@ -31,5 +31,3 @@ void create()
 	carry_object("/d/obj/cloth/sengxie")->wear();
 
 }
-
-ÿ

@@ -8,4 +8,3 @@ void create()
   ::create();
   set("short", "鍏戝");
 }
-

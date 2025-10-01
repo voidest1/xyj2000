@@ -51,4 +51,3 @@ void invocation(object who)
 	COMBAT_D->do_attack(me, who, query_temp("weapon"));
 	destruct(me);
 }
-

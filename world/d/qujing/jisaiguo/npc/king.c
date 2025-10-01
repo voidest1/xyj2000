@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("¼ÀÈü¹ú¹úÍõ", ({"jisai guowang", "guowang", "king"}));
-       set("gender", "ÄĞĞÔ");
+       set_name("ç¥­èµ›å›½å›½ç‹", ({"jisai guowang", "guowang", "king"}));
+       set("gender", "ç”·æ€§");
        set("age", 30);
-        set("long", "¼ÀÈü¹ú¹úÍõ£¬¿´ÆğÀ´Ó¢Ã÷ÉñÎäµÄÑù×Ó¡£\n");
+        set("long", "ç¥­èµ›å›½å›½ç‹ï¼Œçœ‹èµ·æ¥è‹±æ˜ç¥æ­¦çš„æ ·å­ã€‚\n");
        set("attitude", "friendly");
        set("shen_type", 1);
        set("per", 25);
@@ -38,35 +38,35 @@ int accept_object(object me,object ob)
 
         if (ob->query("id")=="shu tie" ){
 	if(who->query("obstacle/jisaiguo")=="done") {
-		command("say "+RANK_D->query_respect(who)+ "ÒÑÌæëŞÈ¡»ØÁË·ğ±¦£¬ÕæÊÇĞÁ¿àÁË£¡\n");
+		command("say "+RANK_D->query_respect(who)+ "å·²æ›¿æœ•å–å›äº†ä½›å®ï¼ŒçœŸæ˜¯è¾›è‹¦äº†ï¼\n");
 		call_out("destroy", 1, ob);
 		return 1;
 	}	
 	if(who->query("obstacle/jisaiguo")=="allow") {
-			command("say " +RANK_D->query_respect(who)+ "»¹Ã»ÆğÉíÂğ£¿\n");
+			command("say " +RANK_D->query_respect(who)+ "è¿˜æ²¡èµ·èº«å—ï¼Ÿ\n");
                 call_out("destroy", 1, ob);
                 return 1;
 	}	
 	if( who->query_temp("obstacle/jisaiguo/letter")) {
-		command("say Ô­À´Èç´Ë£¬¿´À´ëŞ´í¹ÖÁË½ğ¹âËÂµÄÉ®ÈËÁË¡£\n");
+		command("say åŸæ¥å¦‚æ­¤ï¼Œçœ‹æ¥æœ•é”™æ€ªäº†é‡‘å…‰å¯ºçš„åƒ§äººäº†ã€‚\n");
 		command("say " +RANK_D->query_respect(who)+
-"ÂúÉíµÄºÃÎäÒÕ£¬²»ÈçÌæëŞ°Ñ·ğ±¦È¡»Ø£¬Ôì¸£°ÙĞÕ¡£\n");
+"æ»¡èº«çš„å¥½æ­¦è‰ºï¼Œä¸å¦‚æ›¿æœ•æŠŠä½›å®å–å›ï¼Œé€ ç¦ç™¾å§“ã€‚\n");
 		who->set("obstacle/jisaiguo", "allow");
                 call_out("destroy", 1, ob);
                 return 1;
         }
-	command("say ëŞÒÑÖªµÀÁË£¬²»ÀÍ"+RANK_D->query_respect(who)+ "²ÙĞÄÁË£¡\n");
+	command("say æœ•å·²çŸ¥é“äº†ï¼Œä¸åŠ³"+RANK_D->query_respect(who)+ "æ“å¿ƒäº†ï¼\n");
         call_out("destroy", 1, ob);
 	return 1;
 	}
 
 	if(ob->query("id")=="tooth") {
 		if( !ob->query("asdfghj") ){
-			command("say Ê²Ã´¶«Î÷£¬ëŞ²»ÒªËü£¡\n");
+			command("say ä»€ä¹ˆä¸œè¥¿ï¼Œæœ•ä¸è¦å®ƒï¼\n");
 			return 0;
 			}
 		if( who->query("obstacle/jisaiguo")=="done") {
-			command("say ÓÖÀÍ" +RANK_D->query_respect(who)+ "ÁË£¬×£Ò»Â·Ë³·ç¡£\n");
+			command("say åˆåŠ³" +RANK_D->query_respect(who)+ "äº†ï¼Œç¥ä¸€è·¯é¡ºé£ã€‚\n");
 			call_out("destroy", 1, ob);
 			return 1;
 			}
@@ -89,12 +89,10 @@ void announce_success(object me,object who)
   who->delete_temp("obstacle/jisaiguo");
   i = random(800);
   //who->add("daoxing",i+3000);
-  //command("chat "+who->query("name")+"ÌæëŞÈ¡»Ø·ğ±¦ÉáÀû×Ó£¬Îª¼ÀÈü°ÙĞÔÔì¸££¬ÕæÏÀÒåĞÄ³¦Ò²£¡");
-  //command("chat "+who->query("name")+"Ë³Àû´³¹ıÎ÷ĞĞÓÖÒ»¹Ø£¡");
-  //tell_object (who,"ÄãÓ®µÃÁË"+chinese_number(3)+"Äê"+
-  //             chinese_number(i/4)+"Ìì"+
-  //             chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀĞĞ£¡\n");
+  //command("chat "+who->query("name")+"æ›¿æœ•å–å›ä½›å®èˆåˆ©å­ï¼Œä¸ºç¥­èµ›ç™¾æ€§é€ ç¦ï¼ŒçœŸä¾ ä¹‰å¿ƒè‚ ä¹Ÿï¼");
+  //command("chat "+who->query("name")+"é¡ºåˆ©é—¯è¿‡è¥¿è¡Œåˆä¸€å…³ï¼");
+  //tell_object (who,"ä½ èµ¢å¾—äº†"+chinese_number(3)+"å¹´"+
+  //             chinese_number(i/4)+"å¤©"+
+  //             chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
   who->save();
 }
-
-ÿ

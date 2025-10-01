@@ -45,4 +45,3 @@ int do_out()
         me->delete_temp("in_hell");
         return 1;
 }
-

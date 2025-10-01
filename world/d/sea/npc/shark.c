@@ -79,4 +79,3 @@ owner_ob->query("spi")*2+random(30));
         }
         ::die();
 }
-

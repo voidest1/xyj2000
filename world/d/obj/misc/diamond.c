@@ -18,4 +18,4 @@ void create()
 		set("armor_prop/armor", 1);
 	}
 	setup();
-}	
+}

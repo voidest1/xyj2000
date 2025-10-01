@@ -37,4 +37,3 @@ setup();
 //        carry_object("/d/lingtai/obj/shoe")->wear();
         carry_object("/d/obj/weapon/hammer/tongchui")->wield();
 }
-

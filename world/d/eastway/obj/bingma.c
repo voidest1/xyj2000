@@ -82,4 +82,3 @@ int do_act (string arg)
   }
   return 1;
 }
-

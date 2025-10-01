@@ -42,4 +42,3 @@ this_player());
                 return 1;
         }
 }
-

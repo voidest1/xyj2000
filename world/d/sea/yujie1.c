@@ -46,4 +46,3 @@ return
         }   
         return ::valid_leave(me, dir);
 }
-

@@ -23,9 +23,3 @@ LONG);
   set("objects",(["/d/obj/flower/yehua.c":1,]));
   setup();
 }
-
-
-
-
-
-

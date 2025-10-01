@@ -21,4 +21,3 @@ varargs void init_mace(int damage, int flag)
 		set("verbs", ({ "impale", "bash", "crush", "slam" }) );
 	}
 }
-

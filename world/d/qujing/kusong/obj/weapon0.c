@@ -20,4 +20,3 @@ void create()
         init_axe(30, TWO_HANDED);
         setup();
 }
-

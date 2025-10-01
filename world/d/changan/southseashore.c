@@ -48,7 +48,3 @@ message_vision(HIY "$N纵身一跃，跳入海中。只见$N使足了全身力�
         me->receive_damage("sen", 20);
         return 1;
 }
-
-
-
-

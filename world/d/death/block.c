@@ -41,5 +41,3 @@ int block_cmd(string args)
    
 	return 1;
 }
-
-

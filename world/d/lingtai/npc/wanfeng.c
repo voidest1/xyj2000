@@ -46,4 +46,3 @@ int do_yao(string arg)
         message_vision("晚风对$N笑道：饿了吧，慢点吃。\n", this_player());
 return 1;
 }
-

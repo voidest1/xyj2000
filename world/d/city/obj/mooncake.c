@@ -45,4 +45,3 @@ void create()
 		set("no_sell","拿去与大家分享不好吗？：）\n");
         }
 }
-

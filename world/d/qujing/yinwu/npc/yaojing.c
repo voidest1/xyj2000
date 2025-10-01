@@ -7,10 +7,10 @@ void create()
 {
   string str;
   int i = random(4)+1;
-  set_name("Ñı¾«", ({"yao jing","yao", "jing"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("å¦–ç²¾", ({"yao jing","yao", "jing"}));
+  set("gender", "ç”·æ€§");
   set("age", 20*i);
-  set("long","Ò»¸öÊØ¶´µÄÑı¾«¡£\n");
+  set("long","ä¸€ä¸ªå®ˆæ´çš„å¦–ç²¾ã€‚\n");
   set("combat_exp", 20000*i);
   set("per", 15);
   set_skill("parry", 20*i);
@@ -54,13 +54,13 @@ void die ()
     bone->move(where);
   }
 
-  message_vision ("\n$Nµ¹ÁËÏÂÈ¥£¬»¯ÎªÒ»¶ÑÊŞ¹Ç¡£\n",me);  
+  message_vision ("\n$Nå€’äº†ä¸‹å»ï¼ŒåŒ–ä¸ºä¸€å †å…½éª¨ã€‚\n",me);  
   if (! present("shan yao 4",where) &&
-      where->query("short")=="°şÆ¤Í¤")
+      where->query("short")=="å‰¥çš®äº­")
   {
     object ob = new ("/d/qujing/yinwu/npc/yaojing");
     ob->move(where);
-    message_vision ("\n½ô½Ó×Å´ÓÍ¤ÖùºóÓÖÉÁ³öÒ»Î»ÊØÍ¤µÄÑı¾«£¡\n",me);   
+    message_vision ("\nç´§æ¥ç€ä»äº­æŸ±ååˆé—ªå‡ºä¸€ä½å®ˆäº­çš„å¦–ç²¾ï¼\n",me);   
   }
   destruct (me);  
 }
@@ -69,4 +69,3 @@ void unconcious ()
 {
   die();
 }
-ÿ

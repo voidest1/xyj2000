@@ -103,5 +103,3 @@ int notify_fail (mixed arg)
         arg = (string) CONVERT_D->output(arg,this_player());
     return efun::notify_fail (arg);
 }
-
-

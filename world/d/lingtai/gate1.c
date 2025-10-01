@@ -26,5 +26,3 @@ set("outdoors", 1);
         setup();
         replace_program(ROOM);
 }
-
-

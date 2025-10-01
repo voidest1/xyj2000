@@ -20,4 +20,3 @@ string exert_function_file(string func)
 {
         return CLASS_D("yaomo") + "/kusong/huomo/" + func;
 }
-

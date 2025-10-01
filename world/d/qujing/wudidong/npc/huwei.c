@@ -6,13 +6,13 @@ void create()
 {
        
 
-        set_name("»¤ÎÀ", ({ "long shi", "long", "shi" }) );
-        set("gender", "ÄÐÐÔ" );
+        set_name("æŠ¤å«", ({ "long shi", "long", "shi" }) );
+        set("gender", "ç”·æ€§" );
         set("long", 
-                "ÕâÊÇ´Óº£µ×¸÷×åÀï¾«Ñ¡³öÀ´µÄÎäÊ¿\n"
-                "ËûÏ¸ÑüÕ§±Û£¬Ë«¼ç±§Â££¬Ò»¿´¾ÍÖªÎäÒÕ¸ßÇ¿¡£\n"
+                "è¿™æ˜¯ä»Žæµ·åº•å„æ—é‡Œç²¾é€‰å‡ºæ¥çš„æ­¦å£«\n"
+                "ä»–ç»†è…°ä¹è‡‚ï¼ŒåŒè‚©æŠ±æ‹¢ï¼Œä¸€çœ‹å°±çŸ¥æ­¦è‰ºé«˜å¼ºã€‚\n"
         );
-	set("title", "ÁúÊ¿");
+	set("title", "é¾™å£«");
         set("age", 25+random(10));
         set("str", 35);
         set("int", 25);
@@ -29,5 +29,3 @@ void create()
         carry_object("/d/obj/armor/yinjia")->wear();
         carry_object("/d/obj/weapon/spear/tieqiang")->wield();
 }
-
-ÿ

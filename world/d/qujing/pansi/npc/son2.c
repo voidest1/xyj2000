@@ -5,12 +5,12 @@ inherit NPC;
 
 void create()
 {
-  set_name("Âì", ({"ma"}));
-  set("title", "³æ¹Ö");
-  set("gender", "ÄÐÐÔ");
+  set_name("èš‚", ({"ma"}));
+  set("title", "è™«æ€ª");
+  set("gender", "ç”·æ€§");
   set("age", 12);
   set("per", 9);
-  set("long", "Ò»Ö»³æÄ£³æÑùµÄÑý¹Ö£¬³¤ÓÐ¶þ³ßÎåÁù´ç£¬ÖØÔ¼°Ë¾Å½ï¡£\n");
+  set("long", "ä¸€åªè™«æ¨¡è™«æ ·çš„å¦–æ€ªï¼Œé•¿æœ‰äºŒå°ºäº”å…­å¯¸ï¼Œé‡çº¦å…«ä¹æ–¤ã€‚\n");
   set("attitude", "aggressive");
   set("max_kee", 300);
   set("max_gin", 300);
@@ -40,7 +40,7 @@ void die ()
 {
   object me = this_object();
   object ob = query_temp("my_killer");
-  message_vision ("\n$N±ä³ÉÒ»Ö»Ð¡³æ¶ùàÓàÓµØ·É×ßÁË¡£\n",this_object());
+  message_vision ("\n$Nå˜æˆä¸€åªå°è™«å„¿å˜¤å˜¤åœ°é£žèµ°äº†ã€‚\n",this_object());
   if (ob && 
       ! ob->query_temp("obstacle/pansi_killed_"+me->query("name")))
   {
@@ -54,4 +54,3 @@ void unconcious ()
 {
   die ();
 }
-ÿ

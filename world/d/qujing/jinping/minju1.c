@@ -37,4 +37,3 @@ void regenerating_oil ()
 {
   this_object()->set("has_oil",1);
 }
-

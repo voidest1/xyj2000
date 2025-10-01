@@ -64,4 +64,3 @@ int do_dig (string arg)
   }
   return 1;
 }
-

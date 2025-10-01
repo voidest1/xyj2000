@@ -21,4 +21,3 @@ varargs void init_hammer(int damage, int flag)
 		set("verbs", ({ "bash", "crush", "slam" }) );
 	}
 }
-

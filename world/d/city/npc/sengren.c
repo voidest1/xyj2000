@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÓÎ·½É®ÈË", ({"seng ren","seng"}));
-	set("long", "Ò»Î»ÓÎ·½ºÍÉĞ£¬¹ÇÊİÈç²ñ£¬ÉíÉÏµÄôÂôÄ´òÂúÁË²¹¶¡¡£\n");
+	set_name("æ¸¸æ–¹åƒ§äºº", ({"seng ren","seng"}));
+	set("long", "ä¸€ä½æ¸¸æ–¹å’Œå°šï¼Œéª¨ç˜¦å¦‚æŸ´ï¼Œèº«ä¸Šçš„è¢ˆè£Ÿæ‰“æ»¡äº†è¡¥ä¸ã€‚\n");
 
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set("attitude", "friendly");
 	set("class", "bonze");
 
@@ -38,5 +38,3 @@ void create()
 
 	setup();
 }
-
-ÿ

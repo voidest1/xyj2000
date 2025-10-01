@@ -2,11 +2,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("³¤ÍÈÏºÆÅ", ({"xia po", "po"}));
-        set("long", "Ò»¸ö±ÄÀ´±ÄÈ¥µÄÀÏÏºÆÅ¡£\n");
+        set_name("é•¿è…¿è™¾å©†", ({"xia po", "po"}));
+        set("long", "ä¸€ä¸ªè¹¦æ¥è¹¦åŽ»çš„è€è™¾å©†ã€‚\n");
         set("age", 50);
         set("attitude", "peaceful");
-        set("gender", "Å®ÐÔ");
+        set("gender", "å¥³æ€§");
         set("str", 20);
         set("int", 20);
         set("per", 10);
@@ -28,8 +28,8 @@ void create()
         set_skill("dodge", 20);
 	set_skill("hammer", 20);
         set("chat_msg", ({
-        "³¤ÍÈÏºÆÅ±ÄÁË¼¸±Ä¡£\n",
-	"³¤ÍÈÏºÆÅ×ìÀïà½à½àìàì£ºÔ­À´Ò»±Ä¾Í¿ÉÒÔ½øÈ¥¡£\n",
+        "é•¿è…¿è™¾å©†è¹¦äº†å‡ è¹¦ã€‚\n",
+	"é•¿è…¿è™¾å©†å˜´é‡Œå˜Ÿå˜Ÿå›”å›”ï¼šåŽŸæ¥ä¸€è¹¦å°±å¯ä»¥è¿›åŽ»ã€‚\n",
         (: random_move :)
 }));
 
@@ -37,5 +37,3 @@ void create()
 	add_money("silver", random(2)+1);
         carry_object("/d/obj/cloth/skirt")->wear();
 }
-
-ÿ

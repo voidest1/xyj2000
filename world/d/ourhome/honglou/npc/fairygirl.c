@@ -58,5 +58,3 @@ int send_back(object me)
 		return 1;
 	}
 }
-
-

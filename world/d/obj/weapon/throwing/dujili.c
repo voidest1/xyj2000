@@ -26,4 +26,3 @@ mixed hit_ob(object me, object victim, int damage_bonus)
 	victim->apply_condition("root_poison", 3);
 	message_vision("$N中了毒蒺黎上的蟥芦草毒！\n", victim);
 }
-

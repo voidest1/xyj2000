@@ -3,8 +3,8 @@
 // created 4-8-97 pickle
 #include <ansi.h>
 inherit NPC;
-string *first_name = ({ "ÅÓ½ø¸ó","ÁõÍíÆì","¹¶ÓàÑô","±ÏÑÒÍ¥"});
-// ÅÓ£¬Áõ£¬¹¶£¬±Ï£¬µË£¬ÐÁ£¬ÕÅ£¬ÌÕ
+string *first_name = ({ "åºžè¿›é˜","åˆ˜æ™šæ——","è‹Ÿä½™é˜³","æ¯•å²©åº­"});
+// åºžï¼Œåˆ˜ï¼Œè‹Ÿï¼Œæ¯•ï¼Œé‚“ï¼Œè¾›ï¼Œå¼ ï¼Œé™¶
 
 varargs void drool(string msg, string who);
 
@@ -15,13 +15,13 @@ void create()
   name = first_name[random(sizeof(first_name))];
 
   set_name(name, ({ "tian ding", "tian", "ding" }) );
-  set("gender", "ÄÐÐÔ" );
+  set("gender", "ç”·æ€§" );
   set("long", "
 
-¶ÔÓÚÄãµÄ´æÔÚ£¬"+name+"ËÆºõË¿ºÁÃ»ÓÐ×¢Òâ¡£
-Ö±µ½Äã×ß½üÌìÃÅ£¬Ëû²Å½÷É÷ÆðÀ´£¬Ä¿¹â³¯ÄãÉ¨ÁËÒ»É¨¡£
+å¯¹äºŽä½ çš„å­˜åœ¨ï¼Œ"+name+"ä¼¼ä¹Žä¸æ¯«æ²¡æœ‰æ³¨æ„ã€‚
+ç›´åˆ°ä½ èµ°è¿‘å¤©é—¨ï¼Œä»–æ‰è°¨æ…Žèµ·æ¥ï¼Œç›®å…‰æœä½ æ‰«äº†ä¸€æ‰«ã€‚
 ");
-  set("title", "´óÁ¦Ìì¶¡");
+  set("title", "å¤§åŠ›å¤©ä¸");
   set("age", 35+random(10));
   set("attitude", "peaceful");
   set("str", 27);
@@ -44,4 +44,3 @@ void create()
   carry_object("/d/obj/armor/yinjia")->wear();
   carry_object("/d/obj/weapon/spear/tieqiang")->wield();
 }
-ÿ

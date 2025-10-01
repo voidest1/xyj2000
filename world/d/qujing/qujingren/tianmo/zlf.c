@@ -77,5 +77,3 @@ void append_laoren()
      	message_vision("$N走了过来\n",laoren);
 	
 }
-
-

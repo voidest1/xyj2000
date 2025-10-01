@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Âìó¨¹Ö", ({"mahuang guai","guai"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("èš‚èŸ¥æ€ª", ({"mahuang guai","guai"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
-  set("long","Ò»¸öÅÖÍ·ÅÖÄÔµÄÀÏÑý¾«¡£\n");
+  set("long","ä¸€ä¸ªèƒ–å¤´èƒ–è„‘çš„è€å¦–ç²¾ã€‚\n");
   set("combat_exp", 300000+random(3000));
   set("daoxing", 250000);
 
@@ -32,5 +32,3 @@ void create()
   carry_object("/d/qujing/kusong/obj/needle1")->wield();
   carry_object("/d/qujing/kusong/obj/tongjia")->wear();
 }
-
-ÿ

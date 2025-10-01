@@ -62,4 +62,3 @@ void remove_effect(object me, int dodge_amount)
         message_vision(HIB"$N渐感浑身难受，摇了摇脑袋，现出了原形。\n"NOR,me);
         
 }
-

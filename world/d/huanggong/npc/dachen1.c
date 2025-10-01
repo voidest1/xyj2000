@@ -59,4 +59,3 @@ void reward (object who)
   reporting (who, who->query("quest/reason"), points, "点潜能");
   who->add("potential",points);
 }
-

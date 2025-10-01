@@ -5,15 +5,15 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("ÓñÍÃ", ({"yu tu", "rabbit", "jade rabbit" }));
+       set_name("çŽ‰å…”", ({"yu tu", "rabbit", "jade rabbit" }));
        set("long",
-"ÓñÍÃÏÉÔ­±¾Ö»ÊÇæÏ¶ðµÄ³èÎï£¬Òò³ÔÁËæÏ¶ðµôÔÚµØÉÏµÄÁéÒ©¶ø³ÉÈËÐÎ¡£ÓñÍÃ
-ÒòÁéÒ©Ö®ÊÂ±»ÍõÄ¸·£È¥µ·Ò©£¬¾Ã¶ø¾ÃÖ®¾¹ÆÄÍ¨Ò©µÀ¡£\n");
-       set("gender", "Å®ÐÔ");
+"çŽ‰å…”ä»™åŽŸæœ¬åªæ˜¯å«¦å¨¥çš„å® ç‰©ï¼Œå› åƒäº†å«¦å¨¥æŽ‰åœ¨åœ°ä¸Šçš„çµè¯è€Œæˆäººå½¢ã€‚çŽ‰å…”
+å› çµè¯ä¹‹äº‹è¢«çŽ‹æ¯ç½šåŽ»æ£è¯ï¼Œä¹…è€Œä¹…ä¹‹ç«Ÿé¢‡é€šè¯é“ã€‚\n");
+       set("gender", "å¥³æ€§");
        set("age", 20);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 500);
@@ -48,7 +48,7 @@ void create()
         map_skill("force", "moonforce");
         map_skill("dodge", "moondance");
 
-create_family("ÔÂ¹¬", 2, "µÜ×Ó");
+create_family("æœˆå®«", 2, "å¼Ÿå­");
 setup();
 
         carry_object("/d/moon/obj/luoyi")->wear();
@@ -57,16 +57,16 @@ setup();
 
 void attempt_apprentice(object ob)
 {
-        if ( !((string)ob->query("gender")=="Å®ÐÔ")){
+        if ( !((string)ob->query("gender")=="å¥³æ€§")){
            command("shake");
-           command("say ÎÒÃÇÔÂ¹¬Ö»ÊÕÅ®Í½£¬ÕâÎ»" +
-RANK_D->query_respect(ob) + "»¹ÊÇÁíÇë¸ß¾Í°É¡£\n");
+           command("say æˆ‘ä»¬æœˆå®«åªæ”¶å¥³å¾’ï¼Œè¿™ä½" +
+RANK_D->query_respect(ob) + "è¿˜æ˜¯å¦è¯·é«˜å°±å§ã€‚\n");
            return;
         }
 
         command("pat "+ob->query("id"));
-        command("say ºÃ£¬Ï£Íû" + RANK_D->query_respect(ob) +
-"¶à¼ÓÅ¬Á¦£¬°ÑÎÒÃÇÔÂ¹¬·¢Ñï¹â´ó¡£\n");
+        command("say å¥½ï¼Œå¸Œæœ›" + RANK_D->query_respect(ob) +
+"å¤šåŠ åŠªåŠ›ï¼ŒæŠŠæˆ‘ä»¬æœˆå®«å‘æ‰¬å…‰å¤§ã€‚\n");
         command("recruit " + ob->query("id") );
         return;
 }
@@ -76,6 +76,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "xian");
 }
-
-
-ÿ

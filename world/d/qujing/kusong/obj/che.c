@@ -12,4 +12,3 @@ void create()
                 set("unit", "辆");
         }
 }
-

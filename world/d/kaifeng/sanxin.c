@@ -69,4 +69,3 @@ void feeling (object who)
   who->interrupt_me();
   message_vision ("$N走出三心宫，呼出一口气，顿时心境明朗如镜。\n",who);
 }
-

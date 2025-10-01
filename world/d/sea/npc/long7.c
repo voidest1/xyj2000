@@ -64,11 +64,3 @@ int accept_fight(object me)
   command("say 陆上我说不定打不过你，水里就是我的天下了！");
   return 1;
 }
-
-
-
-
-
-
-
-

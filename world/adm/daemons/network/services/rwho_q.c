@@ -101,7 +101,7 @@ void send_rwho_q(string mud, object them, string verbose)
 void create() 
 { 
     seteuid(ROOT_UID);
-    set("channel_id","ＲＷＨＯ");
+    set("channel_id","锛诧挤锛集");
 }
 
 int visiblep(object obj) { return 1; }

@@ -75,5 +75,3 @@ int do_stand(string arg)
       message_vision("$N伸了个懒腰，站了起来。\n", me);
       return 1;
 }
-
-

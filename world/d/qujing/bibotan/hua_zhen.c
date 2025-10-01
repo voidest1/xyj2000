@@ -46,4 +46,3 @@ int do_jump(string arg)
                 tell_room( environment(me), "噗嗵一声，有个人跳了进来。\n", ({me}));
                 return 1;
 }
-

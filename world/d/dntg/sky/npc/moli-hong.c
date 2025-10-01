@@ -97,4 +97,3 @@ void kill_ob (object me)
         ::kill_ob(me);
 
 }
-

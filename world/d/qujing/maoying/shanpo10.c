@@ -39,5 +39,3 @@ int do_enter ()
   who->move(location);
   return 1;
 }
-
-

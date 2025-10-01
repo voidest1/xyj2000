@@ -10,4 +10,3 @@ void create()
    set("unit","块");
    setup();
   }
-

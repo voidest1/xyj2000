@@ -64,4 +64,3 @@ return notify_fail(HIY"护国天王厉声说道：此乃天宫重地，闲杂人
         }
 return ::valid_leave(me,dir);
 }
-

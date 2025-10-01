@@ -13,4 +13,3 @@ void create()
         set("capacity", 500);
         replace_program(BBS_BOARD);
 }
-

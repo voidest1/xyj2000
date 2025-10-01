@@ -35,5 +35,3 @@ int do_climb(string arg)
                 tell_room( environment(me), "「咕咚」一声，" + me->name() + "从墙头上跳了下来！\n", ({me}) );
                 return 1;
 }
-
-

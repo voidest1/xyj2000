@@ -17,4 +17,3 @@ set("long","一个小螃蟹，在和小虾米玩．\n");
 //        carry_object("/d/gao/obj/blade")->wield();
 
 }
-

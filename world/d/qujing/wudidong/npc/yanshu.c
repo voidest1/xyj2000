@@ -337,4 +337,3 @@ int do_giveme(string arg)
     dummy->set_temp("last_fainted_from", me->query("id"));
     return 1;
 }
-

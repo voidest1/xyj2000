@@ -31,4 +31,3 @@ int you_leave(string arg,object who)
    tell_room(environment(who),who->name()+"走了过来。\n",who); 
    return 1;
 }
-

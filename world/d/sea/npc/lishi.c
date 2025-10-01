@@ -1,8 +1,8 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit NPC;
-string *first_name = ({ "Çà÷­", "³àÀð", "»Æöð", "°×öè", "×Ïöë", "½ð÷¡",
-"ÒøòÃ", "ÎÚöú"});
-string *name_words = ({ "Á¦Ê¿"});
+string *first_name = ({ "é’é³", "èµ¤é²¤", "é»„é²³", "ç™½é²¨", "ç´«é²­", "é‡‘é³Œ",
+"é“¶è›Ž", "ä¹Œé³…"});
+string *name_words = ({ "åŠ›å£«"});
 
 void create()
 {
@@ -11,8 +11,8 @@ void create()
 	name += name_words[random(sizeof(name_words))];
 
        set_name(name, ({"li shi", "shi"}));
-       set("gender", "ÄÐÐÔ");
-	set("title", "¹¬Ç°»¤ÎÀ");
+       set("gender", "ç”·æ€§");
+	set("title", "å®«å‰æŠ¤å«");
        set("age", 20+random(5));
 	set("per", 10);
 	set("str", 25);
@@ -44,5 +44,3 @@ void create()
         carry_object("/d/obj/armor/tiejia")->wear();
 	carry_object("/d/obj/weapon/fork/fork")->wield();
 }
-
-ÿ

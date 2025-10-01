@@ -5,10 +5,10 @@ inherit "/d/dntg/hell/wang.c";
 
 void create()
 {
-       set_name("Ì©É½Íõ", ({"taishan wang", "wang", "taishan"}));
-       set("title", "Òõ¼äÊ®ÍõÖ®");
+       set_name("æ³°å±±çŽ‹", ({"taishan wang", "wang", "taishan"}));
+       set("title", "é˜´é—´åçŽ‹ä¹‹");
 	set("class", "youling");
-       set("gender", "ÄÐÐÔ");
+       set("gender", "ç”·æ€§");
        set("age", 100);
        set("attitude", "friendly");
        set("shen_type", 1);
@@ -57,5 +57,3 @@ setup();
 //        carry_object("/d/lingtai/obj/shoe")->wear();
 //        carry_object("/d/lingtai/obj/putibang")->wield();
 }
-
-ÿ

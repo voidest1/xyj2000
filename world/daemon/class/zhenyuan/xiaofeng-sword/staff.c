@@ -100,4 +100,3 @@ void end_pfm_xfs(object me, int key,int enhance,int damage,object weapon)
     me->set_temp("wzg_pfm_cleared",1); // make sure only remove effect once.
     me->reset_action();
 }
-

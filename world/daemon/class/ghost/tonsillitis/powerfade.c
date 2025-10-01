@@ -38,4 +38,3 @@ notify_fail("你已经在运功中了。\n");
 
         return 1;
 }
-

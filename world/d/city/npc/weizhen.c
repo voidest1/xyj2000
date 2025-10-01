@@ -3,13 +3,13 @@ inherit NPC;
 
 void create()
 {
-	set_name("ÎºÕ÷", ({ "wei zheng", "wei", "chengxiang" }));
-	set("title", "µ±³¯Ô×Ïà");
-	set("gender", "ÄĞĞÔ");
+	set_name("é­å¾", ({ "wei zheng", "wei", "chengxiang" }));
+	set("title", "å½“æœå®°ç›¸");
+	set("gender", "ç”·æ€§");
 	set("age", 45);
 	set("str", 20);
 	set("dex", 20);
-	set("long", "Ëû¾ÍÊÇµ±³¯Ø©ÏàÎºÕ÷£¬ĞÔ¸ñ¸ÕÕı²»°¢£¬ÒÔ¸ÒÓÚÖ±ÚÉÎÅÃû¡£\n");
+	set("long", "ä»–å°±æ˜¯å½“æœä¸ç›¸é­å¾ï¼Œæ€§æ ¼åˆšæ­£ä¸é˜¿ï¼Œä»¥æ•¢äºç›´è°é—»åã€‚\n");
 	set("combat_exp", 60000);
   set("daoxing", 600000);
 
@@ -34,4 +34,3 @@ void create()
         add_money("gold", 1);
 
 }
-ÿ

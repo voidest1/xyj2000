@@ -107,5 +107,3 @@ void create()
   setup();
   carry_object(cloth)->wear();
 }
-
-

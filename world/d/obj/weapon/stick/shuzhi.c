@@ -16,4 +16,3 @@ void create()
         init_stick(8);
         setup();
 }
-

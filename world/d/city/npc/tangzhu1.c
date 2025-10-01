@@ -25,5 +25,3 @@ void create()
 	add_money("silver", 10);
         carry_object("/d/obj/cloth/piyi")->wear();
 }
-
-

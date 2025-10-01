@@ -3,9 +3,9 @@
 inherit NPC;
 void create()
 {
-  set_name("¶ñÁú", ({"dragon"}));
-  set("gender", "ÄÐÐÔ");
-  set("long", "Ò»ÌõÕÅÑÀÎè×¦µÄ¶ñÁú£¬Ñù×ÓÊ®·Ö¿ÉÅÂ¡£\n");
+  set_name("æ¶é¾™", ({"dragon"}));
+  set("gender", "ç”·æ€§");
+  set("long", "ä¸€æ¡å¼ ç‰™èˆžçˆªçš„æ¶é¾™ï¼Œæ ·å­ååˆ†å¯æ€•ã€‚\n");
   set("attitude", "aggressive");
   set("combat_exp", 50000+random(1000000));
   set("daoxing", 500000);
@@ -49,9 +49,8 @@ void die()
     else
 	rope = new(rp);
     if( environment() ) {
-	message("vision", "Ò»Õóºì¹âÉÁ¹ý£¬¶ñÁúÂäÔÚµØÉÏ¡£¶¨¾¦Ò»¿´£¬Ô­À´¶ñÁúÒÑ¾­¶ÝÈ¥£¬µØÉÏÖ»ÁôÏÂÒ»ÌõºìË÷¡£\n", environment());
+	message("vision", "ä¸€é˜µçº¢å…‰é—ªè¿‡ï¼Œæ¶é¾™è½åœ¨åœ°ä¸Šã€‚å®šç›ä¸€çœ‹ï¼ŒåŽŸæ¥æ¶é¾™å·²ç»éåŽ»ï¼Œåœ°ä¸Šåªç•™ä¸‹ä¸€æ¡çº¢ç´¢ã€‚\n", environment());
     }
     rope->move(environment(this_object()));
     destruct(this_object());
 }
-ÿ

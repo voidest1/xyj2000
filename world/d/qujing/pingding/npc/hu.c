@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("°ÍÉ½»¢", ({ "bashan hu", "bashan", "hu" }));
-  set("gender", "ÄÐÐÔ");
+  set_name("å·´å±±è™Ž", ({ "bashan hu", "bashan", "hu" }));
+  set("gender", "ç”·æ€§");
   set("age", 34);
   set("attitude", "heroism");
   set("per", 30);
@@ -38,5 +38,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/shoupiqun")->wear();
 }
-
-ÿ

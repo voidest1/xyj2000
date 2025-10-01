@@ -20,4 +20,3 @@ void create()
         set("unwield_msg", "$N将手中的$n藏入怀中。\n");
         setup();
 }
-

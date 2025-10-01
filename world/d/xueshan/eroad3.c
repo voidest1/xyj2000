@@ -57,5 +57,3 @@ int do_climb(string arg)
 	message_vision("$N气喘呼呼地从下面爬了过来。\n", me);   
 	return 1;    
 }
-
-

@@ -82,5 +82,3 @@ void init()
   if (my_armor2=present(armor2_id, me))
        my_armor2->set("name",HIY"钻石王老五"NOR);
 }
-
-

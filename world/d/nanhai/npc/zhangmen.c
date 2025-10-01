@@ -748,5 +748,3 @@ string zname(object ob)
 		return "普陀山弘法大师";
 	else return "普陀山弘法大师";
 }
-
-

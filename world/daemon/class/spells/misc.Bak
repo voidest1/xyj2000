@@ -55,13 +55,13 @@ string find_place(object where)
 
         if(sscanf(filename,"/d/changan/bed#%*s")==1) {
 	//this need check first.
-	  answer="´²ÉÏ";
+	  answer="åºŠä¸Š";
         } else if(!undefinedp(maps[filename1])) {
 	  answer=maps[filename1];
 	} else if(where->is_character()) {
-	  answer=where->query("name")+"ÉíÉÏ";
+	  answer=where->query("name")+"èº«ä¸Š";
         } else if(sscanf(filename,"/obj/home#%*s")==1) {
-          answer="×¡¼ÒÀï";
+          answer="ä½å®¶é‡Œ";
         } else { 
           answer=undefinedp(where->query("short"))?
 		  where->short():

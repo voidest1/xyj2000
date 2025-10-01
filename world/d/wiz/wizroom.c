@@ -46,4 +46,3 @@ int block_cmd()
        if (verb=="look") return 0;
        return 1;
 }
-

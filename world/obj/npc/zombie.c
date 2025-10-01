@@ -176,5 +176,3 @@ HIR"你觉得体内的力量被" + name()+"一点一点地吸去了。\n"NOR, ma
 		return ::heal_up();
 	} 
 }
-
-

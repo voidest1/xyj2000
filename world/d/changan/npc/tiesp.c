@@ -29,5 +29,3 @@ void create()
             carry_object("/d/ourhome/obj/choupao")->wear();
 	add_money("gold", 1);
 }
-
-

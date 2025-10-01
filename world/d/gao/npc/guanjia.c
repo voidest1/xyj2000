@@ -25,4 +25,3 @@ int accept_fight(object me)
         command("say 活动活动筋骨也好！\n");
         return 1;
 }
-

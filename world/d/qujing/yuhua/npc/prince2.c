@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("¶þÍõ×Ó", ({"er wangzi", "wangzi", "wang", "zi"}));
-  set("title", "Óñ»ªÏØ");
-  set("gender", "ÄÐÐÔ");
+  set_name("äºŒçŽ‹å­", ({"er wangzi", "wangzi", "wang", "zi"}));
+  set("title", "çŽ‰åŽåŽ¿");
+  set("gender", "ç”·æ€§");
   set("age", 17);
   set("per", 25);
   set("attitude", "peaceful");
@@ -38,24 +38,24 @@ int accept_object (object who, object ob)
 
   if (ob->query("id") != id)
   {
-    message_vision ("$N¶Ô$nÒ¡Í·ËµµÀ£º²»Òª²»Òª¡£\n",me,who);
+    message_vision ("$Nå¯¹$næ‘‡å¤´è¯´é“ï¼šä¸è¦ä¸è¦ã€‚\n",me,who);
     call_out ("return_ob",1,ob,who);
     return 1;
   }
   if (who->query("combat_exp") < 10000)
   {
-    message_vision ("$NÒ¡Í·ËµµÀ£º$nµÀÐÐ²»¹»Ò²£¬ÕâÍæÒâÅÂÊÇÓÐ¼Ù¡£\n",me,who);
+    message_vision ("$Næ‘‡å¤´è¯´é“ï¼š$né“è¡Œä¸å¤Ÿä¹Ÿï¼Œè¿™çŽ©æ„æ€•æ˜¯æœ‰å‡ã€‚\n",me,who);
     call_out ("return_ob",1,ob,who);
     return 1;
   }
   if (present(id,me))
   {
-    message_vision ("$N¶Ô$nÒ¡Í·ËµµÀ£ºÎÒÒÑÓÐÁË£¬ÄúÄÇ»òÐíÊÇ¼Ù»õÒ²¡£\n",me,who);
+    message_vision ("$Nå¯¹$næ‘‡å¤´è¯´é“ï¼šæˆ‘å·²æœ‰äº†ï¼Œæ‚¨é‚£æˆ–è®¸æ˜¯å‡è´§ä¹Ÿã€‚\n",me,who);
     call_out ("return_ob",1,ob,who);
     return 1;
   }
-  message_vision ("$NÊ§Éù½ÐµÀ£º"+ob->query("name")+"¾ÃÑ°²»µÃÒ²¡£\n",me,who);
-  message_vision ("$NËµµÀ£º¶àÐ»¶àÐ»£¡\n",me);
+  message_vision ("$Nå¤±å£°å«é“ï¼š"+ob->query("name")+"ä¹…å¯»ä¸å¾—ä¹Ÿã€‚\n",me,who);
+  message_vision ("$Nè¯´é“ï¼šå¤šè°¢å¤šè°¢ï¼\n",me);
   who->set_temp("obstacle/yuhua_pa",1);
   call_out ("wield_me",1,ob);
   return 1;
@@ -72,4 +72,3 @@ void wield_me (object ob)
   if (ob)
     command ("wield "+ob->query("id"));
 }
-ÿ

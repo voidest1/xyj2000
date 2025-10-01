@@ -96,4 +96,3 @@ int cast(object me, object target)
 
         return 1;
 }
-

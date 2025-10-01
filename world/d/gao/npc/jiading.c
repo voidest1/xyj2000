@@ -22,4 +22,3 @@ set("long","一个体型魁悟，看起来孔武有力的大个子．\n正狠巴
         carry_object("/d/gao/obj/bang")->wield();
 
 }
-

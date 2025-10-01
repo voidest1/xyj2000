@@ -77,4 +77,3 @@ void init()
   if (my_armor1=present(armor1_id, me))
        my_armor1->set("name",HIY"白罗袍"NOR);
 }
-

@@ -45,5 +45,3 @@ void fall_back (object me)
 {
   tell_object (me,"你在地上呆坐了几秒钟，慢慢站起来。\n");
 }
-
-

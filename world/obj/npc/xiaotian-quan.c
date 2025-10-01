@@ -37,4 +37,3 @@ void invocation(object who)
 	message_vision("$N又化为一道黑气回到豹皮锦囊中。\n", me);
         destruct(me);
 }
-

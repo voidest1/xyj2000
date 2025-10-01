@@ -86,4 +86,3 @@ void init()
   if (my_armor1=present(armor1_id, me))
        my_armor1->set("name",HIY"屠龙甲"NOR);
 }
-

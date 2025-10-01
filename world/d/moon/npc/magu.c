@@ -6,11 +6,11 @@ string ask_for_leave();
 
 void create()
 {
-        set_name("Âé¹Ã", ({"magu"}));
-        set("gender", "Å®ĞÔ" );
+        set_name("éº»å§‘", ({"magu"}));
+        set("gender", "å¥³æ€§" );
         set("age", 35);
-        set("title","ÔÂ¹¬¹Ü¼Ò");
-        set("long", "Âé¹ÃÔÚÔÂ¹¬¿ÉÊÇÀïÀïÍâÍâÒ»°ÑÊÖ¡£\n");
+        set("title","æœˆå®«ç®¡å®¶");
+        set("long", "éº»å§‘åœ¨æœˆå®«å¯æ˜¯é‡Œé‡Œå¤–å¤–ä¸€æŠŠæ‰‹ã€‚\n");
         set("combat_exp", 100);
   set("daoxing", 5000);
 
@@ -20,7 +20,7 @@ void create()
         set("max_gin", 100);
         set("max_sen", 100);
         set("inquiry", ([
-		"ÍÑÀë" : (: ask_for_leave :),
+		"è„±ç¦»" : (: ask_for_leave :),
 		"leave" : (: ask_for_leave :),
 		]) );
 	setup();
@@ -37,20 +37,20 @@ string ask_for_leave()
 {
 	object me=this_player();
 
-	if (me->query("family/family_name") == "ÔÂ¹¬" ) {
-		command("say Äã¼ÈÊÇÖ´ÒâÏÂÉ½£¬ÀÏÉíÈ´ÓĞ¼¸¾ä»°Ëµ¡£");
+	if (me->query("family/family_name") == "æœˆå®«" ) {
+		command("say ä½ æ—¢æ˜¯æ‰§æ„ä¸‹å±±ï¼Œè€èº«å´æœ‰å‡ å¥è¯è¯´ã€‚");
 		me->set_temp("betray", 1);
-		return ("ÍÑÀëÊ¦ÃÅÒªĞèÒªÓĞÒ»¶¨³Í·££¬Äã¿ÉÔ¸Òâ(agree)£¿");
+		return ("è„±ç¦»å¸ˆé—¨è¦éœ€è¦æœ‰ä¸€å®šæƒ©ç½šï¼Œä½ å¯æ„¿æ„(agree)ï¼Ÿ");
 	}
 
-	return ("ÀÏÉí²»Öª¡£\n");
+	return ("è€èº«ä¸çŸ¥ã€‚\n");
 }
 
 int do_agree(string arg)
 {
 	if(this_player()->query_temp("betray")) {
-		message_vision("$N´ğµÀ£ºµÜ×ÓÔ¸Òâ¡£\n\n", this_player());
-		command("say ¼ÈÊÇÄãÓëÔÂ¹¬ÎŞÔµ£¬Äã±ãÏÂÉ½È¥°É£¡");
+		message_vision("$Nç­”é“ï¼šå¼Ÿå­æ„¿æ„ã€‚\n\n", this_player());
+		command("say æ—¢æ˜¯ä½ ä¸æœˆå®«æ— ç¼˜ï¼Œä½ ä¾¿ä¸‹å±±å»å§ï¼");
 		this_player()->add("betray/count", 1);
 		this_player()->add("betray/moon", 1);
 		this_player()->set("combat_exp", this_player()->query("combat_exp")*80/100);
@@ -63,12 +63,10 @@ int do_agree(string arg)
 		
 		this_player()->delete("family");
 		this_player()->delete("class");
-		this_player()->set("title", "ÆÕÍ¨°ÙĞÕ");
+		this_player()->set("title", "æ™®é€šç™¾å§“");
 		this_player()->set_temp("betray", 0);
 		this_player()->save();
-		command("say ½­ºş·ç²¨£¬ÉÆ¶ñÎŞĞÎ£¬ºÃ×ÔÎªÖ®¡£¡£¡£\n");
+		command("say æ±Ÿæ¹–é£æ³¢ï¼Œå–„æ¶æ— å½¢ï¼Œå¥½è‡ªä¸ºä¹‹ã€‚ã€‚ã€‚\n");
 		return 1;
 	}
 }
-
-ÿ

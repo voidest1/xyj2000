@@ -37,4 +37,3 @@ int valid_leave()
             return notify_fail("老头对你说：别把我的茶壶拿跑了！\n");
     return ::valid_leave();
 }
-

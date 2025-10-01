@@ -58,9 +58,3 @@ void create()
   carry_object("/d/sea/obj/dragonwhip")->wield();
   carry_object("/d/sea/obj/longzhu8");
 }
-
-
-
-
-
-

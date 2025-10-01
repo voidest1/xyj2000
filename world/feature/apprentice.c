@@ -68,4 +68,3 @@ int recruit_apprentice(object ob)
 	ob->assign_apprentice("弟子", 0);
 	return 1;
 }
-

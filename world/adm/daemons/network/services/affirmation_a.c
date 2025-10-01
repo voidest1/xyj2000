@@ -31,7 +31,7 @@ void incoming_request(mapping info)
 	if (info["WIZTO"]) {
 		if( info["MSG"][sizeof(info["MSG"])] != '\n' ) info["MSG"] += "\n";
 		if (ob = find_player(lower_case(info["WIZTO"])))
-		tell_object(ob, HIG + info["WIZFROM"]+"通知你："+info["MSG"] + NOR);
+		tell_object(ob, HIG + info["WIZFROM"]+"閫氱煡浣狅細"+info["MSG"] + NOR);
 	}
 }
 

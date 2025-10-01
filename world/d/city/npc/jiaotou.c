@@ -3,12 +3,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("·¶Â«Æ½", ({"fan luping", "fan"}));
+        set_name("èŒƒèŠ¦å¹³", ({"fan luping", "fan"}));
         set("age", 32);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("long",
-"Ò»¸ö¾«¾«ÊİÊİµÄĞ¡¸ö×Ó£¬ÔÚÁ·Ò»Ì×È­£®\n");
-	set("title", "Îä¹İ½ÌÍ·");
+"ä¸€ä¸ªç²¾ç²¾ç˜¦ç˜¦çš„å°ä¸ªå­ï¼Œåœ¨ç»ƒä¸€å¥—æ‹³ï¼\n");
+	set("title", "æ­¦é¦†æ•™å¤´");
         set("attitude", "peaceful");
 
         set("combat_exp", 20000);
@@ -30,5 +30,3 @@ int recognize_apprentice(object ob)
 {
 	return 1;
 }
-
-ÿ

@@ -245,4 +245,3 @@ int ji (string target)
   bao->ji_ob(victim);
   return 1;
 }
-

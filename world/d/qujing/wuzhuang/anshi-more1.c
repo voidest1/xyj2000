@@ -69,5 +69,3 @@ int clean_up()
 {
 	return 0;
 }
-
-

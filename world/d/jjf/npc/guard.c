@@ -54,4 +54,3 @@ void greeting(object ob)
       }
     }
 }
-

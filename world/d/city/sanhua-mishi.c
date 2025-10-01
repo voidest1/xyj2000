@@ -45,5 +45,3 @@ PAPER
 
         setup();
 }
-
-

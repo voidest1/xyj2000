@@ -74,4 +74,3 @@ set("chat_msg_combat", ({
 
 setup();
 }
-

@@ -6,8 +6,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÀÏ¹«¹«", ({"gong gong", "gong"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("è€å…¬å…¬", ({"gong gong", "gong"}));
+  set("gender", "ç”·æ€§");
   set("age", 80);
   set("con", 20);
   set("cor", 20);
@@ -55,7 +55,7 @@ void init()
       present("fu ren",where) ||
       present("gong gong 2",where))
   {
-    if (where->query("short") == "Ò°Â·")
+    if (where->query("short") == "é‡Žè·¯")
     {
       load_object("/obj/empty");
       me->move("/obj/empty");
@@ -83,7 +83,7 @@ void greeting (object me, object who)
       environment(who) != environment(me))
   return;
 
-  message_vision ("$N¶Ô$nËµµÀ£º°¦°¦£¬¿É¼ûÎáÐ¡Å®ÀÏÆÞ£¿\n",me,who);
+  message_vision ("$Nå¯¹$nè¯´é“ï¼šå”‰å”‰ï¼Œå¯è§å¾å°å¥³è€å¦»ï¼Ÿ\n",me,who);
 }
 
 void unconcious()
@@ -100,7 +100,7 @@ void die()
 
   if (ob)
     ob->set_temp("obstacle/baoxiang_killed_gonggong",1);
-  message_vision ("\n$NÒ»Éù²Ò½Ð£¬ÆË·­ÔÚµØËÀÁË¡£\n",me);
+  message_vision ("\n$Nä¸€å£°æƒ¨å«ï¼Œæ‰‘ç¿»åœ¨åœ°æ­»äº†ã€‚\n",me);
   command ("drop long tou");
   corpse = new ("/d/qujing/baoxiang/obj/baigu");
   corpse->move(where);
@@ -113,4 +113,3 @@ void kill_ob (object ob)
   ::kill_ob(ob);
 }
  
-ÿ

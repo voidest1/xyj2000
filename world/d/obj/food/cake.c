@@ -139,4 +139,3 @@ int do_blow(string arg)  {
     set("blow",1);
     return 1;
 }
-

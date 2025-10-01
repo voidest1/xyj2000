@@ -374,4 +374,3 @@ void attacking_cast(
 
 	return;
 }
-

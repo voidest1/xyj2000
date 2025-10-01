@@ -529,4 +529,3 @@ void remove()
 
        ::remove();
 }
-

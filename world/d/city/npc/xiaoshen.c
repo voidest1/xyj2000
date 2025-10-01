@@ -32,4 +32,3 @@ void create()
         carry_object("/d/obj/weapon/sword/changjian")->wield();
 
 }
-

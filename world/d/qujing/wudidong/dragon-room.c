@@ -61,4 +61,3 @@ int do_move()
 	}
 	return 1;
 }
-

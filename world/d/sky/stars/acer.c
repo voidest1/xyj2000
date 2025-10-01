@@ -39,4 +39,3 @@ void create()
 	carry_object("/d/obj/cloth/skirt")->wear();
 	carry_object("/d/obj/weapon/whip/tielian")->wield();
 }
-

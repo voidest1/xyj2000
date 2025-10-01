@@ -13,4 +13,3 @@ set("capacity", 80);
         setup();
         replace_program(BULLETIN_BOARD);
 }
-

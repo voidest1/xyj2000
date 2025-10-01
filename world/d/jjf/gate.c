@@ -43,4 +43,3 @@ notify_fail("秦安喝道：将军府岂是你乱闯之地！有何贵干(answer
 	}
     	return 1;
 	}
-

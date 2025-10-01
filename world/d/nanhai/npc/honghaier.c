@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// honghaier.c ºìº¢¶ù
+// honghaier.c çº¢å­©å„¿
 // By Dream Dec. 20, 1996
 
 inherit NPC;
@@ -7,13 +7,13 @@ inherit F_MASTER;
 
 void create()
 {
-	set_name("ºìº¢¶ù", ({ "honghaier" }));
-	set("title", "ÄÏº£¹ÛÒôÖ®Í½");   
+	set_name("çº¢å­©å„¿", ({ "honghaier" }));
+	set("title", "å—æµ·è§‚éŸ³ä¹‹å¾’");   
 	set("long", @LONG
-Ëû±¾ÊÇÅ£Ä§ÍõÖ®×Ó£¬ÉúÐÔºÃ¶·£»ºó±»ÄÏº£¹ÛÒôÊÕ·þ£¬Æ¢ÆøÈ´²»¼ûÓÐÊ²Ã´ºÃ×ª¡£
-ËûÊ¹µÃÒ»ÊÖµÄºÃÇ¹·¨£¬»ðÔÆÇ¹¸üÊÇÏÊÓÐµÐÊÖ£¬Ñ°³£ÈËÊÇ²»¸ÒÅöËûµÄ¡£
+ä»–æœ¬æ˜¯ç‰›é­”çŽ‹ä¹‹å­ï¼Œç”Ÿæ€§å¥½æ–—ï¼›åŽè¢«å—æµ·è§‚éŸ³æ”¶æœï¼Œè„¾æ°”å´ä¸è§æœ‰ä»€ä¹ˆå¥½è½¬ã€‚
+ä»–ä½¿å¾—ä¸€æ‰‹çš„å¥½æžªæ³•ï¼Œç«äº‘æžªæ›´æ˜¯é²œæœ‰æ•Œæ‰‹ï¼Œå¯»å¸¸äººæ˜¯ä¸æ•¢ç¢°ä»–çš„ã€‚
 LONG);
-	set("gender", "ÄÐÐÔ");
+	set("gender", "ç”·æ€§");
 	set("age", 15);
 	set("attitude", "heroism");
 	set("max_kee", 750);
@@ -55,7 +55,7 @@ LONG);
 		(: cast_spell, "jingang" :),
 	}) );
 
-	create_family("ÄÏº£ÆÕÍÓÉ½", 2, "µÜ×Ó");
+	create_family("å—æµ·æ™®é™€å±±", 2, "å¼Ÿå­");
 
 	setup();
 	carry_object("/obj/money/gold");
@@ -68,14 +68,12 @@ LONG);
 void attempt_apprentice(object ob)
 {
 	if (((int)ob->query_skill("buddhism", 1) < 50 )) {
-		command("say " + RANK_D->query_respect(ob) + "µÄ·ð·¨ÐÞÐÐ»¹²»¾«£¬»¹Ðè¶à¼ÓÅ¬Á¦²ÅÊÇ£¡");
+		command("say " + RANK_D->query_respect(ob) + "çš„ä½›æ³•ä¿®è¡Œè¿˜ä¸ç²¾ï¼Œè¿˜éœ€å¤šåŠ åŠªåŠ›æ‰æ˜¯ï¼");
 		return;
 	}
 	command("smile");
-	command("say ºÜºÃ£¬ÎÒ¾ÍÊÕÏÂÄã£¬Ï£ÍûÄã¶à¼ÓÅ¬Á¦£¬Ôç³ÉÕý¹û¡£\n");
+	command("say å¾ˆå¥½ï¼Œæˆ‘å°±æ”¶ä¸‹ä½ ï¼Œå¸Œæœ›ä½ å¤šåŠ åŠªåŠ›ï¼Œæ—©æˆæ­£æžœã€‚\n");
 
 	command("recruit " + ob->query("id") );
 	return;
 }
-
-ÿ

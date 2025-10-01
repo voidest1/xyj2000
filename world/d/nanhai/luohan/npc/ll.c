@@ -59,4 +59,3 @@ LONG);
 	carry_object("/d/nanhai/obj/sengpao")->wear();
 	carry_object("/d/nanhai/obj/budd_staff")->wield();
 }
-

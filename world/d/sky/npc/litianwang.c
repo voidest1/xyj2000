@@ -5,11 +5,11 @@ inherit NPC;
 void create()
 {
  
-        set_name("Àî¾¸", ({ "li jing", "jing" }) );
-        set("gender", "ÄÐÐÔ" );
-	set("long", "ÍÐËþÀîÌìÍõÄËÊÇÌì½çÔªË§£¬÷âÏÂÊ®ÍòÌì±øÌì½«£¬·¨Á¦ÎÞ±ß¡£\n");
+        set_name("æŽé–", ({ "li jing", "jing" }) );
+        set("gender", "ç”·æ€§" );
+	set("long", "æ‰˜å¡”æŽå¤©çŽ‹ä¹ƒæ˜¯å¤©ç•Œå…ƒå¸…ï¼Œéº¾ä¸‹åä¸‡å¤©å…µå¤©å°†ï¼Œæ³•åŠ›æ— è¾¹ã€‚\n");
         set("age",40);
-	set("title", "ÍÐËþÌìÍõ");
+	set("title", "æ‰˜å¡”å¤©çŽ‹");
         set("str", 40);
         set("int", 20);
 	set("con", 30);
@@ -55,5 +55,3 @@ void create()
 	carry_object("/d/sky/obj/zhanyaojian")->wield();
 }
  
-
-ÿ

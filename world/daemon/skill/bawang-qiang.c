@@ -123,4 +123,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("fighter") + "/bawang-qiang/" + func;
 }
-

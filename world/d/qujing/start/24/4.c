@@ -39,4 +39,3 @@ void create()
 	setup();
 	carry_object("/d/qujing/tianzhu/obj/huapao")->wear();
 }
-

@@ -147,4 +147,3 @@ void zishoulu_drop (object who)
   message_vision ("紫色缎带飘进$N的怀中。\n",who);
   ob->move(who);
 }
-

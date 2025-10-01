@@ -115,4 +115,3 @@ void die()
   }
   destruct(me);
 }
-

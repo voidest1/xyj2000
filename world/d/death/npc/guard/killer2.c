@@ -71,4 +71,3 @@ void leave()
 		this_object() );
 	destruct(this_object());
 }
-

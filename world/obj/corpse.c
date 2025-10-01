@@ -115,4 +115,3 @@ int do_mai(string arg)
 	destruct(this_object());
         return 1;
 }
-

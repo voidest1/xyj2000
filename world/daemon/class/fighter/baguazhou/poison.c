@@ -8,12 +8,12 @@ int scribe(object me,object ob)
 	object seal;
 
 	if( (int)me->query("mana") < 100)
-		return notify_fail("你的法力不足。\n");
+		return notify_fail("浣犵殑娉曞姏涓嶈冻銆俓n");
 	if( (int)me->query("sen") < 100)
-		return notify_fail("你的精神无法集中。\n");
+		return notify_fail("浣犵殑绮剧鏃犳硶闆嗕腑銆俓n");
 	
 	
-	message_vision("$N咬破手指，伸手在桃符纸上画了几下。\n", me);
+	message_vision("$N鍜牬鎵嬫寚锛屼几鎵嬪湪妗冪绾镐笂鐢讳簡鍑犱笅銆俓n", me);
 	
 	destruct(ob);
 
@@ -25,4 +25,3 @@ int scribe(object me,object ob)
 	me->start_busy(2);
 	return 1;
 }
-	

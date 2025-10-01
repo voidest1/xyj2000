@@ -21,4 +21,3 @@ varargs void init_staff(int damage, int flag)
 		set("verbs", ({ "bash", "crush", "slam", "pierce", "impale" }) );
 	}
 }
-

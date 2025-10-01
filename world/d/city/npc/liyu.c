@@ -4,11 +4,11 @@ string fan_me(object me);
 
 void create()
 {
-        set_name("ÀîÓñÄï", ({"li yuniang", "li"}));
+        set_name("æç‰å¨˜", ({"li yuniang", "li"}));
         set("age", 28);
-        set("gender", "Å®ĞÔ");
+        set("gender", "å¥³æ€§");
         set("long",
-"ÀîÓñÄïÊÇÔ¬Ììî¸µÄÀÏÆÅ£¬ÕıÔÚÏ´²Ë×ö·¹¡£\n");
+"æç‰å¨˜æ˜¯è¢å¤©ç½¡çš„è€å©†ï¼Œæ­£åœ¨æ´—èœåšé¥­ã€‚\n");
         set("attitude", "friendly");
 	set("per", 25);
         set("combat_exp", 4000);
@@ -19,8 +19,8 @@ void create()
 	set_skill("parry", 20);
         set_skill("dodge", 40);
         set("inquiry", ([
-"Ô¬Ììî¸": "ÆøËÀÈËÁË£¬ÕâÃ´ÍíÁËÒ²²»»Ø¼Ò³Ô·¹£¡Ò²ÕÒ²»µ½¸öÈË°Ñ·¹ËÍÈ¥£¡\n",
-"ËÍ·¹": (: fan_me :),
+"è¢å¤©ç½¡": "æ°”æ­»äººäº†ï¼Œè¿™ä¹ˆæ™šäº†ä¹Ÿä¸å›å®¶åƒé¥­ï¼ä¹Ÿæ‰¾ä¸åˆ°ä¸ªäººæŠŠé¥­é€å»ï¼\n",
+"é€é¥­": (: fan_me :),
 ]));
 
 	setup();
@@ -33,11 +33,10 @@ string fan_me(object me)
 	who=this_player();
 	
 	if(!present("fan he", me)){
-	return "ÕâÌìºÚÂ·Ô¶µÄ£¬ËãÁË°É£¬¶àĞ»ÁË£¡\n";
+	return "è¿™å¤©é»‘è·¯è¿œçš„ï¼Œç®—äº†å§ï¼Œå¤šè°¢äº†ï¼\n";
 	}
 	if(present("fan he", me)){
 	command("give fan to " + who->query("id"));
-	return "¶àĞ»ÁË£¬¿ìÈ¥°É£¡";
+	return "å¤šè°¢äº†ï¼Œå¿«å»å§ï¼";
 	}
 }
-ÿ

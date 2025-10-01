@@ -5,16 +5,16 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("±§ÇÙ",({"bao qin","fairy", "girl"}));
+       set_name("æŠ±ç´",({"bao qin","fairy", "girl"}));
        set("long",
-"Æä·Â·ðÙâÈôÇáÔÆÖ®±ÎÔÂ£¬Æ®Ò¡ÙâÈôÁ÷·çÖ®»ØÑ©¡£Ô¶¶øÍûÖ®£¬ð¨Èô
-Ì«ÑôÉý³¯Ï¼¡£ÆÈ¶ø²ìÖ®£¬×ÆÈôÜ½Çþ³öÂÌ²¨¡£\n");
-       set("title", "ÔÂ¹¬ËÅÅ®");
-       set("gender", "Å®ÐÔ");
+"å…¶ä»¿ä½›å…®è‹¥è½»äº‘ä¹‹è”½æœˆï¼Œé£˜æ‘‡å…®è‹¥æµé£Žä¹‹å›žé›ªã€‚è¿œè€Œæœ›ä¹‹ï¼ŒçšŽè‹¥
+å¤ªé˜³å‡æœéœžã€‚è¿«è€Œå¯Ÿä¹‹ï¼Œç¼è‹¥èŠ™æ¸ å‡ºç»¿æ³¢ã€‚\n");
+       set("title", "æœˆå®«ä¼ºå¥³");
+       set("gender", "å¥³æ€§");
        set("age", 18);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 800);
@@ -37,11 +37,8 @@ void create()
        set_skill("sword", 80);
        set_skill("spells", 80);
 
-create_family("ÔÂ¹¬", 3, "µÜ×Ó");
+create_family("æœˆå®«", 3, "å¼Ÿå­");
 setup();
 
         carry_object("/d/moon/obj/luoyi")->wear();
 }
-
-
-ÿ

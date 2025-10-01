@@ -21,4 +21,3 @@ varargs void init_rake(int damage, int flag)
 		set("verbs", ({ "rake", "strike", "bash" }) );
 	}
 }
-

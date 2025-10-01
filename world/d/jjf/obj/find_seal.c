@@ -142,4 +142,3 @@ int report(object who)
 	call_out("report", 30, who);
 	return 1;
 }
-		

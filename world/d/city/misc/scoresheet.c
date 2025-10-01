@@ -128,4 +128,3 @@ void update_loser_rank(object who) {
      next_score=query("scores/"+next);
   }   
 }
-

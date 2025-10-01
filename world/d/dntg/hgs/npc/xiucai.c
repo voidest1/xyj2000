@@ -25,5 +25,3 @@ int recognize_apprentice(object ob, object who)
 {
         return 1;
 }
-
-

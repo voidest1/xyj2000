@@ -220,5 +220,3 @@ int accept_object (object who, object ob)
   return accept_object1(who,ob);
  
 }
-
-

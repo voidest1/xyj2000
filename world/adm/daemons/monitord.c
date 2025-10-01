@@ -11,7 +11,7 @@ inherit F_DBASE;
 void create()
 {
 	seteuid(getuid());
-	set("name", "监控精灵");
+	set("name", "鐩戞帶绮剧伒");
 	set("id", "monitord");
 }
 

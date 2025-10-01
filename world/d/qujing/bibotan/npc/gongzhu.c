@@ -3,10 +3,10 @@ inherit NPC;
 string say_position();
 void create()
 {
-       set_name("ÍòÊ¥¹«Ö÷", ({"wansheng gongzhu","gongzhu","princess"}));
+       set_name("ä¸‡åœ£å…¬ä¸»", ({"wansheng gongzhu","gongzhu","princess"}));
 
-        set("long","ÍòÊ¥¹«Ö÷ÊÇÍòÊ¥ÁúÍõµÄÅ®¶ù£¬×î½üÕÐÁË¾ÅÍ·¹ÖÎªæâÂí¡£\n");
-       set("gender", "Å®ÐÔ");
+        set("long","ä¸‡åœ£å…¬ä¸»æ˜¯ä¸‡åœ£é¾™çŽ‹çš„å¥³å„¿ï¼Œæœ€è¿‘æ‹›äº†ä¹å¤´æ€ªä¸ºé©¸é©¬ã€‚\n");
+       set("gender", "å¥³æ€§");
        set("age", 20);
         set("int", 25+random(5));
        set("attitude", "peaceful");
@@ -15,7 +15,7 @@ void create()
 
 	set("eff_dx", -100000);
 	set("nkgain", 400);
-       set("rank_info/respect", "¹«Ö÷µîÏÂ");
+       set("rank_info/respect", "å…¬ä¸»æ®¿ä¸‹");
        set("class","dragon");
        set("per", 30);
        set("max_kee", 800);
@@ -40,9 +40,9 @@ void create()
         map_skill("force", "dragonforce");
         map_skill("dodge", "dragonstep");
 	set("inquiry",([
-		  "±¦±´": "Ê²Ã´±¦±´²»±¦±´µÄ£¡\n",
-		  "·ð±¦": "·ð±¦ÏÖÊÇÎÒÁú¹¬µÄÕòÌ¶Ö®±¦ÁË£¬Ë­Ò²ÄÃ²»µ½¡£\n",
-                  "·½Î»": (: say_position :),
+		  "å®è´": "ä»€ä¹ˆå®è´ä¸å®è´çš„ï¼\n",
+		  "ä½›å®": "ä½›å®çŽ°æ˜¯æˆ‘é¾™å®«çš„é•‡æ½­ä¹‹å®äº†ï¼Œè°ä¹Ÿæ‹¿ä¸åˆ°ã€‚\n",
+                  "æ–¹ä½": (: say_position :),
                   ]));
 
         setup();
@@ -53,7 +53,7 @@ void create()
 
 int recognize_apprentice(object who)
 {	who= this_player();
-	if( who->query("family/family_name")=="ÂÒÊ¯É½±Ì²¨Ì¶" 
+	if( who->query("family/family_name")=="ä¹±çŸ³å±±ç¢§æ³¢æ½­" 
 		&& who->query("can_learn_stealing") ) { 
         	return 1;
 	}
@@ -65,15 +65,15 @@ string say_position()
 	object who=this_player();
 
 	if( me->is_fighting() || who->is_fighting() )
-	return ("Ê²Ã´·½Î»²»·½Î»µÄ£¬ÎÒ²»¶®¡£\n");
+	return ("ä»€ä¹ˆæ–¹ä½ä¸æ–¹ä½çš„ï¼Œæˆ‘ä¸æ‡‚ã€‚\n");
 
 	if(member_array("tianboer xiao", who->parse_command_id_list())==-1) {
 		call_out("kill_him", 1, who);
-		return ("½ñÈÕ²»³ýÄã£¬ÖÕ³ÉÎÒÁú¹¬´ó»¼£¡\n");
+		return ("ä»Šæ—¥ä¸é™¤ä½ ï¼Œç»ˆæˆæˆ‘é¾™å®«å¤§æ‚£ï¼\n");
 	}
 
 	if( me->query("talked") )
-	return ("Ê²Ã´·½Î»²»·½Î»µÄ£¬ÎÒ²»ÊÇÒÑ¾­¸æËßÄã£¡\n");
+	return ("ä»€ä¹ˆæ–¹ä½ä¸æ–¹ä½çš„ï¼Œæˆ‘ä¸æ˜¯å·²ç»å‘Šè¯‰ä½ ï¼\n");
 	me->set("talked", 1);
 	call_out("tell_position", 1, who);
 	return "";
@@ -83,36 +83,36 @@ void tell_position(object who)
 	if( !who || environment(who) != environment()) return;
 	switch (random(8)) {
 		case 0:
-			command("whisper xiao ½ñÈÕ·½Î»ÔÚÇ¬Î»¡£");
-			who->set_temp("heard_position", "Ç¬");
+			command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨ä¹¾ä½ã€‚");
+			who->set_temp("heard_position", "ä¹¾");
 		break;
                 case 1:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚÀ¤Î»¡£");
-                        who->set_temp("heard_position", "À¤");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨å¤ä½ã€‚");
+                        who->set_temp("heard_position", "å¤");
                 break;
                 case 2:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚ¶ÒÎ»¡£");
-                        who->set_temp("heard_position", "¶Ò");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨å…‘ä½ã€‚");
+                        who->set_temp("heard_position", "å…‘");
                 break;
                 case 3:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚÀëÎ»¡£");
-                        who->set_temp("heard_position", "Àë");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨ç¦»ä½ã€‚");
+                        who->set_temp("heard_position", "ç¦»");
                 break;
                 case 4:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚÕðÎ»¡£");
-                        who->set_temp("heard_position", "Õð");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨éœ‡ä½ã€‚");
+                        who->set_temp("heard_position", "éœ‡");
                 break;
                 case 5:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚôÞÎ»¡£");
-                        who->set_temp("heard_position", "ôÞ");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨è‰®ä½ã€‚");
+                        who->set_temp("heard_position", "è‰®");
                 break;
                 case 6:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚÙãÎ»¡£");
-                        who->set_temp("heard_position", "Ùã");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨å·½ä½ã€‚");
+                        who->set_temp("heard_position", "å·½");
                 break;
                 case 7:
-                        command("whisper xiao ½ñÈÕ·½Î»ÔÚ¿²Î»¡£");
-                        who->set_temp("heard_position", "¿²");
+                        command("whisper xiao ä»Šæ—¥æ–¹ä½åœ¨åŽä½ã€‚");
+                        who->set_temp("heard_position", "åŽ");
                 break;
 	}
 }
@@ -124,4 +124,3 @@ void kill_him(object who)
 	husband->kill_ob(who);
 	::kill_ob(who);
 }
-ÿ

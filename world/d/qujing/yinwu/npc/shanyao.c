@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("É½Ñı", ({"shan yao","yao"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("å±±å¦–", ({"shan yao","yao"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
-  set("long","Ò»¸öĞ×Ïà±ÏÂ¶µÄÉ½Ñı¡£\n");
+  set("long","ä¸€ä¸ªå‡¶ç›¸æ¯•éœ²çš„å±±å¦–ã€‚\n");
   set("attitude", "aggressive");
   set("combat_exp", 500000);
   set("daoxing", 400000);
@@ -54,13 +54,13 @@ void die ()
     bone->move(where);
   }
 
-  message_vision ("\n$Nµ¹ÁËÏÂÈ¥£¬»¯ÎªÒ»¶ÑÊŞ¹Ç¡£\n",me);  
+  message_vision ("\n$Nå€’äº†ä¸‹å»ï¼ŒåŒ–ä¸ºä¸€å †å…½éª¨ã€‚\n",me);  
   if (! present("shan yao 3",where) &&
-      where->query("short")=="Â·¿Ú")
+      where->query("short")=="è·¯å£")
   {
     object ob = new ("/d/qujing/yinwu/npc/shanyao");
     ob->move(where);
-    message_vision ("\nÍ»È»£¬É½ÑÒÉÏÓÖ±ÄÏÂÀ´Ò»¸ößÚÑÀßÖ×ìµÄÉ½Ñı£¡\n",me);   
+    message_vision ("\nçªç„¶ï¼Œå±±å²©ä¸Šåˆè¹¦ä¸‹æ¥ä¸€ä¸ªå‘²ç‰™å’§å˜´çš„å±±å¦–ï¼\n",me);   
   }
   destruct (me);  
 }
@@ -69,4 +69,3 @@ void unconcious ()
 {
   die();
 }
-ÿ

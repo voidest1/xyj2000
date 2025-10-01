@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("¶Ï×ã¹í", ({"duanzu gui", "gui"}));
-       set("gender", "ÄĞĞÔ");
+       set_name("æ–­è¶³é¬¼", ({"duanzu gui", "gui"}));
+       set("gender", "ç”·æ€§");
        set("age", 60);
-	set("long", "Ò»¸ö¿´ÆğÀ´Ïàµ±¿ÉÁ¯µÄÀÏÍ·¡£Ë«×ãÈ´²»¼ûÁË£¬ÌÉÔÚµØÏÂ¡£\n");
+	set("long", "ä¸€ä¸ªçœ‹èµ·æ¥ç›¸å½“å¯æ€œçš„è€å¤´ã€‚åŒè¶³å´ä¸è§äº†ï¼Œèººåœ¨åœ°ä¸‹ã€‚\n");
        set("attitude", "friendly");
        set("shen_type", 1);
        set("per", 100);
@@ -33,7 +33,7 @@ setup();
 
 int accept_fight(object me)
 {
-        command("say ÎÒÒÑÂÙÂäµ½Õâ¸öµØ²½ÁË£¬¾Í¿ÉÁ¯¿ÉÁ¯ÎÒ°É£¡\n");
+        command("say æˆ‘å·²æ²¦è½åˆ°è¿™ä¸ªåœ°æ­¥äº†ï¼Œå°±å¯æ€œå¯æ€œæˆ‘å§ï¼\n");
         return 0;
 }
 void init()
@@ -49,8 +49,8 @@ void init()
 void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
-        say( "¶Ï×ã¹íËµµÀ£ºÕâÎ»" + RANK_D->query_respect(ob)
-                + "£¬¸øµãÇ®¿ÉÁ¯¿ÉÁ¯ÎÒ°É¡£\n");
+        say( "æ–­è¶³é¬¼è¯´é“ï¼šè¿™ä½" + RANK_D->query_respect(ob)
+                + "ï¼Œç»™ç‚¹é’±å¯æ€œå¯æ€œæˆ‘å§ã€‚\n");
 }
 
 int accept_object(object who, object ob)
@@ -59,9 +59,9 @@ int accept_object(object who, object ob)
         val = ob->value();
 
 	if ( val > 0 )
-		write("¶Ï×ã¹íĞ¦ÁËĞ¦£¬¶àĞ»¶àĞ»£¡\n");
+		write("æ–­è¶³é¬¼ç¬‘äº†ç¬‘ï¼Œå¤šè°¢å¤šè°¢ï¼\n");
 	if( val > 1000) {
-	command ( "whisper " + who->query("id") + " ÕâÑÂÏÂÓĞ¸öÀÏÍ·£¬Ò»Ììµ½ÍíµÄ¿Ş£¬·³ÈËµÄºÜ£®£®£®²»¹ı£®£®£®ÌıËµ£®£®£®\n");
+	command ( "whisper " + who->query("id") + " è¿™å´–ä¸‹æœ‰ä¸ªè€å¤´ï¼Œä¸€å¤©åˆ°æ™šçš„å“­ï¼Œçƒ¦äººçš„å¾ˆï¼ï¼ï¼ä¸è¿‡ï¼ï¼ï¼å¬è¯´ï¼ï¼ï¼\n");
 	}
 	call_out("destroy", 1, ob);
 	return 1;
@@ -72,5 +72,3 @@ void destroy(object ob)
         destruct(ob);
         return;
 }
-
-ÿ

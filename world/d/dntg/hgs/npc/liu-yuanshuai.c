@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("Á÷ÔªË§", ({"liu yuanshuai","liu","yuanshuai","hou","mahou"}));
-        set("gender", "ÄĞĞÔ" );
+        set_name("æµå…ƒå¸…", ({"liu yuanshuai","liu","yuanshuai","hou","mahou"}));
+        set("gender", "ç”·æ€§" );
         set("age", 45);
-        set("long", "Ò»Ö»ÉíÇ¿Ìå×³µÄ´óÂíºï¡£\n");
+        set("long", "ä¸€åªèº«å¼ºä½“å£®çš„å¤§é©¬çŒ´ã€‚\n");
         set("combat_exp", 90000);
   set("daoxing", 100000);
 
@@ -34,5 +34,3 @@ int accept_fight(object me)
 {
         return 0;
 }
-
-ÿ

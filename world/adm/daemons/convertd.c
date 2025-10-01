@@ -339,4 +339,3 @@ void create()
    set("name", "GB BIG5 converter");
    set("id", "GB BIG5 converter");
 }
-

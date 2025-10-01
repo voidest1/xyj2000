@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("¼À¹Ù", ({"ji guan", "guan"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("ç¥­å®˜", ({"ji guan", "guan"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("per", 25);
   set("attitude", "peaceful");
@@ -27,5 +27,3 @@ void create()
   carry_object("/d/obj/cloth/choupao")->wear();
   carry_object("/d/obj/weapon/blade/jidao")->wield();
 }
-
-ÿ

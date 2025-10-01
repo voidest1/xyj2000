@@ -41,5 +41,3 @@ void init()
 	 ob->move("/d/wiz/punish");
 	 }
 }
-
-

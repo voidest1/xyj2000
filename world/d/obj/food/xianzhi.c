@@ -41,4 +41,3 @@ void create()
   set("long", "一玉壶天上才有的仙汁真酒－－"+names[i]+"。\n");
   setup();
 }
-

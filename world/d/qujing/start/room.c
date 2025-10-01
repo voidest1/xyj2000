@@ -74,4 +74,3 @@ void broadcast(string msg) {
   object room=load_object("/u/bula/workroom");
   if (room) broadcast_room(room,msg);
 }
-

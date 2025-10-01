@@ -17,4 +17,3 @@ bid <amount> [gold|silver]：参与竞价。所出价钱将自动从玩家的
 deposit <amount> [gold]   ：支付预付金。
 set_price <number>        ：设置商品的销售价格。数值为从一到
           一百，其中一为一折，十相当于正常售价，以此类推。          
-

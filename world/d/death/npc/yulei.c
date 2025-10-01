@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÓôÀÝ", ({"yu lei", "lei"}));
-	set("title", "ìë»§");
-       set("gender", "ÄÐÐÔ");
-	set("long", "Ò»¸öºìÁ³Å­ÏàµÄÓÂÊ¿£¬Éí¸ß×ãÓÐÕÉÍâ£¬Õ¾ÔÚÄÇÀïÍþ·çÁÝÁÝ¡£\n");
+       set_name("éƒåž’", ({"yu lei", "lei"}));
+	set("title", "ç¥€æˆ·");
+       set("gender", "ç”·æ€§");
+	set("long", "ä¸€ä¸ªçº¢è„¸æ€’ç›¸çš„å‹‡å£«ï¼Œèº«é«˜è¶³æœ‰ä¸ˆå¤–ï¼Œç«™åœ¨é‚£é‡Œå¨é£Žå‡›å‡›ã€‚\n");
        set("age", 30);
        set("attitude", "peaceful");
 
@@ -48,5 +48,3 @@ setup();
         carry_object("/d/obj/armor/gujia")->wear();
         carry_object("/obj/npc/obj/golden_sword")->wield();
 }
-
-ÿ

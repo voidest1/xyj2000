@@ -14,24 +14,24 @@ int perform(object me, object target)
         ||      !target->is_character()
         ||      target->is_corpse()
         ||      target==me)
-                return notify_fail("ÄãÒª¶ÔË­Ê©Õ¹ÕâÒ»ÕĞ¡¸»ìÔªÒ»ÆÆ¡¹£¿\n");
+                return notify_fail("ä½ è¦å¯¹è°æ–½å±•è¿™ä¸€æ‹›ã€Œæ··å…ƒä¸€ç ´ã€ï¼Ÿ\n");
 
         if(!me->is_fighting())
-                return notify_fail("¡¸»ìÔªÒ»ÆÆ¡¹Ö»ÄÜÔÚÕ½¶·ÖĞÊ¹ÓÃ£¡\n");
+                return notify_fail("ã€Œæ··å…ƒä¸€ç ´ã€åªèƒ½åœ¨æˆ˜æ–—ä¸­ä½¿ç”¨ï¼\n");
 
         if((int)me->query("max_force") < 200 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¡\n");
+                return notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿï¼\n");
 
 	if((int)me->query("force") < 200 )
-		return notify_fail("ÄãµÄÄÚÁ¦²»×ã£¡\n");
+		return notify_fail("ä½ çš„å†…åŠ›ä¸è¶³ï¼\n");
 
         if((int)me->query("sen") < 200 )
-                return notify_fail("ÄãµÄ¾«Éñ²»×ã£¬Ã»·¨×ÓÊ©ÓÃÍâ¹¦£¡\n");
+                return notify_fail("ä½ çš„ç²¾ç¥ä¸è¶³ï¼Œæ²¡æ³•å­æ–½ç”¨å¤–åŠŸï¼\n");
 
         if((int)me->query_skill("huntian-hammer", 1) < 30)
-                return notify_fail("ÄãµÄ»ìÌì´¸¼¶±ğ»¹²»¹»£¬Ê¹ÓÃÕâÒ»ÕĞ»áÓĞÀ§ÄÑ£¡\n");
+                return notify_fail("ä½ çš„æ··å¤©é”¤çº§åˆ«è¿˜ä¸å¤Ÿï¼Œä½¿ç”¨è¿™ä¸€æ‹›ä¼šæœ‰å›°éš¾ï¼\n");
 
-message_vision(HIC"\n$NÔË×ã¾«Éñ£¬´óºÈÒ»Éù£¬¶Ô×Å$n·¢³öÁËÈ«Á¦Ò»»÷£¡\n"NOR, me, target);
+message_vision(HIC"\n$Nè¿è¶³ç²¾ç¥ï¼Œå¤§å–ä¸€å£°ï¼Œå¯¹ç€$nå‘å‡ºäº†å…¨åŠ›ä¸€å‡»ï¼\n"NOR, me, target);
 
 	mypot=(int)me->query_skill("hammer");
 	mypot=mypot*mypot*mypot/10 + (int)me->query("combat_exp");
@@ -48,7 +48,7 @@ message_vision(HIC"\n$NÔË×ã¾«Éñ£¬´óºÈÒ»Éù£¬¶Ô×Å$n·¢³öÁËÈ«Á¦Ò»»÷£¡\n"NOR, me, tar
 		i = sizeof(inv);
 
 		if ( i < 1 ) {
-			message_vision(HIR"$N¶ãÉÁ²»¼°£¬±»´ò¸öÕı×Å£¡\n"NOR, target);
+			message_vision(HIR"$Nèº²é—ªä¸åŠï¼Œè¢«æ‰“ä¸ªæ­£ç€ï¼\n"NOR, target);
 			target->receive_damage("kee",
 random((int)me->query("max_force")/50+(int)me->query("force_factor")));
 			COMBAT_D->report_status(target);
@@ -61,8 +61,8 @@ random((int)me->query("max_force")/50+(int)me->query("force_factor")));
 						obj->delete("equipped");
 						obj->set("value", 0);
 						obj->set("No_Wear", 1);
-						message_vision(HIY"$NÉíÉÏµÄ$n±»´òµÄ·ÛËé£¡\n"NOR, target,obj);
-						obj->set("name", "ÆÆËéµÄ"+obj->query("name"));
+						message_vision(HIY"$Nèº«ä¸Šçš„$nè¢«æ‰“çš„ç²‰ç¢ï¼\n"NOR, target,obj);
+						obj->set("name", "ç ´ç¢çš„"+obj->query("name"));
 						call_out("remove_broken_cloth",random(300)+60,obj);
 						obj->move(environment(target));
 					}
@@ -72,22 +72,22 @@ random((int)me->query("max_force")/50+(int)me->query("force_factor")));
 					obj=target->query_temp("weapon");
 					obj->unequip();
 					obj->set("value", 0);
-					message_vision(HIW "Ö»Ìı¼û¡¸Å¾¡¹µØÒ»Éù£¬$NÊÖÖĞµÄ" + obj->name()+ "ÒÑ¾­¶ÏÎªÁ½½Ø£¡\n" NOR, target);
-					obj->set("name", "¶ÏµôµÄ" + obj->query("name"));
+					message_vision(HIW "åªå¬è§ã€Œå•ªã€åœ°ä¸€å£°ï¼Œ$Næ‰‹ä¸­çš„" + obj->name()+ "å·²ç»æ–­ä¸ºä¸¤æˆªï¼\n" NOR, target);
+					obj->set("name", "æ–­æ‰çš„" + obj->query("name"));
 					obj->set("weapon_prop", 0);
 	                		obj->set("armor_prop", 0);
 					obj->move(environment(target));
 					call_out("remove_broken_cloth",random(300)+60,obj);
 				}
 			} else {
-				message_vision(HIR"$N¶ãÉÁ²»¼°£¬±»´ò¸öÕı×Å£¡\n"NOR, target);
+				message_vision(HIR"$Nèº²é—ªä¸åŠï¼Œè¢«æ‰“ä¸ªæ­£ç€ï¼\n"NOR, target);
                        		target->receive_damage("kee",
 random((int)me->query("max_force")/50+(int)me->query("force_factor")));
                        		COMBAT_D->report_status(target); 
 			}
 		}
 	} else {
-	message_vision(HIC"È´±»$N¶ã¿ªÁË£¡\n"NOR, target);
+	message_vision(HIC"å´è¢«$Nèº²å¼€äº†ï¼\n"NOR, target);
 	}
 
         me->add("force", -150);
@@ -108,7 +108,7 @@ void remove_broken_cloth(object obj)
 {
   if(obj && environment(obj)) {
     tell_object(environment(obj),
-      "Ò»ÕóÎ¢·ç´µ¹ı£¬"+obj->name()+"»¯ÎªÆ¬Æ¬³¾ÍÁ£¬ÏûÊ§²»¼ûÁË¡£\n");
+      "ä¸€é˜µå¾®é£å¹è¿‡ï¼Œ"+obj->name()+"åŒ–ä¸ºç‰‡ç‰‡å°˜åœŸï¼Œæ¶ˆå¤±ä¸è§äº†ã€‚\n");
     destruct(obj);
   }
 }

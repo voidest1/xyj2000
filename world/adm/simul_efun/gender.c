@@ -17,4 +17,3 @@ string gender_self(string sex)
 {
      return "你";
 }
-

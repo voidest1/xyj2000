@@ -120,4 +120,3 @@ int do_quit(string arg)
     tell_object(this_player(), "这里不能离开游戏。\n");
     return 1;
 }
-

@@ -25,4 +25,3 @@ void reporting (object who, string reason, int points, string name)
 //  if (snowcat && wizardp(snowcat))
 //    tell_object (snowcat, " ⊙ "+who->query("name")+str);
 }
-

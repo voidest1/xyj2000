@@ -18,4 +18,3 @@ void create()
 	}
 	set_amount(1);
 }
-

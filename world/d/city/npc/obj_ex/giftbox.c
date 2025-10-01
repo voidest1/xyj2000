@@ -76,4 +76,3 @@ me->add("potential",50000);
 	return 1;
 
 }
-

@@ -33,7 +33,7 @@ void incoming_request(mapping info)
 		svcs=(mapping)DNS_MASTER->query_svc();
 
 		msg=info["MSG"];
-		set("channel_id", "网路动作精灵");
+		set("channel_id", "缃戣矾鍔ㄤ綔绮剧伒");
                 CHANNEL_D->do_channel(this_object(), lower_case(info["CHANNEL"]),
                   replace_string(msg, "$N", info["CNAME"]), 1);
 

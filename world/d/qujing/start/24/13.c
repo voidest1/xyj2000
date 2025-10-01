@@ -45,4 +45,3 @@ void create()
         carry_object("/d/qujing/start/obj/xiangmochu")->wield();
 	carry_object("/d/obj/armor/jinjia")->wear();
 }
-

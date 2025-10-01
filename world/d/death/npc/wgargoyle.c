@@ -9,31 +9,31 @@ inherit F_MASTER;
 inherit F_CLEAN_UP;
 
 string *death_msg = ({
-        HIW "°×ÎÞ³£ËµµÀ£ºÎ¹£¡ÐÂÀ´µÄ£¬Äã½ÐÊ²Ã´Ãû×Ö£¿\n\n" NOR,
-        HIW "°×ÎÞ³£ÓÃÆæÒìµÄÑÛ¹â¶¢×ÅÄã£¬ºÃÏñÒª¿´´©ÄãµÄÒ»ÇÐËÆµÄ¡£\n\n" NOR,
-        HIW "°×ÎÞ³£¡¸ºß¡¹µÄÒ»Éù£¬´ÓÐäÖÐÌÍ³öÒ»±¾ÏñÕÊ²áµÄ¶«Î÷·­¿´×Å¡£\n\n" NOR,
-        HIW "°×ÎÞ³£ºÏÉÏ²á×Ó£¬ËµµÀ£ºß×£¿ÑôÊÙÎ´¾¡£¿ÔõÃ´¿ÉÄÜ£¿\n\n" NOR,
-        HIW "°×ÎÞ³£É¦ÁËÉ¦Í·£¬Ì¾µÀ£º°ÕÁË°ÕÁË£¬Äã×ß°É¡£\n\n"
-                "Ò»¹ÉÒõÀäµÄÅ¨ÎíÍ»È»³öÏÖ£¬ºÜ¿ìµØ°üÎ§ÁËÄã¡£\n\n" NOR,
+        HIW "ç™½æ— å¸¸è¯´é“ï¼šå–‚ï¼æ–°æ¥çš„ï¼Œä½ å«ä»€ä¹ˆåå­—ï¼Ÿ\n\n" NOR,
+        HIW "ç™½æ— å¸¸ç”¨å¥‡å¼‚çš„çœ¼å…‰ç›¯ç€ä½ ï¼Œå¥½åƒè¦çœ‹ç©¿ä½ çš„ä¸€åˆ‡ä¼¼çš„ã€‚\n\n" NOR,
+        HIW "ç™½æ— å¸¸ã€Œå“¼ã€çš„ä¸€å£°ï¼Œä»Žè¢–ä¸­æŽå‡ºä¸€æœ¬åƒå¸å†Œçš„ä¸œè¥¿ç¿»çœ‹ç€ã€‚\n\n" NOR,
+        HIW "ç™½æ— å¸¸åˆä¸Šå†Œå­ï¼Œè¯´é“ï¼šå’¦ï¼Ÿé˜³å¯¿æœªå°½ï¼Ÿæ€Žä¹ˆå¯èƒ½ï¼Ÿ\n\n" NOR,
+        HIW "ç™½æ— å¸¸æ”äº†æ”å¤´ï¼Œå¹é“ï¼šç½¢äº†ç½¢äº†ï¼Œä½ èµ°å§ã€‚\n\n"
+                "ä¸€è‚¡é˜´å†·çš„æµ“é›¾çªç„¶å‡ºçŽ°ï¼Œå¾ˆå¿«åœ°åŒ…å›´äº†ä½ ã€‚\n\n" NOR,
 });
 
 void create()
 {
-        set_name("°×ÎÞ³£", ({ "white gargoyle", "gargoyle" }));
+        set_name("ç™½æ— å¸¸", ({ "white gargoyle", "gargoyle" }));
         set("long",
-"°×ÎÞ³£Éì×Å³¤³¤µÄÉàÍ·µÉ×ÅÄã£¬ËÀ°×µÄÁ³ÉÏ¿´²»³öÈÎºÎÏ²Å­°§ÀÖ¡£\n");
+"ç™½æ— å¸¸ä¼¸ç€é•¿é•¿çš„èˆŒå¤´çžªç€ä½ ï¼Œæ­»ç™½çš„è„¸ä¸Šçœ‹ä¸å‡ºä»»ä½•å–œæ€’å“€ä¹ã€‚\n");
         set("attitude", "peaceful");
 set("chat_chance", 15);
 set("chat_msg", ({
-"°×ÎÞ³£·¢³öÒ»ÕóÏñÉëÒ÷µÄÉùÒô£¬µ±Ëû·¢ÏÖÄãÕý×¢ÊÓ×ÅËûµÄÊ±ºò£¬µÉÁËÄãÒ»ÑÛ¡£\n",
+"ç™½æ— å¸¸å‘å‡ºä¸€é˜µåƒå‘»åŸçš„å£°éŸ³ï¼Œå½“ä»–å‘çŽ°ä½ æ­£æ³¨è§†ç€ä»–çš„æ—¶å€™ï¼Œçžªäº†ä½ ä¸€çœ¼ã€‚\n",
 
-"°×ÎÞ³£°Ñ³¤³¤µÄÉàÍ·Éì³öÀ´£¬»º»ºµØÌòÁËÌò×Ô¼ºÓÖ°×ÓÖ³¤µÄÊÖÖ¸¡£\n"
+"ç™½æ— å¸¸æŠŠé•¿é•¿çš„èˆŒå¤´ä¼¸å‡ºæ¥ï¼Œç¼“ç¼“åœ°èˆ”äº†èˆ”è‡ªå·±åˆç™½åˆé•¿çš„æ‰‹æŒ‡ã€‚\n"
         }) );
 	set("per", 100);
 	set("str", 20);
 	set("int", 20);
         set("age", 217);
-	set("title", "Ó­»êÊ¹Õß");
+	set("title", "è¿Žé­‚ä½¿è€…");
         set("combat_exp", 100000);
   set("daoxing", 100000);
 
@@ -60,7 +60,7 @@ set("chat_msg", ({
 	map_skill("dodge", "ghost-steps");
 	map_skill("force", "tonsillit");
 	map_skill("unarmed", "jinghun-zhang");
-create_family("ÑÖÂÞµØ¸®", 3, "ÄãºÃ");
+create_family("é˜Žç½—åœ°åºœ", 3, "ä½ å¥½");
 
         setup();
 	carry_object("/d/obj/cloth/bai")->wear();
@@ -80,8 +80,8 @@ void death_stage(object ob, int stage)
 {
         if( !ob || !present(ob) ) return;
         if( !ob->is_ghost()) {
-                if( visible(ob)&&(string)ob->query("family/family_name")!="ÑÖÂÞµØ¸®" ){
-                        command("say Î¹£¡ÑôÈËÀ´Òõ¼ä×öÊ²Ã´£¿");
+                if( visible(ob)&&(string)ob->query("family/family_name")!="é˜Žç½—åœ°åºœ" ){
+                        command("say å–‚ï¼é˜³äººæ¥é˜´é—´åšä»€ä¹ˆï¼Ÿ");
 			command("kick " + ob->query("id"));
                         return;
                 }
@@ -97,8 +97,8 @@ void death_stage(object ob, int stage)
 		ob->set("gin", (int)ob->query("max_gin"));
         ob->move(REVIVE_ROOM);
         message("vision",
-                "ÄãºöÈ»·¢ÏÖÇ°Ãæ¶àÁËÒ»¸öÈËÓ°£¬²»¹ýÄÇÈËÓ°ÓÖºÃÏñÒÑ¾­ÔÚÄÇÀï\n"
-                "ºÜ¾ÃÁË£¬Ö»ÊÇÄãÒ»Ö±Ã»·¢¾õ¡£\n", environment(ob), ob);
+                "ä½ å¿½ç„¶å‘çŽ°å‰é¢å¤šäº†ä¸€ä¸ªäººå½±ï¼Œä¸è¿‡é‚£äººå½±åˆå¥½åƒå·²ç»åœ¨é‚£é‡Œ\n"
+                "å¾ˆä¹…äº†ï¼Œåªæ˜¯ä½ ä¸€ç›´æ²¡å‘è§‰ã€‚\n", environment(ob), ob);
 }
 
 
@@ -110,8 +110,8 @@ void attempt_apprentice()
 	me->reincarnate();
 	me->set("gin", (int)me->query("max_gin"));
 	}
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(me) +
-"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(me) +
+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
        command("recruit " + me->query("id") );
         return;
 }
@@ -120,5 +120,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
 }
-
-ÿ

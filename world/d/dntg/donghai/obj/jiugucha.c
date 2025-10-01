@@ -26,5 +26,3 @@ void create()
         init_fork(30);
         setup();
 }
-
-

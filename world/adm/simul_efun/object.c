@@ -102,4 +102,3 @@ object load_object( mixed str )
 	
     return efun::load_object(str);
 }
-

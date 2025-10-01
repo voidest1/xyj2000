@@ -37,5 +37,3 @@ int main(object me, string arg)
 	tell_object (me,chinese_number(total));
 	return 1;
 }
-
-

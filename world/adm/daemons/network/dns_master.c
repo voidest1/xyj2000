@@ -1008,4 +1008,3 @@ int check_mud(string ip, string port, string name)
     //log_file("band"," "+i+"\n");
     return i;
 }
-

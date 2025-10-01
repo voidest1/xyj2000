@@ -27,5 +27,3 @@ set("objects", ([
         setup();
         replace_program(ROOM);
 }
-
-

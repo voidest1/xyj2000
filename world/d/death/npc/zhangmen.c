@@ -774,5 +774,3 @@ void create_identity (mixed master, mixed where)
         }
         init_identity (this_object(), master_ob, where_ob);
 }
-
-

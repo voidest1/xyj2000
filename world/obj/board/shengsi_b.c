@@ -11,4 +11,3 @@ set("long", "天下芸芸众生的生死都在这里记录。\n");
         setup();
         replace_program(BULLETIN_BOARD);
 }
-

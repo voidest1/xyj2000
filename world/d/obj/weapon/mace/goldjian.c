@@ -26,4 +26,3 @@ void create()
   init_mace(95);
   setup();
 }
-

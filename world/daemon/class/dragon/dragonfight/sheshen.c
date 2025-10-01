@@ -122,4 +122,3 @@ int calculate_damage(object me, object target, int base_damage, int damage_bonus
 
 	return damage;
 }
-

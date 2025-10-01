@@ -11,4 +11,3 @@ driver via:
 will call flag("debug") in the master object during initialization.
 
  Tim Hollebeek  Beek@ZorkMUD, Lima Bean, IdeaExchange, and elsewhere
-

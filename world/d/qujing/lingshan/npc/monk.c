@@ -6,11 +6,11 @@ inherit NPC;
 void create()
 {
   if (random(2))
-    set_name("°¢ÂÞ", ({ "a luo", "a", "luo" }));
+    set_name("é˜¿ç½—", ({ "a luo", "a", "luo" }));
   else
-    set_name("½ÒÚÐ", ({ "jie di", "jie", "di" }));
-  set("title", "ÁéÉ½");
-  set("gender", "ÄÐÐÔ");
+    set_name("æ­è°›", ({ "jie di", "jie", "di" }));
+  set("title", "çµå±±");
+  set("gender", "ç”·æ€§");
   set("age", 100);
   set("attitude", "peaceful");
   set("str",40);
@@ -52,5 +52,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/jia_sha")->wear();
 }
-
-ÿ

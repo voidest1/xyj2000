@@ -25,4 +25,3 @@ int do_join(string arg)
 	write("\n恭喜，从今天起您已经成为一名武者！\n\n");
 	return 1;
 }
-

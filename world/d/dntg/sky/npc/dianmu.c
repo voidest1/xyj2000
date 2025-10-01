@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-set_name("µçÄ¸",({"dian mu","dian shen","mu"}));
-set("gender", "Å®ÐÔ");
+set_name("ç”µæ¯",({"dian mu","dian shen","mu"}));
+set("gender", "å¥³æ€§");
 set("age", 45);
-set("long", "    \nÒ»¶Ë×¯ÐãÑÅµÄÌìÉñ£¬ÔÚÌì¹¬ÖÐ¸ºÔðÉÁµç¡£\n");
+set("long", "    \nä¸€ç«¯åº„ç§€é›…çš„å¤©ç¥žï¼Œåœ¨å¤©å®«ä¸­è´Ÿè´£é—ªç”µã€‚\n");
 
 set("attitude", "heroism");
 set("class", "xian");
@@ -41,9 +41,9 @@ set_skill("parry", 140);
 map_skill("dodge", "jindouyun");
 map_skill("unarmed", "puti-zhi");
 set("inquiry", ([
-  "ÉÁµç"   : "Ã»µ½Ê±ºò¡£",
-  "name"   : "ÎÒÊÇµçÉñ¡£",
-  "here"   : "ÕâÀï¾ÍÊÇÌì¹¬¡£",
+  "é—ªç”µ"   : "æ²¡åˆ°æ—¶å€™ã€‚",
+  "name"   : "æˆ‘æ˜¯ç”µç¥žã€‚",
+  "here"   : "è¿™é‡Œå°±æ˜¯å¤©å®«ã€‚",
 ]));
 
 
@@ -54,4 +54,3 @@ carry_object("/obj/loginload/shoes.c")->wear();
 carry_object("/d/dntg/sky/obj/dianlingfu");
 
 }
-ÿÿ

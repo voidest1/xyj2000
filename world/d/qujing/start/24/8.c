@@ -39,4 +39,3 @@ void create()
 	carry_object("/d/sea/obj/longpao")->wear();
 	carry_object("/d/qujing/tianzhu/obj/longguan")->wear();
 }
-

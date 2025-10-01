@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-       set_name("Àð×Ü±ø", ({"li zongbing", "li", "zongbing"}));
-	set("long","¶«º£Áú¹¬Àð×Ü±ø¡£\n");
-       set("gender", "ÄÐÐÔ");
+       set_name("é²¤æ€»å…µ", ({"li zongbing", "li", "zongbing"}));
+	set("long","ä¸œæµ·é¾™å®«é²¤æ€»å…µã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 40);
 	set("per", 15);
 	set("str", 25);
@@ -34,5 +34,3 @@ void create()
         carry_object("/d/obj/armor/tiejia")->wear();
 	carry_object("/d/obj/weapon/hammer/tongchui")->wield();
 }
-
-ÿ

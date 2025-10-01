@@ -70,4 +70,3 @@ int do_read(string arg)
   write("\n");
   return 1;
 }
-

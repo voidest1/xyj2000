@@ -14,6 +14,4 @@ msg_mout <anything>       设定当使用 goto 离开时, 原来房间里的人�
 msg_clone <anything>      设定当 clone NPC 或 OBJ 时所显示的讯息。
 
 msg_dest <anything>       设定当 dest NPC 或 OBJ 时所显示的讯息。但如果该 OBJ
-                          是存在於自己身上时则不会有讯息。
-
-
+                          是存在於自己身上时则不会有讯息�

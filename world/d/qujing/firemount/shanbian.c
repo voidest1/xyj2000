@@ -40,5 +40,3 @@ int do_all(string arg)
     else set("exits/westup", __DIR__"huoyan");
     return 0;
 }
-
-

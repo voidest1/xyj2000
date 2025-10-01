@@ -21,4 +21,3 @@ varargs void init_axe(int damage, int flag)
 		set("verbs", ({ "chop", "slice", "hack" }) );
 	}
 }
-

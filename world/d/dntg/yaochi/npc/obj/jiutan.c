@@ -39,6 +39,3 @@ int effect() {
 
   return 1;
 }
-
-
-

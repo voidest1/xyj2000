@@ -92,4 +92,3 @@ object *query_team()
 {
 	return team;
 }
-

@@ -5,12 +5,12 @@ string receive_mail();
 
 void create()
 {
-        set_name("╢Внджь", ({"dai wenzhong", "dai"}));
+        set_name("Ф┬╢Ф√┤И┤█", ({"dai wenzhong", "dai"}));
         set("age", 42);
-        set("gender", "дппт");
+        set("gender", "Г■╥Ф─╖");
         set("long",
-"ФДу╬юО╣д╣╠╪рё╛Ё╓╣дт╡т╡ежеж╣д║ё\n");
-	set("title", "ФДу╬╣╠╪р");
+"И╘©Г╚≥И┤▄Г └Е╫⌠Е╝╤О╪▄И∙©Г └Е°├Е°├Х┐√Х┐√Г └Ц─┌\n");
+	set("title", "И╘©Г╚≥Е╫⌠Е╝╤");
         set("attitude", "peaceful");
 
         set("combat_exp", 40000);
@@ -24,11 +24,11 @@ void create()
         set_skill("dodge", 60);
         set_skill("parry", 40);
         set("inquiry", ([
-                "╥╒пе" : (: send_mail :),
-                "йупе" : (: receive_mail :),
-                "пе╪Ч" : (: receive_mail :),
-                "пе" : (: receive_mail :),
-                "mail" : "дЗ╫╡╣дйгмБ╧З╩╟╟иё©нрлЩ╡╩╤╝р╝~~~~~~~~",
+                "Е▐▒Д©║" : (: send_mail :),
+                "Ф■╤Д©║" : (: receive_mail :),
+                "Д©║Д╩╤" : (: receive_mail :),
+                "Д©║" : (: receive_mail :),
+                "mail" : "Ф┌╗Х╝╡Г └Ф≤╞Е╓√Е⌡╫Х╞²Е░╖О╪÷Ф┬▒Е░╛Д╦█Ф┤┌Х─╤~~~~~~~~",
         ]) );
 
 	setup();
@@ -39,15 +39,15 @@ string send_mail()
         object mbox;
 
         if( this_player()->query_temp("mbox_ob") )
-                return "дЦ╣дпеоД╩╧тз╟иё©сцпеоД╬м©ирт╪дпеак║ё\n";
+                return "Д╫═Г └Д©║Г╝╠Х©≤Е°╗Е░╖О╪÷Г■╗Д©║Г╝╠Е╟╠Е▐╞Д╩╔Е╞└Д©║Д╨├Ц─┌\n";
         if( !environment()
         ||      base_name(environment()) != query("startroom") )
-                return "╣хр╩об╣╫ФДу╬ю╢урнр╟и║ё\n";
+                return "Г╜┴Д╦─Д╦▀Е┬╟И╘©Г╚≥Ф²╔Ф┴╬Ф┬▒Е░╖Ц─┌\n";
         seteuid(getuid());
         mbox = new(MAILBOX_OB);
         mbox->move(this_player());
-        return "е╤...
-р╙╪дпейгбПё©уБйгдЦ╣дпеоДё╛╪дпе╣д╥╫╥╗пеоДиоспк╣цВ║ё\n";
+        return "Е⌠╕...
+Х╕│Е╞└Д©║Ф≤╞Е░≈О╪÷Х©≥Ф≤╞Д╫═Г └Д©║Г╝╠О╪▄Е╞└Д©║Г └Ф√╧ФЁ∙Д©║Г╝╠Д╦┼Ф°┴Х╞╢Ф≤▌Ц─┌\n";
 }
 
 string receive_mail()
@@ -55,15 +55,13 @@ string receive_mail()
         object mbox;
 
         if( this_player()->query_temp("mbox_ob") )
-                return "дЦ╣дпеоД╩╧тз╟иё©дЦкЫсп╣дпе╤╪тзюОцФ║ё\n";
+                return "Д╫═Г └Д©║Г╝╠Х©≤Е°╗Е░╖О╪÷Д╫═Ф┴─Ф°┴Г └Д©║И┐╫Е°╗И┤▄И²╒Ц─┌\n";
         if( !environment()
         ||      base_name(environment()) != query("startroom") )
-                return "╣хр╩об╣╫╢Сй╞м╥ю╢урнр╟и║ё\n";
+                return "Г╜┴Д╦─Д╦▀Е┬╟Е╓╖Г÷ЁЕ╓╢Ф²╔Ф┴╬Ф┬▒Е░╖Ц─┌\n";
         seteuid(getuid());
         mbox = new(MAILBOX_OB);
         mbox->move(this_player());
         return
-"╨цё╛╢Щнрурур....спакё╛дЦ╣дпеоДтзуБё╛бЩбЩ©╢╟иё╛╡╩╢Р╫адЦак║ё\n";
+"Е╔╫О╪▄Е╬┘Ф┬▒Ф┴╬Ф┴╬....Ф°┴Д╨├О╪▄Д╫═Г └Д©║Г╝╠Е°╗Х©≥О╪▄Ф┘╒Ф┘╒Г°▀Е░╖О╪▄Д╦█Ф┴⌠Ф░┘Д╫═Д╨├Ц─┌\n";
 }
-
-Ъ

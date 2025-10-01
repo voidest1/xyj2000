@@ -21,4 +21,3 @@ void create()
         carry_object("/d/gao/obj/ao")->wear();
 
 }
-

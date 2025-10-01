@@ -136,5 +136,3 @@ void go_back(object who)
   who2->move(where);
   tell_object(where,"偏将们揉着眼睛走回兵器库。\n");
 }
-
-

@@ -361,5 +361,3 @@ int do_block(string arg)
        
     return 1;
 }
-
-

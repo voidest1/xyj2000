@@ -62,5 +62,3 @@ void greeting(object ob)
 	if( !ob || !present(ob, environment(this_object())) ) return;
 	say( "ж╙©ми╝ххгИ╣ьк╣╣юё╨уБн╩" + RANK_D->query_respect(ob) + "ё╛╩╤с╜ю╢╣╫до╨ёфумси╫ё║\n");
 }
-
-Ъ

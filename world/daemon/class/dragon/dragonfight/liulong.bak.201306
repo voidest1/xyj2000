@@ -24,29 +24,29 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("²»ÔÚÕ½¶·ÖĞ£¬»ØÊ²Ã´»Ø£¿\n");
+		return notify_fail("ä¸åœ¨æˆ˜æ–—ä¸­ï¼Œå›ä»€ä¹ˆå›ï¼Ÿ\n");
 
 	mydf=(int)me->query_skill("dragonfight",1);
 	if(mydf<150) 
-		return notify_fail("ÄãµÄĞŞÎª²»¹»Éî£¬»¹²»ÄÜÁìÁùÁú»ØÈÕµÄ¾«Ëè¡£\n");
+		return notify_fail("ä½ çš„ä¿®ä¸ºä¸å¤Ÿæ·±ï¼Œè¿˜ä¸èƒ½é¢†å…­é¾™å›æ—¥çš„ç²¾é«“ã€‚\n");
 	mydf=(int)me->query_skill("dragonforce",1);
 	if(mydf<150) 
-		return notify_fail("ÄãµÄĞŞÎª²»¹»Éî£¬»¹²»ÄÜÁìÁùÁú»ØÈÕµÄ¾«Ëè¡£\n");
+		return notify_fail("ä½ çš„ä¿®ä¸ºä¸å¤Ÿæ·±ï¼Œè¿˜ä¸èƒ½é¢†å…­é¾™å›æ—¥çš„ç²¾é«“ã€‚\n");
 	if( me->query("sea_liulong") != 1 )
-		return notify_fail("Äã»¹²»»áÁùÁú»ØÈÕ¡£\n");
+		return notify_fail("ä½ è¿˜ä¸ä¼šå…­é¾™å›æ—¥ã€‚\n");
 
-	if(me->query("family/family_name") != "¶«º£Áú¹¬")
-                return notify_fail("ÁùÁú»ØÈÕÊÇ¶«º£Áú¹¬²»´«Ö®ÃÜ£¡\n");
+	if(me->query("family/family_name") != "ä¸œæµ·é¾™å®«")
+                return notify_fail("å…­é¾™å›æ—¥æ˜¯ä¸œæµ·é¾™å®«ä¸ä¼ ä¹‹å¯†ï¼\n");
 	
 	if((int)me->query("force")<500) return
-	    notify_fail("ÄãµÄÄÚÁ¦²»¹»ÁË¡£\n");
+	    notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿäº†ã€‚\n");
 
-	if (me->query_temp("liulong_pfm_busy")) return notify_fail("¾øÕĞÓÃµÄÌ«¶àÌ«ÀÄ¾Í²»ÁéÁË¡£\n");
+	if (me->query_temp("liulong_pfm_busy")) return notify_fail("ç»æ‹›ç”¨çš„å¤ªå¤šå¤ªæ»¥å°±ä¸çµäº†ã€‚\n");
 
 //	me->delete("env/brief_message");
 //	target->delete("env/brief_message");
-        message_vision(HIY"\n$NÔË×ã¾«Éñ£¬Ò»ÉùÁúÒ÷£¬Á¬ĞøÏò$n¹¥³öÁËÁùÕĞ£¡\n"NOR,me,target);
-        message_vision(HIY"\n$nÖ»¾õµÃĞÄÖĞÒ»²ü£¬Ò»¸öôóÇÓ£¬µøÔÚµØÏÂ£¡\n"NOR,me,target);
+        message_vision(HIY"\n$Nè¿è¶³ç²¾ç¥ï¼Œä¸€å£°é¾™åŸï¼Œè¿ç»­å‘$næ”»å‡ºäº†å…­æ‹›ï¼\n"NOR,me,target);
+        message_vision(HIY"\n$nåªè§‰å¾—å¿ƒä¸­ä¸€é¢¤ï¼Œä¸€ä¸ªè¶”æ€¯ï¼Œè·Œåœ¨åœ°ä¸‹ï¼\n"NOR,me,target);
 
 	target->set_temp("no_dodge", 1);
         call_out("no_dodge_end", 6+random(3), target);
@@ -74,7 +74,7 @@ int perform(object me, object target)
 
         me->receive_damage("sen", 100);
         me->add("force", -100);
-           tell_object(me, HIY"\nÄãµÄÁùÁú»ØÈÕÒ»Ê½ÁùÕĞ£¬Ò»ÆøºÇ³É¡£\n\n"NOR);
+           tell_object(me, HIY"\nä½ çš„å…­é¾™å›æ—¥ä¸€å¼å…­æ‹›ï¼Œä¸€æ°”å‘µæˆã€‚\n\n"NOR);
 
         if( !target->is_fighting(me) ) {
                 if( living(target) ) {
@@ -130,6 +130,6 @@ void no_dodge_end(object target)
 {
 	if (!target) return;
 	target->delete_temp("no_dodge");
-        message_vision(HIY"\n$NÅÄÅÄÉíµÄÍÁ£¬ÅÀÁËÆğÀ´£¡\n"NOR,target);
+        message_vision(HIY"\n$Næ‹æ‹èº«çš„åœŸï¼Œçˆ¬äº†èµ·æ¥ï¼\n"NOR,target);
 	return;
 }

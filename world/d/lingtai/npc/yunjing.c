@@ -5,17 +5,17 @@ inherit NPC;
 inherit F_MASTER;
 void create()
 {
-        set_name("ÔÆ¾²", ({"yun jing", "yun"}));
-        set("gender", "ÄÐÐÔ" );
+        set_name("äº‘é™", ({"yun jing", "yun"}));
+        set("gender", "ç”·æ€§" );
         set("age", 33);
-        set("long", "·½´çÉ½ÈýÐÇ¶´µÚÈý´úµÜ×ÓÖÐµÄ½Ü³öÈËÎï£®\n");
+        set("long", "æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´žç¬¬ä¸‰ä»£å¼Ÿå­ä¸­çš„æ°å‡ºäººç‰©ï¼Ž\n");
         set("combat_exp", 70000);
 	set("daoxing", 100000);
 
         set("attitude", "peaceful");
 	set("int", 25);
 	set("class", "taoist");
-        create_family("·½´çÉ½ÈýÐÇ¶´", 3, "µÜ×Ó");
+        create_family("æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´ž", 3, "å¼Ÿå­");
 	
         set("eff_dx", 30000);
         set("nkgain", 200);
@@ -60,8 +60,8 @@ void create()
 }
 void attempt_apprentice(object ob, object me)
 {
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) +
-"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) +
+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
         command("recruit " + ob->query("id") );
 	return;
 }		
@@ -71,5 +71,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "taoist");
 }
-
-ÿ

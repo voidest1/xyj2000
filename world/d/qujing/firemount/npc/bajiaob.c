@@ -8,15 +8,15 @@ void create()
 {
   string dir;
 
-  set_name("°Å½¶¹Ö", ({"bajiao guai", "bainian guai", "guai"}));
-  set("title", "°ÙÄê");
-  set("gender", "ÄÐÐÔ");
+  set_name("èŠ­è•‰æ€ª", ({"bajiao guai", "bainian guai", "guai"}));
+  set("title", "ç™¾å¹´");
+  set("gender", "ç”·æ€§");
   set("age", 120+random(60));
   set("con", 20);
   set("cor", 20);
   set("int", 20);
   set("per", 20);
-  set("long", "°ÙÄê°Å½¶¹Ö¡£\n");
+  set("long", "ç™¾å¹´èŠ­è•‰æ€ªã€‚\n");
   set("attitude", "peaceful");
   set("combat_exp", 300000);
   set("daoxing", 100000);
@@ -62,7 +62,7 @@ int allow_split()
   object who = this_player();
 
   me->set_temp("split",1);
-  message_vision ("$NÒ»ã¶£¬Ëæ¼´ÉñÃØµØ³¯$nµãÍ·Ò»Ð¦¡£\n",me,who);
+  message_vision ("$Nä¸€æ„£ï¼Œéšå³ç¥žç§˜åœ°æœ$nç‚¹å¤´ä¸€ç¬‘ã€‚\n",me,who);
   return 1;
 }
 
@@ -73,7 +73,7 @@ void init()
   ::init();
   /*
   set("inquiry", ([
-       "·ÖÉíÊõ": (: allow_split :),
+       "åˆ†èº«æœ¯": (: allow_split :),
       ]));
       */
 }
@@ -108,7 +108,7 @@ int accept_fight (object me)
     //ob3 = new(str);
     //ob3->setup();
     //ob3->move(environment(ob));
-    message_vision ("$N´óºÈÒ»Éù£¬´ÓÉíºóÍ»È»ÉÁ³öÁ½¸ö$N£¡\n",ob);
+    message_vision ("$Nå¤§å–ä¸€å£°ï¼Œä»Žèº«åŽçªç„¶é—ªå‡ºä¸¤ä¸ª$Nï¼\n",ob);
     ob->set("kee",ob->query("max_kee")/10*12);
     ob->set("triplicate",1);
     ob1->set("triplicate",1);
@@ -125,5 +125,3 @@ void unconcious()
 {
   die();
 }
-
-ÿ

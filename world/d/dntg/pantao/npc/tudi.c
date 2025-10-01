@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÍÁµØ", ({"tu di","tudi"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("åœŸåœ°", ({"tu di","tudi"}));
+  set("gender", "ç”·æ€§");
   set("age", 100);
-  set("long","×¨¹Üó´ÌÒÔ°µÄÀÏÍÁµØÒ¯Ò¯£¬´ÈÃ¼ÉÆÄ¿£¬Ò»ÍÅºÍÆø¡£\n");
+  set("long","ä¸“ç®¡èŸ æ¡ƒå›­çš„è€åœŸåœ°çˆ·çˆ·ï¼Œæ…ˆçœ‰å–„ç›®ï¼Œä¸€å›¢å’Œæ°”ã€‚\n");
   set("attitude", "friendly");
   
     set("combat_exp", 50000);
@@ -37,7 +37,7 @@ void init()
 
   ::init();
   set("inquiry", ([
-       "here": "ÕâÀïÊÇÍõÄ¸ÄïÄïµÄó´ÌÒÔ°¡£\n",
+       "here": "è¿™é‡Œæ˜¯çŽ‹æ¯å¨˜å¨˜çš„èŸ æ¡ƒå›­ã€‚\n",
       ]));
 
   if (interactive(ob = this_player()) && !is_fighting())  {
@@ -54,16 +54,15 @@ void greeting(object ob)
   if (ob->query_temp("dntg/pantao")=="doing") {
 // need query_temp(dntg/pantao) and query(dntg/pantao)==doing
     command("bow "+ob->query("id"));
-    command("say »¶Ó­"+ob->query("name")+RANK_D->query_respect(ob)+
-             "Ö´ÕÆó´ÌÒÔ°£¬ÀÏÐàÕâÏáÓÐÀñÁË¡£");  
+    command("say æ¬¢è¿Ž"+ob->query("name")+RANK_D->query_respect(ob)+
+             "æ‰§æŽŒèŸ æ¡ƒå›­ï¼Œè€æœ½è¿™åŽ¢æœ‰ç¤¼äº†ã€‚");  
     return;
   }
   if (ob->query("dntg/pantao")=="done") {
      command("fear "+ob->query("id"));
-     command("say ÄãÕâ"+RANK_D->query_rude(ob)+ 
-           "ÉÏ´ÎÈÇ³öÙ¼´óÊÇ·Ç£¬º¦ÀÏÐàÒ²Âä¸öÀÏ´ó²»ÊÇ£¬Õâ´ÎÔõµÄ»¹¸ÒÇ°À´£¿");
+     command("say ä½ è¿™"+RANK_D->query_rude(ob)+ 
+           "ä¸Šæ¬¡æƒ¹å‡ºåŒå¤§æ˜¯éžï¼Œå®³è€æœ½ä¹Ÿè½ä¸ªè€å¤§ä¸æ˜¯ï¼Œè¿™æ¬¡æ€Žçš„è¿˜æ•¢å‰æ¥ï¼Ÿ");
      return;
   } 
   command("hi "+ob->query("id"));
 }
-ÿÿ

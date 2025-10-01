@@ -4,19 +4,19 @@
 inherit NPC;
 
 string *names = ({
-  "»¢½«",
-  "ÐÜÊ¦",
-  "±ªÍ·",
-  "±ëË§",
-  "ÑòÍ·¹Ö",
-  "Ì¡Ïó¹Ö",
-  "Â¹Í·¹Ö",
-  "²ÔÀÇ¹Ö",
-  "¹Ôâ¯¹Ö",
-  "½ÆÍÃ¹Ö",
-  "³¤Éß¹Ö",
-  "áôáô¹Ö",
-  "òþÉß¹Ö",
+  "è™Žå°†",
+  "ç†Šå¸ˆ",
+  "è±¹å¤´",
+  "å½ªå¸…",
+  "ç¾Šå¤´æ€ª",
+  "ç­è±¡æ€ª",
+  "é¹¿å¤´æ€ª",
+  "è‹ç‹¼æ€ª",
+  "ä¹–çæ€ª",
+  "ç‹¡å…”æ€ª",
+  "é•¿è›‡æ€ª",
+  "ç‹’ç‹’æ€ª",
+  "èŸ’è›‡æ€ª",
 });
 
 void create()
@@ -24,7 +24,7 @@ void create()
   int i = random(9)+1;
   string str;
   set_name(names[random(sizeof(names))], ({"yao guai", "yao", "guai"}));
-  set("gender", "ÄÐÐÔ");
+  set("gender", "ç”·æ€§");
   set("age", 30*i);
   set("combat_exp", 30000*i);
   set("per", 10);
@@ -59,4 +59,3 @@ void create()
   str[strlen(str)-1] = '0'+random(3);
   carry_object(str)->wield();
 }
-ÿ

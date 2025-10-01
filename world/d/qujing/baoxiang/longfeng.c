@@ -39,4 +39,3 @@ int valid_leave (object who, string dir)
     return notify_fail("阁门大使向你摇了摇手。\n");;
   return 1;
 }
-

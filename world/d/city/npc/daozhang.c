@@ -25,11 +25,11 @@ mapping *poisons = ({
 
 void create()
 {
-        set_name("ÎíÔ¨µÀ³¤", ({"wuyuan daozhang", "wuyuan", "daozhang","taoist"}));
+        set_name("é›¾æ¸Šé“é•¿", ({"wuyuan daozhang", "wuyuan", "daozhang","taoist"}));
         set("age", 62);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("long",
-"ÇåĞé¹ÛµÄÖ÷³Ö£¬¿´ÆğÀ´ÏÉ·çµÀ¹Ç£®\n");
+"æ¸…è™šè§‚çš„ä¸»æŒï¼Œçœ‹èµ·æ¥ä»™é£é“éª¨ï¼\n");
         set("attitude", "peaceful");
 	set("class", "taoist");
         set("combat_exp", 180000);
@@ -65,15 +65,15 @@ void create()
         }) );
 
 	set("inquiry", ([
-		"name": "Æ¶µÀÎíÔ¨£¬±¾¹ÛÖ÷³Ö¾ÍÊÇÆ¶µÀ¡£",
-		"here": "Æ¶µÀ´ÖÍ¨Ò½Êõ£¬ÒªÖÎ²¡(cure)Ò²ĞíÆ¶µÀ¿ÉÒÔÊÔÊÔ¿´¡£",
+		"name": "è´«é“é›¾æ¸Šï¼Œæœ¬è§‚ä¸»æŒå°±æ˜¯è´«é“ã€‚",
+		"here": "è´«é“ç²—é€šåŒ»æœ¯ï¼Œè¦æ²»ç—…(cure)ä¹Ÿè®¸è´«é“å¯ä»¥è¯•è¯•çœ‹ã€‚",
 		"cure": (: test_player :),
-		"ÖÎ²¡": (: test_player :),
+		"æ²»ç—…": (: test_player :),
 	]));
 
 	set("chat_chance", 20);
 	set("chat_msg", ({
-"ÎíÔ¨ÕæÈËÌ¾µ½£ºÄÑÄÑÄÑ£¬µÀ×îĞş£¬Äª°Ñ½ğµ¤×÷µÈÏĞ£®\n",
+"é›¾æ¸ŠçœŸäººå¹åˆ°ï¼šéš¾éš¾éš¾ï¼Œé“æœ€ç„ï¼Œè«æŠŠé‡‘ä¸¹ä½œç­‰é—²ï¼\n",
 }) );
         setup();
         carry_object("/d/obj/weapon/whip/fuchen")->wield();
@@ -91,36 +91,36 @@ string test_player()
 	int amount, duration, total;
 
 	total=0;
-	message_vision(CYN "$nÉì³öÓÒÊÖ£¬´îÔÚ$NÊÖÍóÉÏ¡£\n"NOR, me, npc);
-	message_vision(CYN "¹ıÁËÆ¬¿Ì£¬$n»º»ºËµµÀ£º\n" NOR, me, npc);
+	message_vision(CYN "$nä¼¸å‡ºå³æ‰‹ï¼Œæ­åœ¨$Næ‰‹è…•ä¸Šã€‚\n"NOR, me, npc);
+	message_vision(CYN "è¿‡äº†ç‰‡åˆ»ï¼Œ$nç¼“ç¼“è¯´é“ï¼š\n" NOR, me, npc);
 	for(i=0;i<sizeof(poisons);i++) {
 		poison=poisons[i];
 		duration=me->query_condition(poison["name"]);
 		if(duration>0) {
 			amount=poison["base_amount"]*duration;
-			message_vision(CYN ""+poison["name"]+"£º"+chinese_number(amount)+"Á½°×Òø,\n" NOR, me, npc);
+			message_vision(CYN ""+poison["name"]+"ï¼š"+chinese_number(amount)+"ä¸¤ç™½é“¶,\n" NOR, me, npc);
 			total+=amount;
 		}
 	}
 	if(me->query("eff_kee")<me->query("max_kee")) {
 		duration=me->query("max_kee")-me->query("eff_kee");
 		amount=duration;
-		message_vision(CYN "ÆøÑª£º"+chinese_number(amount)+"Á½°×Òø,\n" NOR, me, npc);
+		message_vision(CYN "æ°”è¡€ï¼š"+chinese_number(amount)+"ä¸¤ç™½é“¶,\n" NOR, me, npc);
 		total+=amount;
 	}
 	if(me->query("eff_sen")<me->query("max_sen")) {
                 duration=me->query("max_sen")-me->query("eff_sen");
                 amount=duration;
-                message_vision(CYN "¾«Éñ£º"+chinese_number(amount)+"Á½°×Òø,\n" NOR, me, npc);
+                message_vision(CYN "ç²¾ç¥ï¼š"+chinese_number(amount)+"ä¸¤ç™½é“¶,\n" NOR, me, npc);
 		total+=amount;
         }
 	me->set_temp("cure_payment", total);
 	if(total>0) {
-		message_vision(CYN "Ò»¹²ĞèÒª"+chinese_number(total)+"Á½°×Òø¡£\n" NOR, me, npc);
-		return "½»Ò½Ò©·Ñ°É£¡";
+		message_vision(CYN "ä¸€å…±éœ€è¦"+chinese_number(total)+"ä¸¤ç™½é“¶ã€‚\n" NOR, me, npc);
+		return "äº¤åŒ»è¯è´¹å§ï¼";
 	}
-	message_vision(CYN ""+RANK_D->query_respect(me)+"ÓÖÃ»²¡£¬ÔõÃ´ÖÎ£¿\n" NOR, me, npc);
-	return "Ò»±ßÍæÈ¥£¡";
+	message_vision(CYN ""+RANK_D->query_respect(me)+"åˆæ²¡ç—…ï¼Œæ€ä¹ˆæ²»ï¼Ÿ\n" NOR, me, npc);
+	return "ä¸€è¾¹ç©å»ï¼";
 }
 
 int accept_object(object who, object ob)
@@ -132,17 +132,17 @@ int accept_object(object who, object ob)
 	int duration,i;
 
 	if(total==0) {
-		command("say "+RANK_D->query_respect(who)+"ÕâÊÇ¸ÉÊ²Ã´£¿");
+		command("say "+RANK_D->query_respect(who)+"è¿™æ˜¯å¹²ä»€ä¹ˆï¼Ÿ");
 		return 0;
 	}
 	if(total*100>value) {
-		command("say Ò½Ò©·ÑÒ»¹²ĞèÒª"+chinese_number(total)+"Á½°×Òø¡£");
+		command("say åŒ»è¯è´¹ä¸€å…±éœ€è¦"+chinese_number(total)+"ä¸¤ç™½é“¶ã€‚");
 		return 0;
 	}
-	message_vision(CYN "$NÌÍ³ö¼¸Ö§½ğÕë£¬´ÌÈë$nÈËÖĞ£¬Ó¡ÌÃ£¬×óÊÖÀÍ¹¬£¬ÓÒÏ¥×ãÈıÀïµÈÑ¨µÀ¡£\n" NOR, me, who);
-	message_vision(CYN "Æ¬¿ÌÖ®ºó£¬$N½«½ğÕëÒ»Ò»°ÎÏÂ£¬\n$nÖ»¾õµÃÉ¤×ÓÑÛ·¢ÏÌ£¬ÕÅ×ìÍÂ³öÒ»¿ÚÎå²Ê°ßìµµÄÏÊÑª¡£\n" NOR, me, who);
+	message_vision(CYN "$Næå‡ºå‡ æ”¯é‡‘é’ˆï¼Œåˆºå…¥$näººä¸­ï¼Œå°å ‚ï¼Œå·¦æ‰‹åŠ³å®«ï¼Œå³è†è¶³ä¸‰é‡Œç­‰ç©´é“ã€‚\n" NOR, me, who);
+	message_vision(CYN "ç‰‡åˆ»ä¹‹åï¼Œ$Nå°†é‡‘é’ˆä¸€ä¸€æ‹”ä¸‹ï¼Œ\n$nåªè§‰å¾—å—“å­çœ¼å‘å’¸ï¼Œå¼ å˜´åå‡ºä¸€å£äº”å½©æ–‘æ–“çš„é²œè¡€ã€‚\n" NOR, me, who);
 	command("pat "+who->query("id"));
-	command("say ²î²»¶àÁË¡£");
+	command("say å·®ä¸å¤šäº†ã€‚");
 	for(i=0;i<sizeof(poisons);i++) {
                 poison=poisons[i];
                 duration=who->query_condition(poison["name"]);
@@ -154,5 +154,3 @@ int accept_object(object who, object ob)
 	who->set("eff_sen", who->query("max_sen"));
 	return 1;
 }
-
-ÿ

@@ -71,4 +71,3 @@ void close_down()
         delete("exits/enter");
 
 }
-

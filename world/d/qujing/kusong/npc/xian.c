@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÏÆºæÐË", ({"xianhong xing","xing"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("æŽ€çƒ˜å…´", ({"xianhong xing","xing"}));
+  set("gender", "ç”·æ€§");
   set("age", 10);
-  set("title", "»ðÔÆ¶´½¡½«");
-  set("long","Ò»¸öÔôÃ¼ÊóÑÛµÄÐ¡Ñý¾«¡£\n");
+  set("title", "ç«äº‘æ´žå¥å°†");
+  set("long","ä¸€ä¸ªè´¼çœ‰é¼ çœ¼çš„å°å¦–ç²¾ã€‚\n");
   set("combat_exp", 100000+random(3000));
   set("daoxing", 100000);
 
@@ -25,5 +25,3 @@ void create()
 
   carry_object("/d/qujing/kusong/obj/tongjia")->wear();
 }
-
-ÿ

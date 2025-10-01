@@ -7,8 +7,8 @@ int give_fajian();
 
 void create()
 {
-  set_name("°×÷×ÍÁµØ", ({"tu di", "tu", "di"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("ç™½é«¯åœŸåœ°", ({"tu di", "tu", "di"}));
+  set("gender", "ç”·æ€§");
   set("age", 100);
   set("attitude", "friendly");
   set("combat_exp", 250000);
@@ -28,12 +28,12 @@ void create()
   setup();
 
   set("inquiry", ([
-       "here": "Õâ¶ùÊÇÒşÎíÉ½£¬ÒàÓĞÁ¬»·¶´ÔÚ´Ë¡£\n",
-       "ÒşÎíÉ½": "ÒşÎíÉ½ÄËÓĞÁ¬»·¶´Ö®È¥´¦£¬¶à¼ÓĞ¡ĞÄÎªÊÇ¡£\n",
-       "Á¬»·¶´": "Á¬»·¶´ÔÚÒşÎíÉ½ÏÂÁ¬»·ÏàÏÎ£¬ÓĞÁ½¸öÈë¿ÚÒ²¡£\n",
-       "name": "ÒşÎíÉ½ÍÁµØÒ²£¬ÀÏ·ò±ğÎŞËûÎï£¬Ö»ÓĞÒ»±¦¡£\n",
-       "±¦": "ÀÏ·òÓĞÒ»·¨¼ò£¬ÄËÒ»½õÒ»ìøÊ¦ËùÔù¡£\n",
-       "·¨¼ò": (: give_fajian :),
+       "here": "è¿™å„¿æ˜¯éšé›¾å±±ï¼Œäº¦æœ‰è¿ç¯æ´åœ¨æ­¤ã€‚\n",
+       "éšé›¾å±±": "éšé›¾å±±ä¹ƒæœ‰è¿ç¯æ´ä¹‹å»å¤„ï¼Œå¤šåŠ å°å¿ƒä¸ºæ˜¯ã€‚\n",
+       "è¿ç¯æ´": "è¿ç¯æ´åœ¨éšé›¾å±±ä¸‹è¿ç¯ç›¸è¡”ï¼Œæœ‰ä¸¤ä¸ªå…¥å£ä¹Ÿã€‚\n",
+       "name": "éšé›¾å±±åœŸåœ°ä¹Ÿï¼Œè€å¤«åˆ«æ— ä»–ç‰©ï¼Œåªæœ‰ä¸€å®ã€‚\n",
+       "å®": "è€å¤«æœ‰ä¸€æ³•ç®€ï¼Œä¹ƒä¸€é”¦ä¸€ç¦…å¸ˆæ‰€èµ ã€‚\n",
+       "æ³•ç®€": (: give_fajian :),
        "fajian": (: give_fajian :),
       ]));
   carry_object("/d/obj/cloth/choupao")->wear();
@@ -77,12 +77,12 @@ void call_out_announce_success (object who)
 
 void say_hi (object who)
 {
-  message_vision ("\n°×÷×ÍÁµØÏò$N±§ÁËÒ»±§È­¡£\n",who);
+  message_vision ("\nç™½é«¯åœŸåœ°å‘$NæŠ±äº†ä¸€æŠ±æ‹³ã€‚\n",who);
 }
 
 void destruct_me (object me)
 {
-  message_vision ("$NÍùµØÏÂÒ»×ê±ãÏûÊ§ÁË¡£\n",me);
+  message_vision ("$Nå¾€åœ°ä¸‹ä¸€é’»ä¾¿æ¶ˆå¤±äº†ã€‚\n",me);
   destruct (me);
 }
 
@@ -102,11 +102,10 @@ void announce_success (object who)
   who->add("obstacle/number",1);
   who->set("obstacle/yinwu","done");
   //who->add("daoxing",i+3000);
-  //command("chat "+who->query("name")+"ÒşÎíÉ½Ê©·¨£¬Á¬»·¶´ÃğÑıĞ°£¡");
-  //command("chat "+who->query("name")+"Ë³Àû´³¹ıÎ÷ĞĞÓÖÒ»¹Ø£¡");
-  //tell_object (who,"ÄãÓ®µÃÁË"+chinese_number(3)+"Äê"+
-  //             chinese_number(i/4)+"Ìì"+
-  //             chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀĞĞ£¡\n");
+  //command("chat "+who->query("name")+"éšé›¾å±±æ–½æ³•ï¼Œè¿ç¯æ´ç­å¦–é‚ªï¼");
+  //command("chat "+who->query("name")+"é¡ºåˆ©é—¯è¿‡è¥¿è¡Œåˆä¸€å…³ï¼");
+  //tell_object (who,"ä½ èµ¢å¾—äº†"+chinese_number(3)+"å¹´"+
+  //             chinese_number(i/4)+"å¤©"+
+  //             chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
   who->save();
 }
-ÿ

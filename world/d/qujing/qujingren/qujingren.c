@@ -184,4 +184,3 @@ void die()
   me->move(__DIR__"shengsilunlui");
   call_out("random_move_xuanzang", 1800);  
 }
-

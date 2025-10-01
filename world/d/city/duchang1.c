@@ -299,5 +299,3 @@ int do_get(string arg)
      }
    return 0;
 }
-
-

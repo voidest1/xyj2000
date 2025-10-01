@@ -99,5 +99,3 @@ void remove_rain_busy(object me)
 		if (me->query_temp("rain_busy"))
         me->delete_temp("rain_busy");
 }         
-
-

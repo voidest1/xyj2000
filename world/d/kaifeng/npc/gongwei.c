@@ -24,6 +24,3 @@ void create()
   carry_object("/d/obj/weapon/whip/tielian")->wield();
   carry_object("/d/obj/cloth/bingfu")->wear();
 }
-
-
-

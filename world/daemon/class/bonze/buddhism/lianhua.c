@@ -47,4 +47,3 @@ void remove_effect(object me, int amount)
         tell_object(me, "你身后的白莲渐渐隐去了。\n");
 	return;
 }
-

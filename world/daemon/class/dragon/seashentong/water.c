@@ -61,4 +61,3 @@ HIR"\n结果$n躲避不及，被水柱激个正着！\n"NOR,
 	me->start_busy(3+random(2));
 	return 3+random(5);
 }
-

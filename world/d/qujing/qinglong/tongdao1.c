@@ -35,4 +35,3 @@ int valid_leave (object who, string dir)
     return notify_fail ("守门牛精一晃两只大牛角抵住你：想溜到哪儿去？\n");
   return ::valid_leave(who, dir);
 }
-

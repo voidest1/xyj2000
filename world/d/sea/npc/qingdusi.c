@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-       set_name("öë¶¼Ë¾", ({"qing dusi", "qing", "dusi"}));
-        set("long","¶«º£Áú¹¬öë¶¼Ë¾¡£\n");
-       set("gender", "ÄÐÐÔ");
+       set_name("é²­éƒ½å¸", ({"qing dusi", "qing", "dusi"}));
+        set("long","ä¸œæµ·é¾™å®«é²­éƒ½å¸ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 40);
         set("per", 15);
         set("str", 25);
@@ -32,5 +32,3 @@ void create()
         setup();
         carry_object("/d/obj/cloth/magua")->wear();
 }
-
-ÿ

@@ -44,4 +44,3 @@ void set_my_killer_list(object killer, object victim)
 	     list=list[1..<1]; // remove the first element.
 	 victim->set_temp("my_killer_list", list);
 }
-

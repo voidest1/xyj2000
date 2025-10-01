@@ -1,16 +1,16 @@
 inherit NPC;
 void create()
 {
-        set_name("ÁøÊ÷¾«", ({"liushu jing", "jing"}));
-        set("long", "Ò»¸öÄ£Ñù¼«ÏóÊ÷×®×ÓµÄÑý¹Ö£¬ÊÖÀïÌá×ÅÒ»½ØÊ÷¸É¡£\n");
+        set_name("æŸ³æ ‘ç²¾", ({"liushu jing", "jing"}));
+        set("long", "ä¸€ä¸ªæ¨¡æ ·æžè±¡æ ‘æ¡©å­çš„å¦–æ€ªï¼Œæ‰‹é‡Œæç€ä¸€æˆªæ ‘å¹²ã€‚\n");
         set("age", 30);
         set("attitude", "aggressive");
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "yaomo");
         set("str", 20);
         set("int", 20);
         set("per", 10);
-	set("looking", "»ëÉíÉÏÏÂ¾ÍÊÇÄ¾Í·£¬ÄÇÀïÓÐÊ²Ã´ÈÝÃ²¡£");
+	set("looking", "æµ‘èº«ä¸Šä¸‹å°±æ˜¯æœ¨å¤´ï¼Œé‚£é‡Œæœ‰ä»€ä¹ˆå®¹è²Œã€‚");
         set("con", 30);
         set("max_kee",600);
         set("max_sen", 600);
@@ -54,11 +54,9 @@ void leave()
 	
 	this_object()->add("time", 1);
 	if( (int)this_object()->query("time") >= 15 ) {
-        message("vision",name() + "Ò»¸ö×ÝÉí£¬Ìø»Øµ½Ê÷ÉÏ¡£\n", environment(),this_object() );
+        message("vision",name() + "ä¸€ä¸ªçºµèº«ï¼Œè·³å›žåˆ°æ ‘ä¸Šã€‚\n", environment(),this_object() );
         destruct(this_object());
 
 	}
 	return;
 }
-
-ÿ

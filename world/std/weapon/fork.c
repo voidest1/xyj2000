@@ -21,4 +21,3 @@ varargs void init_fork(int damage, int flag)
 		set("verbs", ({ "thrust", "pierce" }) );
 	}
 }
-

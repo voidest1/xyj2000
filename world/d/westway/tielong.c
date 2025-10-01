@@ -73,7 +73,3 @@ int valid_leave(object me, string dir)
         }   
 	
 }
-
-
-
-

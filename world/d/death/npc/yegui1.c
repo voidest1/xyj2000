@@ -24,5 +24,3 @@ setup();
 //        carry_object("/d/lingtai/obj/shoe")->wear();
         carry_object("/d/gao/obj/blade")->wield();
 }
-
-

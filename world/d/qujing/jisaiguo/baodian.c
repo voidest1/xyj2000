@@ -65,4 +65,3 @@ void close_down()
 要紧的地方。
 LONG);
 }
-

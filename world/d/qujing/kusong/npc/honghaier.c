@@ -6,10 +6,10 @@ int rank_me();
 
 void create()
 {
-       set_name("ºìº¢¶ù", ({"honghai er","er"}));
-	set("title", "Ê¥Ó¤´óÍõ");
-	set("long", "Å£Ä§ÍõÓëÂŞÉ²Å®µÄ¶ù×Ó£¬ÓÚ»ğÑæÉ½ÖĞĞŞÁ¶ÁËÒ»ÉíºÃ±¾Áì¡£\n");
-       set("gender", "ÄĞĞÔ");
+       set_name("çº¢å­©å„¿", ({"honghai er","er"}));
+	set("title", "åœ£å©´å¤§ç‹");
+	set("long", "ç‰›é­”ç‹ä¸ç½—åˆ¹å¥³çš„å„¿å­ï¼Œäºç«ç„°å±±ä¸­ä¿®ç‚¼äº†ä¸€èº«å¥½æœ¬é¢†ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 16);
 	set("per", 25);
 	set("str", 25);
@@ -61,10 +61,10 @@ void create()
 	}));
 
 
-	create_family("»ğÔÆ¶´", 2, "À¶");
+	create_family("ç«äº‘æ´", 2, "è“");
 
         set("inquiry", ([
-                "Ö°Î»": (: rank_me :),
+                "èŒä½": (: rank_me :),
 ]) );
 
 
@@ -76,7 +76,7 @@ void create()
 void attempt_apprentice(object ob)
 {       ob=this_player();
 
-	if( (string)ob->query("family/family_name") == "»ğÔÆ¶´") {
+	if( (string)ob->query("family/family_name") == "ç«äº‘æ´") {
 
 		if( (int)ob->query("max_mana") > 200 
 		&& (int)ob->query("max_force") > 200
@@ -93,7 +93,7 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) ) {
                 ob->set("class", "yaomo");
-		ob->set("title", "¿İËÉ½§»ğÔÆ¶´Ğ¡Ñı");
+		ob->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å°å¦–");
 		ob->set("kusong/Teach_Hong", 1);
 	}
 }
@@ -105,33 +105,32 @@ int rank_me()
 	int exp;
 	exp=(int)me->query("combat_exp");
 
-	if( (string)me->query("family/family_name") == "»ğÔÆ¶´"
+	if( (string)me->query("family/family_name") == "ç«äº‘æ´"
 	&& (string)me->query("family/master_id") == "honghai er"){
 
 		
 		if( exp <= 10000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´Ñ²É½Ğ¡Ñı");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å·¡å±±å°å¦–");
 		} else if(exp <= 50000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´ÏÈ·æ");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å…ˆé”‹");
 		} else if(exp < 100000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´½¡½«");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å¥å°†");
 		} else if(exp <= 250000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´Ñ²É½´ó½«");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å·¡å±±å¤§å°†");
 		} else if(exp <= 500000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´ÑıÍõ");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´å¦–ç‹");
 		} else if(exp <= 1000000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´Ä§Íõ");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´é­”ç‹");
 		} else if(exp <= 1500000 ){
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´³¤ÀÏ");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´é•¿è€");
 		} else {
-			me->set("title", "¿İËÉ½§»ğÔÆ¶´¶´Ö÷");
+			me->set("title", "æ¯æ¾æ¶§ç«äº‘æ´æ´ä¸»");
 		}
 
-		tell_object(me, "ºìº¢¶ù¶ÔÄãËµ£ºÄã¿ÉÒÔ×ö"+me->query("title")+"¡£\n");
+		tell_object(me, "çº¢å­©å„¿å¯¹ä½ è¯´ï¼šä½ å¯ä»¥åš"+me->query("title")+"ã€‚\n");
 		tell_room(environment(me),
-"ºìº¢¶ù¶Ô"+me->query("name")+"Ëµ£ºÄã¿ÉÒÔ×ö"+me->query("title")+"¡£\n", ({me, me}));
+"çº¢å­©å„¿å¯¹"+me->query("name")+"è¯´ï¼šä½ å¯ä»¥åš"+me->query("title")+"ã€‚\n", ({me, me}));
 
 	}
 	return 1;
 }
-ÿ

@@ -227,4 +227,3 @@ int ji (string target)
   hulu->ji_ob(victim);
   return 1;
 }
-

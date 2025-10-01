@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÇàÃæ¹í", ({"qingmian gui", "gui"}));
-       set("gender", "ÄÐÐÔ");
+       set_name("é’é¢é¬¼", ({"qingmian gui", "gui"}));
+       set("gender", "ç”·æ€§");
        set("age", 30);
-	set("long", "Ò»¸öÇàÃæ¹í£¬ÃæÄ¿ÕøÄü¿ÉÅÂ£®\n");
+	set("long", "ä¸€ä¸ªé’é¢é¬¼ï¼Œé¢ç›®ç‹°ç‹žå¯æ€•ï¼Ž\n");
        set("attitude", "heroism");
        set("shen_type", 1);
        set("per", 100);
@@ -29,5 +29,3 @@ setup();
 
         carry_object("/d/obj/weapon/whip/tielian")->wield();
 }
-
-ÿ

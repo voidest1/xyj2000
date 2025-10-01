@@ -140,13 +140,3 @@ mapping query_action(object me, object weapon)
 	}
 	//return action[random(sizeof(action))];
 }
-
-
-
-
-
-
-
-
-
-

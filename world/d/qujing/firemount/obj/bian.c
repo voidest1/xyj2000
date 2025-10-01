@@ -19,4 +19,3 @@ void create()
         init_whip(5);
         setup();
 }
-

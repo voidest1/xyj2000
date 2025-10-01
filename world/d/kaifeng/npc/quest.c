@@ -333,4 +333,3 @@ string *player_target(string *quest, object who)
 */
 
 #endif
-

@@ -78,4 +78,3 @@ void announce(object me, object who)
   who->save();
   command("follow none");
 }
-

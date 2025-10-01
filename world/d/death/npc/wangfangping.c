@@ -9,16 +9,16 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("Íõ·½Æ½", ({ "wang fangping", "wang", "fangping" }));
+        set_name("çŽ‹æ–¹å¹³", ({ "wang fangping", "wang", "fangping" }));
 
-set("long","Íõ·½Æ½±¾ÊÇÉ½ÖÐµÀÊ¿£¬ºóÔÚ·á¶¼É½Í¬Òõ³¤ÉúÍ¬ÐÞÁ¶³ÉÏÉ£¬Óù·â(¡¸¹íÍõ¡¹¡£\n");
+set("long","çŽ‹æ–¹å¹³æœ¬æ˜¯å±±ä¸­é“å£«ï¼ŒåŽåœ¨ä¸°éƒ½å±±åŒé˜´é•¿ç”ŸåŒä¿®ç‚¼æˆä»™ï¼Œå¾¡å°(ã€Œé¬¼çŽ‹ã€ã€‚\n");
         set("attitude", "peaceful");
 	set("per", 30);
 	set("str", 25);
 	set("int", 25);
         set("age", 30);
-	set("title", "ÂÖ»ØË¾Ö÷");
-	set("nickname", "¹íÍõ");
+	set("title", "è½®å›žå¸ä¸»");
+	set("nickname", "é¬¼çŽ‹");
         set("combat_exp", 850000);
   set("daoxing", 600000);
 
@@ -66,7 +66,7 @@ set("long","Íõ·½Æ½±¾ÊÇÉ½ÖÐµÀÊ¿£¬ºóÔÚ·á¶¼É½Í¬Òõ³¤ÉúÍ¬ÐÞÁ¶³ÉÏÉ£¬Óù·â(¡¸¹íÍõ¡¹¡£\n"
 	set_temp("apply/armor", 50);
 
 
-create_family("ÑÖÂÞµØ¸®", 2, "ÄãºÃ");
+create_family("é˜Žç½—åœ°åºœ", 2, "ä½ å¥½");
 
         setup();
 	carry_object("/d/obj/weapon/stick/wuchangbang")->wield();
@@ -80,8 +80,8 @@ void attempt_apprentice()
 	me = this_player();
         command("grin");
 
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(me) +
-"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(me) +
+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
        command("recruit " + me->query("id") );
 	me->set("class", "youling");
         return;
@@ -91,8 +91,7 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
-		ob->set("title", "µØ¸®ÕÐ»êË¾Òõ±ø");
+		ob->set("title", "åœ°åºœæ‹›é­‚å¸é˜´å…µ");
 }
 
 */
-ÿ

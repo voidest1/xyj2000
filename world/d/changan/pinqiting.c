@@ -643,4 +643,3 @@ int do_play(string arg)
 	 else message_vision("现在轮到白方$N走棋。\n",op);
 	return 1;
 }
-

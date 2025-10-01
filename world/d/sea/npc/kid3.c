@@ -17,4 +17,3 @@ set("long","一个漂亮的小水母．\n");
 //        carry_object("/d/gao/obj/blade")->wield();
 
 }
-

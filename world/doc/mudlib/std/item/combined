@@ -42,4 +42,3 @@ varargs int move(mixed dest, int silent)
 
 Elon@ES2 (07-05-95) drafted.
 Annihilator@ES2 (07/14/95) refined.
-

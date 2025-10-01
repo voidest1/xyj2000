@@ -66,10 +66,3 @@ int accept_fight(object me)
   command("wield rake");
   return 1;
 }
-
-
-
-
-
-
-

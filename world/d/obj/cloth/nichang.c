@@ -22,7 +22,3 @@ void create()
 	}
 	setup();
 }
-
-
-
-

@@ -124,5 +124,3 @@ void close_up()
 
         delete("exits/out");
 }
-
-

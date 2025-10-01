@@ -105,4 +105,3 @@ void self_destroy()
     if(this_object())
 	destruct(this_object());
 }
-

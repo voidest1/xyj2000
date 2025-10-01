@@ -27,4 +27,3 @@ LONG);
   create_door("west", "小门", "east", DOOR_CLOSED);
   setup();
 }
-

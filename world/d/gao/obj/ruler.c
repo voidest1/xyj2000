@@ -20,4 +20,3 @@ void create()
         init_sword(10);
         setup();
 }
-

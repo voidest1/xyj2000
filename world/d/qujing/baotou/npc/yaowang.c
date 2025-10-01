@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÑıÍõ", ({"yao wang", "wang" }));
-  set("title","»ÆÊ¨¾«");
-  set("gender", "ÄĞĞÔ");
+  set_name("å¦–ç‹", ({"yao wang", "wang" }));
+  set("title","é»„ç‹®ç²¾");
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("attitude", "aggressive");
   set("shen_type", 1);
@@ -56,8 +56,8 @@ void die()
   object me = this_object();
   object where = environment();
 
-  message_vision("Ö»¼û$NË¤µ¹ÔÚµØ£¬ÏÖÁË±¾ĞÎ¡£Ô­À´ÊÇÖ»½ğÃ«Ê¨×Ó£¡\n",me);
-  set_name("½ğÃ«Ê¨×Ó", ({"yao wang", "wang" }));
+  message_vision("åªè§$Næ‘”å€’åœ¨åœ°ï¼Œç°äº†æœ¬å½¢ã€‚åŸæ¥æ˜¯åªé‡‘æ¯›ç‹®å­ï¼\n",me);
+  set_name("é‡‘æ¯›ç‹®å­", ({"yao wang", "wang" }));
   delete("title");
   ::die();
 }
@@ -66,4 +66,3 @@ void unconcious()
 {
   die();
 }
-ÿ

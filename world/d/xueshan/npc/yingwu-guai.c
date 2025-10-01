@@ -278,4 +278,3 @@ void reset()
 {
 	delete("memory");
 }
-ÿ

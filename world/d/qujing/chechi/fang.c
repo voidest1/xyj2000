@@ -23,4 +23,3 @@ LONG);
   set("if_bed",1);
   setup();
 }
-

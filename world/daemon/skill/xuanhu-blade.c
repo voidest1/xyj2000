@@ -139,4 +139,3 @@ notify_fail("你的体力不够练这门刀法，还是先休息休息吧。\n")
         me->add("force", -5);
         return 1;
 }
-

@@ -19,5 +19,3 @@ void create()
 
 	setup();
 }
-
-

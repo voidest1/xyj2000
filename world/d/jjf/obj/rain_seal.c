@@ -143,4 +143,3 @@ int ji (string target)
   seal->ji_ob(victim);
   return 1;
 }
-

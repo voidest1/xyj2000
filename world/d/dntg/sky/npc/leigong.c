@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-set_name("À×¹«",({"lei gong","lei shen","gong"}));
-set("gender", "ÄÐÐÔ");
+set_name("é›·å…¬",({"lei gong","lei shen","gong"}));
+set("gender", "ç”·æ€§");
 set("age", 45);
-set("long", "    \nÒ»¸ö¼â×ìºïÈùµÄÌìÉñ£¬ÔÚÌì¹¬ÖÐ¸ºÔð´òÀ×¡£\n");
+set("long", "    \nä¸€ä¸ªå°–å˜´çŒ´è…®çš„å¤©ç¥žï¼Œåœ¨å¤©å®«ä¸­è´Ÿè´£æ‰“é›·ã€‚\n");
 
 set("attitude", "heroism");
 set("class", "xian");
@@ -41,9 +41,9 @@ set_skill("parry", 140);
 map_skill("dodge", "jindouyun");
 map_skill("unarmed", "puti-zhi");
 set("inquiry", ([
-  "´òÀ×"   : "¼±Ê²Ã´£¿¸ÃÏÂÓêÊ±ÎÒ×ÔÈ»»áÈ¥´òÀ×¡£",
-  "name"   : "ÎÒÊÇÀ×Éñ¡£",
-  "here"   : "ÕâÀï¾ÍÊÇÌì¹¬¡£",
+  "æ‰“é›·"   : "æ€¥ä»€ä¹ˆï¼Ÿè¯¥ä¸‹é›¨æ—¶æˆ‘è‡ªç„¶ä¼šåŽ»æ‰“é›·ã€‚",
+  "name"   : "æˆ‘æ˜¯é›·ç¥žã€‚",
+  "here"   : "è¿™é‡Œå°±æ˜¯å¤©å®«ã€‚",
 ]));
 
 
@@ -53,4 +53,3 @@ carry_object("/d/obj/cloth/xianpao")->wear();
 carry_object("/d/dntg/sky/obj/leilingfu");
 
 }
-ÿÿ

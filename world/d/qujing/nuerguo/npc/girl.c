@@ -22,4 +22,3 @@ void init()
 {
   ::init();
 }
-

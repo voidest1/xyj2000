@@ -46,4 +46,3 @@ int do_turn()
 	}
 	return 1;
 }
-

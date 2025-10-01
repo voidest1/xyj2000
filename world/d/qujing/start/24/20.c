@@ -52,4 +52,3 @@ void create()
         carry_object("/d/obj/weapon/spear/jinqiang")->wield();
 	carry_object("/d/obj/armor/jinjia")->wear();
 }
-

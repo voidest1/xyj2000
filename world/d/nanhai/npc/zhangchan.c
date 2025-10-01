@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// zhangchan.c ÕÆìøÉ®
+// zhangchan.c æŒç¦…åƒ§
 // By Dream Dec. 20, 1996
 
 inherit NPC;
@@ -9,8 +9,8 @@ string ask_spear(object who);
 
 void create()
 {
-	set_name("ÕÆìøÉ®", ({ "zhangchan seng", "seng" }));
-	set("gender", "ÄĞĞÔ");
+	set_name("æŒç¦…åƒ§", ({ "zhangchan seng", "seng" }));
+	set("gender", "ç”·æ€§");
 	set("age", 35);
 	set("attitude", "peaceful");
 	set("class", "bonze");
@@ -37,14 +37,14 @@ void create()
 	map_skill("unarmed", "jienan-zhi");
 
 	set("inquiry", ([
-		"±øÆ÷": "ÄãÏëÒªÊ²Ã´±øÆ÷£¿",
-		"ÌúÕÈ": (: ask_staff :),
-		"ÌúÇ¹": (: ask_spear :)
+		"å…µå™¨": "ä½ æƒ³è¦ä»€ä¹ˆå…µå™¨ï¼Ÿ",
+		"é“æ–": (: ask_staff :),
+		"é“æª": (: ask_spear :)
 	]) );
 
 	set("apply/staffno", 10);
 	set("apply/spearno", 10);
-        create_family("ÄÏº£ÆÕÍÓÉ½", 4, "µÜ×Ó");
+        create_family("å—æµ·æ™®é™€å±±", 4, "å¼Ÿå­");
 	
 	setup();
 	carry_object("/obj/money/gold");
@@ -58,18 +58,18 @@ string ask_staff(object me)
 	int number;
 
 
-	if (who->query("family/family_name") != "ÄÏº£ÆÕÍÓÉ½") 
-		return RANK_D->query_respect(who) +"Óë±¾ÃÅºÁÎŞÔ¨Ô´£¬ÎªÊ²Ã´ÎÊÆğÕâ¸ö£¿\n";
+	if (who->query("family/family_name") != "å—æµ·æ™®é™€å±±") 
+		return RANK_D->query_respect(who) +"ä¸æœ¬é—¨æ¯«æ— æ¸Šæºï¼Œä¸ºä»€ä¹ˆé—®èµ·è¿™ä¸ªï¼Ÿ\n";
 
-	if (present("tie zhang", who)) return "ÄãÉíÉÏ²»ÊÇÒÑ¾­ÓĞÌúÕÈÁËÂğ£¬ÔõÃ´ÓÖÀ´Òª£¿\n";
+	if (present("tie zhang", who)) return "ä½ èº«ä¸Šä¸æ˜¯å·²ç»æœ‰é“æ–äº†å—ï¼Œæ€ä¹ˆåˆæ¥è¦ï¼Ÿ\n";
 
-	if (!(number = me->query("apply/staffno"))) return "¶Ô²»Æğ£¬±øÆ÷ÒÑ¾­È«²¿·¢·Å³öÈ¥ÁË¡£\n";
+	if (!(number = me->query("apply/staffno"))) return "å¯¹ä¸èµ·ï¼Œå…µå™¨å·²ç»å…¨éƒ¨å‘æ”¾å‡ºå»äº†ã€‚\n";
 	set("apply/staffno", --number);
 
 	ob = new("/d/nanhai/obj/tiezhang");
 	ob -> move(me);
 	command("give " + who->query("id") + " staff");
-	return "Ç§Íò¼Ç×¡£¬±øÆ÷Ö»¿ÉÓÃÀ´·ÀÉí£¬²»¿ÉÀÄÉ±ÎŞ¹¼¡£";
+	return "åƒä¸‡è®°ä½ï¼Œå…µå™¨åªå¯ç”¨æ¥é˜²èº«ï¼Œä¸å¯æ»¥æ€æ— è¾œã€‚";
 }
 
 string ask_spear(object me)
@@ -77,18 +77,16 @@ string ask_spear(object me)
         object ob, who = this_player();
         int number;
 
-        if (who->query("family/family_name") != "ÄÏº£ÆÕÍÓÉ½")
-		return RANK_D->query_respect(who) +"Óë±¾ÃÅºÁÎŞÔ¨Ô´£¬ÎªÊ²Ã´ÎÊÆğÕâ¸ö£¿\n";
+        if (who->query("family/family_name") != "å—æµ·æ™®é™€å±±")
+		return RANK_D->query_respect(who) +"ä¸æœ¬é—¨æ¯«æ— æ¸Šæºï¼Œä¸ºä»€ä¹ˆé—®èµ·è¿™ä¸ªï¼Ÿ\n";
 
-	if (present("iron spear", who)) return "ÄãÉíÉÏ²»ÊÇÒÑ¾­ÓĞÌúÇ¹ÁËÂğ£¬ÔõÃ´ÓÖÀ´Òª£¿\n";
+	if (present("iron spear", who)) return "ä½ èº«ä¸Šä¸æ˜¯å·²ç»æœ‰é“æªäº†å—ï¼Œæ€ä¹ˆåˆæ¥è¦ï¼Ÿ\n";
 
-	if (!(number = me->query("apply/spearno"))) return "¶Ô²»Æğ£¬±øÆ÷ÒÑ¾­È«²¿·¢·Å³öÈ¥ÁË¡£\n";
+	if (!(number = me->query("apply/spearno"))) return "å¯¹ä¸èµ·ï¼Œå…µå™¨å·²ç»å…¨éƒ¨å‘æ”¾å‡ºå»äº†ã€‚\n";
 	set("apply/spearno", --number);
 
 	ob = new("/d/nanhai/obj/tieqiang");
 	ob -> move(me);
 	command("give " + who->query("id") + " spear");
-	return "Ç§Íò¼Ç×¡£¬±øÆ÷Ö»¿ÉÓÃÀ´·ÀÉí£¬²»¿ÉÀÄÉ±ÎŞ¹¼¡£";
+	return "åƒä¸‡è®°ä½ï¼Œå…µå™¨åªå¯ç”¨æ¥é˜²èº«ï¼Œä¸å¯æ»¥æ€æ— è¾œã€‚";
 }
-
-ÿ

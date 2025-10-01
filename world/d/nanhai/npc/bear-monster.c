@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// bear-monster.c ºÚĞÜ¹Ö¡õ
+// bear-monster.c é»‘ç†Šæ€ªâ–¡
 // By Dream Dec. 20, 1996
 
 inherit NPC;
@@ -7,18 +7,18 @@ inherit F_MASTER;
 
 void create()
 {
-	set_name("ºÚĞÜ¹Ö", ({ "bear monster", "bear", "monster" }));
-	set("title", "ÄÏº£¹ÛÒôÖ®Í½");   
+	set_name("é»‘ç†Šæ€ª", ({ "bear monster", "bear", "monster" }));
+	set("title", "å—æµ·è§‚éŸ³ä¹‹å¾’");   
 	set("long", @LONG
-ºÚĞÜ¹Ö±¾ÊÇÉ½¼äÒ°ÊŞ£¬²»Öª´ÓÄÄÀïÑ§µ½Ò»ÉíºÃ±¾Áì¡£
-ºóÓö¼ûÄÏº£¹ÛÒô£¬±»ÄÏº£¹ÛÒôÊÕÎªÍ½µÜ¡£
+é»‘ç†Šæ€ªæœ¬æ˜¯å±±é—´é‡å…½ï¼Œä¸çŸ¥ä»å“ªé‡Œå­¦åˆ°ä¸€èº«å¥½æœ¬é¢†ã€‚
+åé‡è§å—æµ·è§‚éŸ³ï¼Œè¢«å—æµ·è§‚éŸ³æ”¶ä¸ºå¾’å¼Ÿã€‚
 LONG);
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set("age", 30);
 	set("attitude", "heroism");
 	set("per", 9);
-	set("rank_info/self", "ºÚĞÜ");
-	set("rank_info/rude", "ĞÜ¹Ö");
+	set("rank_info/self", "é»‘ç†Š");
+	set("rank_info/rude", "ç†Šæ€ª");
 	set("max_kee", 850);
 	set("max_gin", 800);
 	set("max_sen", 850);
@@ -59,7 +59,7 @@ LONG);
 		(: cast_spell, "bighammer" :),
 		(: cast_spell, "jingang" :),
 	}) );
-        create_family("ÄÏº£ÆÕÍÓÉ½", 2, "µÜ×Ó");
+        create_family("å—æµ·æ™®é™€å±±", 2, "å¼Ÿå­");
 
 	setup();
 	carry_object("/obj/cloth")->wear();
@@ -69,17 +69,15 @@ LONG);
 
 void attempt_apprentice(object ob)
 {
-	if ( (string)ob->query("family/family_name")=="ÄÏº£ÆÕÍÓÉ½") {
+	if ( (string)ob->query("family/family_name")=="å—æµ·æ™®é™€å±±") {
 		command("smile");
-		command("say ºÜºÃ£¬ÎÒ¾ÍÊÕÏÂÄã£¬Ï£ÍûÄã¶à¼ÓÅ¬Á¦£¬Ôç³ÉÕı¹û¡£\n");
+		command("say å¾ˆå¥½ï¼Œæˆ‘å°±æ”¶ä¸‹ä½ ï¼Œå¸Œæœ›ä½ å¤šåŠ åŠªåŠ›ï¼Œæ—©æˆæ­£æœã€‚\n");
 
 		command("recruit " + ob->query("id") );
 		return;
 	}
 
 	command("shake");
-	command("say " + "ÆĞÈø²»ÈÃÎÒËæ±ãÊÕÍâÈËÎªÍ½¡£\n");
+	command("say " + "è©è¨ä¸è®©æˆ‘éšä¾¿æ”¶å¤–äººä¸ºå¾’ã€‚\n");
 	return;
 }
-
-ÿ

@@ -32,4 +32,3 @@ setup();
 
 "/obj/board/wall_b"->foo();
 }
-

@@ -393,5 +393,3 @@ int check_string(string arg, string who, int emote_mode)
 	
     return 1;
 }
-
-

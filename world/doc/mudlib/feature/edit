@@ -10,4 +10,3 @@ void input_line(string line, string text, function callback)
 
 Elon@ES2
 06-11-95 drafted.
-

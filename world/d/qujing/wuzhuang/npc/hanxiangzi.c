@@ -4,18 +4,18 @@
 inherit NPC;
 void create()
 {
-	set_name("º«Ïæ×Ó", ({"han xiangzi", "han", "xiangzi"}));
+	set_name("éŸ©æ¹˜å­", ({"han xiangzi", "han", "xiangzi"}));
 	//set("title", "");
-	set("gender", "ÄÐÐÔ" );
+	set("gender", "ç”·æ€§" );
 	set("age", 22);
 	set("per", 30);
-	set("long", "ºÃÒ»Î»¿¡ÑÅäìÈ÷µÄÏà¹«¡£º«Ïæ×Ó±¾ÊÇÃûÃÅÖ®ºó£¬È´²»Ï²ÄîÊéÈëÊË¡£\n±»Æä×åÖÐ³¤ÕßÒÔÇá¿ñ²»Ñ§³â³ö¼ÒÃÅ¡£\n");
+	set("long", "å¥½ä¸€ä½ä¿Šé›…æ½‡æ´’çš„ç›¸å…¬ã€‚éŸ©æ¹˜å­æœ¬æ˜¯åé—¨ä¹‹åŽï¼Œå´ä¸å–œå¿µä¹¦å…¥ä»•ã€‚\nè¢«å…¶æ—ä¸­é•¿è€…ä»¥è½»ç‹‚ä¸å­¦æ–¥å‡ºå®¶é—¨ã€‚\n");
 	set("class", "xian");
 	set("combat_exp", 120000);
   set("daoxing", 200000);
 
 	set("attitude", "peaceful");
-	create_family("Îå×¯¹Û", 3, "µÜ×Ó");
+	create_family("äº”åº„è§‚", 3, "å¼Ÿå­");
 	set_skill("unarmed", 60);
 	set_skill("wuxing-quan", 60);
 	set_skill("dodge", 80);
@@ -51,29 +51,29 @@ void create()
 
 void attempt_apprentice(object ob)
 {
-	if( (string)ob->query("family/family_name")=="Îå×¯¹Û" )
+	if( (string)ob->query("family/family_name")=="äº”åº„è§‚" )
 	{
 		if( (int)ob->query("family/generation") < 3  )
 		{
-			if ( (string)ob->query("gender") == "ÄÐÐÔ" ) command("say Ê¦Êå¼ûÐ¦ÁË¡£\n");
-			else command("say Ê¦¹Ã¼ûÐ¦ÁË¡£\n");
+			if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå”è§ç¬‘äº†ã€‚\n");
+			else command("say å¸ˆå§‘è§ç¬‘äº†ã€‚\n");
 		}
 		else if( (int)ob->query("family/generation") ==3  )
 		{
-			if ( (string)ob->query("gender") == "ÄÐÐÔ" ) command("say Ê¦ÐÖÌ«¿ÍÆøÁË¡£\n");
-			else command("say Ê¦ÃÃÌ«¿ÍÆøÁË¡£\n");
+			if ( (string)ob->query("gender") == "ç”·æ€§" ) command("say å¸ˆå…„å¤ªå®¢æ°”äº†ã€‚\n");
+			else command("say å¸ˆå¦¹å¤ªå®¢æ°”äº†ã€‚\n");
 		}
 		else 
 		{
 			command("consider");
-			command("say ÊÇÄã×Ô¼ºÒª°ÝµÄ£¬ÄãÊ¦¸¸´òÉÏÃÅÀ´ÎÒ¿ÉµÃÄÃÄãµ²¡£\n");
+			command("say æ˜¯ä½ è‡ªå·±è¦æ‹œçš„ï¼Œä½ å¸ˆçˆ¶æ‰“ä¸Šé—¨æ¥æˆ‘å¯å¾—æ‹¿ä½ æŒ¡ã€‚\n");
 			command("recruit " + ob->query("id") );
 		}
 	}
 
 	else
 	{
-		command("say ºÃ£¬ÎÒÎå×¯¹ÛÒ»ÃÅÈË²Å±²³ö£¬Äã¿ÉµÃ¸øÊ¦¸¸ÕùÆø¡£\n");
+		command("say å¥½ï¼Œæˆ‘äº”åº„è§‚ä¸€é—¨äººæ‰è¾ˆå‡ºï¼Œä½ å¯å¾—ç»™å¸ˆçˆ¶äº‰æ°”ã€‚\n");
 		command("recruit " + ob->query("id") );
 	}
 
@@ -85,8 +85,3 @@ int recruit_apprentice(object ob)
 	if( ::recruit_apprentice(ob) )
 		ob->set("class", "xian");
 }
-
-
-
-
-ÿ

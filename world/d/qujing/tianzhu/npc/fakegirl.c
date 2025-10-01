@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("¹«Ö÷", ({"gong zhu", "zhu", "princess"}));
-  set("title", "ÌìóÃ¹ú");
-  set("gender", "Å®ÐÔ");
+  set_name("å…¬ä¸»", ({"gong zhu", "zhu", "princess"}));
+  set("title", "å¤©ç«ºå›½");
+  set("gender", "å¥³æ€§");
   set("age", 20);
   set("attitude", "peaceful");
   set("combat_exp", 900000);
@@ -77,7 +77,7 @@ void move_to_cave (object me)
 
   if (me->is_fighting())
   {
-    message_vision ("$NÍùÅÔ±ßÒ»Ìø£¬Ò»×ªÑÛÒÑÎÞ×ÙÎÞÓ°£¡\n",me);
+    message_vision ("$Nå¾€æ—è¾¹ä¸€è·³ï¼Œä¸€è½¬çœ¼å·²æ— è¸ªæ— å½±ï¼\n",me);
     me->move(room);
   }
 }
@@ -91,9 +91,9 @@ void unconcious()
   {
     ob->set_temp("obstacle/tianzhu_killed",1);
   }
-  message_vision ("\n$NÏÖÁËÔ­ÐÎ£¬¾¹ÊÇÒ»Ö»ÓñÍÃ¡£\n",me);
-  message_vision ("Ö»ÌýÔ¶Ô¶µØ´«À´Ì«ÒõÐÇ¾ýµÄÅ­³â£º¡°ÓñÍÃ¶ù£¡¡±\n",me);
-  message_vision ("\nÓñÍÃÎÅÉù¹Ô¹ÔµØÏòÍâÌøÈ¥¡£\n",me);
+  message_vision ("\n$NçŽ°äº†åŽŸå½¢ï¼Œç«Ÿæ˜¯ä¸€åªçŽ‰å…”ã€‚\n",me);
+  message_vision ("åªå¬è¿œè¿œåœ°ä¼ æ¥å¤ªé˜´æ˜Ÿå›çš„æ€’æ–¥ï¼šâ€œçŽ‰å…”å„¿ï¼â€\n",me);
+  message_vision ("\nçŽ‰å…”é—»å£°ä¹–ä¹–åœ°å‘å¤–è·³åŽ»ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -108,5 +108,3 @@ void die()
 {
   unconcious();
 }
-
-ÿ

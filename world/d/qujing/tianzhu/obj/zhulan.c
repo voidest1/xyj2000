@@ -19,4 +19,3 @@ void create()
   set("wear_msg", "$N提起烫花竹篮，轻巧地背在身上。\n");
   set("unequip_msg", "$N将烫花竹篮从背后卸下来，抱在怀里。\n");
 }
-

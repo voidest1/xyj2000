@@ -169,4 +169,3 @@ int do_duandao(string arg)
 	destruct(this_object()); //let this ice blade disappear.
 	return 1;	
 }
-

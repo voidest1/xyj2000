@@ -29,5 +29,3 @@ LONG);
   call_other("/obj/board/kaifeng_b", "???");
 
 }
-
-

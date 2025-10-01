@@ -6,10 +6,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Ð¡Âí¾Ô", ({ "ma ju", "ju" }) );
-  set("race", "Ò°ÊÞ");
+  set_name("å°é©¬é©¹", ({ "ma ju", "ju" }) );
+  set("race", "é‡Žå…½");
   set("age", 5);
-  set("long", "Ò»Ö»ÉÐÎ´³¤´óµÄÐ¡Âí¾Ô¡£\n");
+  set("long", "ä¸€åªå°šæœªé•¿å¤§çš„å°é©¬é©¹ã€‚\n");
   set("per", 10+random(20));
   set("kee", 100);
   set("max_kee", 100);
@@ -18,8 +18,8 @@ void create()
   set("combat_exp", 4000);
   set("daoxing", 4000);
 
-  set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å", "Î²°Í" }) );
-  set("ride/msg", "Ç£");
+  set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š", "å°¾å·´" }) );
+  set("ride/msg", "ç‰µ");
   set("ride/dodge", 20);
   set("verbs", ({ "bite"}));
 
@@ -37,9 +37,9 @@ void init()
         set("chat_chance", 5);
 
         set("chat_msg", ({
-            "Ð¡Âí¾ÔÇáÇáµÄºßºßÁË¼¸Éù¡£\n",
-            "Ð¡Âí¾ÔÄ¦²Á×ÅÇ°Ìã¡£\n",
-            "Ð¡Âí¾ÔÒ»¸±ÎÞ¾«´ò²ÉµÄÑù×Ó¡£\n",
+            "å°é©¬é©¹è½»è½»çš„å“¼å“¼äº†å‡ å£°ã€‚\n",
+            "å°é©¬é©¹æ‘©æ“¦ç€å‰è¹„ã€‚\n",
+            "å°é©¬é©¹ä¸€å‰¯æ— ç²¾æ‰“é‡‡çš„æ ·å­ã€‚\n",
         }) );
 
         add_action("do_qian", "qian");
@@ -69,18 +69,18 @@ int do_qian(string arg)
                 {
 
                 if ( random(20) != 0 )
-                message_vision("$NÇ£×ÅÐ¡Âí¾ÔÁïÁËÒ»È¦¡£\n", who);
+                message_vision("$Nç‰µç€å°é©¬é©¹æºœäº†ä¸€åœˆã€‚\n", who);
 
                 else
                      {
                      object smallhorse;
-                     message_vision("$NÒ»ÉùË»Ãù£¬·ÜÌã¼²±¼¡£\n" , me,);
+                     message_vision("$Nä¸€å£°å˜¶é¸£ï¼Œå¥‹è¹„ç–¾å¥”ã€‚\n" , me,);
                      me->add("max_kee",200);
                      me->add("eff_kee",200);
                      me->add("kee",200);
                      }
                 }
-            else  message_vision("$NÇ£×ÅÐ¡Âí¾ÔÁïÁËÒ»È¦£¬µ«Ð¡Âí¾ÔÒÀÈ»ÎÞ¾«´ò²É¡£\n", who);
+            else  message_vision("$Nç‰µç€å°é©¬é©¹æºœäº†ä¸€åœˆï¼Œä½†å°é©¬é©¹ä¾ç„¶æ— ç²¾æ‰“é‡‡ã€‚\n", who);
 
              }
         return 1;
@@ -94,10 +94,8 @@ int do_mount(object me)
 
         if (me->query("kee")<200)  
            {
-            message_vision("Ð¡Âí¾Ô²Ò½ÐÒ»Éù£¬ÂÊµ¹ÔÚµØ¡£\n\n", me);
+            message_vision("å°é©¬é©¹æƒ¨å«ä¸€å£°ï¼ŒçŽ‡å€’åœ¨åœ°ã€‚\n\n", me);
             me->unconcious();
             return 1;
            }
 }
-
-ÿ

@@ -103,4 +103,3 @@ int check_out(object me)
 	if( me->query_temp("xmaze9") ) me->delete_temp("xmaze9");
 	return 1;
 }
-

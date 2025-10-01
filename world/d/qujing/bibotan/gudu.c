@@ -50,4 +50,3 @@ notify_fail("你一个猛子扎到水里．．．\n\n但没多会儿就被憋得
 		message_vision("$N游了过来。\n", me);
                 return 1;
 }
-

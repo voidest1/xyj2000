@@ -44,4 +44,3 @@ if( (int)me->query_skill("dragonforce", 1) >= 200 ) {
 }
 	return 1;
 }
-

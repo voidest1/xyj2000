@@ -21,4 +21,3 @@ return CLASS_D("bonze") + "/buddhism/" + spell;
 	}
 
 string type() { return "magic";}
-

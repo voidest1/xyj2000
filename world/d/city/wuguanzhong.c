@@ -24,4 +24,3 @@ set("item_desc",(["qi":"
 ]));
   setup();
 }
-

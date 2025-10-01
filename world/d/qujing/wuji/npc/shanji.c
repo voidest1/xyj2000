@@ -4,12 +4,12 @@ inherit NPC;
 
 void create()
 {
-  set_name("É½¼§", ({ "shan ji", "ji" }) );
-  set("gender", "Å®ÐÔ");
+  set_name("å±±å§¬", ({ "shan ji", "ji" }) );
+  set("gender", "å¥³æ€§");
   set("combat_exp", 10000);
   set("daoxing", 250000);
 
-  set("long","Ò»Î»½¿ÑÞÃÔÈËµÄÒ°Å®×Ó¡£\n");
+  set("long","ä¸€ä½å¨‡è‰³è¿·äººçš„é‡Žå¥³å­ã€‚\n");
   set("age", 20);
   set("per", 20);
   set("attitude", "friendly");
@@ -42,7 +42,7 @@ void init ()
   call_out ("emoting",random(9)+1,me,who);
   if (! interactive(who))
     return;
-  if (where->query("short")!="É½Â·")
+  if (where->query("short")!="å±±è·¯")
   {
     me->set_leader(0);
     return;
@@ -90,7 +90,7 @@ void die ()
 {
   object me = this_object();
   object ji = new (__DIR__"ji");
-  message_vision ("\n$NÉí×ÓÒ»ÈíÏÖÁËÔ­ÐÎ£¬¾¹ÊÇÒ»Ö»Ä¸É½¼¦£¬ÆË´ò×Å³á°ò¡£\n",me);
+  message_vision ("\n$Nèº«å­ä¸€è½¯çŽ°äº†åŽŸå½¢ï¼Œç«Ÿæ˜¯ä¸€åªæ¯å±±é¸¡ï¼Œæ‰‘æ‰“ç€ç¿…è†€ã€‚\n",me);
   ji->move(environment(me));
   destruct (me);
 }
@@ -99,4 +99,3 @@ void unconcious()
 {
   die();
 }
-ÿ

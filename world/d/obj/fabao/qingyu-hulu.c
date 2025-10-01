@@ -77,8 +77,3 @@ int ji(string target)
     message_vision(msg,me,victim);
     return 1;
 }
-
-
-
-
-

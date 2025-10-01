@@ -78,5 +78,3 @@ int smoke_spreads (object me, object ob)
 //  call_out ("smoke_spreads",random(3)+3,me,ob);
   return 1;
 }
-
-

@@ -32,5 +32,3 @@ int valid_leave(object me, string dir)
         me->add("mana", -10);
 	return ::valid_leave(me, dir);
 }
-
-

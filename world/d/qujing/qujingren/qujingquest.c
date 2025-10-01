@@ -13,4 +13,3 @@ mapping obstacles = ([
                   "60","20"
                 }),
 ]);
-

@@ -250,4 +250,3 @@ varargs void improve_skill(string skill, int amount, int weak_mode)
 		SKILL_D(skill)->skill_improved(this_object());
 	}
 }
-

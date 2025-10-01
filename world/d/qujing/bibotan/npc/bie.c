@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("¹Å²¨¶ùÎ÷", ({"guboer xi", "xi"}));
-        set("long", "ËûÊÇÂÒÊ¯É½±Ì²¨Ì¶µÄÀÏ±î¾«¡£\n");
+        set_name("å¤æ³¢å„¿è¥¿", ({"guboer xi", "xi"}));
+        set("long", "ä»–æ˜¯ä¹±çŸ³å±±ç¢§æ³¢æ½­çš„è€é³–ç²¾ã€‚\n");
         set("age", 30);
-	set("title", "µîÇ°ÓÒÊ¹");
+	set("title", "æ®¿å‰å³ä½¿");
         set("attitude", "peaceful");
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "yaomo");
         set("str", 20);
         set("int", 20);
@@ -39,5 +39,3 @@ void create()
         carry_object("/d/obj/armor/tenjia")->wear();
 	carry_object("/d/obj/weapon/fork/gangcha")->wield();
 }
-
-ÿ

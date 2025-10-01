@@ -39,4 +39,3 @@ int random_move ()
   else
     message_vision ("$N哈哈哈哈地笑了几声。\n",me);
 }
-

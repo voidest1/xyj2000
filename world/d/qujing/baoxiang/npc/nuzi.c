@@ -6,8 +6,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("Å®×Ó", ({"nu zi", "nu", "zi"}));
-  set("gender", "Å®ÐÔ");
+  set_name("å¥³å­", ({"nu zi", "nu", "zi"}));
+  set("gender", "å¥³æ€§");
   set("age", 18);
   set("con", 20);
   set("cor", 20);
@@ -56,7 +56,7 @@ void init()
       present("fu ren",where) ||
       present("gong gong",where))
   {
-    if (where->query("short") == "Ò°Â·")
+    if (where->query("short") == "é‡Žè·¯")
     {
       load_object("/obj/empty");
       me->move("/obj/empty");
@@ -83,7 +83,7 @@ void greeting (object me, object who)
   if (! who ||
       environment(who) != environment(me))
     return;
-  message_vision ("$N¶Ô$nËµµÀ£ºÓ´£¬¿Í´ÓºÎÀ´£¿\n",me,who);
+  message_vision ("$Nå¯¹$nè¯´é“ï¼šå“Ÿï¼Œå®¢ä»Žä½•æ¥ï¼Ÿ\n",me,who);
 }
 
 void unconcious()
@@ -100,7 +100,7 @@ void die()
 
   if (ob)
     ob->set_temp("obstacle/baoxiang_killed_nuzi",1);
-  message_vision ("\n$NÒ»Éù²Ò½Ð£¬ÆË·­ÔÚµØËÀÁË¡£\n",me);
+  message_vision ("\n$Nä¸€å£°æƒ¨å«ï¼Œæ‰‘ç¿»åœ¨åœ°æ­»äº†ã€‚\n",me);
   command ("drop mi fan");
   command ("drop mian jin");
   corpse = CHAR_D->make_corpse(me,ob);
@@ -124,4 +124,3 @@ void kill_ob (object ob)
   ::kill_ob(ob);
 }
  
-ÿ

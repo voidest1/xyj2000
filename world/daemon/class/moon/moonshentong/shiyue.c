@@ -79,4 +79,3 @@ NOR;
 	message_vision(msg, me, target);
 	return 3+random(5);
 }
-

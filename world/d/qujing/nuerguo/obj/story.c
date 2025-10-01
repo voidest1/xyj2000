@@ -71,4 +71,3 @@ LONG
 void init()
 {
 }
-

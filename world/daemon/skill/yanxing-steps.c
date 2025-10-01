@@ -39,4 +39,3 @@ notify_fail("你的气或内力不够，不能练雁行步法。\n");
         me->add("force", -3);
         return 1;
 }
-

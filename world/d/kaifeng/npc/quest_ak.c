@@ -434,5 +434,3 @@ mapping quests_ask = ([
  1000000 : ({ "ask", "大鹏明王",     "dapeng mingwang",    "大雪山参加水陆大会", "1" }),
 
 ]);
-
-

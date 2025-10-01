@@ -21,4 +21,3 @@ void create()
         init_throwing(5);
         setup();
 }
-

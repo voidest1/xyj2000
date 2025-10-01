@@ -43,4 +43,3 @@ HIC"一阵阴风过后，隐约现出"+me->query("name")+"的影子。\n\n"NOR, 
 
         return 5+random(5);
 }
-

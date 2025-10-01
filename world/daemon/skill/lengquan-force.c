@@ -8,10 +8,9 @@ int valid_learn(object me) { return 1; }
 int practice_skill(object me)
 {
         return
-notify_fail("冷泉神功只能向师父学，或是从运用(exert)中增加熟练度。\n");
+notify_fail("鍐锋硥绁炲姛鍙兘鍚戝笀鐖跺锛屾垨鏄粠杩愮敤(exert)涓鍔犵啛缁冨害銆俓n");
 }
 string exert_function_file(string func)
 {
         return CLASS_D("fighter") + "/lengquan-force/" + func;
 }
-

@@ -199,5 +199,3 @@ int do_duandao(string arg)
 	destruct(this_object()); 
 	return 1;
 }
-
-	

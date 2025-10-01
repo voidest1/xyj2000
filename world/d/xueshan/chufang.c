@@ -193,5 +193,3 @@ int freezing (object who)
     return 1;
     } 
 }
-
-

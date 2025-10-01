@@ -5,16 +5,16 @@
 inherit NPC;
 void create()
 {
-	set_name("ä½»¨", ({"huan hua", "huanhua", "hua"}));
-	set("gender", "Å®ÐÔ" );
+	set_name("æµ£èŠ±", ({"huan hua", "huanhua", "hua"}));
+	set("gender", "å¥³æ€§" );
 	set("age", 16);
-	set("long", "Ñ©É½ÃÅÏÂÅ®µÜ×Ó¡£\n");
+	set("long", "é›ªå±±é—¨ä¸‹å¥³å¼Ÿå­ã€‚\n");
 	set("class", "yaomo");
 	set("combat_exp", 25000);
   set("daoxing", 30000);
 
 	set("attitude", "peaceful");
-	create_family("´óÑ©É½", 4, "µÜ×Ó");
+	create_family("å¤§é›ªå±±", 4, "å¼Ÿå­");
 	set_skill("unarmed", 30);
 	set_skill("dodge", 30);
 	set_skill("parry", 30);
@@ -50,9 +50,9 @@ void init()
 
         ::init();
 
-        if ( ((string)ob->query("gender")=="ÄÐÐÔ") &&
+        if ( ((string)ob->query("gender")=="ç”·æ€§") &&
 ((int)ob->query("env/invisibility")  == 0) &&
-((string)environment(me)->query("short")=="Å®µÜ×ÓÎÔ·¿") )
+((string)environment(me)->query("short")=="å¥³å¼Ÿå­å§æˆ¿") )
         {
 
                         remove_call_out("greeting");
@@ -65,12 +65,8 @@ void greeting(object ob)
 
         switch( random(1) ) {
                 case 0:
-                command("chat* Ö»Ìýä½»¨¸ßÉù½ÐµÀ£º" + ob->query("name") + "£¬ÄãÕâ¸ö³ôÁ÷Ã¥£¡¾ÓÈ»´³µ½Å®µÜ×ÓÎÔ·¿À´ÁË£¡\n");
+                command("chat* åªå¬æµ£èŠ±é«˜å£°å«é“ï¼š" + ob->query("name") + "ï¼Œä½ è¿™ä¸ªè‡­æµæ°“ï¼å±…ç„¶é—¯åˆ°å¥³å¼Ÿå­å§æˆ¿æ¥äº†ï¼\n");
 		command("kick " + ob->query("id"));
                 break;
         }
 }
-
-
-
-ÿ

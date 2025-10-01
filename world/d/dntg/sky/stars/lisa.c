@@ -79,5 +79,3 @@ void init()
   if (my_armor2=present(armor2_id, me))
        my_armor2->set("name",HIY"苍茫云海间"NOR);
 }
-
-

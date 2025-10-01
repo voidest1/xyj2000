@@ -39,4 +39,3 @@ int random_move ()
   else
     message_vision ("$N拿起一把剁肉刀，想想又将刀往桌边一扔。\n",me);
 }
-

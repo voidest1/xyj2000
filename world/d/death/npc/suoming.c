@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-       set_name("Ë÷Ãü¹í", ({"suoming gui", "gui"}));
-       set("gender", "ÄĞĞÔ");
+       set_name("ç´¢å‘½é¬¼", ({"suoming gui", "gui"}));
+       set("gender", "ç”·æ€§");
        set("age", 30);
-	set("long", "Ò»¸öÇàÃæâ²ÑÀµÄĞ¡¹í£¬Éí´©ÊŞÆ¤£¬ÊÖ³ÖÌúÁ´£®
-ËûµÄÈÎÎñ¾ÍÊÇ´ÓÑô¼ä½«ËÀÈËµÄ»êÆÇ´ø»Ø£®\n");
+	set("long", "ä¸€ä¸ªé’é¢ç ç‰™çš„å°é¬¼ï¼Œèº«ç©¿å…½çš®ï¼Œæ‰‹æŒé“é“¾ï¼
+ä»–çš„ä»»åŠ¡å°±æ˜¯ä»é˜³é—´å°†æ­»äººçš„é­‚é­„å¸¦å›ï¼\n");
        set("attitude", "peaceful");
        set("shen_type", 1);
        set("per", 10);
@@ -24,13 +24,13 @@ void create()
 	set("force_factor", 15);
 	set("max_kee", 450);
 set("inquiry", ([
-"here": "Õâ¾ÍÊÇÒõ²ÜµØ¸®£¬ºß£¬µÈ×Å°şÆ¤³é½î°ÉÄã£¡\n",
+"here": "è¿™å°±æ˜¯é˜´æ›¹åœ°åºœï¼Œå“¼ï¼Œç­‰ç€å‰¥çš®æŠ½ç­‹å§ä½ ï¼\n",
 ]) );
 
 set("chat_chance", 8);
 set("chat_msg", ({
-"Ë÷Ãü¹íµÄÉÏÉÏÏÂÏÂ´òÁ¿ÁËÄã¼¸ÑÛ¡£\n",
-"Ë÷Ãü¹íËµµÀ£ºÑÖÍõ½ĞÄãÈı¸üËÀ£¬²»¸ÒÁôÄãµ½Îå¸ü£¡\n",
+"ç´¢å‘½é¬¼çš„ä¸Šä¸Šä¸‹ä¸‹æ‰“é‡äº†ä½ å‡ çœ¼ã€‚\n",
+"ç´¢å‘½é¬¼è¯´é“ï¼šé˜ç‹å«ä½ ä¸‰æ›´æ­»ï¼Œä¸æ•¢ç•™ä½ åˆ°äº”æ›´ï¼\n",
 (: random_move :)
 }) );
 
@@ -46,9 +46,9 @@ void init()
         ::init();
         if( interactive(ob = this_player()) && !is_fighting() ) {
 	
-	if ((string)ob->query("family/family_name")!="ÑÖÂŞµØ¸®") {
+	if ((string)ob->query("family/family_name")!="é˜ç½—åœ°åºœ") {
 	if (random((int)ob->query("age")) > 20 ){
-	command("tell " + ob->query("id") + " ÑÖÍõÒ¯½ĞÎÒÀ´¹´ÄãµÄ»ê£¬ÄãÈ´×Ô¼ºËÍÉÏÃÅÀ´£¬¸úÎÒ×ß°É£¡\n");
+	command("tell " + ob->query("id") + " é˜ç‹çˆ·å«æˆ‘æ¥å‹¾ä½ çš„é­‚ï¼Œä½ å´è‡ªå·±é€ä¸Šé—¨æ¥ï¼Œè·Ÿæˆ‘èµ°å§ï¼\n");
 	kill_ob(ob);
 	set_leader(ob);
 	return;
@@ -62,9 +62,7 @@ return;
 
 int accept_fight(object me)
 {
-        command("say Äã»îµÃ²»ÄÍ·³ÁË£¿\n");
+        command("say ä½ æ´»å¾—ä¸è€çƒ¦äº†ï¼Ÿ\n");
         kill_ob(me);
         return 1;
 }
-
-ÿ

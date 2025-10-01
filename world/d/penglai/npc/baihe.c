@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("°×º×", ({ "bai he", "he" }) );
-        set("race", "Ò°ÊŞ");
+        set_name("ç™½é¹¤", ({ "bai he", "he" }) );
+        set("race", "é‡å…½");
         set("age", 30);
-        set("long", "Ò»Ö»ºÚÍÈµ¤¶¥»ëÉí½à°×µÄ°×º×¡£\n");
+        set("long", "ä¸€åªé»‘è…¿ä¸¹é¡¶æµ‘èº«æ´ç™½çš„ç™½é¹¤ã€‚\n");
 
         set("str", 30);
         set("dex", 30);
@@ -15,7 +15,7 @@ void create()
 	set("cor", 50);
 	set("spi", 50);
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "ÍÈ²¿", "×ó³á", "ÓÒ³á", "Î²°Í" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "è…¿éƒ¨", "å·¦ç¿…", "å³ç¿…", "å°¾å·´" }) );
         set("verbs", ({ "bite"}) );
 
 	set("combat_exp", 800000);
@@ -43,6 +43,3 @@ void create()
 	set_temp("apply/dodge", 100);
         setup();
 }
-
-
-ÿ

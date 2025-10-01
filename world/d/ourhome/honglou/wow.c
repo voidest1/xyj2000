@@ -38,5 +38,3 @@ void init()
 
         message_vision("$N被一块看不见的石头(stone)绊了一下。\n", me);
 }
-
-

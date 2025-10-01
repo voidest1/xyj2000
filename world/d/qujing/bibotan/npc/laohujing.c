@@ -1,12 +1,12 @@
 inherit NPC;
 void create()
 {
-        set_name("ÀÏ»¢¾«", ({"laohu jing", "jing"}));
-        set("long", "Ò»¸öÐ×Éñ¶ñÉ·°ãµÄÀÏ»¢¾«£¬ÕÅ×ÅÑªÅè´ó¿Ú£¬Òª³ÔÈËµÄÑù×Ó¡£\n");
+        set_name("è€è™Žç²¾", ({"laohu jing", "jing"}));
+        set("long", "ä¸€ä¸ªå‡¶ç¥žæ¶ç…žèˆ¬çš„è€è™Žç²¾ï¼Œå¼ ç€è¡€ç›†å¤§å£ï¼Œè¦åƒäººçš„æ ·å­ã€‚\n");
         set("age", 30);
         set("attitude", "aggressive");
 	set("bellicosity", 1000);
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "yaomo");
         set("str", 30);
         set("int", 20);
@@ -58,7 +58,7 @@ void leave()
         this_object()->add("time", 1);
 
         if( (int)this_object()->query("time") >= 10 ) {
-        message("vision",name() + "Ò»¸ö»¢Ìø£¬×êÈë²Ý´ÓÖÐ²»¼ûÁË¡£\n", environment(),this_object() );
+        message("vision",name() + "ä¸€ä¸ªè™Žè·³ï¼Œé’»å…¥è‰ä»Žä¸­ä¸è§äº†ã€‚\n", environment(),this_object() );
         destruct(this_object());
 
         }
@@ -69,16 +69,14 @@ void die()
 {
 	object skirt, env;
         if( environment() ) {
-        message("sound", "\nÀÏ»¢¾«¼ûÊÆ²»ºÃ£¬ºöÈ»°ÇÏÂ×Ô¼ºµÄÆ¤À´£¬±ä³ÉÒ»¸öÀÏ»¢Ä£Ñù¡£\n", environment());
+        message("sound", "\nè€è™Žç²¾è§åŠ¿ä¸å¥½ï¼Œå¿½ç„¶æ‰’ä¸‹è‡ªå·±çš„çš®æ¥ï¼Œå˜æˆä¸€ä¸ªè€è™Žæ¨¡æ ·ã€‚\n", environment());
 
 		seteuid(getuid());
 		if( skirt=new("/d/qujing/bibotan/obj/hupiqun") )
 		skirt->move(environment());
-		message("vision", "¾ÍÔÚÕâÒ»»Ðã±Ö®¼û£¬ÕæÉíÒ»¸ö»¢Ìø£¬×êÈë²Ý´ÓÖÐ²»¼ûÁË¡£\n",environment());
+		message("vision", "å°±åœ¨è¿™ä¸€ææƒšä¹‹è§ï¼ŒçœŸèº«ä¸€ä¸ªè™Žè·³ï¼Œé’»å…¥è‰ä»Žä¸­ä¸è§äº†ã€‚\n",environment());
         }
 	env=environment(this_object());
 	env->set("done", 1);
         destruct(this_object());
 }
-
-ÿ

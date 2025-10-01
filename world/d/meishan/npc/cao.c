@@ -8,14 +8,14 @@ inherit NPC;
 void create()
 {
 
-  set_name("²ÝÍ·Éñ", ({"caotou shen","shen"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("è‰å¤´ç¥ž", ({"caotou shen","shen"}));
+  set("gender", "ç”·æ€§");
   set("age", 20+random(20));
   set("con", 20);
   set("cor", 20);
   set("int", 20);
   set("per", 20);
-  set("long", "ËûÊÇ¶þÀÉÉñ¾ýÕÊÏÂÒ»Ç§¶þ°Ù¸ö²ÝÍ·ÉñÖÐµÄÒ»¸ö¡£\n");
+  set("long", "ä»–æ˜¯äºŒéƒŽç¥žå›å¸ä¸‹ä¸€åƒäºŒç™¾ä¸ªè‰å¤´ç¥žä¸­çš„ä¸€ä¸ªã€‚\n");
   set("attitude", "peaceful");
   set("combat_exp", 160000);
   set("daoxing", 200000);
@@ -54,7 +54,7 @@ int allow_split()
   object who = this_player();
 
   me->set_temp("split",1);
-  message_vision ("$NÒ»Ð¦£ºÎÒÒ»¸ö¾Í¹»ÊÕÊ°ÄãÁË¡£\n",me);
+  message_vision ("$Nä¸€ç¬‘ï¼šæˆ‘ä¸€ä¸ªå°±å¤Ÿæ”¶æ‹¾ä½ äº†ã€‚\n",me);
   return 1;
 }
 
@@ -64,7 +64,7 @@ void init()
 
   ::init();
   set("inquiry", ([
-       "Ò»Ç§¶þ°Ù¸ö²ÝÍ·Éñ": (: allow_split :),
+       "ä¸€åƒäºŒç™¾ä¸ªè‰å¤´ç¥ž": (: allow_split :),
       ]));
 }
 
@@ -92,7 +92,7 @@ int accept_fight (object me)
     ob2 = new(str);
     ob2->setup();
     ob2->move(environment(ob));
-    message_vision ("¡°°ð°ð¡±¼¸ÉùÂàÏì£¬´Ó²ÝÖÐÌø³ö¼¸¸ö$N°Ñ$nÍÅÍÅÎ§×¡¡£\n",ob, me);
+    message_vision ("â€œæ¢†æ¢†â€å‡ å£°é”£å“ï¼Œä»Žè‰ä¸­è·³å‡ºå‡ ä¸ª$NæŠŠ$nå›¢å›¢å›´ä½ã€‚\n",ob, me);
     ob->set("kee",ob->query("max_kee")/10*12);
     ob->set("triplicate",1);
     ob1->set("triplicate",1);
@@ -102,5 +102,3 @@ int accept_fight (object me)
   }
   return 1;
 }
-
-ÿ

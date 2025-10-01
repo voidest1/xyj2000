@@ -27,4 +27,3 @@ int valid_leave(object me, string dir)
         me->delete_temp("rent_paid");
         return ::valid_leave(me, dir);
 }
-

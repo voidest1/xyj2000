@@ -25,4 +25,3 @@ string exert_function_file(string func)
 {
         return CLASS_D("ghost") + "/tonsillitis/" + func;
 }
-

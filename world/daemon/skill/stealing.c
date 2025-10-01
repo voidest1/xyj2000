@@ -8,12 +8,12 @@ string level_description(int level)
 {
 	int grade;
 	string *level_desc = ({
-		BLU "贼头贼脑" NOR,     
-		HIB "贼手贼脚" NOR,
-		HIB "快手快脚" NOR,     
-		CYN "出手如风" NOR,
-		HIC "手到擒来" NOR,     
-		HIW "妙手神偷" NOR,
+		BLU "璐煎ご璐艰剳" NOR,     
+		HIB "璐兼墜璐艰剼" NOR,
+		HIB "蹇墜蹇剼" NOR,     
+		CYN "鍑烘墜濡傞" NOR,
+		HIC "鎵嬪埌鎿掓潵" NOR,     
+		HIW "濡欐墜绁炲伔" NOR,
 	});
 
 	grade = level / 10;
@@ -22,4 +22,3 @@ string level_description(int level)
 		grade = sizeof(level_desc)-1;
 	return level_desc[grade];
 }
-

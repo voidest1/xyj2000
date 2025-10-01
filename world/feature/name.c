@@ -118,4 +118,3 @@ varargs string long(int raw)
 
 	return str;
 }
-

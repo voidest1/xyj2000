@@ -55,6 +55,3 @@ int do_take (string arg)
   ob->move(who);
   return 1;
 }
-
-
-

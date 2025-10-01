@@ -21,4 +21,3 @@ set_name("武馆弟子", ({"wuguan dizi", "dizi", "trainee" }) );
 	add_money("coin", 100+random(200));
         carry_object("/d/obj/cloth/linen")->wear();
 }
-

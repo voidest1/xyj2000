@@ -99,6 +99,3 @@ int do_shou()
 	return 1;
 
 }
-
-
-

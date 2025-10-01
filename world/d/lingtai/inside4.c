@@ -41,4 +41,3 @@ int valid_leave()
 	    return notify_fail("你不能把葫芦带走！\n");
     return ::valid_leave();
 }
-

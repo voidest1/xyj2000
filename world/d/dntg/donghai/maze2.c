@@ -65,4 +65,3 @@ int valid_leave(object me, string dir)
        message_vision("$N摆着尾巴游走了。\n", this_player());
        return ::valid_leave(me, dir);
 }
-

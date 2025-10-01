@@ -36,4 +36,3 @@ int accept_fight(object me)
         command("say 哈哈，本秀才不仅才华横溢，武功也是鲜有对手！\n");
         return 1;
 }
-

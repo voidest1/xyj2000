@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ä§Àñºì", ({ "guangmu tianwang","guangmu", "tianwang" }) );
-        set("gender", "ÄÐÐÔ" );
-	set("title", "¹ãÄ¿ÌìÍõ");
-        set("long","¹ãÄ¿ÌìÍõÏ²¶¯²»Ï²¾²£¬²»Ô¸ÔÚÌìÉÏÊØÃÅ¡£
-ÓñµÛ±ãÅÉËûÑ²ÓÎËÄ·½£¬±£ÎÀÖÚÏÉ¼Ò°²È«¡£\n");
+        set_name("é­”ç¤¼çº¢", ({ "guangmu tianwang","guangmu", "tianwang" }) );
+        set("gender", "ç”·æ€§" );
+	set("title", "å¹¿ç›®å¤©çŽ‹");
+        set("long","å¹¿ç›®å¤©çŽ‹å–œåŠ¨ä¸å–œé™ï¼Œä¸æ„¿åœ¨å¤©ä¸Šå®ˆé—¨ã€‚
+çŽ‰å¸ä¾¿æ´¾ä»–å·¡æ¸¸å››æ–¹ï¼Œä¿å«ä¼—ä»™å®¶å®‰å…¨ã€‚\n");
         set("age",40);
         set("str",30);
         set("int",25);
@@ -42,4 +42,3 @@ void create()
         carry_object("/d/obj/weapon/spear/jinqiang")->wield();
         carry_object("/d/obj/armor/jinjia")->wear();
 }
-ÿ

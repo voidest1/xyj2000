@@ -4,22 +4,22 @@
 inherit NPC;
 
 string *names = ({
-  "ºÚÊó¹Ö",
-  "»Æáì¹Ö",
-  "»Òáõ¹Ö",
-  "°×áû¹Ö",
-  "³àâ¡¹Ö",
-  "ÍÁâ¬¹Ö",
-  "Ê¯â¥¹Ö",
-  "Ä¾â®¹Ö",
-  "Ë®âµ¹Ö",
+  "é»‘é¼ æ€ª",
+  "é»„çŠ°æ€ª",
+  "ç°ç‹¨æ€ª",
+  "ç™½çŒæ€ª",
+  "èµ¤ç‹»æ€ª",
+  "åœŸçŒ¬æ€ª",
+  "çŸ³çŒŠæ€ª",
+  "æœ¨çŒ±æ€ª",
+  "æ°´ç¾æ€ª",
 });
 
 void create()
 {
   string str;
-  set_name("Ð¡Í¯", ({"xiao tong", "tong"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å°ç«¥", ({"xiao tong", "tong"}));
+  set("gender", "ç”·æ€§");
   set("age", 13);
   set("combat_exp", 150000+random(70000));
   set("daoxing", 100000);
@@ -56,11 +56,10 @@ void kill_ob (object ob)
 
   if (me->query("id")!="yao guai")
   {
-    message_vision ("$N¶ÙÊ±±äÁËÑÕÉ«£¬ÏÖÁËÑý¾«µÄ±¾Ïà£¡\n",me);
+    message_vision ("$Né¡¿æ—¶å˜äº†é¢œè‰²ï¼ŒçŽ°äº†å¦–ç²¾çš„æœ¬ç›¸ï¼\n",me);
     me->set_name(names[random(sizeof(names))], ({"yao guai", "yao", "guai", "xiao tong", "tong"}));
     command("wear dun");
     command("wield all");
   }
   ::kill_ob(ob);
 }
-ÿ

@@ -210,5 +210,3 @@ void rewarding (object who)
   who->delete("quest/pending/give");
   quest_done(who);
 }
-
-

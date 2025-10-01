@@ -44,4 +44,3 @@ void create()
 	carry_object("/d/moon/obj/luoyi")->wear();
 	carry_object("/d/qujing/start/obj/huoyandao")->wield();
 }
-

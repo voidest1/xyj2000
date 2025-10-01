@@ -197,4 +197,3 @@ int ji (string target)
   ping->ji_ob(victim);
   return 1;
 }
-

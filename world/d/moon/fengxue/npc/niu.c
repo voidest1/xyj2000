@@ -25,4 +25,3 @@ void create()
 	carry_object("/d/obj/cloth/skirt.c")->wear(); 
 	carry_object("/d/obj/cloth/shoes")->wear();
 }
-

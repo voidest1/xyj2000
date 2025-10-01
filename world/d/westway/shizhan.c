@@ -59,4 +59,3 @@ int reg()
 	this_object()->delete("done");
 	return 1;
 }
-

@@ -17,4 +17,3 @@ void create()
         set("no_get","要吃桃板店里去买，这个桃核不干净。\n");
         setup();
 }
-

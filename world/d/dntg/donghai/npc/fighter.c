@@ -146,5 +146,3 @@ int check_result(object me, object who)
 
   return 1;  
 }
-
-

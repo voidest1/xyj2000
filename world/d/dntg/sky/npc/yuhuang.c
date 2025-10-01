@@ -280,6 +280,3 @@ int ask_pantao() {
   command("say 就让你去管王母娘娘的蟠桃园，少惹麻烦好好干！");
   return 1;
 }
-
-
-

@@ -5,9 +5,9 @@ inherit NPC;
 void create()
 {
  
-        set_name("Éñ±ø", ({ "shen bing", "bing"}) );
-        set("gender", "ÄÐÐÔ" );
-        set("long","ÍÐËþÀîÌìÍõÕÊÏÂÉñ±ø£¬°òÀ«ÑüÔ²£¬Á¦´óÎÞÇî¡£\n");
+        set_name("ç¥žå…µ", ({ "shen bing", "bing"}) );
+        set("gender", "ç”·æ€§" );
+        set("long","æ‰˜å¡”æŽå¤©çŽ‹å¸ä¸‹ç¥žå…µï¼Œè†€é˜”è…°åœ†ï¼ŒåŠ›å¤§æ— ç©·ã€‚\n");
         set("age",40);
         set("str", 30);
         set("int", 20);
@@ -46,5 +46,3 @@ void create()
 	carry_object("/d/obj/weapon/sword/changjian")->wield();
 }
  
-
-ÿ

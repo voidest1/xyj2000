@@ -5,15 +5,15 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("ÔÂÅ«", ({"yue nu", "yuenu", "yue","master"}));
+       set_name("æœˆå¥´", ({"yue nu", "yuenu", "yue","master"}));
        set("long",
-"ËýÄËÊÇ¹ðÊ÷²ÉÌìµØÖ®¾«»ª»¯³É£¬ºó°ÝæÏ¶ðÎªÊ¦£®\n");
-       set("title", "¹ð»¨ÏÉ");
-       set("gender", "Å®ÐÔ");
+"å¥¹ä¹ƒæ˜¯æ¡‚æ ‘é‡‡å¤©åœ°ä¹‹ç²¾åŽåŒ–æˆï¼ŒåŽæ‹œå«¦å¨¥ä¸ºå¸ˆï¼Ž\n");
+       set("title", "æ¡‚èŠ±ä»™");
+       set("gender", "å¥³æ€§");
        set("age", 20);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 500);
@@ -52,7 +52,7 @@ void create()
         map_skill("parry", "snowsword");
         map_skill("dodge", "moondance");
 
-create_family("ÔÂ¹¬", 3, "µÜ×Ó");
+create_family("æœˆå®«", 3, "å¼Ÿå­");
 setup();
 
         carry_object("/d/moon/obj/luoyi")->wear();
@@ -61,16 +61,16 @@ setup();
 
 void attempt_apprentice(object ob)
 {
-        if ( !((string)ob->query("gender")=="Å®ÐÔ")){
+        if ( !((string)ob->query("gender")=="å¥³æ€§")){
            command("shake");
-           command("say ÎÒÃÇÔÂ¹¬Ö»ÊÕÅ®Í½£¬ÕâÎ»" +
-RANK_D->query_respect(ob) + "»¹ÊÇÁíÇë¸ß¾Í°É¡£\n");
+           command("say æˆ‘ä»¬æœˆå®«åªæ”¶å¥³å¾’ï¼Œè¿™ä½" +
+RANK_D->query_respect(ob) + "è¿˜æ˜¯å¦è¯·é«˜å°±å§ã€‚\n");
            return;
         }
 
         command("pat "+ob->query("id"));
-        command("say ºÃ£¬Ï£Íû" + RANK_D->query_respect(ob) +
-"¶à¼ÓÅ¬Á¦£¬°ÑÎÒÃÇÔÂ¹¬·¢Ñï¹â´ó¡£\n");
+        command("say å¥½ï¼Œå¸Œæœ›" + RANK_D->query_respect(ob) +
+"å¤šåŠ åŠªåŠ›ï¼ŒæŠŠæˆ‘ä»¬æœˆå®«å‘æ‰¬å…‰å¤§ã€‚\n");
         command("recruit " + ob->query("id") );
         return;
 }
@@ -80,4 +80,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "xian");
 }
-ÿ

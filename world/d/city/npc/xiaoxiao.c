@@ -71,4 +71,3 @@ int accept_fight(object me)
         command("say 哼，老娘地盘上也敢撒野！\n");
         return 1;
 }
-

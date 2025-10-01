@@ -108,4 +108,3 @@ int ji (string target)
   victim=present(target,environment(me));
   return seal->ji_ob(victim);
 }
-

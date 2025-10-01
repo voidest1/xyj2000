@@ -19,4 +19,3 @@ void create()
 		set("eat_msg","$N抓起一大块$n送进嘴里。\n");
         }
 }
-

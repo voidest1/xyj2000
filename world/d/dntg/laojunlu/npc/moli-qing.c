@@ -77,4 +77,3 @@ void die ()
   destruct (this_object());
   return ;
 }
-

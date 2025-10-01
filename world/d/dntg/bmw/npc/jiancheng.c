@@ -3,12 +3,12 @@
 inherit NPC;
 void create()
 {
-	set_name("¼àØ©", ({"jian cheng"})); 
-        set("gender", "ÄÐÐÔ" );
-	set("long", "ÓùÂí¼à¼àØ©¡£\n");
+	set_name("ç›‘ä¸ž", ({"jian cheng"})); 
+        set("gender", "ç”·æ€§" );
+	set("long", "å¾¡é©¬ç›‘ç›‘ä¸žã€‚\n");
         set("age",40);
         set("str", 30);
-	set("title", "ÓùÂí¼à");
+	set("title", "å¾¡é©¬ç›‘");
         set("int", 20);
 	set("con", 30);
 	set("spi", 20);
@@ -25,4 +25,3 @@ void create()
         carry_object("/d/obj/cloth/xianpao")->wear();
 }
  
-ÿ

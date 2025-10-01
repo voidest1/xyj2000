@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("°×Ô³", ({ "bai yuan", "yuan" }) );
-        set("race", "Ò°ÊÞ");
+        set_name("ç™½çŒ¿", ({ "bai yuan", "yuan" }) );
+        set("race", "é‡Žå…½");
         set("age", 80);
-        set("long", "Ò»Ö»»ëÉí³¤×Å´çÐí³¤°×Ã«µÄÀÏÔ³¡£\n");
+        set("long", "ä¸€åªæµ‘èº«é•¿ç€å¯¸è®¸é•¿ç™½æ¯›çš„è€çŒ¿ã€‚\n");
 
         set("str", 30);
         set("dex", 30);
@@ -15,7 +15,7 @@ void create()
 	set("cor", 50);
 	set("spi", 50);
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "ºó½Å", "Î²°Í" }) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "åŽè„š", "å°¾å·´" }) );
         set("verbs", ({ "bite", "claw" }) );
 
 	set("combat_exp", 999000);
@@ -50,5 +50,3 @@ void create()
         setup();
 	carry_object("/d/obj/weapon/sword/changjian")->wield();
 }
-
-ÿ

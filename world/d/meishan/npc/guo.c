@@ -5,10 +5,10 @@ void consider();
 void create()
 {
 
-  set_name("¹ùÉê", ({ "guo shen", "guo", "jiangjun" }) );
-  set("gender", "ÄĞĞÔ" );
-  set("long", "¹ùÉêÊÇÃ·É½ÆßĞÖµÜÖĞµÄÀÏ¶ş¡£\n");
-  set("title", "Ã·É½½«¾ü");
+  set_name("éƒ­ç”³", ({ "guo shen", "guo", "jiangjun" }) );
+  set("gender", "ç”·æ€§" );
+  set("long", "éƒ­ç”³æ˜¯æ¢…å±±ä¸ƒå…„å¼Ÿä¸­çš„è€äºŒã€‚\n");
+  set("title", "æ¢…å±±å°†å†›");
   set("age", 45);
   set("attitude", "peaceful");
   set("str", 30);
@@ -66,7 +66,7 @@ int accept_fight(object me)
                 command("wield sword");
                 return 1;
         }
-        command("say ÎáÓĞ¹«ÎñÔÚÉí£¬Ë¡²»·îÅã£¡\n");
+        command("say å¾æœ‰å…¬åŠ¡åœ¨èº«ï¼Œæ•ä¸å¥‰é™ªï¼\n");
         return 0;
 }
 
@@ -81,11 +81,9 @@ void consider()
                 if( !living(enemy[i]) ) continue;
                         flag++;
                 if(     !query_temp("weapon") ) {
-                command("say ¸óÏÂ¹¦·ò³¬Èº£¬ÔÚÏÂ±ãÒ²²»¿ÍÆøÁË£¡\n");
+                command("say é˜ä¸‹åŠŸå¤«è¶…ç¾¤ï¼Œåœ¨ä¸‹ä¾¿ä¹Ÿä¸å®¢æ°”äº†ï¼\n");
                         command("wield sword");
                         break;
                 }
         }
 }
-
-ÿ

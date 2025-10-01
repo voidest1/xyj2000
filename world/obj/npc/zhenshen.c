@@ -157,4 +157,3 @@ void invocation(object who)
 	set("owner", who->query("id"));
 	set("owner_ob", who);
 }
-

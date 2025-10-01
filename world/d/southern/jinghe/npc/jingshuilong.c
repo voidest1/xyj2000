@@ -58,7 +58,3 @@ void create()
 
 	carry_object("/d/sea/obj/longpao")->wear();
 }
-
-
-
-

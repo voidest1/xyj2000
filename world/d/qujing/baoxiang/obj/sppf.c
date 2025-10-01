@@ -95,4 +95,3 @@ void remove()
       obs[i]->set_temp("apply/courage",0);
    }
 }
-

@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÏÉÍ¯", ({ "xian tong", "xian", "tong" }));
-  set("gender", "ÄÐÐÔ");
+  set_name("ä»™ç«¥", ({ "xian tong", "xian", "tong" }));
+  set("gender", "ç”·æ€§");
   set("age", 10);
   set("attitude", "peaceful");
   set("str",30);
@@ -44,5 +44,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/sengyi")->wear();
 }
-
-ÿ

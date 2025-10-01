@@ -85,4 +85,3 @@ int do_read(string arg)
         tell_room( environment(me), me->name() +"双眼盯着九股托天叉，手里还不知在比划什么。\n", ({me}));
         return 1;
 }
-

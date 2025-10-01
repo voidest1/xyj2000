@@ -65,5 +65,3 @@ int do_open(string arg)
 	destruct(key);
 	return 1;
 }
-
-

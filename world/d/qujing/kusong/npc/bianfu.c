@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("òùòð¾«", ({"bianfu jing","jing"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("è™è ç²¾", ({"bianfu jing","jing"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
-  set("long","Ò»¸öÔôÃ¼ÊóÑÛµÄÀÏÑý¾«¡£\n");
+  set("long","ä¸€ä¸ªè´¼çœ‰é¼ çœ¼çš„è€å¦–ç²¾ã€‚\n");
   set("combat_exp", 300000+random(3000));
   set("daoxing", 300000);
 
@@ -33,5 +33,3 @@ void create()
   carry_object("/d/qujing/kusong/obj/needle0")->wield();
   carry_object("/d/qujing/kusong/obj/tongjia")->wear();
 }
-
-ÿ

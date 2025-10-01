@@ -48,6 +48,3 @@ message_vision(HIR"\n$N觉得气血有所恢复！\n"NOR,me);
 if(wizardp(me)) tell_object(me,HIR"吸血量："+gp+"\n"NOR);
 return;}
 }
-
-
-

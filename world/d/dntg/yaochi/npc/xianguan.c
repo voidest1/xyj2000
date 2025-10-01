@@ -57,4 +57,3 @@ void heart_beat() {
     else destruct(this_object());
   }
 }
-

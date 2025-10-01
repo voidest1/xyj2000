@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("¹íÅĞ", ({"gui pan","gui","guard"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("é¬¼åˆ¤", ({"gui pan","gui","guard"}));
+  set("gender", "ç”·æ€§");
   set("age", 10);
-  set("long","¿´ÃÅµÄ¹íÅĞ£¬Õı¶ñºİºİµØ¶¢×ÅÄã¡£\n");
+  set("long","çœ‹é—¨çš„é¬¼åˆ¤ï¼Œæ­£æ¶ç‹ ç‹ åœ°ç›¯ç€ä½ ã€‚\n");
   set("combat_exp", 2500);
   set("daoxing", 6000);
 
@@ -26,4 +26,3 @@ void create()
   setup();
 
 }
-ÿ

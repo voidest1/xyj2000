@@ -34,4 +34,3 @@ init_sword(500);
      setup();
 }
 int query_autoload() { return 1; }
-

@@ -9,14 +9,14 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("���޳�", ({ "bai wuchang","wuchang", "gargoyle" }));
-        set("long","һ�����°׾���Ƥ��ʹ�ߣ����׵����Ͽ������κ�ϲŭ���֡�\n");
+        set_name("白无常", ({ "bai wuchang","wuchang", "gargoyle" }));
+        set("long","一个白衣白净面皮的使者，死白的脸上看不出任何喜怒哀乐。\n");
         set("attitude", "peaceful");
 	set("per", 10);
 	set("str", 25);
 	set("int", 25);
         set("age", 30);
-	set("title", "�л�˾��");
+	set("title", "招魂司主");
         set("combat_exp", 120000);
   set("daoxing", 200000);
 
@@ -49,13 +49,13 @@ void create()
 	map_skill("dodge", "ghost-steps");
 	map_skill("force", "tonsillit");
 	map_skill("unarmed", "jinghun-zhang");
-create_family("���޵ظ�", 3, "���");
+create_family("阎罗地府", 3, "你好");
   set("inquiry",([
-   "name":"�����л�ʹ���޳�����ʮ��ڤ��֮����ǰ�����乴�ꡣ\n",
-   "here":"���������޵ظ���\n",
-   "����":"�Ұ��������鹴�ˣ�����ԩ�������뷢�˹���֮ڤ������(complain)��\n",
-   "ԩ��":"�Ұ��������鹴�ˣ�����ԩ�������뷢�˹���֮ڤ������(complain)��\n",
-   "ԩ��":"�Ұ��������鹴�ˣ�����ԩ�������뷢�˹���֮ڤ������(complain)��\n",
+   "name":"在下招魂使白无常，奉十殿冥王之命，前往阳间勾魂。\n",
+   "here":"这里是阎罗地府。\n",
+   "勾魂":"我按批文所书勾人，若有冤屈，可与发此公文之冥王申诉(complain)。\n",
+   "冤枉":"我按批文所书勾人，若有冤屈，可与发此公文之冥王申诉(complain)。\n",
+   "冤屈":"我按批文所书勾人，若有冤屈，可与发此公文之冥王申诉(complain)。\n",
   ]));
 
         setup();
@@ -69,8 +69,8 @@ void attempt_apprentice()
 	me = this_player();
         command("grin");
 
-        command("say �ܺã�" + RANK_D->query_respect(me) +
-"���Ŭ�������ձض��гɡ�\n");
+        command("say 很好，" + RANK_D->query_respect(me) +
+"多加努力，他日必定有成。\n");
        command("recruit " + me->query("id") );
         return;
 }
@@ -78,7 +78,5 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
-//		ob->set("title", "�ظ��л�˾����");
+//		ob->set("title", "地府招魂司阴兵");
 }
-
-�

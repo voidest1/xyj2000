@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÓñÃæ¹«Ö÷", ({ "yumian gongzhu", "yumian", "gongzhu", "princess" }));
-  set("title", "»ýÀ×É½");   
-  set("long", "Ò»Î»½¿ÈáÍò·ÖµÄÅ®×Ó£¬ÁæÀþµØÅ¤¶¯×ÅÑüÖ«¡£\n");
-  set("gender", "Å®ÐÔ");
+  set_name("çŽ‰é¢å…¬ä¸»", ({ "yumian gongzhu", "yumian", "gongzhu", "princess" }));
+  set("title", "ç§¯é›·å±±");   
+  set("long", "ä¸€ä½å¨‡æŸ”ä¸‡åˆ†çš„å¥³å­ï¼Œä¼¶ä¿åœ°æ‰­åŠ¨ç€è…°è‚¢ã€‚\n");
+  set("gender", "å¥³æ€§");
   set("age", 16);
   set("attitude", "heroism");
   set("per", 32);
@@ -63,8 +63,8 @@ void die ()
     ob->set_temp("obstacle/jilei_yumian_killed",1);
     call_out ("li_appearing",1,ob);
   }
-  message_vision ("\n$N·­µ¹ÔÚµØÏÖÁËÕæÉí£¬¾¹ÊÇÒ»Ö»ºüÀê¾«¡£\n",me);
-  message_vision ("ºüÀê¾«ÆËÔÚµØÉÏ£¬ËÀÁË¡£\n\n",me);
+  message_vision ("\n$Nç¿»å€’åœ¨åœ°çŽ°äº†çœŸèº«ï¼Œç«Ÿæ˜¯ä¸€åªç‹ç‹¸ç²¾ã€‚\n",me);
+  message_vision ("ç‹ç‹¸ç²¾æ‰‘åœ¨åœ°ä¸Šï¼Œæ­»äº†ã€‚\n\n",me);
   corpse = CHAR_D->make_corpse(me,ob);
   corpse->move(environment(me));
   load_object("/obj/empty");
@@ -103,6 +103,3 @@ void kill_ob (object ob)
   if (niumo && !niumo->is_fighting())
     niumo->kill_ob(ob);
 }
-
-
-ÿ

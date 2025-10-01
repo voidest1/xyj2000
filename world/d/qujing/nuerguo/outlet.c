@@ -30,9 +30,3 @@ int valid_leave (object me, string dir)
   me->set_temp("out_of_greenyard",0);
   return 1;
 }
-
-
-
-
-
-

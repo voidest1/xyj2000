@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÓüÊØ", ({"ward", "yushou", "monster"}));
-  set("long","¿´ÓüµÄĞ¡Ñı£¬°òÀ«ÑüÔ²£¬ÕÅÑÀÎè×¦£¬Í¦ÅÂÈË¡£\n");
-  set("gender", "ÄĞĞÔ");
+  set_name("ç‹±å®ˆ", ({"ward", "yushou", "monster"}));
+  set("long","çœ‹ç‹±çš„å°å¦–ï¼Œè†€é˜”è…°åœ†ï¼Œå¼ ç‰™èˆçˆªï¼ŒæŒºæ€•äººã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 40+random(15));
   set("attitude", "aggressive");
   set("shen_type", 1);
@@ -46,8 +46,7 @@ void greeting(object ob)
   if( !ob || environment(ob) != environment() ) return;
   switch( random(1) ) {
   case 0:
-    say("ÓüÊØ´óº°£º¾¹¸ÒË½´³½ûµØ£¬É±ÎŞÉâ£¡\n");
+    say("ç‹±å®ˆå¤§å–Šï¼šç«Ÿæ•¢ç§é—¯ç¦åœ°ï¼Œæ€æ— èµ¦ï¼\n");
     break;
   }
 }
-ÿ

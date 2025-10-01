@@ -5,15 +5,15 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("³ÕÃÎÏÉ¹Ã",({"chi meng","dream", "fairy"}));
+       set_name("ç—´æ¢¦ä»™å§‘",({"chi meng","dream", "fairy"}));
        set("long",
-"´ËÄËÃÔ½ò³ÕÃÎÏÉ¹ÃÒ²£»²»ÊÜ½ðÒøÖ®Ð»£¬µ«ÓöÓÐÔµÕß¶ÉÖ®£¡\n");
-       set("title", "ÃÔ½ò¶ÉÕß");
-       set("gender", "Å®ÐÔ");
+"æ­¤ä¹ƒè¿·æ´¥ç—´æ¢¦ä»™å§‘ä¹Ÿï¼›ä¸å—é‡‘é“¶ä¹‹è°¢ï¼Œä½†é‡æœ‰ç¼˜è€…æ¸¡ä¹‹ï¼\n");
+       set("title", "è¿·æ´¥æ¸¡è€…");
+       set("gender", "å¥³æ€§");
        set("age", 18);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 1000);
@@ -47,7 +47,7 @@ void create()
         map_skill("parry", "snowsword");
         map_skill("dodge", "moondance");
 
-create_family("ÔÂ¹¬", 2, "µÜ×Ó");
+create_family("æœˆå®«", 2, "å¼Ÿå­");
 setup();
 
         carry_object("/d/moon/obj/luoyi")->wear();
@@ -56,22 +56,22 @@ setup();
 
 void attempt_apprentice(object ob)
 {
-        if ( !((string)ob->query("gender")=="Å®ÐÔ")){
+        if ( !((string)ob->query("gender")=="å¥³æ€§")){
            command("shake");
-           command("say ÎÒÃÇÔÂ¹¬Ö»ÊÕÅ®Í½£¬ÕâÎ»" +
-RANK_D->query_respect(ob) + "»¹ÊÇÁíÇë¸ß¾Í°É¡£\n");
+           command("say æˆ‘ä»¬æœˆå®«åªæ”¶å¥³å¾’ï¼Œè¿™ä½" +
+RANK_D->query_respect(ob) + "è¿˜æ˜¯å¦è¯·é«˜å°±å§ã€‚\n");
            return;
         }
 	if (random(this_player()->query("kar")) < 15 || this_player()->query("mark/moon_chimeng")){
 	  this_player()->set("mark/moon_chimeng", 1);
 	  command("shake");
-	  command("say ÄãÎÒÎÞÔµ£¬»¹ÊÇÁíÇë¸ß¾Í°É¡£\n");
+	  command("say ä½ æˆ‘æ— ç¼˜ï¼Œè¿˜æ˜¯å¦è¯·é«˜å°±å§ã€‚\n");
 	  return;
 	}
         else{
 	command("pat "+ob->query("id"));
-        command("say ºÃ£¬Ï£Íû" + RANK_D->query_respect(ob) +
-"¶à¼ÓÅ¬Á¦£¬°ÑÎÒÃÇÔÂ¹¬·¢Ñï¹â´ó¡£\n");
+        command("say å¥½ï¼Œå¸Œæœ›" + RANK_D->query_respect(ob) +
+"å¤šåŠ åŠªåŠ›ï¼ŒæŠŠæˆ‘ä»¬æœˆå®«å‘æ‰¬å…‰å¤§ã€‚\n");
         command("recruit " + ob->query("id") );
         return;}
 }
@@ -80,6 +80,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "xian");
 }
-
-
-ÿ

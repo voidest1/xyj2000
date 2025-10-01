@@ -7,10 +7,10 @@ inherit F_MASTER;
 
 void create()
 {
-  set_name("ÎíÀïÔÆ", ({"fog cloud", "fog"}));
-  set("long", "ºìº¢¶ùÊÖÏÂÁù½¡½«£¬ÆäÖĞÓÖÊÇÔÆÀïÎí"+
-              "ºÍÎíÀïÔÆ×îÊÜºìº¢¶ùµÄÏ²°®£¬¶´ÖĞµÄÈºÑı¶¼ÊÜ¹ıËûÁ©µÄÖ¸µ¼¡£\n");
-  set("gender", "ÄĞĞÔ");
+  set_name("é›¾é‡Œäº‘", ({"fog cloud", "fog"}));
+  set("long", "çº¢å­©å„¿æ‰‹ä¸‹å…­å¥å°†ï¼Œå…¶ä¸­åˆæ˜¯äº‘é‡Œé›¾"+
+              "å’Œé›¾é‡Œäº‘æœ€å—çº¢å­©å„¿çš„å–œçˆ±ï¼Œæ´ä¸­çš„ç¾¤å¦–éƒ½å—è¿‡ä»–ä¿©çš„æŒ‡å¯¼ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 20);
   set("attitude", "heroism");
   set("shen_type", 1);
@@ -32,7 +32,7 @@ void create()
   set_skill("stick", 50);
   set_skill("spells", 30);
   set_skill("force", 50);
-  create_family("´äÔÆÉ½°Å½¶¶´",3,"µÜ×Ó");
+  create_family("ç¿ äº‘å±±èŠ­è•‰æ´",3,"å¼Ÿå­");
   setup();
   carry_object("/d/obj/cloth/shoupiqun")->wear();
 }
@@ -48,10 +48,7 @@ void init()
   ::init();
   set("inquiry", ([
         "princess" :   (: test_player :),
-        "ÌúÉÈ¹«Ö÷" :   (: test_player :),
-        "¹«Ö÷"     :   (: test_player :),
+        "é“æ‰‡å…¬ä¸»" :   (: test_player :),
+        "å…¬ä¸»"     :   (: test_player :),
       ]));
 }
-
-
-ÿ

@@ -28,7 +28,7 @@ int self_purge()
  	ghost =1;
  	me->move("/d/death/block.c");
  	CHANNEL_D->do_channel(me, "rumor", me->query("name")
- 		+ "ÒòÎªÄê¼ÍÌ«´ó£¬ĞÄÁ¦½»´á£¬²»ĞÒÓëÊÀ³¤´Ç£¬ÓÀÔ¶Àë¿ªÁËÎÒÃÇ£¡"); 
+ 		+ "å› ä¸ºå¹´çºªå¤ªå¤§ï¼Œå¿ƒåŠ›äº¤ç˜ï¼Œä¸å¹¸ä¸ä¸–é•¿è¾ï¼Œæ°¸è¿œç¦»å¼€äº†æˆ‘ä»¬ï¼"); 
         return 1;
 }
 
@@ -45,7 +45,7 @@ void gameover()
     {
 	me->set("life/death_announced", 1);
         CHANNEL_D->do_channel(load_object(COMBAT_D), "rumor", me->query("name")
-            + "ÊÙÖÕÕıÇŞ£¬ÓÀÔ¶µØÀë¿ªÁËÎÒÃÇ¡£");
+            + "å¯¿ç»ˆæ­£å¯ï¼Œæ°¸è¿œåœ°ç¦»å¼€äº†æˆ‘ä»¬ã€‚");
     }		    
 }
 
@@ -83,10 +83,10 @@ void announce_live_forever(string reason)
     dadi = new("/d/wiz/npc/dadi.c");
     dadi->move(environment(me));
 
-    message_vision(HIY"Ö»ÌıÒ»ÕóÏÉÀÖçÎç¿£¬Ò»¼İÎå²ÊÔÆ³µ´ÓÌì»º»º¶ø½µ¡£\n"NOR, dadi);
-    message_vision(HIY"$N´Ó³µÉÏÁ¢ÆğÉíÀ´¶Ô$nÒ»¹°ÊÖ£º¹§Ï²£¡¹§Ï²£¡\n"NOR, dadi, me);
+    message_vision(HIY"åªå¬ä¸€é˜µä»™ä¹ç¼¥ç¼ˆï¼Œä¸€é©¾äº”å½©äº‘è½¦ä»å¤©ç¼“ç¼“è€Œé™ã€‚\n"NOR, dadi);
+    message_vision(HIY"$Nä»è½¦ä¸Šç«‹èµ·èº«æ¥å¯¹$nä¸€æ‹±æ‰‹ï¼šæ­å–œï¼æ­å–œï¼\n"NOR, dadi, me);
     dadi->command_function("chat "+reason);
-    message_vision(HIY"$NÒ»»ÓÊÖ£¬ÔÆ³µ½¥½¥µ­È¥£®£®£®\n"NOR, dadi);
+    message_vision(HIY"$Nä¸€æŒ¥æ‰‹ï¼Œäº‘è½¦æ¸æ¸æ·¡å»ï¼ï¼ï¼\n"NOR, dadi);
     destruct(dadi);
 
     return;
@@ -96,9 +96,9 @@ varargs int receive_damage(string type, int damage, object who)
 {
 	int val;
 
-	if( damage < 0 ) error("F_DAMAGE: ÉËº¦ÖµÎª¸ºÖµ¡£\n");
+	if( damage < 0 ) error("F_DAMAGE: ä¼¤å®³å€¼ä¸ºè´Ÿå€¼ã€‚\n");
 	if( type!="gin" && type!="kee" && type!="sen" )
-		error("F_DAMAGE: ÉËº¦ÖÖÀà´íÎó( Ö»ÄÜÊÇ gin, kee, sen ÆäÖĞÖ®Ò» )¡£\n");
+		error("F_DAMAGE: ä¼¤å®³ç§ç±»é”™è¯¯( åªèƒ½æ˜¯ gin, kee, sen å…¶ä¸­ä¹‹ä¸€ )ã€‚\n");
 
 	if( objectp(who) ) {
 	    if(objectp(who->query_temp("invoker")))
@@ -143,9 +143,9 @@ varargs int receive_wound(string type, int damage, object who)
 	int val;
 	int val1;
 
-	if( damage < 0 ) error("F_DAMAGE: ÉËº¦ÖµÎª¸ºÖµ¡£\n");
+	if( damage < 0 ) error("F_DAMAGE: ä¼¤å®³å€¼ä¸ºè´Ÿå€¼ã€‚\n");
 	if( type!="gin" && type!="kee" && type!="sen" )
-		error("F_DAMAGE: ÉËº¦ÖÖÀà´íÎó( Ö»ÄÜÊÇ gin, kee, sen ÆäÖĞÖ®Ò» )¡£\n");
+		error("F_DAMAGE: ä¼¤å®³ç§ç±»é”™è¯¯( åªèƒ½æ˜¯ gin, kee, sen å…¶ä¸­ä¹‹ä¸€ )ã€‚\n");
 
 	if( objectp(who) ) {
 	    if(objectp(who->query_temp("invoker")))
@@ -198,9 +198,9 @@ int receive_heal(string type, int heal)
 {
 	int val;
 
-	if( heal < 0 ) error("F_DAMAGE: »Ö¸´ÖµÎª¸ºÖµ¡£\n");
+	if( heal < 0 ) error("F_DAMAGE: æ¢å¤å€¼ä¸ºè´Ÿå€¼ã€‚\n");
 	if( type!="gin" && type!="kee" && type!="sen" )
-		error("F_DAMAGE: »Ö¸´ÖÖÀà´íÎó( Ö»ÄÜÊÇ gin, kee, sen ÆäÖĞÖ®Ò» )¡£\n");
+		error("F_DAMAGE: æ¢å¤ç§ç±»é”™è¯¯( åªèƒ½æ˜¯ gin, kee, sen å…¶ä¸­ä¹‹ä¸€ )ã€‚\n");
 
 	val = (int)query(type) + heal;
 
@@ -214,9 +214,9 @@ int receive_curing(string type, int heal)
 {
 	int max, val;
 
-	if( heal < 0 ) error("F_DAMAGE: »Ö¸´ÖµÎª¸ºÖµ¡£\n");
+	if( heal < 0 ) error("F_DAMAGE: æ¢å¤å€¼ä¸ºè´Ÿå€¼ã€‚\n");
 	if( type!="gin" && type!="kee" && type!="sen" )
-		error("F_DAMAGE: »Ö¸´ÖÖÀà´íÎó( Ö»ÄÜÊÇ gin, kee, sen ÆäÖĞÖ®Ò» )¡£\n");
+		error("F_DAMAGE: æ¢å¤ç§ç±»é”™è¯¯( åªèƒ½æ˜¯ gin, kee, sen å…¶ä¸­ä¹‹ä¸€ )ã€‚\n");
 
 	val = (int)query("eff_" + type);
 	max = (int)query("max_" + type);
@@ -263,9 +263,9 @@ void unconcious()
 	this_object()->remove_all_enemy();
 	remove_ride();
 
- 	message("system", HIR "\nÄãµÄÑÛÇ°Ò»ºÚ£¬½Ó×ÅÊ²Ã´Ò²²»ÖªµÀÁË£®£®£®\n\n" NOR,
+ 	message("system", HIR "\nä½ çš„çœ¼å‰ä¸€é»‘ï¼Œæ¥ç€ä»€ä¹ˆä¹Ÿä¸çŸ¥é“äº†ï¼ï¼ï¼\n\n" NOR,
 		this_object());
-	this_object()->disable_player(" <»èÃÔ²»ĞÑ>");
+	this_object()->disable_player(" <æ˜è¿·ä¸é†’>");
 	set("gin", 0);
 	set("kee", 0);
 	set("sen", 0);
@@ -294,7 +294,7 @@ varargs void revive(int quiet)
 	if( !quiet ) {
 		COMBAT_D->announce(this_object(), "revive");
 		set_temp("block_msg/all", 0);
-		message("system", HIY "\nÂıÂıµØÄãÖÕÓÚÓÖÓĞÁËÖª¾õ£®£®£®\n\n" NOR,
+		message("system", HIY "\næ…¢æ…¢åœ°ä½ ç»ˆäºåˆæœ‰äº†çŸ¥è§‰ï¼ï¼ï¼\n\n" NOR,
 			this_object());
 	} else
 		set_temp("block_msg/all", 0);
@@ -334,8 +334,8 @@ void die()
 	inv = all_inventory(this_object());
 	for(i=0; i<sizeof(inv); i++)   {
 		if( inv[i]->query("owner_id") == getuid(this_object()) )   {
-			tell_object(this_object(), HIB+"Äã¿´µ½" + inv[i]->query("name") +
-			HIB + "ÆÆ¿Õ¶øÈ¥£¬ÂıÂıÏûÊ§ÔÚÌì¼Ê£®£®£®\n"+NOR);
+			tell_object(this_object(), HIB+"ä½ çœ‹åˆ°" + inv[i]->query("name") +
+			HIB + "ç ´ç©ºè€Œå»ï¼Œæ…¢æ…¢æ¶ˆå¤±åœ¨å¤©é™…ï¼ï¼ï¼\n"+NOR);
 			destruct( inv[i] );
 		}
 	}
@@ -363,7 +363,7 @@ void die()
 	    if(str=this_object()->query_temp("death_msg"))  
 	         //can set customized death message to death_msg.
 	      str=this_object()->name(1)+str;
-	    else  str=this_object()->name(1)+"ÄªÃûÆäÃîµØËÀÁË¡£\n";
+	    else  str=this_object()->name(1)+"è«åå…¶å¦™åœ°æ­»äº†ã€‚\n";
             COMBAT_D->announce(this_object(), "death_rumor", str);
 	    log_file("death",sprintf("[%s] %s is killed: %s.\n",
 		  ctime(time()),this_object()->query("id"),

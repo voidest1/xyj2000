@@ -2,7 +2,7 @@
 // tian-jiang.c
 #include <ansi.h>
 inherit NPC;
-string *first_name = ({ "ÕÔÀÏ´ó","Ç®ÓÐ¸£","Ëï´óÍ¨","ÀîÔª±ë","ÖÜÌìºÆ","Îâ¹ã¶È","Ö£Èçº£","ÍõËÄº£"});
+string *first_name = ({ "èµµè€å¤§","é’±æœ‰ç¦","å­™å¤§é€š","æŽå…ƒå½ª","å‘¨å¤©æµ©","å´å¹¿åº¦","éƒ‘å¦‚æµ·","çŽ‹å››æµ·"});
 
 varargs void drool(string msg, string who);
 
@@ -13,12 +13,12 @@ void create()
         name = first_name[random(sizeof(first_name))];
 
         set_name(name, ({ "tian jiang", "tian", "jiang" }) );
-        set("gender", "ÄÐÐÔ" );
+        set("gender", "ç”·æ€§" );
         set("long", 
-                "ÄÜÔÚÕâÀï»ìÉÏ¸öÌì½«µÄÎ»×Ó¿Ï¶¨»áÓÐÁ½ÏÂ×Ó¡£\n"
-                "ËûÏ¸ÑüÕ§±Û£¬Ë«¼ç±§Â££¬Ò»¿´¾ÍÖªÎäÒÕ¸ßÇ¿¡£\n"
+                "èƒ½åœ¨è¿™é‡Œæ··ä¸Šä¸ªå¤©å°†çš„ä½å­è‚¯å®šä¼šæœ‰ä¸¤ä¸‹å­ã€‚\n"
+                "ä»–ç»†è…°ä¹è‡‚ï¼ŒåŒè‚©æŠ±æ‹¢ï¼Œä¸€çœ‹å°±çŸ¥æ­¦è‰ºé«˜å¼ºã€‚\n"
         );
-	set("title", "Ìì½«");
+	set("title", "å¤©å°†");
         set("age", 25+random(10));
         set("str", 30);
         set("int", 25);
@@ -40,5 +40,3 @@ void create()
         carry_object("/d/obj/armor/yinjia")->wear();
         carry_object("/d/obj/weapon/spear/tieqiang")->wield();
 }
-
-ÿ

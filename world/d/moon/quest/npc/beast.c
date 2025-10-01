@@ -58,6 +58,3 @@ varargs int receive_wound(string type,int damage,object who) {
   return ::receive_damage(type,damage,who);
 }
   
-
-
-

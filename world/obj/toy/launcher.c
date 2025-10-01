@@ -168,5 +168,3 @@ int do_install(string arg)
      return 1;
      
   }
-
-

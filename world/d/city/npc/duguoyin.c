@@ -1,16 +1,16 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// �Ź�񫣬duguoyin.c 
+// 杜过瘾，duguoyin.c 
 // 5-3-97, pickle
 
 inherit NPC;
 
 void create()
 {
-  set_name("�Ź��", ({"du guoyin", "du", "guoyin", "duguoyin", "boss"})); 
-  set("gender", "����" );
+  set_name("杜过瘾", ({"du guoyin", "du", "guoyin", "duguoyin", "boss"})); 
+  set("gender", "男性" );
   set("age", 52);
-  set("title", "�ĳ��ϰ�");
-  set("long","����ͷ������һ�����У�ʱ��ʱ̧ͷ�����ĸ������ϵĶĿ͡�");
+  set("title", "赌场老板");
+  set("long","这老头看起来一脸悠闲，时不时抬头看看四个桌子上的赌客。");
   set("combat_exp", 40000);
   set("daoxing", 20000);
 
@@ -19,7 +19,7 @@ void create()
   set_skill("unarmed", 50);
   set_skill("literate", 70);
   set("attitude", "friendly");
-  set("rank_info/respect", "�����");
+  set("rank_info/respect", "孔秀才");
   set("per",25);
   set("vendor_goods", ([
     "xiji": "/d/obj/books-nonskill/xiji",
@@ -48,7 +48,7 @@ void init()
 void greeting(object ob)
 {
   if( !ob || !visible(ob) || environment(ob) != environment() ) return;
-  command("say ��λ" + RANK_D->query_respect(ob) +"��������\n");
+  command("say 这位" + RANK_D->query_respect(ob) +"请进请进。\n");
 }
 
 mixed buy_object (object who, object item)
@@ -66,13 +66,12 @@ mixed buy_object (object who, object item)
 	  }
 	else
 	  {
-	    return notify_fail("�׷���˵�����Բ�������Ҫ���������ˣ�������һ�������ɡ�\n");
+	    return notify_fail("孔方兄说道：对不起，您老要的书卖完了！您等下一批进货吧。\n");
 	  }
 	npc->add_temp("total_books", 1);
       }
       else
       {
-	return notify_fail("�׷���˵����С�걾С�������Խ���������ˡ����ϵ���һ���ɡ�\n");
+	return notify_fail("孔方兄说道：小店本小，今日以将存货卖完了。您老等下一批吧。\n");
       }
     }
-�

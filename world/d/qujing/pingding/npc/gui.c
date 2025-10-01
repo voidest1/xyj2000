@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("¾«Ï¸¹í", ({ "jingxi gui", "jingxi gui", "gui" }));
-  set("gender", "ÄÐÐÔ");
+  set_name("ç²¾ç»†é¬¼", ({ "jingxi gui", "jingxi gui", "gui" }));
+  set("gender", "ç”·æ€§");
   set("age", 24);
   set("attitude", "heroism");
   set("per", 30);
@@ -38,5 +38,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/shoupiqun")->wear();
 }
-
-ÿ

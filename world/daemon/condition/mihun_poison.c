@@ -7,8 +7,7 @@ int update_condition(object me, int duration)
 {
         me->receive_wound("sen", 20);
         me->apply_condition("mihun_poison", duration - 1);
-        tell_object(me, HIR "你觉得四肢麻木，身体中的元神正一点点的流失．\n" NOR);
+        tell_object(me, HIR "浣犺寰楀洓鑲㈤夯鏈紝韬綋涓殑鍏冪姝ｄ竴鐐圭偣鐨勬祦澶憋紟\n" NOR);
         if( duration < 1 ) return 0;
         return 1;
 }
-

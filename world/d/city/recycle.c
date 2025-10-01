@@ -98,4 +98,3 @@ int _do_drop(object me, object obj)
    destruct(obj);
    return 1;
 }
-

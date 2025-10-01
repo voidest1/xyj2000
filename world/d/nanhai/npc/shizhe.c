@@ -55,5 +55,3 @@ LONG);
 	carry_object("/d/nanhai/obj/jingping");
 	carry_object("/obj/cloth")->wear();
 }
-
-ÿ

@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("±Ùº®´óÍõ", ({ "pihan dawang", "dawang" }));
-  set("title", "ÐþÓ¢¶´");   
-  set("long", "Ò»Î»Ñý¹Ö£¬±Ç×ÓÉÏ³¤×ÅÒ»¸ù½Ç¡£");
-  set("gender", "ÄÐÐÔ");
+  set_name("è¾Ÿå¯’å¤§çŽ‹", ({ "pihan dawang", "dawang" }));
+  set("title", "çŽ„è‹±æ´ž");   
+  set("long", "ä¸€ä½å¦–æ€ªï¼Œé¼»å­ä¸Šé•¿ç€ä¸€æ ¹è§’ã€‚");
+  set("gender", "ç”·æ€§");
   set("age", 50);
   set("attitude", "heroism");
   set("per", 29);
@@ -56,8 +56,8 @@ void die ()
     ob->set_temp("obstacle/jinping_pi1_killed",1);
     call_out ("fuling_appearing",1,ob);
   }
-  message_vision ("\n$NÆËµ¹ÔÚµØ£¬»¹Ô­ÎªÒ»Í·Ï¬Å£¡£\n",me);
-  message_vision ("\nÌì¿ÕËÄÄ¾ÇÝÐÇÒ»ÉÁ£¬Ï¬Å£±»Ò»µÀ¹â×½ÁËÈ¥£¡\n",me);
+  message_vision ("\n$Næ‰‘å€’åœ¨åœ°ï¼Œè¿˜åŽŸä¸ºä¸€å¤´çŠ€ç‰›ã€‚\n",me);
+  message_vision ("\nå¤©ç©ºå››æœ¨ç¦½æ˜Ÿä¸€é—ªï¼ŒçŠ€ç‰›è¢«ä¸€é“å…‰æ‰äº†åŽ»ï¼\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -95,5 +95,3 @@ void kill_ob (object ob)
   set_temp("my_killer",ob);
   ::kill_ob(ob);
 }
-
-ÿ

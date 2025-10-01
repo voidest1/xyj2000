@@ -48,4 +48,3 @@ int do_jump (string arg)
   who->move(__DIR__+rooms[random(sizeof(rooms))]);
   return 1;
 }
-

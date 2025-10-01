@@ -16,4 +16,3 @@ LONG);
    set("cook/type","shui");
    setup();
   }
-

@@ -5,11 +5,11 @@ inherit NPC;
 void create()
 {
  
-        set_name("¾ÞÁéÉñ", ({ "juling shen", "shen", "juling" }) );
-        set("gender", "ÄÐÐÔ" );
-        set("long","ÍÐËþÀîÌìÍõÕÊÏÂÏÈ·æ´ó½«£¬°òÀ«ÑüÔ²£¬Á¦´óÎÞÇî¡£\n");
+        set_name("å·¨çµç¥ž", ({ "juling shen", "shen", "juling" }) );
+        set("gender", "ç”·æ€§" );
+        set("long","æ‰˜å¡”æŽå¤©çŽ‹å¸ä¸‹å…ˆé”‹å¤§å°†ï¼Œè†€é˜”è…°åœ†ï¼ŒåŠ›å¤§æ— ç©·ã€‚\n");
         set("age",40);
-	set("title", "ÏÈ·æ´ó½«");
+	set("title", "å…ˆé”‹å¤§å°†");
         set("str", 40);
         set("int", 20);
 	set("con", 30);
@@ -55,5 +55,3 @@ void create()
 	carry_object("/d/obj/weapon/axe/huafu")->wield();
 }
  
-
-ÿ

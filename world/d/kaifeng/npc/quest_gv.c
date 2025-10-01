@@ -145,5 +145,3 @@ mapping quests_give = ([
   270000 : ({ "give", "吕洞宾","lu dongbin",  "【太乙真经】(taiyi zhenjing)","1" }),
 
 ]);
-
-

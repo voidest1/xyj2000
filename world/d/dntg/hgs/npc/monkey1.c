@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-	set_name("Ğ¡ºï×Ó", ({ "xiao houzi","xiaohouzi","monkey","hou" }) );
-	set("race", "Ò°ÊŞ");
+	set_name("å°çŒ´å­", ({ "xiao houzi","xiaohouzi","monkey","hou" }) );
+	set("race", "é‡å…½");
 	set("age", 6);
-	set("long", "Ò»Ö»ÍçÆ¤µÄĞ¡ºï×Ó¡£\n");
+	set("long", "ä¸€åªé¡½çš®çš„å°çŒ´å­ã€‚\n");
 	
 	set("str", 30);
 	set("cor", 26);	
@@ -17,16 +17,16 @@ void create()
 
             set_skill("dodge",20);
             set_skill("unarmed",10);
-	set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ºó½Å", "Î²°Í" }) );
+	set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰çˆª", "åè„š", "å°¾å·´" }) );
 	set("verbs", ({ "bite", "claw" }) );
 
 	set("chat_chance", 6);
 	set("chat_msg", ({
 		(: call_other, this_object(), "random_move" :),
-		"Ğ¡ºï×Ó¶ÔÄã×öÁË¸ö¹íÁ³¡£\n",
-		"Å¾µØÒ»Éù£¡Ğ¡ºï×ÓÈÓÀ´Ò»¿ÅÒ°¹û£¬ÕıºÃÔÒÖĞÄãµÄ±Ç×Ó¡£\n",
-		"Ğ¡ºï×Ó¶ÔÄãÖ¨Ö¨Ö¨µØ½ĞÁË¼¸Éù¡£\n",
-		"Ğ¡ºï×Ó×¥¶úÄÓÈùµØ£¬Î§×ÅÄãÌøÀ´ÌøÈ¥¡£\n" }) );
+		"å°çŒ´å­å¯¹ä½ åšäº†ä¸ªé¬¼è„¸ã€‚\n",
+		"å•ªåœ°ä¸€å£°ï¼å°çŒ´å­æ‰”æ¥ä¸€é¢—é‡æœï¼Œæ­£å¥½ç ¸ä¸­ä½ çš„é¼»å­ã€‚\n",
+		"å°çŒ´å­å¯¹ä½ å±å±å±åœ°å«äº†å‡ å£°ã€‚\n",
+		"å°çŒ´å­æŠ“è€³æŒ è…®åœ°ï¼Œå›´ç€ä½ è·³æ¥è·³å»ã€‚\n" }) );
 		
 //	set_temp("apply/attack", 20);
 //	set_temp("apply/defense", 50);
@@ -40,7 +40,7 @@ int accept_object(object who, object ob)
 	if( ob->id("mihou tao")||ob->id("huasheng")||ob->id("jiudai")) {
 		set_leader(who);
 		who->set("pending/haha", 5);
-		message("vision", name() + "¸ßĞËµÃ×¥¶úÄÓÈù£¬Ö±·­¸úÍ·¡£\n", environment());
+		message("vision", name() + "é«˜å…´å¾—æŠ“è€³æŒ è…®ï¼Œç›´ç¿»è·Ÿå¤´ã€‚\n", environment());
 		return 1;
 	}
 }
@@ -52,15 +52,14 @@ void init()
 int do_let(string arg)
 {
         if( !this_player()->query("pending/haha") ) 
-        return notify_fail("Ğ¡ºï×Ó¿ÚÖĞÎØÎØÁ½Éù£¬ºÃÏñ²»Ô¸ÀíÄã£¡\n");
+        return notify_fail("å°çŒ´å­å£ä¸­å‘œå‘œä¸¤å£°ï¼Œå¥½åƒä¸æ„¿ç†ä½ ï¼\n");
 	
 	if(!arg )
-	return notify_fail("Ğ¡ºï×ÓºÃÏó²»¶®ÄãËµÊ²Ã´£¡\n");
+	return notify_fail("å°çŒ´å­å¥½è±¡ä¸æ‡‚ä½ è¯´ä»€ä¹ˆï¼\n");
 
-	message_vision("$N¶Ô$n×öÁË¸öÊÖÊÆ¡£\n", this_player(), this_object());
+	message_vision("$Nå¯¹$nåšäº†ä¸ªæ‰‹åŠ¿ã€‚\n", this_player(), this_object());
 	command("bite");
 	command("bite none");
 	this_player()->add("pending/haha", -1);
 	return 1;
 }
-ÿ

@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÃÀºó", ({ "mei hou", "hou", "queen" }));
-  set("title", "±ÈÇğ¹ú");   
-  set("long", "Ò»Î»½¿¿¡ÎŞ±È£¬Ã²ËÆ¹ÛÒôµÄÍõºó¡£\n");
-  set("gender", "Å®ĞÔ");
+  set_name("ç¾å", ({ "mei hou", "hou", "queen" }));
+  set("title", "æ¯”ä¸˜å›½");   
+  set("long", "ä¸€ä½å¨‡ä¿Šæ— æ¯”ï¼Œè²Œä¼¼è§‚éŸ³çš„ç‹åã€‚\n");
+  set("gender", "å¥³æ€§");
   set("age", 17);
   set("attitude", "heroism");
   set("per", 30);
@@ -59,8 +59,8 @@ void die ()
 
   if (ob)
     ob->set_temp("obstacle/biqiu_hou",1);
-  message_vision ("\n$NÆËÔÚµØÉÏÏÖÁËÔ­Éí£¬Ô­ÊÇÒ»Ö»ºüÀê¾«¡£\n",me);
-  me->set_name("ºüÀê¾«", ({"huli jing", "huli", "jing"}));
+  message_vision ("\n$Næ‰‘åœ¨åœ°ä¸Šç°äº†åŸèº«ï¼ŒåŸæ˜¯ä¸€åªç‹ç‹¸ç²¾ã€‚\n",me);
+  me->set_name("ç‹ç‹¸ç²¾", ({"huli jing", "huli", "jing"}));
   ::die();
 }
 
@@ -68,5 +68,3 @@ void unconcious ()
 {
   die ();
 }
-
-ÿ

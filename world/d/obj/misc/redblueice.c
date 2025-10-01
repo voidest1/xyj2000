@@ -145,4 +145,3 @@ int do_add(string arg)
 	destruct(this_object());
 	return 1;
 }
-

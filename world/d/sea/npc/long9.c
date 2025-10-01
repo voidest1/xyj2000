@@ -66,8 +66,3 @@ int accept_fight(object me)
   command("say 不过既然" + RANK_D->query_respect(me) + "想比划两招，俺也只好奉陪了。");
   return 1;
 }
-
-
-
-
-

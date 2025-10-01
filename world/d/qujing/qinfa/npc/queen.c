@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Íõºó", ({"wang hou", "hou", "queen"}));
-  set ("long", "ÇÕ·¨¹úÍõºó£¬ÃæÈÝÑÅÀö£¬¾ÙÖ¹¶Ë×¯¡£\n");
-  set("title", "ÇÕ·¨¹ú");
-  set("gender", "Å®ÐÔ");
+  set_name("çŽ‹åŽ", ({"wang hou", "hou", "queen"}));
+  set ("long", "é’¦æ³•å›½çŽ‹åŽï¼Œé¢å®¹é›…ä¸½ï¼Œä¸¾æ­¢ç«¯åº„ã€‚\n");
+  set("title", "é’¦æ³•å›½");
+  set("gender", "å¥³æ€§");
   set("age", 30);
   set("combat_exp", 100000);
   set("daoxing", 50000);
@@ -33,7 +33,7 @@ void check_hair ()
 {
   object me = this_object();
 
-  if (me->query("disable_type") == "<Ë¯ÃÎÖÐ>" &&
+  if (me->query("disable_type") == "<ç¡æ¢¦ä¸­>" &&
       me->query_temp("disabled"))
   {
     call_out("check_hair",1);
@@ -43,8 +43,7 @@ void check_hair ()
   if (me->query_temp("has_said"))
     return;
 
-  message_vision ("$NÍ»È»ÏÂÒâÊ¶µØÃþÁËÃþÍ·£ºÌìÄÅ£¬ÄÔ´üÈ«Ìê¹âÁË£¡\n",me);
-  message_vision ("$NÒ»ÕóÑ£ÔÎ£¬²îµãË¤µ¹ÔÚµØ£¡\n",me);
+  message_vision ("$Nçªç„¶ä¸‹æ„è¯†åœ°æ‘¸äº†æ‘¸å¤´ï¼šå¤©å‘ï¼Œè„‘è¢‹å…¨å‰ƒå…‰äº†ï¼\n",me);
+  message_vision ("$Nä¸€é˜µçœ©æ™•ï¼Œå·®ç‚¹æ‘”å€’åœ¨åœ°ï¼\n",me);
   me->set_temp("has_said",1);
 }
-ÿ

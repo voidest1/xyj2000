@@ -22,4 +22,3 @@ void create()
 				set("no_get","想拿总管框框发的装备？做梦吧!\n");
   setup();
 }
-

@@ -281,4 +281,3 @@ void remove()
     remove_ding();
     ::remove();
 }
-

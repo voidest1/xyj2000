@@ -37,4 +37,3 @@ int valid_leave (object who, string dir)
     return notify_fail ("妖王对你喝道：哪里逃！\n");
   return ::valid_leave(who,dir);
 }
-

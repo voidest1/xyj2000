@@ -48,4 +48,3 @@ me->move(__DIR__"xiaoxi");
 message_vision("只见小溪中水花四溅，几条小鱼跳了起来。\n", me);
 return 1;
 }
-

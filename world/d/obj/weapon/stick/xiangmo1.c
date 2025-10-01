@@ -24,4 +24,3 @@ set("no_put",1);
         setup();
 }
 int query_autoload() { return 1; }
-

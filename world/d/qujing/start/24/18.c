@@ -45,4 +45,3 @@ void create()
         carry_object("/d/obj/weapon/staff/budd_staff")->wield();
 	carry_object("/d/obj/armor/jinjia")->wear();
 }
-

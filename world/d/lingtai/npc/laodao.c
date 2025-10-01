@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÀÏµÀÊ¿", ({"laodao"}));
-        set("gender", "ÄÐÐÔ" );
+        set_name("è€é“å£«", ({"laodao"}));
+        set("gender", "ç”·æ€§" );
         set("age", 73);
-        set("long", "Ò»Î»ÀÏµÀÊ¿£¬Ã¼Ã«ºÍºú×Ó¶¼°×ÁË£®\n");
+        set("long", "ä¸€ä½è€é“å£«ï¼Œçœ‰æ¯›å’Œèƒ¡å­éƒ½ç™½äº†ï¼Ž\n");
         set("combat_exp", 20000);
 	set("daoxing", 50000);
 
@@ -40,8 +40,8 @@ int accept_object(object me,object ob)
         who=this_player();
 
         if (ob->query("id")=="songguo"
-	&& who->query("family/family_name")=="·½´çÉ½ÈýÐÇ¶´") {
-write("ÀÏµÀÊ¿¸ßÐËµÄºú×Ó¶¼ÇÌÆðÀ´ÁË£¬Ëµ£ºÕâ¿ÉÊÇºÃ¶«Î÷Ñ½£¡\n");
+	&& who->query("family/family_name")=="æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´ž") {
+write("è€é“å£«é«˜å…´çš„èƒ¡å­éƒ½ç¿˜èµ·æ¥äº†ï¼Œè¯´ï¼šè¿™å¯æ˜¯å¥½ä¸œè¥¿å‘€ï¼\n");
                 command("give piece to " + who->query("id"));
                 call_out("destroy", 1, ob);
 		return 1;
@@ -53,5 +53,3 @@ void destroy(object ob)
         destruct(ob);
         return;
 }
-
-ÿ

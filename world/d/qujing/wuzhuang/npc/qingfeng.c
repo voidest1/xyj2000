@@ -4,16 +4,16 @@
 inherit NPC;
 void create()
 {
-	set_name("Çå·ç", ({"qing feng", "qingfeng"}));
-	set("gender", "ÄÐÐÔ" );
+	set_name("æ¸…é£Ž", ({"qing feng", "qingfeng"}));
+	set("gender", "ç”·æ€§" );
 	set("age", 16);
-	set("long", "Ò»¸ö»úÁéµÄÐ¡ÏÉÍ¯£¬ÔÚÎå×¯¹ÛÉÏÏÂºÜÊÇ³ÔµÃ¿ª¡£\n");
+	set("long", "ä¸€ä¸ªæœºçµçš„å°ä»™ç«¥ï¼Œåœ¨äº”åº„è§‚ä¸Šä¸‹å¾ˆæ˜¯åƒå¾—å¼€ã€‚\n");
 	set("class", "xian");
 	set("combat_exp", 10000);
   set("daoxing", 20000);
 
 	set("attitude", "peaceful");
-	set("title", "Ð¡ÏÉÍ¯");
+	set("title", "å°ä»™ç«¥");
 	set_skill("unarmed", 40);
 	set_skill("dodge", 40);
 	set_skill("parry", 40);
@@ -31,7 +31,7 @@ void init()
 
 	::init();
 
-	if ( ((int)ob->query("env/invisibility")  == 0) && ((string)environment(me)->query("short")=="Õýµî") )
+	if ( ((int)ob->query("env/invisibility")  == 0) && ((string)environment(me)->query("short")=="æ­£æ®¿") )
 	{
 		remove_call_out("greeting");
 		call_out("greeting", 1, ob);
@@ -43,14 +43,13 @@ void greeting(object ob)
 	if( !ob || environment(ob) != environment() ) return;
 
 	if ( (int)ob->query("combat_exp")>500000 )
-		command("say ÕâÎ»" + RANK_D->query_respect(ob) + "Ê§Ó­ÁË£¬¿ìÇëÉÏ×ø£¡Çëµ½¶«µîÓÃÏã²è£¡\n");
+		command("say è¿™ä½" + RANK_D->query_respect(ob) + "å¤±è¿Žäº†ï¼Œå¿«è¯·ä¸Šåï¼è¯·åˆ°ä¸œæ®¿ç”¨é¦™èŒ¶ï¼\n");
 	else if ( (int)ob->query("combat_exp")>100000 )
-		command("say ÕâÎ»" + RANK_D->query_respect(ob) + "Ê§Ó­ÁË£¬¿ìÇë×ø£¡Çëµ½¶«µîÓÃ²è£¡\n");
+		command("say è¿™ä½" + RANK_D->query_respect(ob) + "å¤±è¿Žäº†ï¼Œå¿«è¯·åï¼è¯·åˆ°ä¸œæ®¿ç”¨èŒ¶ï¼\n");
 	else if ( (int)ob->query("combat_exp")>10000 )
-		command("say ÕâÎ»" + RANK_D->query_respect(ob) + "£¬Çë×ø£¡ÓÃ²è£¡\n");
+		command("say è¿™ä½" + RANK_D->query_respect(ob) + "ï¼Œè¯·åï¼ç”¨èŒ¶ï¼\n");
 	else if ( (int)ob->query("combat_exp")>1000 )
 		command("hi " + ob->query("id"));	
 	else
 		return;
 }
-ÿ

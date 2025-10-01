@@ -15,5 +15,3 @@ void create()
   set_amount(1+random(3));
   setup();
 }
-
-

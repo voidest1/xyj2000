@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// ¿×·½ĞÖ, bookseller.
+// å­”æ–¹å…„, bookseller.
 // 5-3-97, pickle
 
 inherit F_VENDOR_SALE;
@@ -7,12 +7,12 @@ inherit F_VENDOR_SALE;
 void create()
 {
     reload("city_kongfang");
-  set_name("¿×·½ĞÖ", ({ "kong fang", "kongfang", "kong", "fang", "bookseller", "seller", "vendor" }) );
+  set_name("å­”æ–¹å…„", ({ "kong fang", "kongfang", "kong", "fang", "bookseller", "seller", "vendor" }) );
   set("shop_id",({"kongfang","kong","fang","bookseller","seller"}));
-  set("gender", "ÄĞĞÔ" );
+  set("gender", "ç”·æ€§" );
   set("age", 37);
-  set("title", "ÊéµêÀÏ°å");
-  set("long","¿×Ğã²ÅÈë¾©¸Ï¿¼ÂäµÚ£¬ÅÌ²øÓÃ¾¡£¬ÎŞ·¨»¹Ïç£¬\n²»µÃÒÑÔÚ³¤°²¿ªÒ»¼ÒÊéµê¡£´«ËµËûÔøÓöÒìÈË£¬\nÑ§µÃÒ»Ğ©·ÀÉíÖ®Êõ¡£\n");
+  set("title", "ä¹¦åº—è€æ¿");
+  set("long","å­”ç§€æ‰å…¥äº¬èµ¶è€ƒè½ç¬¬ï¼Œç›˜ç¼ ç”¨å°½ï¼Œæ— æ³•è¿˜ä¹¡ï¼Œ\nä¸å¾—å·²åœ¨é•¿å®‰å¼€ä¸€å®¶ä¹¦åº—ã€‚ä¼ è¯´ä»–æ›¾é‡å¼‚äººï¼Œ\nå­¦å¾—ä¸€äº›é˜²èº«ä¹‹æœ¯ã€‚\n");
   set("combat_exp", 40000);
   set("daoxing", 20000);
 
@@ -21,7 +21,7 @@ void create()
   set_skill("unarmed", 50);
   set_skill("literate", 70);
   set("attitude", "friendly");
-  set("rank_info/respect", "¿×Ğã²Å");
+  set("rank_info/respect", "å­”ç§€æ‰");
   set("per",25);
   set("vendor_goods", ([
 //    "xiji": "/d/obj/books-nonskill/xiji",
@@ -51,7 +51,7 @@ void init()
 void greeting(object ob)
 {
   if( !ob || !visible(ob) || environment(ob) != environment() ) return;
-  command("say ÕâÎ»" + RANK_D->query_respect(ob) +"Çë½øÇë½ø¡£");
+  command("say è¿™ä½" + RANK_D->query_respect(ob) +"è¯·è¿›è¯·è¿›ã€‚");
 }
 
 mixed buy_object (object who, object item)
@@ -70,13 +70,13 @@ mixed buy_object (object who, object item)
 	  }
 	else
 	  {
-	    return notify_fail(name()+"ËµµÀ£º¶Ô²»Æğ£¬ÄúÀÏÒªµÄÊéÂôÍêÁË£¡ÄúµÈÏÂÒ»Åú½ø»õ°É¡£\n");
+	    return notify_fail(name()+"è¯´é“ï¼šå¯¹ä¸èµ·ï¼Œæ‚¨è€è¦çš„ä¹¦å–å®Œäº†ï¼æ‚¨ç­‰ä¸‹ä¸€æ‰¹è¿›è´§å§ã€‚\n");
 	  }
 	//npc->add_temp("total_books", 1);
       }
       else
       {
-	return notify_fail(name()+"ËµµÀ£ºĞ¡µê±¾Ğ¡£¬½ñÈÕÒÔ½«´æ»õÂôÍêÁË¡£ÄúÀÏµÈÏÂÒ»Åú°É¡£\n");
+	return notify_fail(name()+"è¯´é“ï¼šå°åº—æœ¬å°ï¼Œä»Šæ—¥ä»¥å°†å­˜è´§å–å®Œäº†ã€‚æ‚¨è€ç­‰ä¸‹ä¸€æ‰¹å§ã€‚\n");
       }
 }
 
@@ -93,7 +93,7 @@ void accept_kill(object me)
                 ob=new("/d/city/npc/xunluobing");
                 ob->move(environment());
         }
-        message_vision("\nºöÈ»´ÓÃÅÍâ³å½øÀ´¸öÑ²Âß¹Ù±ø£¬¶Ô$N´óº°Ò»Éù¡°¸ÉÊ²Ã´£¿ÏëÉ±ÈËÄ±²ÆÃ´£¡\n\n",me);        
+        message_vision("\nå¿½ç„¶ä»é—¨å¤–å†²è¿›æ¥ä¸ªå·¡é€»å®˜å…µï¼Œå¯¹$Nå¤§å–Šä¸€å£°â€œå¹²ä»€ä¹ˆï¼Ÿæƒ³æ€äººè°‹è´¢ä¹ˆï¼\n\n",me);        
 
         ob->kill_ob(me);
         ob->set_leader(me);
@@ -106,5 +106,3 @@ int regenerate()
         set("called", 0);
         return 1;
 }
-
-ÿ

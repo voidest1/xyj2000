@@ -81,4 +81,3 @@ void close ()
     tell_room (this_object(),"乓地一声门又关死了！\n");
   this_object()->delete("exits/southeast");
 }
-

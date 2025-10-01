@@ -43,4 +43,3 @@ int valid_leave (object who, string dir)
     return notify_fail ("皇宫伺卫将枪一横，威严地喝了一声：禁行！\n");
   return ::valid_leave (who, dir);
 }
-

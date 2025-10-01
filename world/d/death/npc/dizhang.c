@@ -5,10 +5,10 @@ inherit F_MASTER;
 
 void create()
 {
-  set_name("µØ²ØÍõÆĞÈø", ({"dizang pusa", "pusa"}));
-  set("long", "ÃæÈçÖìÓñ£¬´ó¶ú´¹¼ç£¬Ò»Á³Ëà¾²£®
-Ëû±ãÊÇÖ÷¹ÜÒõ²ÜµØ¸®£¬ÌìÏÂ¹í»êµÄµØ²ØÍõÆĞÈø£®\n");
-  set("gender", "ÄĞĞÔ");
+  set_name("åœ°è—ç‹è©è¨", ({"dizang pusa", "pusa"}));
+  set("long", "é¢å¦‚æœ±ç‰ï¼Œå¤§è€³å‚è‚©ï¼Œä¸€è„¸è‚ƒé™ï¼
+ä»–ä¾¿æ˜¯ä¸»ç®¡é˜´æ›¹åœ°åºœï¼Œå¤©ä¸‹é¬¼é­‚çš„åœ°è—ç‹è©è¨ï¼\n");
+  set("gender", "ç”·æ€§");
   set("class", "youling");
   set("age", 70);
   set("attitude", "friendly");
@@ -68,7 +68,7 @@ void create()
   set_temp("apply/dodge", 50);
 
   
-  create_family("ÑÖÂŞµØ¸®", 1, "ÄãºÃ");
+  create_family("é˜ç½—åœ°åºœ", 1, "ä½ å¥½");
   setup();
   
   carry_object("/d/obj/cloth/baipao")->wear();
@@ -77,22 +77,19 @@ void create()
 
 void attempt_apprentice(object ob, object me)
 {
-  if ( (string)ob->query("family/family_name")=="ÑÖÂŞµØ¸®") {
+  if ( (string)ob->query("family/family_name")=="é˜ç½—åœ°åºœ") {
     if (((int)ob->query("combat_exp") < 350000 )) {
-      command("say " + RANK_D->query_rude(ob) + "ÕâµãÈı½ÅÃ¨µÄ°ÑÊ½Ò²¸Òµ½ÎÒÕâÀï¶ªÈËÏÖÑÛ£¿");
+      command("say " + RANK_D->query_rude(ob) + "è¿™ç‚¹ä¸‰è„šçŒ«çš„æŠŠå¼ä¹Ÿæ•¢åˆ°æˆ‘è¿™é‡Œä¸¢äººç°çœ¼ï¼Ÿ");
       return;
     }
     command("grin");
-    command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) +
-	    "¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓĞ³É¡£\n");
+    command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) +
+	    "å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
     command("recruit " + ob->query("id") );
     return;
   }
   command("shake");
   command("say " + RANK_D->query_respect(ob) +
-	  "»¹ÊÇÏÈÈ¥Ñ§Ğ©»ù´¡¹¦·ò°É£¡\n");
+	  "è¿˜æ˜¯å…ˆå»å­¦äº›åŸºç¡€åŠŸå¤«å§ï¼\n");
   return;
 }
-
-
-ÿ

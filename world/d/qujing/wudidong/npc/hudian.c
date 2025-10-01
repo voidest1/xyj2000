@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("»¤µîÑý", ({"hudian yao", "yao", "hu dian", "hudian", "monster"}));
-  set("long","Ò»¸ö°òÀ«ÑüÔ²µÄ»¤µîÑý£¬¿´ÉÏÈ¥µÀÐÐ²»Ç³¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("æŠ¤æ®¿å¦–", ({"hudian yao", "yao", "hu dian", "hudian", "monster"}));
+  set("long","ä¸€ä¸ªè†€é˜”è…°åœ†çš„æŠ¤æ®¿å¦–ï¼Œçœ‹ä¸ŠåŽ»é“è¡Œä¸æµ…ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 20+random(15));
   set("attitude", "peaceful");
   set("shen_type", 1);
@@ -49,20 +49,20 @@ void greeting(object me)
   mykar=me->query_kar(); 
   diff=40-mykar;
 
-  if(me->query("family/family_name") == "ÏÝ¿ÕÉ½ÎÞµ×¶´")
+  if(me->query("family/family_name") == "é™·ç©ºå±±æ— åº•æ´ž")
     return;
   if( member_array("tian shu",me->parse_command_id_list())==-1 &&
       member_array("yu shu",me->parse_command_id_list())==-1)
     {
-      command("say Ê²Ã´¶«Î÷£¿¾¹¸ÒÔÚÎÞµ×¶´³öÈë£¡");
+      command("say ä»€ä¹ˆä¸œè¥¿ï¼Ÿç«Ÿæ•¢åœ¨æ— åº•æ´žå‡ºå…¥ï¼");
       kill_ob(me);
       return;
     }
   if( random(myspells+mykar) > diff) return;
   else
     {
-      message_vision(CYN ""+npcname+"¶Ô$N´óºÈµÀ£ºß¾£¡Ê²Ã´¶«Î÷£¡£¿ÐÝÏë´ÓÀÏ×ÓÑÛÏÂÁï¹ýÈ¥£¡\n"NOR, me);
-      message_vision(npcname+"´óº°Ò»Éù£ºÏÖ£¡$N¶ÙÊ±ÏÖ³öÔ­ÐÎ£¬Ô­À´ÊÇ"+me->query("name")+"£¡\n", me);
+      message_vision(CYN ""+npcname+"å¯¹$Nå¤§å–é“ï¼šå‘”ï¼ä»€ä¹ˆä¸œè¥¿ï¼ï¼Ÿä¼‘æƒ³ä»Žè€å­çœ¼ä¸‹æºœè¿‡åŽ»ï¼\n"NOR, me);
+      message_vision(npcname+"å¤§å–Šä¸€å£°ï¼šçŽ°ï¼$Né¡¿æ—¶çŽ°å‡ºåŽŸå½¢ï¼ŒåŽŸæ¥æ˜¯"+me->query("name")+"ï¼\n", me);
       me->delete_temp("spellslevel");
       me->delete_temp("d_mana");
       me->delete_temp("apply/name");
@@ -73,13 +73,3 @@ void greeting(object me)
       return;
     }
 }
-
-
-
-
-
-
-
-
-
-ÿ

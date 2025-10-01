@@ -72,4 +72,3 @@ if (!param) param = "";
 			DNS_SUPPORT_Q, Mud_name(), udp_port(),
 			cmd + (strlen(param) ? "||PARAM:"+param : ""), idx));
 }
-

@@ -297,5 +297,3 @@ int telling (object me, object who, int short)
   write ("\n");
   return 1;
 }
-
-

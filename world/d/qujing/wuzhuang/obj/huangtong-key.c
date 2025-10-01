@@ -43,6 +43,3 @@ void init()
     remove_call_out("announce");
     call_out("announce",random(10),this_player());
 }
-
-
-

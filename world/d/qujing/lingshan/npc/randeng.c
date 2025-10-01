@@ -7,9 +7,9 @@ int give_book ();
 
 void create()
 {
-  set_name("È¼µÆ¹Å·ð", ({ "randeng gufo", "randeng", "gufo" }));
-  set("title", "ÁéÉ½");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç‡ƒç¯å¤ä½›", ({ "randeng gufo", "randeng", "gufo" }));
+  set("title", "çµå±±");
+  set("gender", "ç”·æ€§");
   set("age", 1000);
   set("attitude", "peaceful");
   set("str",40);
@@ -52,9 +52,9 @@ void create()
     "book" : (: give_book :),
     "jing" : (: give_book :),
     "qujing" : (: give_book :),
-    "¾­" : (: give_book :),
-    "È¡¾­" : (: give_book :),
-    "¾­Êé" : (: give_book :),
+    "ç»" : (: give_book :),
+    "å–ç»" : (: give_book :),
+    "ç»ä¹¦" : (: give_book :),
   ]) );
 
   setup();
@@ -69,17 +69,17 @@ int give_book()
 
   if (! who->query("obstacle/reward"))
   {
-    message_vision ("$N¶Ô$nÒ¡ÁËÒ¡Í·£ºÄãÏÈ»ØÈ¥£¬ºÃºÃ¹ýÎ÷ÓòÔÙÀ´È¡¾­¡£\n",me,who);
+    message_vision ("$Nå¯¹$næ‘‡äº†æ‘‡å¤´ï¼šä½ å…ˆå›žåŽ»ï¼Œå¥½å¥½è¿‡è¥¿åŸŸå†æ¥å–ç»ã€‚\n",me,who);
     return 1;
   }
   if (me->query_temp("given_book"))
   {
-    message_vision ("$N¶Ô$nÒ¡ÁËÒ¡Í·£º¾­ÊéÒÑ¸ø¹ýÁË£¬µÈµÈÔÙÀ´°É¡£\n",me,who);
+    message_vision ("$Nå¯¹$næ‘‡äº†æ‘‡å¤´ï¼šç»ä¹¦å·²ç»™è¿‡äº†ï¼Œç­‰ç­‰å†æ¥å§ã€‚\n",me,who);
     return 1;
   }
   book = new ("/d/obj/book/qujing");
   command ("nod");
-  message_vision("$N¸ø$nÒ»±¾"+book->query("name")+"¡£\n",me,who);
+  message_vision("$Nç»™$nä¸€æœ¬"+book->query("name")+"ã€‚\n",me,who);
   if(!book->move(who)) {
       destruct(book);
   }
@@ -94,5 +94,3 @@ void reset_give ()
   object me = this_object();
   me->set_temp("given_book",0);
 }
-
-ÿ

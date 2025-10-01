@@ -72,4 +72,3 @@ int valid_leave (object who, string dir)
   return ::valid_leave(who,dir);
 
 }
-

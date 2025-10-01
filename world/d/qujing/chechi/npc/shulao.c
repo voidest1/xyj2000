@@ -40,4 +40,3 @@ void says (object me)
   if(sizeof(filter_array(all_inventory(environment(this_object())), (:userp:))))
   call_out("says",random(40),me);
 }
-

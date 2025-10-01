@@ -54,4 +54,3 @@ else
 message_vision(HIY "$N顺着宽广的河水飘了过来。\n" NOR, who);
 return 1;
 }
-

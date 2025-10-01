@@ -22,5 +22,3 @@ setup();
 //        carry_object("/d/lingtai/obj/shoe")->wear();
 //        carry_object("/d/diyu/obj/tielian")->wield();
 }
-
-

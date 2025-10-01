@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-       set_name("öýÌá¶½", ({"bian tidu", "bian", "tidu"}));
-	set("long","¶«º£Áú¹¬öýÌá¶½¡£\n");
-       set("gender", "ÄÐÐÔ");
+       set_name("é³Šæç£", ({"bian tidu", "bian", "tidu"}));
+	set("long","ä¸œæµ·é¾™å®«é³Šæç£ã€‚\n");
+       set("gender", "ç”·æ€§");
        set("age", 40);
 	set("per", 15);
 	set("str", 25);
@@ -34,5 +34,3 @@ void create()
         carry_object("/d/obj/armor/tiejia")->wear();
 	carry_object("/d/obj/weapon/fork/fork")->wield();
 }
-
-ÿ

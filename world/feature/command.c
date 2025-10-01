@@ -153,5 +153,3 @@ nomask void disable_player(string type)
                             // marked living again. block command in alias.c
                             // instead of here.
 }
-
-

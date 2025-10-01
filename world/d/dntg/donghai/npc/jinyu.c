@@ -72,5 +72,3 @@ void yinlu6 (object me)
   message_vision("小金鱼一摆尾巴不知游到哪里去了。\n",me);
   me->move("/d/dntg/donghai/mazee");
 }
-
-

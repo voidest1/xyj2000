@@ -178,4 +178,3 @@ void reward(object me,object victim, object weapon, int damage) {
      victim->improve_skill(skill,ammount*(10+random(10))/15,0);
   
 }
-

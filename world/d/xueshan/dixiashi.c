@@ -106,5 +106,3 @@ void close_up()
 
 	delete("exits/up");
 }
-
-

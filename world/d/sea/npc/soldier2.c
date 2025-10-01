@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ð·½«", ({"xie jiang", "xie"}));
-        set("long","Ò»¸ö´©×Å¿ø¼×µÄ´óó¦Ð·£¬Õý×ßÀ´×ßÈ¥Î¬»¤ÖÈÐò£®\n");
-        set("gender", "ÄÐÐÔ");
+        set_name("èŸ¹å°†", ({"xie jiang", "xie"}));
+        set("long","ä¸€ä¸ªç©¿ç€ç›”ç”²çš„å¤§èžƒèŸ¹ï¼Œæ­£èµ°æ¥èµ°åŽ»ç»´æŠ¤ç§©åºï¼Ž\n");
+        set("gender", "ç”·æ€§");
         set("age", 20);
         set("per", 10);
         set("attitude", "heroism");
@@ -25,5 +25,3 @@ void create()
         carry_object("/d/obj/armor/tenjia")->wear();
         carry_object("/d/obj/weapon/fork/gangcha")->wield();
 }
-
-ÿ

@@ -47,4 +47,3 @@ void appearing (object who)
     message_vision ("路边嗖地一声$N蹿了过来。\n",jing);
   }
 }
-

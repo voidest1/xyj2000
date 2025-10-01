@@ -121,4 +121,3 @@ int valid_leave (object me, string dir)
     return 0;
   return 1;
 }
-

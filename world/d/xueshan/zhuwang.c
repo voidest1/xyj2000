@@ -31,5 +31,3 @@ int valid_leave(object me, string dir)
      return notify_fail("五彩蜘蛛庞大的身躯挡住了去路。\n");
    return ::valid_leave(me,dir);
 }
-
-

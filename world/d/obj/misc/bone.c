@@ -33,4 +33,3 @@ void disappear (object me)
 {
   destruct (me);
 }
-

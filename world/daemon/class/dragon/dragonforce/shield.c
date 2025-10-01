@@ -48,4 +48,3 @@ void remove_effect(object me, int amount)
         tell_object(me, "你的龙神心法运行一周天完毕，龙鳞渐渐消去了。\n");
 	return;
 }
-

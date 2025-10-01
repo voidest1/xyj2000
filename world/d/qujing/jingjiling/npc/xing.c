@@ -3,14 +3,14 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÐÓÏÉ", ({"xing xian", "xian"}));
+        set_name("æä»™", ({"xing xian", "xian"}));
         set("long",
-"ËýÇà×Ë×°ôä´ä£¬µ¤Á³ÈüëÙÖ¬£¬ÐÇÑÛ¹â»¹²Ê£¬¶êÃ¼ÐãÓÖÆë¡£\n");
+"å¥¹é’å§¿è£…ç¿¡ç¿ ï¼Œä¸¹è„¸èµ›èƒ­è„‚ï¼Œæ˜Ÿçœ¼å…‰è¿˜å½©ï¼Œè›¾çœ‰ç§€åˆé½ã€‚\n");
         set("age", 20);
 	set("attitude", "friendly");
-        set("gender", "Å®ÐÔ");
+        set("gender", "å¥³æ€§");
 	set("class", "yaomo");
-	set("nickname", "ÌìÌ¨æ§¼§");
+	set("nickname", "å¤©å°å¦²å§¬");
         set("str", 20);
         set("int", 20);
         set("per", 30);
@@ -49,4 +49,3 @@ void create()
 	carry_object("/d/qujing/jingjiling/obj/armor")->wear();
 	carry_object("/d/obj/cloth/pinkskirt")->wear();
 }
-ÿ

@@ -101,4 +101,3 @@ void do_improve(object who, string name, int points, int level)
 
 //tell_object(who,name+" "+level+" "+pot+"\n");
 }
-

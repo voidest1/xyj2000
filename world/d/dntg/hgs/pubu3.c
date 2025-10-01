@@ -74,5 +74,3 @@ int do_go (string dir)
 
   return 0;
 }
-
-

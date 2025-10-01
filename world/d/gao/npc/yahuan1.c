@@ -15,4 +15,3 @@ void create()
 	setup();
         carry_object("/d/gao/obj/pink_cloth")->wear();
 }
-

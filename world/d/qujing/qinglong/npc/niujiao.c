@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("Å£½Ç´óÍõ", ({ "niujiao dawang", "dawang" }));
-  set("long", "Ò»Î»Ñý¹Ö£¬±Ç×ÓÉÏ³¤×ÅÒ»¸ù½Ç¡£");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç‰›è§’å¤§çŽ‹", ({ "niujiao dawang", "dawang" }));
+  set("long", "ä¸€ä½å¦–æ€ªï¼Œé¼»å­ä¸Šé•¿ç€ä¸€æ ¹è§’ã€‚");
+  set("gender", "ç”·æ€§");
   set("age", 50);
   set("attitude", "heroism");
   set("per", 29);
@@ -57,10 +57,8 @@ void unconcious ()
 void die ()
 {
   object me = this_object();
-  message_vision ("\n$NÆËµ¹ÔÚµØ£¬»¹Ô­ÎªÒ»Í·Ï¬Å£¡£\n",me);
+  message_vision ("\n$Næ‰‘å€’åœ¨åœ°ï¼Œè¿˜åŽŸä¸ºä¸€å¤´çŠ€ç‰›ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
 }
-
-ÿ

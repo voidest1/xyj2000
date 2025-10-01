@@ -2,11 +2,11 @@
 inherit NPC;
 void create()
 {
-        set_name("É½Ñı", ({"shan yao", "yao"}));
-        set("long", "Ò»¸öĞ×Éñ¶ñÉ·°ãµÄÉ½Ñı¡£\n");
+        set_name("å±±å¦–", ({"shan yao", "yao"}));
+        set("long", "ä¸€ä¸ªå‡¶ç¥æ¶ç…èˆ¬çš„å±±å¦–ã€‚\n");
         set("age", 30);
         set("attitude", "herosim");
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("class", "yaomo");
         set("per", 10);
         set("max_kee",800);
@@ -55,11 +55,9 @@ void greeting(object ob)
         if( !ob || !present(ob, environment(this_object())) ) return;
 
         command("look " + ob->query("id") );
-        command("say ÓÖ°×ÓÖÅÖ£¬¸ÕºÃÈÃÀÏ×ÓÏÂ¾Æ£¡");
+        command("say åˆç™½åˆèƒ–ï¼Œåˆšå¥½è®©è€å­ä¸‹é…’ï¼");
         command("chan " + ob->query("id") );
 	command("kill " + ob->query("id") );
 
         return;
 }
-
-ÿ

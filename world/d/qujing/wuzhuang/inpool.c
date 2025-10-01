@@ -42,4 +42,3 @@ void init()
 	if( me->query_temp("wzgmaze7") ) me->delete_temp("wzgmaze7");
 	if( me->query_temp("wzgmaze8") ) me->delete_temp("wzgmaze8");
 }
-

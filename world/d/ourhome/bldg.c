@@ -99,5 +99,3 @@ int do_sit(string arg)
 	this_player()->set_temp("marks/sit", 1);
 	return notify_fail("你小心翼翼地钻进车里，头还是被碰了一下。\n");	
 }
-
-

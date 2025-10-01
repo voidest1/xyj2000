@@ -44,4 +44,3 @@ void wield_knife()
     say("妇人抓起一把菜刀喊到：你这挨千刀的！\n");
     command("wield knife");
 }
-

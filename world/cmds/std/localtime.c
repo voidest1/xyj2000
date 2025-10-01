@@ -29,7 +29,7 @@ int main()
     else 
 	   sec = sprintf("%d", lt[LT_SEC]);
 
-	output = sprintf("现在时间 %s %s %d %s:%s:%s %s %d\n",
+	output = sprintf("鐜板湪鏃堕棿 %s %s %d %s:%s:%s %s %d\n",
 	  week_day[ lt[LT_WDAY] ], month[ lt[LT_MON] ], lt[LT_MDAY],
 	  hr, min, sec, lt[LT_ZONE], lt[LT_YEAR] );
 	write( output );

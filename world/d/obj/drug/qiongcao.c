@@ -200,4 +200,3 @@ int grow_g(object me)
 	set("eatable",1);
         return 1;
 }
-

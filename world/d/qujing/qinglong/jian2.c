@@ -38,4 +38,3 @@ int do_jump (string arg)
   who->move(__DIR__"jian1");
   return 1;
 }
-

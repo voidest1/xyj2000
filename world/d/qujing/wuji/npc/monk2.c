@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÊØËÂÉ®", ({"shousi seng", "seng"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å®ˆå¯ºåƒ§", ({"shousi seng", "seng"}));
+  set("gender", "ç”·æ€§");
   set("combat_exp", 1000+random(50000));
   set("daoxing", 50000);
 
@@ -27,6 +27,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/sengyi")->wear();
 }
-
-
-ÿ

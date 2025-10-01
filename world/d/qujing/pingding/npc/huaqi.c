@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("ºü°¢Æß´óÍõ", ({ "huaqi dawang", "huaqi", "dawang", "wang" }));
-  set("title", "Ñ¹Áú¶´");   
-  set("long", "Ò»Î»Å¤Ñü°ÚÍÎµÄÑ¹Áú¶´ÑýÍõ£¬ÉíÉÏÒþÒþµØ·¢³öºü³ô¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç‹é˜¿ä¸ƒå¤§çŽ‹", ({ "huaqi dawang", "huaqi", "dawang", "wang" }));
+  set("title", "åŽ‹é¾™æ´ž");   
+  set("long", "ä¸€ä½æ‰­è…°æ‘†è‡€çš„åŽ‹é¾™æ´žå¦–çŽ‹ï¼Œèº«ä¸Šéšéšåœ°å‘å‡ºç‹è‡­ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 64);
   set("attitude", "heroism");
   set("per", 30);
@@ -61,8 +61,8 @@ void die ()
     ob->set_temp("obstacle/pingding_huaqi_killed",1);
     call_out ("taishang_appearing",1,ob);
   }
-  message_vision ("\n$N·­µ¹ÔÚµØÏÖÁËÕæÉí£¬ÊÇÒ»Ö»ºüÀê¾«¡£\n",me);
-  message_vision ("ºüÀê¾«ËÀÁË¡£\n",me);
+  message_vision ("\n$Nç¿»å€’åœ¨åœ°çŽ°äº†çœŸèº«ï¼Œæ˜¯ä¸€åªç‹ç‹¸ç²¾ã€‚\n",me);
+  message_vision ("ç‹ç‹¸ç²¾æ­»äº†ã€‚\n",me);
   corpse = CHAR_D->make_corpse(me,ob);
   corpse->move(environment(me));
   load_object("/obj/empty");
@@ -109,5 +109,3 @@ void hurting (object me, object ob)
   remove_call_out ("hurting");  
   call_out ("hurting",random(10)+10,me,ob);  
 }
-
-ÿ

@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("»ÆÃ¼ÀÏ·ð", ({ "huangmei laofo", "huangmei", "laofo", "fo" }));
-  set("title", "Ð¡À×ÒôËÂ");   
-  set("long", "Ò»Î»ÃæÎÞ±íÇéÈ´ÓÖ¾«Éñ»À·¢µÄÀÏ·ð¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("é»„çœ‰è€ä½›", ({ "huangmei laofo", "huangmei", "laofo", "fo" }));
+  set("title", "å°é›·éŸ³å¯º");   
+  set("long", "ä¸€ä½é¢æ— è¡¨æƒ…å´åˆç²¾ç¥žç„•å‘çš„è€ä½›ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 80);
   set("attitude", "heroism");
   set("per", 30);
@@ -68,16 +68,16 @@ void die ()
     ob->set_temp("obstacle/xiaoxitian_killed",1);
     call_out ("mile_appearing",1,ob);
   }
-  message_vision ("\nÐý·ç³öÏÖ£¬ÃÖÀÕ·ð×æ×ßÁË½øÀ´¡£\n",me);
-  message_vision ("\n$NÁ¬Ã¦»Å×Å¹òÁËÏÂÀ´£¬È´»¹Éí×÷Ò»»ÆÃ¼Ð¡Í¯¡£\n",me);
-  message_vision ("ÃÖÀÕ·ð×æÁì×Å»ÆÃ¼Ð¡Í¯×ßÁË³öÈ¥",me);
+  message_vision ("\næ—‹é£Žå‡ºçŽ°ï¼Œå¼¥å‹’ä½›ç¥–èµ°äº†è¿›æ¥ã€‚\n",me);
+  message_vision ("\n$Nè¿žå¿™æ…Œç€è·ªäº†ä¸‹æ¥ï¼Œå´è¿˜èº«ä½œä¸€é»„çœ‰å°ç«¥ã€‚\n",me);
+  message_vision ("å¼¥å‹’ä½›ç¥–é¢†ç€é»„çœ‰å°ç«¥èµ°äº†å‡ºåŽ»",me);
   if (fabao)
   {
-     message_vision ("£¬¶ªÏÂÒ»Ö»$n¡£\n",me,fabao);
+     message_vision ("ï¼Œä¸¢ä¸‹ä¸€åª$nã€‚\n",me,fabao);
      fabao->move(environment(me));
   }
   else
-    message_vision ("¡£\n",me);
+    message_vision ("ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -122,5 +122,3 @@ void hurting (object me, object ob)
   remove_call_out ("hurting");  
   call_out ("hurting",random(10)+10,me,ob);  
 }
-
-ÿ

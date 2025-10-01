@@ -36,4 +36,3 @@ void recruit_apprentice(objct apprentice)
 修改弟子的 rank 或其他东西。
 呼叫者: "apprentice" 指令
 有预设定义此一函数的系统物件: none
-

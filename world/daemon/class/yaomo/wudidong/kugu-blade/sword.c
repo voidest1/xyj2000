@@ -53,4 +53,3 @@ int perform(object me, object target)
     me->start_busy(random(2)+1);
     return 1;
 }
-

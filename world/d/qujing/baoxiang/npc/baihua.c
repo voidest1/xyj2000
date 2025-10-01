@@ -7,9 +7,9 @@ int execute_ask();
 
 void create()
 {
-  set_name("°Ù»¨Ðß", ({"baihua xiu", "baihua" }));
-  set("title","Èý¹«Ö÷");
-  set("gender", "Å®ÐÔ");
+  set_name("ç™¾èŠ±ç¾ž", ({"baihua xiu", "baihua" }));
+  set("title","ä¸‰å…¬ä¸»");
+  set("gender", "å¥³æ€§");
   set("age", 24);
   set("attitude", "peaceful");
   set("shen_type", 1);
@@ -33,8 +33,8 @@ void create()
   set_skill("spells", 60);
   set_skill("force", 60);
   set("inquiry", ([
-        "ÐÅ" : (: execute_ask() :),
-        "¹úÍõ" : (: execute_ask() :),
+        "ä¿¡" : (: execute_ask() :),
+        "å›½çŽ‹" : (: execute_ask() :),
         "letter" : (: execute_ask() :),
         "king" : (: execute_ask() :),
   ]));
@@ -61,7 +61,7 @@ int execute_ask ()
     return 1;
   }
 
-  if (environment(me)->query("short")!="²¨ÔÂ¶´")
+  if (environment(me)->query("short")!="æ³¢æœˆæ´ž")
   {
     command ("shake");
     return 1;
@@ -95,7 +95,7 @@ int execute_ask ()
   me->set("given",1);
   letter = new ("/d/qujing/baoxiang/obj/letter");
   letter->move(me);
-  command ("whisper "+who->query("id")+" ½«´ËÃØÐÅËÙ½»¹úÍõ£¡ÊÂ²»ÒË³Ù£¡");
+  command ("whisper "+who->query("id")+" å°†æ­¤ç§˜ä¿¡é€Ÿäº¤å›½çŽ‹ï¼äº‹ä¸å®œè¿Ÿï¼");
   command ("give "+who->query("id")+" "+letter->query("id"));
   if (! who->query("obstacle/baoxiang"))
     who->set("obstacle/baoxiang","got_letter");
@@ -128,7 +128,7 @@ int check_rescure (object who)
   if (me->query("leader"))
     return 1;
   me->set("leader",who->query("id"));
-  message_vision("$N¶Ô$n¼±ÇÐµØËµµÀ£º¶÷ÈË£¡¿ì´øÎÒÈ¥¼û¸¸Íõ£¡\n",me,who);
+  message_vision("$Nå¯¹$næ€¥åˆ‡åœ°è¯´é“ï¼šæ©äººï¼å¿«å¸¦æˆ‘åŽ»è§çˆ¶çŽ‹ï¼\n",me,who);
   command("follow "+who->query("id"));
   me->set_temp("no_return",1);
   return 1;
@@ -151,4 +151,3 @@ void unconcious()
   ::unconcious();
   die();
 }
-ÿ

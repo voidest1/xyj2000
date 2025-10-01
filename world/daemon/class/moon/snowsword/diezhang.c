@@ -106,4 +106,3 @@ int remove_effect(object me, object target, int amount)
 	message_vision(GRN"$N和$n的叠掌不再发挥功效，周围的人也都松了一口气。\n"NOR, me, target);
 	return 0;
 }
-

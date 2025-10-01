@@ -27,7 +27,7 @@ void create()
 	seteuid(ROOT_UID);
 	my_address = query_host_name();
 	my_port = udp_port();
-	set("channel_id", "网路回应精灵");
+	set("channel_id", "缃戣矾鍥炲簲绮剧伒");
 }
 
 // Someone has ping'd us
@@ -84,4 +84,3 @@ void send_ping_query(string host, mixed port)
 		"||PORTUDP:"+udp_port()+
 		"@@@\n");
 }
-

@@ -286,9 +286,3 @@ void show_time(int d)
 	return;}
 }
 */
-
-
-
-
-
-

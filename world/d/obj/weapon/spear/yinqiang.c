@@ -27,4 +27,3 @@ void create()
         init_spear(70);
         setup();
 }
-

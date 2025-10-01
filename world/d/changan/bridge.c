@@ -44,4 +44,3 @@ me);
 		message_vision("四处刮起阴风，现出$N的影子．\n", me);
                 return 1;
 }
-

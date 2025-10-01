@@ -39,4 +39,3 @@ void setup_monster(object ob)
 	//	ob->init_limbs(LIMBS);
 	if( !ob->query_weight() ) ob->set_weight(BASE_WEIGHT + (my["str"] - 10)* 2000);
 }
-

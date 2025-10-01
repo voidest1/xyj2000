@@ -391,4 +391,3 @@ void relay_channel(object ob, string channel, string msg)
           notified+=({wizid});
         } //each wiz will only be notified once.
 }
-

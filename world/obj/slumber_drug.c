@@ -26,5 +26,3 @@ int drink_drug(object ob)
 		(int)this_player()->query_condition("slumber_drug") + 100 );
 	return 0;
 }
-
-

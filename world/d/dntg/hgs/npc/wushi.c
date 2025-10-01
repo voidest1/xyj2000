@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("°ÁÀ´¹úÎäÊ¿", ({ "wu shi", "shi", "wu", "jiang" }));
-        set("gender", "ÄÐÐÔ");
+        set_name("å‚²æ¥å›½æ­¦å£«", ({ "wu shi", "shi", "wu", "jiang" }));
+        set("gender", "ç”·æ€§");
         set("age", random(10) + 30);
         set("str", 25);
-	set("long", "°ÁÀ´¹ú¿´ÊØ³ÇÃÅµÄÎäÊ¿£¬Íþ·çÁÝÁÝµÄÑ²ÊÓ×ÅÖÜÎ§¡£\n");
+	set("long", "å‚²æ¥å›½çœ‹å®ˆåŸŽé—¨çš„æ­¦å£«ï¼Œå¨é£Žå‡›å‡›çš„å·¡è§†ç€å‘¨å›´ã€‚\n");
         set("combat_exp", 75000);
   set("daoxing", 25000);
 
@@ -27,6 +27,3 @@ void create()
         carry_object("/d/obj/weapon/sword/changjian")->wield();
         carry_object("/d/obj/armor/niupi")->wear();
 }
-
-
-ÿ

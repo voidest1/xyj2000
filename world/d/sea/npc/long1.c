@@ -69,5 +69,3 @@ int accept_fight(object me)
   command("say 我最喜欢打架了。咱们比划比划！");
   return 1;
 }
-
-

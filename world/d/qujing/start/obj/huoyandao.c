@@ -21,4 +21,3 @@ void create()
         init_blade(60);
         setup();
 }
-

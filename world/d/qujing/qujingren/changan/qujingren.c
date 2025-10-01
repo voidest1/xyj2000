@@ -14,4 +14,3 @@ int accept_object1(object who,object ob)
         if (who->query("id")=="tang taizong")return 1;
         return notify_fail("");
 }
-

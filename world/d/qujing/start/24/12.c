@@ -38,4 +38,4 @@ void create()
         map_skill("unarmed", "cuixin-zhang");
 
 	setup();
-	carry_object("/d/qujing/tianzhu/obj/piyi@‚Xt;Ã>¾Øt
+	carry_object("/d/qujing/tianzhu/obj/piyi@‚Xt;Ã>¾Øt

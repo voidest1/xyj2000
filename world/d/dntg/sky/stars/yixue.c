@@ -97,4 +97,3 @@ void init()
   if (my_armor2=present(armor2_id, me))
        my_armor2->set("name",HIW"天禅雪舞衣"NOR);
 }
-

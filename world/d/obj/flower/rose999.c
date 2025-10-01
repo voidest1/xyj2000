@@ -20,5 +20,3 @@ void create ()
   set("wear_msg", "$N戴上"+query("name")+"，不禁想起年少时曾经的梦中人。\n");
   setup();
 }
-
-

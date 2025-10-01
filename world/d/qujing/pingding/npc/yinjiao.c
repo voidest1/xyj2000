@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Òø½Ç´óÍõ", ({ "yinjiao dawang", "yinjiao", "dawang", "wang" }));
-  set("title", "Á«»¨¶´");   
-  set("long", "Ò»Î»ÉñÌ¬°ÁÈ»µÄÁ«»¨¶´ÑýÍõ¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("é“¶è§’å¤§çŽ‹", ({ "yinjiao dawang", "yinjiao", "dawang", "wang" }));
+  set("title", "èŽ²èŠ±æ´ž");   
+  set("long", "ä¸€ä½ç¥žæ€å‚²ç„¶çš„èŽ²èŠ±æ´žå¦–çŽ‹ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 54);
   set("attitude", "heroism");
   set("per", 30);
@@ -61,16 +61,16 @@ void die ()
     ob->set_temp("obstacle/pingding_yinjiao_killed",1);
     call_out ("taishang_appearing",1,ob);
   }
-  message_vision ("\n$NÎÞ¿ÉÄÎºÎµØÏÖÁËÕæÉí£¬Ô­À´ÊÇÌ«ÉÏÀÏ¾ýµÄÒø½ÇÍ¯×Ó¡£\n",me);
-  message_vision ("\nÒø½ÇÍ¯×Ó¾ÏÁË¸ö¹ª£ºÊ±³½ÒÑµ½£¬È¥¼ûÌ«ÉÏÀÏ¾ýÒ²¡£\n",me);
-  message_vision ("Òø½ÇÍ¯×ÓÍùÍâ±¼È¥",me);
+  message_vision ("\n$Næ— å¯å¥ˆä½•åœ°çŽ°äº†çœŸèº«ï¼ŒåŽŸæ¥æ˜¯å¤ªä¸Šè€å›çš„é“¶è§’ç«¥å­ã€‚\n",me);
+  message_vision ("\né“¶è§’ç«¥å­éž äº†ä¸ªèº¬ï¼šæ—¶è¾°å·²åˆ°ï¼ŒåŽ»è§å¤ªä¸Šè€å›ä¹Ÿã€‚\n",me);
+  message_vision ("é“¶è§’ç«¥å­å¾€å¤–å¥”åŽ»",me);
   if (fabao)
   {
-    message_vision ("£¬¶ªÏÂÒ»Ö»$n¡£\n",me,fabao);
+    message_vision ("ï¼Œä¸¢ä¸‹ä¸€åª$nã€‚\n",me,fabao);
     fabao->move(environment(me));
   }
   else
-    message_vision ("¡£\n",me);
+    message_vision ("ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -115,5 +115,3 @@ void hurting (object me, object ob)
   remove_call_out ("hurting");  
   call_out ("hurting",random(10)+10,me,ob);  
 }
-
-ÿ

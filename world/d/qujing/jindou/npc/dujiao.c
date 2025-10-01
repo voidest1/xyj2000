@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("¶À½ÇÙî´óÍõ", ({ "dujiaosi dawang", "dujiaosi", "dawang", "wang" }));
-  set("title", "½ð¶µ¶´");   
-  set("long", "Ò»Î»Éí²Ä×³ÊµµÄ´ó¿éÍ·ÑýÍõ£¬Í·ÉÏ³¤×ÅÒ»Ö»½Ç¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç‹¬è§’å…•å¤§çŽ‹", ({ "dujiaosi dawang", "dujiaosi", "dawang", "wang" }));
+  set("title", "é‡‘å…œæ´ž");   
+  set("long", "ä¸€ä½èº«æå£®å®žçš„å¤§å—å¤´å¦–çŽ‹ï¼Œå¤´ä¸Šé•¿ç€ä¸€åªè§’ã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 70);
   set("attitude", "heroism");
   set("per", 30);
@@ -66,16 +66,16 @@ void die ()
     ob->set_temp("obstacle/jindou_killed",1);
     call_out ("li_appearing",1,ob);
   }
-  message_vision ("\nÒ»Õó·ç´µÀ´£¬´«À´ÌìÉÏÀîÀÏ¾ýµÄÉùÒô£ºÅ£¶ù»Ø¼ÒÒ²£¡\n",me);
-  message_vision ("\n$NÎÅÉùÏÖÁËÔ­Éí£¬¹ûÈ»ÊÇÒ»Í·´óÇàÅ£¡£\n",me);
-  message_vision ("´óÇàÅ£ÑØ×ÅÀîÀÏ¾ýÉùÒôµÄ·½Ïò±¼È¥",me);
+  message_vision ("\nä¸€é˜µé£Žå¹æ¥ï¼Œä¼ æ¥å¤©ä¸ŠæŽè€å›çš„å£°éŸ³ï¼šç‰›å„¿å›žå®¶ä¹Ÿï¼\n",me);
+  message_vision ("\n$Né—»å£°çŽ°äº†åŽŸèº«ï¼Œæžœç„¶æ˜¯ä¸€å¤´å¤§é’ç‰›ã€‚\n",me);
+  message_vision ("å¤§é’ç‰›æ²¿ç€æŽè€å›å£°éŸ³çš„æ–¹å‘å¥”åŽ»",me);
   if (fabao)
   {
-     message_vision ("£¬¶ªÏÂÒ»Ö»$n¡£\n",me,fabao);
+     message_vision ("ï¼Œä¸¢ä¸‹ä¸€åª$nã€‚\n",me,fabao);
      fabao->move(environment(me));
   }
   else
-    message_vision ("¡£\n",me);
+    message_vision ("ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -120,5 +120,3 @@ void hurting (object me, object ob)
   remove_call_out ("hurting");  
   call_out ("hurting",random(10)+10,me,ob);  
 }
-
-ÿ

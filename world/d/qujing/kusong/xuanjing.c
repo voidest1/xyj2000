@@ -42,4 +42,3 @@ me);
         me->receive_damage("sen", 20);
         return 1;
 }
-

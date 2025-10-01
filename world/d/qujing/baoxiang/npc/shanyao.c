@@ -6,10 +6,10 @@ inherit NPC;
 void create()
 {
   int i = random(9)+1;
-  set_name("É½Ñý", ({"shan yao","yao"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å±±å¦–", ({"shan yao","yao"}));
+  set("gender", "ç”·æ€§");
   set("age", 20*i);
-  set("long","Ò»¸öÐ×Ïà±ÏÂ¶µÄÉ½Ñý¡£\n");
+  set("long","ä¸€ä¸ªå‡¶ç›¸æ¯•éœ²çš„å±±å¦–ã€‚\n");
   set("combat_exp", 20000*i);
   set("per", 15);
   set_skill("parry", 10*i);
@@ -37,4 +37,3 @@ void create()
   setup();
   carry_object("/d/qujing/baoxiang/obj/spqun")->wear();
 }
-ÿ

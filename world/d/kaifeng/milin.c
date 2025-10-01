@@ -328,5 +328,3 @@ mixed no_leave(object who, object where)
 		    }))>-1) return 0;
     return "一股浓烈的瘴气挡住了你。\n";
 }
-
-

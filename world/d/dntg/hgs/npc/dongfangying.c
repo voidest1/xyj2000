@@ -30,4 +30,3 @@ int recognize_apprentice()
 
         return 1;
 }
-

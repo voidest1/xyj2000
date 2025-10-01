@@ -19,6 +19,3 @@ string cast_spell_file(string spell)
 return CLASS_D("bonze") + "/fofa/" + spell;
 
 	}
-
-
-

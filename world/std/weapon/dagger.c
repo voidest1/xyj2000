@@ -21,4 +21,3 @@ varargs void init_dagger(int damage, int flag)
 		set("verbs", ({ "pierce", "thrust" }) );
 	}
 }
-

@@ -92,5 +92,3 @@ int unlock_door(object room)
         write("门锁蹦的一声弹开了！\n");
         return 1;
 }
-
-

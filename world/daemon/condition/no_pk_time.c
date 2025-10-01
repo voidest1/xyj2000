@@ -56,4 +56,3 @@ int update_condition(object me, int duration)
 // mon 8/1/98
 // this condition can't be cleared.
 int no_clear_condition() {return 1;}
-

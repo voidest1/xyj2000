@@ -350,4 +350,3 @@ void send_maze (object who)
   message_vision("$N一拱手道："+RANK_D->query_respect(who)+"向前走即可看到那神铁，恕老夫不奉陪了。\n",me,who);
   message_vision("说罢，龙王转身回宫了。\n",me);
 }
-

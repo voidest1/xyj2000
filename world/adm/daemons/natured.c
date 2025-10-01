@@ -172,5 +172,3 @@ mapping *read_table(string file)
 	}
 	return data;
 }
-
-

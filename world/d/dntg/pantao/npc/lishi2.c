@@ -7,9 +7,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÔËË®Á¦Ê¿",({ "li shi", "shi" }) );
-  set("gender", "ÄÐÐÔ" );
-  set("long", "Ò»Î»×Ïç·½ðÕÂÜ½ÈØ¹ÚµÄ´óÁ¦Ê¿£¬ÎªÆß´óÁ¦Ê¿Ö®Ò»¡£\n");
+  set_name("è¿æ°´åŠ›å£«",({ "li shi", "shi" }) );
+  set("gender", "ç”·æ€§" );
+  set("long", "ä¸€ä½ç´«ç»¶é‡‘ç« èŠ™è“‰å† çš„å¤§åŠ›å£«ï¼Œä¸ºä¸ƒå¤§åŠ›å£«ä¹‹ä¸€ã€‚\n");
   set("age", 100+random(100));
   set("attitude", "peaceful");
   set("str", 60);
@@ -34,4 +34,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/xianpao")->wear();
 }
-ÿ

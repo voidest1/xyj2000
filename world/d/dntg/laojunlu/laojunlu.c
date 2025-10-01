@@ -133,4 +133,3 @@ int do_cast (string arg)
      }
   else return 0;
 }
-

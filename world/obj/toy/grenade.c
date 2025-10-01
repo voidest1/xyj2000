@@ -232,8 +232,3 @@ void show_time(int d)
 }
 
 */
-
-
-
-
-

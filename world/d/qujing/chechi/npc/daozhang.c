@@ -5,8 +5,8 @@ inherit NPC;
 
 void create()
 {
-  set_name("Îå¸£µÀ³¤", ({"dao zhang", "dao"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("äº”ç¦é“é•¿", ({"dao zhang", "dao"}));
+  set("gender", "ç”·æ€§");
   set("combat_exp", 50000);
   set("daoxing", 100000);
 
@@ -28,6 +28,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/daopao")->wear();
 }
-
-
-ÿ

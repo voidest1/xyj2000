@@ -4,16 +4,16 @@
 inherit NPC;
 void create()
 {
-	set_name("±ù¹ÈÑ²Ê¹", ({"xunshi", "shi"}));
-	set("gender", "ÄÐÐÔ" );
+	set_name("å†°è°·å·¡ä½¿", ({"xunshi", "shi"}));
+	set("gender", "ç”·æ€§" );
 	set("age", 33);
-	set("long", "ÕâÎ»Ñ²Ê¹À´×ÔÒ£Ô¶µÄ´óÑ©É½¡£ËûÉíÅû°×ÅÛ£¬Ñü¿çÍäµ¶¡£\n°×ÅÛµ±ÐØÐå×ÅÒ»Ö»·ÉÑïÓûÍÑµÄ´óÅôÄñ¡£Íäµ¶¿´ÆðÀ´¾§Ó¨Í¸Ã÷£¬ºÃÏñÊÇÒÔº®±ùÖÆ³É¡£\n");
+	set("long", "è¿™ä½å·¡ä½¿æ¥è‡ªé¥è¿œçš„å¤§é›ªå±±ã€‚ä»–èº«æŠ«ç™½è¢ï¼Œè…°è·¨å¼¯åˆ€ã€‚\nç™½è¢å½“èƒ¸ç»£ç€ä¸€åªé£žæ‰¬æ¬²è„±çš„å¤§é¹é¸Ÿã€‚å¼¯åˆ€çœ‹èµ·æ¥æ™¶èŽ¹é€æ˜Žï¼Œå¥½åƒæ˜¯ä»¥å¯’å†°åˆ¶æˆã€‚\n");
 	set("class", "yaomo");
 	set("combat_exp", 50000);
   set("daoxing", 30000);
 
 	set("attitude", "peaceful");
-	create_family("´óÑ©É½", 4, "µÜ×Ó");
+	create_family("å¤§é›ªå±±", 4, "å¼Ÿå­");
 	set_skill("unarmed", 40);
 	set_skill("yingzhaogong", 40);
 	set_skill("dodge", 40);
@@ -48,5 +48,3 @@ void create()
 	carry_object("/d/obj/cloth/xueshan-pao")->wear();
 	carry_object("/d/obj/weapon/blade/iceblade")->wield();
 }
-
-ÿ

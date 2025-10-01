@@ -13,4 +13,3 @@ void create()
    set("cook/type","she");
    setup();
   }
-

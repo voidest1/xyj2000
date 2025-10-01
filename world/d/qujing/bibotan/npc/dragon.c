@@ -2,13 +2,13 @@ inherit NPC;
 
 void create()
 {
-        set_name("Îå×¦½ðÁú", ({ "golden dragon", "dragon" }) );
-        set("race", "Ò°ÊÞ");
-        set("gender", "ÐÛÐÔ");
+        set_name("äº”çˆªé‡‘é¾™", ({ "golden dragon", "dragon" }) );
+        set("race", "é‡Žå…½");
+        set("gender", "é›„æ€§");
         set("age", 100);
-        set("long", "Ò»Ö»ÂúÉí½ð¼×µÄÎå×¦½ðÁú¡£\n");
+        set("long", "ä¸€åªæ»¡èº«é‡‘ç”²çš„äº”çˆªé‡‘é¾™ã€‚\n");
         set("attitude", "peaceful");
-        set("looking", "Íþ·çÁÝÁÝ£¬ÆøÊÆ±ÆÈË¡£");
+        set("looking", "å¨é£Žå‡›å‡›ï¼Œæ°”åŠ¿é€¼äººã€‚");
         set("str", 40);
         set("con", 40);
         set("max_kee", 2000);
@@ -19,7 +19,7 @@ void create()
 	set("mana", 1500);
 	set("force_factor", 50);
 	set("mana_factor", 50);
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°×¦", "ºó×¦", "Î²°Í"}) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰çˆª", "åŽçˆª", "å°¾å·´"}) );
         set("verbs", ({ "bite", "claw"}) );
         set("combat_exp", 1400000);
   set("daoxing", 1000000);
@@ -43,8 +43,8 @@ void init()
         ::init();
         set("chat_chance", 5);
         set("chat_msg", ({
-	    "Îå×¦½ðÁúÔÚ°ë¿ÕÖÐÅÌÐýÁË¼¸È¦¡£\n",
-            "Îå×¦½ðÁú·¢³öÒ»ÕóÁúÒ÷¡£\n",
+	    "äº”çˆªé‡‘é¾™åœ¨åŠç©ºä¸­ç›˜æ—‹äº†å‡ åœˆã€‚\n",
+            "äº”çˆªé‡‘é¾™å‘å‡ºä¸€é˜µé¾™åŸã€‚\n",
         }) );
 }
 
@@ -64,11 +64,9 @@ void leave()
 	this_object()->add("time", 1);
 	if( (int)this_object()->query("time") < 6 )  return;
 
-        message("vision",name() + "¿ÕÖÐÉíÐÎÒ»±ä£¬ÓÖ±ä³ÉÁúÍõÄ£Ñù¡£\n", environment(), this_object() );
+        message("vision",name() + "ç©ºä¸­èº«å½¢ä¸€å˜ï¼Œåˆå˜æˆé¾™çŽ‹æ¨¡æ ·ã€‚\n", environment(), this_object() );
                 seteuid(getuid());
                 obj=new("/d/qujing/bibotan/npc/longwang");
                 obj->move(environment(this_object()));
         destruct(this_object());
 }
-
-ÿ

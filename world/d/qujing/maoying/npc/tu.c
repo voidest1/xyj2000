@@ -4,14 +4,14 @@
 inherit NPC;
 
 string *names = ({
-  "°×ÍÃ¾«",
-  "»ÒÍÃ¾«",
-  "ºÚÍÃ¾«",
-  "³àÍÃ¾«",
-  "»ÆÍÃ¾«",
-  "³¤Ã«ÍÃ¾«",
-  "¶ÌÃ«ÍÃ¾«",
-  "¾íÃ«ÍÃ¾«",
+  "ç™½å…”ç²¾",
+  "ç°å…”ç²¾",
+  "é»‘å…”ç²¾",
+  "èµ¤å…”ç²¾",
+  "é»„å…”ç²¾",
+  "é•¿æ¯›å…”ç²¾",
+  "çŸ­æ¯›å…”ç²¾",
+  "å·æ¯›å…”ç²¾",
 });
 
 void jump_away ();
@@ -19,8 +19,8 @@ void jump_away ();
 void create()
 {
   set_name(names[random(sizeof(names))], ({ "tu jing", "tu", "jing" }));
-  set("long", "Ò»Î»ÍÃÄ£ÍÃÑùµÄÅ®×Ó¡£\n");
-  set("gender", "Å®ÐÔ");
+  set("long", "ä¸€ä½å…”æ¨¡å…”æ ·çš„å¥³å­ã€‚\n");
+  set("gender", "å¥³æ€§");
   set("age", 20);
   set("attitude", "peaceful");
   set("per", 29);
@@ -64,12 +64,12 @@ void jump_away ()
   
   s = sprintf ("/d/qujing/maoying/shanpo%d.c",random(10)+1);
   room = load_object(s);
-  message_vision ("à²µØÒ»Éù£¬$NÏòÍâÌøÈ¥¡­¡­\n",me);
+  message_vision ("å—–åœ°ä¸€å£°ï¼Œ$Nå‘å¤–è·³åŽ»â€¦â€¦\n",me);
   me->move(room);
   if (present("tu jing 6",environment(me)))
     destruct (me);
   else
-    message_vision ("$Nà²µØÒ»ÉùÌøÁË¹ýÀ´¡­¡­\n",me);
+    message_vision ("$Nå—–åœ°ä¸€å£°è·³äº†è¿‡æ¥â€¦â€¦\n",me);
 }
 
 void destruct_me(object me)
@@ -85,10 +85,8 @@ void unconcious ()
 void die ()
 {
   object me = this_object();
-  message_vision ("\n$N·­µ¹ÔÚµØ£¬»¹Ô­ÎªÒ»Ö»Ò°ÍÃ£¬ÏòÍâÒ»´Ú¡£\n",me);
+  message_vision ("\n$Nç¿»å€’åœ¨åœ°ï¼Œè¿˜åŽŸä¸ºä¸€åªé‡Žå…”ï¼Œå‘å¤–ä¸€è¹¿ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
 }
-
-ÿ

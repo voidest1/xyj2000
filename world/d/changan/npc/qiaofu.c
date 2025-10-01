@@ -23,5 +23,3 @@ void create()
         carry_object("/d/ourhome/obj/linen")->wear();
         carry_object("/d/ourhome/obj/lumber_axe")->wield();
 }
-
-

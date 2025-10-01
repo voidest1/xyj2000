@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 // rewritten by snowcat.c 4/4/1997
 // niuer.c
-#define NAME "Å£¶þÏÈÉú"
+#define NAME "ç‰›äºŒå…ˆç”Ÿ"
 
 inherit NPC;
 
@@ -11,10 +11,10 @@ int is_empty;
 void create()
 {
   set_name(NAME, ({"niuer","xiansheng","daoshi"}));
-  set("gender", "ÄÐÐÔ" );
+  set("gender", "ç”·æ€§" );
   set("age", 53);
-  set("title", "ÈçÒâÕæÏÉ");
-  set("long", "Å£¶þÏÈÉúÊÇÅ£Ä§ÍõµÄµÜµÜ¡£²»¹ýËûÒ»Ïò²»Ï²»¶±ðÈË½ÐËû\nÅ£¶þÏÈÉú£¬¶øÏ²»¶±»½Ð×÷ÈçÒâÏÈÉú¡£");
+  set("title", "å¦‚æ„çœŸä»™");
+  set("long", "ç‰›äºŒå…ˆç”Ÿæ˜¯ç‰›é­”çŽ‹çš„å¼Ÿå¼Ÿã€‚ä¸è¿‡ä»–ä¸€å‘ä¸å–œæ¬¢åˆ«äººå«ä»–\nç‰›äºŒå…ˆç”Ÿï¼Œè€Œå–œæ¬¢è¢«å«ä½œå¦‚æ„å…ˆç”Ÿã€‚");
   set("class","taoist");
   set("combat_exp", 500000);
   set("daoxing", 800000);
@@ -31,9 +31,9 @@ void create()
   set("force", 500);
   set("max_force", 500);
   set("inquiry", ([
-        "name": "ÎÒÊÇÅ£Ä§ÍõµÄµÜµÜ£¬±ðÈË½ÐÎÒÈçÒâÏÈÉú¡£\n",
-        "ÈçÒâÏÈÉú": "ÈçÒâ£¬ÈçÒâ£¬ÎÒÓÐÊ±ºò³£³£ÖÎÒ»Ð©¶Ç×Ó²»Êæ·þµÄÃ«²¡¡£\n",
-        "¶Ç×Ó": "¶Ç×ÓÕÍ£¬¶Ç×Ó´ó£¬¶Ç×ÓÍ´ÎÒ¶¼¿ÉÒÔÊÔÒ»ÊÔ¡£\n",
+        "name": "æˆ‘æ˜¯ç‰›é­”çŽ‹çš„å¼Ÿå¼Ÿï¼Œåˆ«äººå«æˆ‘å¦‚æ„å…ˆç”Ÿã€‚\n",
+        "å¦‚æ„å…ˆç”Ÿ": "å¦‚æ„ï¼Œå¦‚æ„ï¼Œæˆ‘æœ‰æ—¶å€™å¸¸å¸¸æ²»ä¸€äº›è‚šå­ä¸èˆ’æœçš„æ¯›ç—…ã€‚\n",
+        "è‚šå­": "è‚šå­èƒ€ï¼Œè‚šå­å¤§ï¼Œè‚šå­ç—›æˆ‘éƒ½å¯ä»¥è¯•ä¸€è¯•ã€‚\n",
       ]));
   setup();
   carry_object("/d/obj/cloth/taijicloth")->wear();
@@ -69,7 +69,7 @@ void return_object (object who, object ob, string id, int amount)
     if (ob)
     {
       ob->move(who);
-      tell_object(who,NAME+"½«Ò»Ð©"+ob->query("name")+"»¹¸øÄã¡£\n");
+      tell_object(who,NAME+"å°†ä¸€äº›"+ob->query("name")+"è¿˜ç»™ä½ ã€‚\n");
     }
   }
   else
@@ -81,7 +81,7 @@ int accept_object (object who, object ob)
   object queen;
   string msg, id;
   int amount;
-  msg = NAME+"¹°ÊÖµÀ£ºÕâÎ»"+RANK_D->query_respect(who);
+  msg = NAME+"æ‹±æ‰‹é“ï¼šè¿™ä½"+RANK_D->query_respect(who);
 
   amount = ob->value(); 
   id = ob->query("money_id");
@@ -89,7 +89,7 @@ int accept_object (object who, object ob)
   {
     id = ob->query("id");
     amount = 1;
-    say(msg+"Õæ¿ÍÆø¡£¶àÐ»¶àÐ»£¬²»±Ø²»±ØÀ²¡£\n");
+    say(msg+"çœŸå®¢æ°”ã€‚å¤šè°¢å¤šè°¢ï¼Œä¸å¿…ä¸å¿…å•¦ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }
@@ -99,53 +99,53 @@ int accept_object (object who, object ob)
     queen = new (__DIR__"queen");
     queen->refuse_player (who);
     destruct (queen);
-    say(msg+"£¬¿È¡­¡­ËµµÄÒ²ÊÇ¡£\n");
+    say(msg+"ï¼Œå’³â€¦â€¦è¯´çš„ä¹Ÿæ˜¯ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
 
   if (who->query("obstacle/nuerguo") == "marriage")
   {
-    say(msg+"»¹ÊÇÏÈÈ¥¼û¹«Ö÷°É¡£\n");
+    say(msg+"è¿˜æ˜¯å…ˆåŽ»è§å…¬ä¸»å§ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
 
   if (who->query("obstacle/nuerguo") == "company")
   {
-    say(msg+"»¹ÊÇÏÈÈ¥¼û¹«Ö÷°É¡£\n");
+    say(msg+"è¿˜æ˜¯å…ˆåŽ»è§å…¬ä¸»å§ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
 
   if (who->query("obstacle/nuerguo") != "stomachache")
   {
-    say(msg+"¿´À´Ã»Ê²Ã´Ã«²¡¡£\n");
+    say(msg+"çœ‹æ¥æ²¡ä»€ä¹ˆæ¯›ç—…ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }
   
   if ( ob->value() < 30000) 
   {
-    say(msg+"£¬¿È¡­¡­Õâ¸ö¡­¡­ÅÂÊÇ²»Í×°É¡£\n");
+    say(msg+"ï¼Œå’³â€¦â€¦è¿™ä¸ªâ€¦â€¦æ€•æ˜¯ä¸å¦¥å§ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
 
   if (is_busy)
   {
-    say(msg+"£¬Õæ¶Ô²»Æð£¬ÎÒ²»ÕýÔÚÃ¦×ÅÖÎ²¡Âð£¿\n");
+    say(msg+"ï¼ŒçœŸå¯¹ä¸èµ·ï¼Œæˆ‘ä¸æ­£åœ¨å¿™ç€æ²»ç—…å—ï¼Ÿ\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
   if (is_empty)
   {
-    say(msg+"£¬¶Ô²»Æð£¬ÖÎ²¡µÄÈªË®ÓÃÍêÁË£¬µÈÒ»»á¶ùÔÙÀ´°É¡£\n");
+    say(msg+"ï¼Œå¯¹ä¸èµ·ï¼Œæ²»ç—…çš„æ³‰æ°´ç”¨å®Œäº†ï¼Œç­‰ä¸€ä¼šå„¿å†æ¥å§ã€‚\n");
     call_out ("return_object",1,who,ob,id,amount);
     return 1;
   }  
 
-  say(msg+"ÕæÊÇÌ«¿ÍÆøÁË£¬ÎÒÕâ¾Í¸øÄúÖÎ²¡¡£\n");
+  say(msg+"çœŸæ˜¯å¤ªå®¢æ°”äº†ï¼Œæˆ‘è¿™å°±ç»™æ‚¨æ²»ç—…ã€‚\n");
   is_busy = 1;
   is_empty = 1;
   call_out("get_water",1,who);
@@ -163,7 +163,7 @@ void get_water (object who)
 {
   if (who)
   {
-    say ("\n"+NAME+"ÂýÓÆÓÆµØ×ß¹ýÈ¥£¬Ö¨Ö¨¸Â¸ÂµØÒ¡ÉÏÒ»Í°ÈªË®¡£\n\n");
+    say ("\n"+NAME+"æ…¢æ‚ æ‚ åœ°èµ°è¿‡åŽ»ï¼Œå±å±å˜Žå˜Žåœ°æ‘‡ä¸Šä¸€æ¡¶æ³‰æ°´ã€‚\n\n");
     call_out("pour_water",1,who);
   }
 }
@@ -172,8 +172,8 @@ void pour_water (object who)
 {
   if (who)
   {
-    say (NAME+"ÄÃÆðÒ»Ö»½ðÒ©ÖÑ£¬¿ÚÖÐÄîÄîÓÐ´Ê¡£\n");
-    say ("Ö»¼ûÂúÂúÒ»´óÍ°Ë®¾ÓÈ»È«²¿¶¼µ¹½øÐ¡Ò©ÖÑÀï£¡\n\n");
+    say (NAME+"æ‹¿èµ·ä¸€åªé‡‘è¯ç›…ï¼Œå£ä¸­å¿µå¿µæœ‰è¯ã€‚\n");
+    say ("åªè§æ»¡æ»¡ä¸€å¤§æ¡¶æ°´å±…ç„¶å…¨éƒ¨éƒ½å€’è¿›å°è¯ç›…é‡Œï¼\n\n");
     call_out("feed_water",1,who);
     call_out("feed_water",2,who);
     call_out("feed_water",3,who);
@@ -184,8 +184,8 @@ void feed_water (object who)
 {
   if (who)
   {
-    message_vision (NAME+"ÅõÆð½ðÒ©ÖÑ£¬½«ÈªË®ÂýÂý¹à½ø$NµÄ×ìÀï¡£\n",who);
-    message_vision ("Ò»¹ÉÁ¹ÒâÁ÷½ø$NµÄÌåÄÚ£¬$NµÄ¶Ç×ÓÀï¶¯ÁËÒ»ÏÂ¡£\n",who);
+    message_vision (NAME+"æ§èµ·é‡‘è¯ç›…ï¼Œå°†æ³‰æ°´æ…¢æ…¢çŒè¿›$Nçš„å˜´é‡Œã€‚\n",who);
+    message_vision ("ä¸€è‚¡å‡‰æ„æµè¿›$Nçš„ä½“å†…ï¼Œ$Nçš„è‚šå­é‡ŒåŠ¨äº†ä¸€ä¸‹ã€‚\n",who);
   }
 }
 
@@ -198,12 +198,12 @@ void heal_stomach (object who)
 
   if (random(10)==0)
   {
-    message_vision ("\n$NÃÍ¿ÈÁË¼¸ÏÂ£¬×ìÀïÇº³öÒ»Ð©µ­»ÆÉ«µÄË®£¡\n",who);
+    message_vision ("\n$NçŒ›å’³äº†å‡ ä¸‹ï¼Œå˜´é‡Œå‘›å‡ºä¸€äº›æ·¡é»„è‰²çš„æ°´ï¼\n",who);
     res = 1;
   }
   else
   {
-    message_vision ("\n$N·ÜÁ¦ÕÅÁËÕÅ×ì£¬Ïë¿È³öÊ²Ã´£¬¿ÉÊ²Ã´¶¼Ã»¿È³öÀ´¡£\n",who);
+    message_vision ("\n$Nå¥‹åŠ›å¼ äº†å¼ å˜´ï¼Œæƒ³å’³å‡ºä»€ä¹ˆï¼Œå¯ä»€ä¹ˆéƒ½æ²¡å’³å‡ºæ¥ã€‚\n",who);
     res = 0;
   }
   call_out("check_result",1,who,res);
@@ -218,14 +218,14 @@ void check_result (object who, int res)
 
   if (res)
   {
-    say (NAME+"Á³ÉÏÂ¶³öÁËÎ¢Ð¦£º¿´Ñù×ÓÒ©ÐÔ¼«¼Ñ£¬ÖÎºÃÁË¡£\n");
+    say (NAME+"è„¸ä¸Šéœ²å‡ºäº†å¾®ç¬‘ï¼šçœ‹æ ·å­è¯æ€§æžä½³ï¼Œæ²»å¥½äº†ã€‚\n");
     queen = new (__DIR__"queen");
-    queen->announce_success (who,"ÖÎºÃÁË¸¹Ë®ÔÐ");
+    queen->announce_success (who,"æ²»å¥½äº†è…¹æ°´å­•");
     destruct (queen);
   }
   else
   {
-    say (NAME+"Ì¾ÁËÒ»¿ÚÆø£ºàÅ£¬Ã»ÓÐÖÎºÃ£¬»¹µÃÔÙÀ´¿´Ò»´Î¡£\n");
+    say (NAME+"å¹äº†ä¸€å£æ°”ï¼šå—¯ï¼Œæ²¡æœ‰æ²»å¥½ï¼Œè¿˜å¾—å†æ¥çœ‹ä¸€æ¬¡ã€‚\n");
   }
   who->interrupt_me();
 }
@@ -239,4 +239,3 @@ void reset_empty ()
 {
   is_empty = 0;
 }
-ÿ

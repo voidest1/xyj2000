@@ -11,4 +11,3 @@ mapping color_code=([
 //	"xiang lan":HIB"蓝"NOR,
 	"xiang lan":HIW"白"NOR,
         ]);
-

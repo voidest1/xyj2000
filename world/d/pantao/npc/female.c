@@ -7,12 +7,12 @@ inherit NPC;
 
 void create()
 {
-  string *names = ({ "ÏÉÅ®", "ÏÉåú", "ÏÉ×Ó", });
+  string *names = ({ "ä»™å¥³", "ä»™å¦ƒ", "ä»™å­", });
   string name = names[random(sizeof(names))];
 
   set_name(name,({ "xian" }) );
-  set("gender", "Å®ÐÔ" );
-  set("long", "Ò»Î»Óñô¢ÖéÂÄç­É´ÒÂµÄ"+name+"¡£\n");
+  set("gender", "å¥³æ€§" );
+  set("long", "ä¸€ä½çŽ‰ç°ªç å±¥ç»›çº±è¡£çš„"+name+"ã€‚\n");
   set("age", 20+random(10));
   set("attitude", "peaceful");
   set("str", 40);
@@ -37,4 +37,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/xianyi")->wear();
 }
-ÿ

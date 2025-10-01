@@ -3,11 +3,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("³àÉí¹íÊ¹", ({"guard"}));
-        set("long", "Ò»¸öÇàÃæâ²ÑÀµÄºìÐë³àÉí¹íÊ¹¡£\n");
+        set_name("èµ¤èº«é¬¼ä½¿", ({"guard"}));
+        set("long", "ä¸€ä¸ªé’é¢ç ç‰™çš„çº¢é¡»èµ¤èº«é¬¼ä½¿ã€‚\n");
         set("age", 30);
 	set("attitude", "heroism");
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
         set("str", 25);
         set("int", 20);
         set("per", 10);
@@ -34,4 +34,3 @@ void create()
 
 	carry_object("/d/obj/weapon/fork/gangcha")->wield();
 }
-ÿ

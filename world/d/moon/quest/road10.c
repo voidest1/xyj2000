@@ -49,4 +49,3 @@ int valid_leave(object me, string dir) {
      return notify_fail(npc->name()+"拉住你的衣角舍不得让你走。\n");
   return 1;
 }
-

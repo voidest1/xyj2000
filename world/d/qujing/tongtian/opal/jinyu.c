@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("½ðÁÛ¹Ö", ({ "jinlin guai", "jinglin", "guai" }));
-  set("title", "Í¨ÌìºÓ");   
-  set("long", "Ò»Î»Éí×Å½ð¼×µÄÑý¹Ö¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("é‡‘é³žæ€ª", ({ "jinlin guai", "jinglin", "guai" }));
+  set("title", "é€šå¤©æ²³");   
+  set("long", "ä¸€ä½èº«ç€é‡‘ç”²çš„å¦–æ€ªã€‚\n");
+  set("gender", "ç”·æ€§");
   set("age", 76);
   set("attitude", "aggressive");
   set("per", 30);
@@ -58,9 +58,9 @@ void die ()
     ob->set_temp("obstacle/tongtian_killed",1);
     call_out ("chen_appearing",1,ob);
   }
-  message_vision ("\n$NÒ»Ë¦Î²°Í£¬ÏÖ³ö½ðÓãµÄÔ­Éí¡£\n",me);
-  message_vision ("\nÌìÉÏÅ­ºÈÒ»Éù£º½ðÓã£¬¹éÎÒÁ«»¨³ØÒ²£¡\n",me);
-  message_vision ("½ðÓãÎÅÉù£¬¹Ô¹ÔµØÒ»×ÝÉíÅ¤×ÅÑüÒ¡»Î×ÅÍ·ÓÎ×ßÁË¡£\n",me);
+  message_vision ("\n$Nä¸€ç”©å°¾å·´ï¼ŒçŽ°å‡ºé‡‘é±¼çš„åŽŸèº«ã€‚\n",me);
+  message_vision ("\nå¤©ä¸Šæ€’å–ä¸€å£°ï¼šé‡‘é±¼ï¼Œå½’æˆ‘èŽ²èŠ±æ± ä¹Ÿï¼\n",me);
+  message_vision ("é‡‘é±¼é—»å£°ï¼Œä¹–ä¹–åœ°ä¸€çºµèº«æ‰­ç€è…°æ‘‡æ™ƒç€å¤´æ¸¸èµ°äº†ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -93,5 +93,3 @@ void kill_ob (object ob)
   set_temp("my_killer",ob);
   ::kill_ob(ob);
 }
-
-ÿ

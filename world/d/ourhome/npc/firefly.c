@@ -124,4 +124,3 @@ void greeting(object ob)
 			tell_room( environment(), "萤火虫拍拍翅膀，趴在" + ob->name() + "耳边小声地说了些话。\n", ({ ob, ob }) );
         }
 }
-

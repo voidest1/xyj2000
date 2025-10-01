@@ -76,4 +76,3 @@ int do_donate (string arg)
 
   return 1;
 }
-

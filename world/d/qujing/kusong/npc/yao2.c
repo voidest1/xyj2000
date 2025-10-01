@@ -1,11 +1,11 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit NPC;
 string *namea= ({
-  "Â¹Í·¹Ö",
-  "ºüÍ·¹Ö",
-  "ÂíÍ·¹Ö",
-  "ÑòÍ·¹Ö",
-  "ÍÃÍ·¹Ö",
+  "é¹¿å¤´æ€ª",
+  "ç‹å¤´æ€ª",
+  "é©¬å¤´æ€ª",
+  "ç¾Šå¤´æ€ª",
+  "å…”å¤´æ€ª",
 });
 
 
@@ -19,7 +19,7 @@ void create()
 
 	i = random(5) + 6;
 	set("class", "yaomo");
-	set("gender", "Å®ĞÔ");
+	set("gender", "å¥³æ€§");
 	set("per", 20+random(10));
 	set("age", 20);
 	set("max_kee", 70*i);
@@ -51,5 +51,3 @@ void create()
 	add_money("coin", random(90));
 
 }
-
-ÿ

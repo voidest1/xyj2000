@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-set_name("ÔÆÍ¯",({"yun tong","yun shen","tong"}));
-set("gender", "ÄÐÐÔ");
+set_name("äº‘ç«¥",({"yun tong","yun shen","tong"}));
+set("gender", "ç”·æ€§");
 set("age", 15);
-set("long", "    \nÌì¹¬ÖÐ¸ºÔðÆðÔÆµÄÌìÉñ£¬ËûËä¿´ÉÏÈ¥Äê¼ÍÇáÇá£¬È´\nÕÆ¹Ü×ÅÌìÉÏËùÓÐµÄÔÆ²Ê¡£\n");
+set("long", "    \nå¤©å®«ä¸­è´Ÿè´£èµ·äº‘çš„å¤©ç¥žï¼Œä»–è™½çœ‹ä¸ŠåŽ»å¹´çºªè½»è½»ï¼Œå´\næŽŒç®¡ç€å¤©ä¸Šæ‰€æœ‰çš„äº‘å½©ã€‚\n");
 
 set("attitude", "heroism");
 set("class", "xian");
@@ -43,10 +43,10 @@ set_skill("parry", 90);
 map_skill("dodge", "jindouyun");
 map_skill("unarmed", "puti-zhi");
 set("inquiry", ([
-  "ÆðÔÆ"   : "ÓÐÕÅÁé·û¿ÉÒÔÆðÔÆ£¬µ«ÎÒ²»ÄÜ¸øÄã¡£",
-  "cloud"   : "ÓÐÕÅÁé·û¿ÉÒÔÆðÔÆ£¬µ«ÎÒ²»ÄÜ¸øÄã¡£",
-  "name"   : "ÎÒÊÇÔÆÉñ¡£",
-  "here"   : "ÕâÀï¾ÍÊÇÌì¹¬¡£",
+  "èµ·äº‘"   : "æœ‰å¼ çµç¬¦å¯ä»¥èµ·äº‘ï¼Œä½†æˆ‘ä¸èƒ½ç»™ä½ ã€‚",
+  "cloud"   : "æœ‰å¼ çµç¬¦å¯ä»¥èµ·äº‘ï¼Œä½†æˆ‘ä¸èƒ½ç»™ä½ ã€‚",
+  "name"   : "æˆ‘æ˜¯äº‘ç¥žã€‚",
+  "here"   : "è¿™é‡Œå°±æ˜¯å¤©å®«ã€‚",
 ]));
 
 
@@ -56,4 +56,3 @@ carry_object("/d/obj/cloth/xianpao")->wear();
 carry_object("/d/dntg/sky/obj/yunlingfu");
 
 }
-ÿÿÿ

@@ -51,5 +51,3 @@ int accept_fight(object me)
         command("say 哼！长安府岂是你撒野的地方，看打！\n");
         return 1;
 }
-
-

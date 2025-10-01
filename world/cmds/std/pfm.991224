@@ -12,25 +12,25 @@ int main(object me, string arg)
 	seteuid(getuid());
 
 	if((int)me->query_temp("no_perform")==1)
-	        return notify_fail("ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜÊ©ÓÃÍâ¹¦¡£\n");
+	        return notify_fail("ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆï¼Œä¸èƒ½æ–½ç”¨å¤–åŠŸã€‚\n");
 
 	if( me->is_busy() )
-		return notify_fail("( ÄãÉÏÒ»¸ö¶¯×÷»¹Ã»ÓĞÍê³É£¬²»ÄÜÊ©ÓÃÍâ¹¦¡£)\n");
+		return notify_fail("( ä½ ä¸Šä¸€ä¸ªåŠ¨ä½œè¿˜æ²¡æœ‰å®Œæˆï¼Œä¸èƒ½æ–½ç”¨å¤–åŠŸã€‚)\n");
 
-	if( !arg ) return notify_fail("ÄãÒªÓÃÍâ¹¦×öÊ²Ã´£¿\n");
+	if( !arg ) return notify_fail("ä½ è¦ç”¨å¤–åŠŸåšä»€ä¹ˆï¼Ÿ\n");
 	if ( !wizardp(me) && environment(me)->query("no_fight")) 
-		return notify_fail("ÕâÀï²»ÄÜÊ©ÓÃÍâ¹¦¡£\n");
+		return notify_fail("è¿™é‡Œä¸èƒ½æ–½ç”¨å¤–åŠŸã€‚\n");
 
         if( sscanf(arg, "%s on %s", perf, arg)==2 ) {
                 target = present(arg, environment(me));
                 if( !target ) target = present(arg, me);
-                if( !target ) return notify_fail("ÕâÀïÃ»ÓĞ " + arg + "¡£\n");
+                if( !target ) return notify_fail("è¿™é‡Œæ²¡æœ‰ " + arg + "ã€‚\n");
 
                 if(!valid_kill(me,target,0)) return 0;
 
                 if( userp(me) && userp(target) && 
                     target->query_temp("netdead") )
-                   return notify_fail("¶Ô·½ÕıÔÚ¶ÏÏßÖĞ£¬²»ÄÜ¶ÔÆäÊ©ÓÃÍâ¹¦¡£\n");
+                   return notify_fail("å¯¹æ–¹æ­£åœ¨æ–­çº¿ä¸­ï¼Œä¸èƒ½å¯¹å…¶æ–½ç”¨å¤–åŠŸã€‚\n");
 
                 arg=perf+" "+arg;
         } else if(sscanf(arg, "%s %s", perf, arg)==2 ) {
@@ -47,7 +47,7 @@ int main(object me, string arg)
 	if( stringp(skill = me->query_skill_mapped(martial)) ) {
 	        int nopfm;
 
-		notify_fail("ÄãËùÊ¹ÓÃµÄÍâ¹¦ÖĞÃ»ÓĞÕâÖÖ¹¦ÄÜ¡£\n");
+		notify_fail("ä½ æ‰€ä½¿ç”¨çš„å¤–åŠŸä¸­æ²¡æœ‰è¿™ç§åŠŸèƒ½ã€‚\n");
 		if( nopfm=SKILL_D(skill)->perform_action(me, arg) ) {
 		        //each pfm should return an integer which is
 		        //the no_perform time fot this pfm.
@@ -68,7 +68,7 @@ int main(object me, string arg)
 		return 0;
 	}
 
-	return notify_fail("ÄãÇëÏÈÓÃ enable Ö¸ÁîÑ¡ÔñÄãÒªÊ¹ÓÃµÄÍâ¹¦¡£\n");
+	return notify_fail("ä½ è¯·å…ˆç”¨ enable æŒ‡ä»¤é€‰æ‹©ä½ è¦ä½¿ç”¨çš„å¤–åŠŸã€‚\n");
 }
 
 void destruct_flag(object me)
@@ -80,14 +80,14 @@ void destruct_flag(object me)
 int help (object me)
 {
         write(@HELP
-Ö¸Áî¸ñÊ½£ºperfrom [<Îä¹¦ÖÖÀà>.]<ÕĞÊ½Ãû³Æ> [<Ê©ÓÃ¶ÔÏó>]
+æŒ‡ä»¤æ ¼å¼ï¼šperfrom [<æ­¦åŠŸç§ç±»>.]<æ‹›å¼åç§°> [<æ–½ç”¨å¯¹è±¡>]
 
-Èç¹ûÄãËùÑ§µÄÍâ¹¦(È­½Å¡¢½£·¨¡¢µ¶·¨....)ÓĞÒ»Ğ©ÌØÊâµÄ¹¥»÷·½Ê½»òÕĞÊ½£¬¿ÉÒÔ
-ÓÃÕâ¸öÖ¸ÁîÀ´Ê¹ÓÃ£¬Äã±ØĞëÏÈÓÃ enable Ö¸ÁîÖ¸¶¨ÄãÊ¹ÓÃµÄÎä¹¦£¬²»Ö¸¶¨Îä¹¦ÖÖ
-ÀàÊ±£¬¿ÕÊÖµÄÍâ¹¦ÊÇÖ¸ÄãµÄÈ­½Å¹¦·ò£¬Ê¹ÓÃÎäÆ÷Ê±ÔòÊÇ±øÈĞµÄÎä¹¦¡£
+å¦‚æœä½ æ‰€å­¦çš„å¤–åŠŸ(æ‹³è„šã€å‰‘æ³•ã€åˆ€æ³•....)æœ‰ä¸€äº›ç‰¹æ®Šçš„æ”»å‡»æ–¹å¼æˆ–æ‹›å¼ï¼Œå¯ä»¥
+ç”¨è¿™ä¸ªæŒ‡ä»¤æ¥ä½¿ç”¨ï¼Œä½ å¿…é¡»å…ˆç”¨ enable æŒ‡ä»¤æŒ‡å®šä½ ä½¿ç”¨çš„æ­¦åŠŸï¼Œä¸æŒ‡å®šæ­¦åŠŸç§
+ç±»æ—¶ï¼Œç©ºæ‰‹çš„å¤–åŠŸæ˜¯æŒ‡ä½ çš„æ‹³è„šåŠŸå¤«ï¼Œä½¿ç”¨æ­¦å™¨æ—¶åˆ™æ˜¯å…µåˆƒçš„æ­¦åŠŸã€‚
 
 
-»»¾ä»°Ëµ£¬Ö»ÒªÊÇ enable ÖĞµÄÎä¹¦ÓĞÌØÊâÕĞÊ½µÄ£¬¶¼¿ÉÒÔÓÃÕâ¸öÖ¸ÁîÊ¹ÓÃ¡£
+æ¢å¥è¯è¯´ï¼Œåªè¦æ˜¯ enable ä¸­çš„æ­¦åŠŸæœ‰ç‰¹æ®Šæ‹›å¼çš„ï¼Œéƒ½å¯ä»¥ç”¨è¿™ä¸ªæŒ‡ä»¤ä½¿ç”¨ã€‚
 HELP
         );
         return 1;

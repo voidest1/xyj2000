@@ -84,4 +84,3 @@ void init()
   if (my_armor2=present(armor2_id, me))
        my_armor2->set("name",HIW"苍原"NOR);
 }
-

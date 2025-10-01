@@ -46,4 +46,3 @@ int do_challenge(string arg) {
 //  destruct(this_object());
   return 1;
 }
-

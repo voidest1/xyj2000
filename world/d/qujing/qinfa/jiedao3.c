@@ -25,4 +25,3 @@ LONG);
   set("outdoors",__DIR__"");
   setup();
 }
-

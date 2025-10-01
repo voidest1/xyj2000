@@ -11,14 +11,14 @@ int cast(object me, object target)
 	success_adj = 250;
 	damage_adj = 200;
 
-	if(me->query("family/family_name") != "ÄÏº£ÆÕÍÓÉ½")
-                return notify_fail("²»Èë·ğÃÅÇë²»À´ÎåÖ¸É½£¡\n");
+	if(me->query("family/family_name") != "å—æµ·æ™®é™€å±±")
+                return notify_fail("ä¸å…¥ä½›é—¨è¯·ä¸æ¥äº”æŒ‡å±±ï¼\n");
 
 	if(me->query_skill("buddhism",1)<200) 
-		return notify_fail("ÄãµÄĞŞÎª²»¹»Éî£¬»¹Çë²»À´ÎåÖ¸É½¡£\n");
+		return notify_fail("ä½ çš„ä¿®ä¸ºä¸å¤Ÿæ·±ï¼Œè¿˜è¯·ä¸æ¥äº”æŒ‡å±±ã€‚\n");
 
      //   if(!me->query("wuzhishan")) 
-         //       return notify_fail("ÄãÊ¦¸¸»¹Ã»½Ì»áÄãÔõÃ´ÇëÀ´ÎåÖ¸É½¡£\n");
+         //       return notify_fail("ä½ å¸ˆçˆ¶è¿˜æ²¡æ•™ä¼šä½ æ€ä¹ˆè¯·æ¥äº”æŒ‡å±±ã€‚\n");
 
 	if( !target ) target = offensive_target(me);
 
@@ -26,20 +26,20 @@ int cast(object me, object target)
 	||      !target->is_character()
 	||      target->is_corpse()
 	||      target==me)
-		return notify_fail("ÄãÒªÓÃÎåÖ¸É½Ñ¹Ë­£¿\n");
+		return notify_fail("ä½ è¦ç”¨äº”æŒ‡å±±å‹è°ï¼Ÿ\n");
 
 	if((int)me->query("mana") < 25+2*(int)me->query("mana_factor") )
-		return notify_fail("ÄãµÄ·¨Á¦²»¹»£¡\n");
+		return notify_fail("ä½ çš„æ³•åŠ›ä¸å¤Ÿï¼\n");
 
 	if((int)me->query("sen") < 200 )
-		return notify_fail("ÄãÎŞ·¨¼¯ÖĞ¾«Á¦£¬¾Í±ğÇëÎåÖ¸É½ÁË£¡\n");
+		return notify_fail("ä½ æ— æ³•é›†ä¸­ç²¾åŠ›ï¼Œå°±åˆ«è¯·äº”æŒ‡å±±äº†ï¼\n");
 
 
 	me->add("mana", -25-2*(int)me->query("mana_factor"));
 	me->receive_damage("sen", 100);
 
 	if( random(me->query("max_mana")) < 50 ) {
-		write("ºÃÏóÃ»·´Ó¦£¬ÔÙÇëÒ»´Î°É£¡\n");
+		write("å¥½è±¡æ²¡ååº”ï¼Œå†è¯·ä¸€æ¬¡å§ï¼\n");
 		return 1;
 	}
     suc = 0;
@@ -54,30 +54,30 @@ int cast(object me, object target)
 			//damage adjustment
 		"both", 		
 			//damage type: could be "qi"/"kee", "shen"/"sen", ...default "both"
-		HIC "$N¿ÚÖĞÄîÁË¼¸¾äÖäÎÄ£¬°ë¿ÕÖĞÏÖ³öÒ»×ùÎåÖ¸É½£¡\nºô£¡µØÒ»ÉùÏò$nµ±Í·Ñ¹ÁËÏÂÀ´£¡\n" NOR,
+		HIC "$Nå£ä¸­å¿µäº†å‡ å¥å’’æ–‡ï¼ŒåŠç©ºä¸­ç°å‡ºä¸€åº§äº”æŒ‡å±±ï¼\nå‘¼ï¼åœ°ä¸€å£°å‘$nå½“å¤´å‹äº†ä¸‹æ¥ï¼\n" NOR,
 			//initial message
-		HIC "½á¹ûÔÒ¸öÕı×Å£¬Ö±½Ó°Ñ$nÑ¹ÔÚµØÉÏ£¡\n" NOR, 
+		HIC "ç»“æœç ¸ä¸ªæ­£ç€ï¼Œç›´æ¥æŠŠ$nå‹åœ¨åœ°ä¸Šï¼\n" NOR, 
 			//success message
-		HIC "µ«ÊÇ$nÔÚÇ§¾ûÒ»·¢Ö®¼Ê¶ãÁË¿ªÀ´¡£\n" NOR, 
+		HIC "ä½†æ˜¯$nåœ¨åƒé’§ä¸€å‘ä¹‹é™…èº²äº†å¼€æ¥ã€‚\n" NOR, 
 			//fail message
-		HIC "µ«ÊÇÎåÖ¸É½±»$nÒÔ·¨Á¦Ò»Òı£¬·´¶øÏò$NµÄ¶¥ÃÅÑ¹ÁËÏÂÀ´£¡\n" NOR, 
+		HIC "ä½†æ˜¯äº”æŒ‡å±±è¢«$nä»¥æ³•åŠ›ä¸€å¼•ï¼Œåè€Œå‘$Nçš„é¡¶é—¨å‹äº†ä¸‹æ¥ï¼\n" NOR, 
 			//backfire initial message
-		HIC "½á¹ûÔÒ¸öÕı×Å£¬Ö±½Ó°Ñ$nÑ¹ÔÚµØÉÏ£¡\n" NOR
+		HIC "ç»“æœç ¸ä¸ªæ­£ç€ï¼Œç›´æ¥æŠŠ$nå‹åœ¨åœ°ä¸Šï¼\n" NOR
 			//backfire hit message. note here $N and $n!!!
 	);
 	if (suc > 0) 
 	{
 		if(target->query_temp("silence")) 
-		{write("¶Ô·½ÕıÔÚ³ÁÄ¬ÖĞ£¡\n");}
+		{write("å¯¹æ–¹æ­£åœ¨æ²‰é»˜ä¸­ï¼\n");}
     	else
 		{target->set_temp("silence",1);
-    	message_vision(HIR"\n$n¾õµÃĞØÖĞ³ÁÃÆ£¬Ò»¾ä»°¶¼Ëµ²»³öÀ´£¡\n"NOR,me,target);
+    	message_vision(HIR"\n$nè§‰å¾—èƒ¸ä¸­æ²‰é—·ï¼Œä¸€å¥è¯éƒ½è¯´ä¸å‡ºæ¥ï¼\n"NOR,me,target);
 howlong = (int)(me->query_skill("buddhism",1)/20)+random(3);
     	call_out("remove_silence",howlong,target);
 		}
 	
 	}
-   // if( wizardp(me) ) write(HIY"ÅĞ¶¨£º"+suc+"\n"NOR);
+   // if( wizardp(me) ) write(HIY"åˆ¤å®šï¼š"+suc+"\n"NOR);
 	me->start_busy(1);
 	return 3+random(5);
 }
@@ -88,6 +88,6 @@ void remove_silence(object target)
 {
   if (!target || !living(target) ) return;
   target->delete_temp("silence");
-  message_vision(HIR"\n$N¾õµÃ»º¹ı¾¢À´ÁË£¡\n"NOR,target);
+  message_vision(HIR"\n$Nè§‰å¾—ç¼“è¿‡åŠ²æ¥äº†ï¼\n"NOR,target);
 return;
 }

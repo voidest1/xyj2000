@@ -17,4 +17,3 @@ set("long","一个小丫环．\n");
 //        carry_object("/d/gao/obj/blade")->wield();
 
 }
-

@@ -106,4 +106,3 @@ void hitagain(object me, object victim, object weapon,int damage) {
   message_vision("$N震得两臂发麻，动弹不得$n趁机发动攻击！\n",victim,me);
   COMBAT_D->do_attack(me, victim, me->query_temp("weapon"));
 }
-

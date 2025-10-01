@@ -9,8 +9,8 @@ void announce(object);
 
 void create()
 {
-  set_name("ÏÉÅ®", ({ "xian nu", "xian"}) );
-  set("gender", "Å®ĞÔ" );
+  set_name("ä»™å¥³", ({ "xian nu", "xian"}) );
+  set("gender", "å¥³æ€§" );
   set("age", 18);
   set("str", 30);
   set("per", 30);
@@ -82,7 +82,7 @@ void greeting(object ob)
   
   if (ob->query("dntg/pantao")=="doing") {
      command("bow "+ob->query("id"));
-     command("say ÎÒ·îÍõÄ¸Ö®Ãü£¬À´Õªó´ÌÒ£¬´òÈÅÖ®´¦£¬Çë¶à°üº­¡£");
+     command("say æˆ‘å¥‰ç‹æ¯ä¹‹å‘½ï¼Œæ¥æ‘˜èŸ æ¡ƒï¼Œæ‰“æ‰°ä¹‹å¤„ï¼Œè¯·å¤šåŒ…æ¶µã€‚");
   } else command ("shysmile "+ob->query("id"));
   
 
@@ -98,14 +98,14 @@ void die()
 
   if (objectp(ob)) {
     mark=ob->query_temp("pantao/"+me->query("name"));
-    //message_vision("ºÃºÃºÃ£¡\n",me);
+    //message_vision("å¥½å¥½å¥½ï¼\n",me);
     command("sob "+ob->query("id"));
-    message_vision("$NÒ»¶å½Å£¬Å­µÀ£º¡°ÄãÕâ"+
+    message_vision("$Nä¸€è·ºè„šï¼Œæ€’é“ï¼šâ€œä½ è¿™"+
        RANK_D->query_rude(ob)+
-       "£¬Íµ³ÔÏÉÌÒ»¹ÒªĞĞĞ×£¬´ıÎÒÙ÷Ã÷ÍõÄ¸£¬ÔÙÀ´ÄÃÄã£¡¡±\n",
+       "ï¼Œå·åƒä»™æ¡ƒè¿˜è¦è¡Œå‡¶ï¼Œå¾…æˆ‘ç¦€æ˜ç‹æ¯ï¼Œå†æ¥æ‹¿ä½ ï¼â€\n",
        me);
-    message_vision(HIY"$NÊÖÒ»Ö¸£¬ÕÙÀ´Ò»¶äÔÆ²Ê£¬¸ß¸ßĞËĞËµØ×øÁËÉÏÈ¥£¬
-ÔÙ´µÒ»Éù¿ÚÉÚ£¬ËæÖ®ÍùÉÏÈ½È½µØÉıÆğ¡£¡£¡£\n"NOR,me);
+    message_vision(HIY"$Næ‰‹ä¸€æŒ‡ï¼Œå¬æ¥ä¸€æœµäº‘å½©ï¼Œé«˜é«˜å…´å…´åœ°åäº†ä¸Šå»ï¼Œ
+å†å¹ä¸€å£°å£å“¨ï¼Œéšä¹‹å¾€ä¸Šå†‰å†‰åœ°å‡èµ·ã€‚ã€‚ã€‚\n"NOR,me);
     if (!mark) {
         ob->set_temp("pantao/"+me->query("name"),1);
         mark=(int) ob->query_temp("pantao/total");
@@ -134,10 +134,10 @@ void announce(object ob) {
    object me=this_object();
 
    if (ob->query("dntg/pantao") != "doing") return;
-   me->set("name","Î÷ÍõÄ¸");
+   me->set("name","è¥¿ç‹æ¯");
    me->set("id","xi wangmu");
-   command("chat "+ob->query("name")+"Õâ"+RANK_D->query_rude(ob)+
-            "µ¨´ó°üÌì£¬¼àÊØ×ÔµÁ£¬Íµ³Ôó´ÌÒ£¬ÆøÉ±ÀÏÉíÁË£¡");
+   command("chat "+ob->query("name")+"è¿™"+RANK_D->query_rude(ob)+
+            "èƒ†å¤§åŒ…å¤©ï¼Œç›‘å®ˆè‡ªç›—ï¼Œå·åƒèŸ æ¡ƒï¼Œæ°”æ€è€èº«äº†ï¼");
    ob->set("dntg/pantao","done");
 log_file("dntg",sprintf("%s(%s) passed pantao-yuan on %s\n",ob->name(1), geteuid(ob), ctime(time()) ) );
 }
@@ -145,7 +145,7 @@ log_file("dntg",sprintf("%s(%s) passed pantao-yuan on %s\n",ob->name(1), geteuid
 int accept_object(object me, object ob)
 {
 
-     if ((string)ob->query("name")!="ÌÒºË") {
+     if ((string)ob->query("name")!="æ¡ƒæ ¸") {
             command("shysmile "+me->query("id"));
             command("thank "+me->query("id"));
             //command("give " + ob->query("id") + "to " + me->query("id"));
@@ -158,16 +158,9 @@ int accept_object(object me, object ob)
              return 1;
        }
        command("ah "+me->query("id"));
-       command("say ´óµ¨"+RANK_D->query_rude(me)+
-                "¾¹¸ÒÍµ³Ôó´ÌÒ£¬ÄÃÃüÀ´£¡");
+       command("say å¤§èƒ†"+RANK_D->query_rude(me)+
+                "ç«Ÿæ•¢å·åƒèŸ æ¡ƒï¼Œæ‹¿å‘½æ¥ï¼");
        set_temp("my_killer",me);
        kill_ob(me);                  
        return 1;
 }      
-
-
-
-
-
-
-ÿÿ

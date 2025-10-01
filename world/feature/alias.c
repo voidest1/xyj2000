@@ -137,4 +137,3 @@ mapping query_all_alias()
 {
 	return alias;
 }
-

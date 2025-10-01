@@ -44,4 +44,3 @@ void destruct_me(object where, object me)
         message_vision("$N手中的$n掉到地下摔碎了。\n",where,me);
         destruct(me);
 }
-

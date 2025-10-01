@@ -108,4 +108,3 @@ int do_put (string arg)
   tell_object(who,"这里没有这样东西。\n");
   return 1;
 }
-

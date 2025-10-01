@@ -3,9 +3,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÓíÍõ×ä", ({ "yuwang zu", "zu" }));
+  set_name("ç¦¹çŽ‹å’", ({ "yuwang zu", "zu" }));
   set("age", 18+random(10));
-  set("gender", "ÄÐÐÔ");
+  set("gender", "ç”·æ€§");
   set("attitude", "peaceful");
   set("str", 20);
   set("combat_exp", 20000);
@@ -26,7 +26,3 @@ void create()
   carry_object("/d/obj/weapon/mace/copperjian")->wield();
   carry_object("/d/obj/cloth/bingfu")->wear();
 }
-
-
-
-ÿ

@@ -30,4 +30,3 @@ void init()
     if(!this_player())  return;
     this_player()->delete_temp("ymdh/entered");
 }
-

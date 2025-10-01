@@ -23,4 +23,3 @@ void create()
 }
 
 int is_container() { return 1; }
-

@@ -98,4 +98,3 @@ int perform(object me, object target)
 
           return 1;
 }
-

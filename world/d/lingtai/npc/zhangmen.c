@@ -739,5 +739,3 @@ string zname(object ob)
 		return "掌门大师姐";
 	else return "掌门大师兄";
 }
-
-

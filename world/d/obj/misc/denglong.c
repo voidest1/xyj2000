@@ -103,4 +103,3 @@ int do_remove (string arg)
   message_vision ("$N嘴巴凑近$n，噗地轻轻一吹。\n",me,denglong);
   return 0;
 }
-

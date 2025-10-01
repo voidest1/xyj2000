@@ -20,4 +20,3 @@ void create()
         init_rake(15);
         setup();
 }
-

@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("¿´ÃÅÑý", ({"kanmen yao","kanmen","kanmenyao","yao","monster"}));
-  set("long","Ò»¸ö¿´ÃÅµÄÐ¡Ñý£¬ÕÅÑÀÎè×¦µÄ£¬Í¦ÅÂÈË¡£\n");
-  set("gender", "ÄÐÐÔ");
+  set_name("çœ‹é—¨å¦–", ({"kanmen yao","kanmen","kanmenyao","yao","monster"}));
+  set("long","ä¸€ä¸ªçœ‹é—¨çš„å°å¦–ï¼Œå¼ ç‰™èˆžçˆªçš„ï¼ŒæŒºæ€•äººã€‚\n");
+  set("gender", "ç”·æ€§");
   set("cor", 25);
   set("age", 20+random(15));
   set("attitude", "peaceful");
@@ -25,4 +25,3 @@ void create()
   carry_object("/d/obj/weapon/blade/blade")->wield();
   carry_object("/d/obj/cloth/linen")->wear();
 }
-ÿ

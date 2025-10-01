@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÀÏÄÌÄÌ", ({ "lao nainai", "lao", "nainai", "queen" }));
-  set("title", "Ñ¹Áú¶´");   
-  set("long", "Ò»Î»Å¤Ñü°ÚÍÎµÄÑ¹Áú¶´Ñýºó£¬ÉíÉÏÒþÒþµØ·¢³öºü³ô¡£\n");
-  set("gender", "Å®ÐÔ");
+  set_name("è€å¥¶å¥¶", ({ "lao nainai", "lao", "nainai", "queen" }));
+  set("title", "åŽ‹é¾™æ´ž");   
+  set("long", "ä¸€ä½æ‰­è…°æ‘†è‡€çš„åŽ‹é¾™æ´žå¦–åŽï¼Œèº«ä¸Šéšéšåœ°å‘å‡ºç‹è‡­ã€‚\n");
+  set("gender", "å¥³æ€§");
   set("age", 86);
   set("attitude", "heroism");
   set("per", 12);
@@ -57,8 +57,8 @@ void die ()
     ob->set_temp("obstacle/pingding_laonai_killed",1);
     call_out ("taishang_appearing",1,ob);
   }
-  message_vision ("\n$N·­µ¹ÔÚµØÏÖÁËÕæÉí£¬ÊÇÒ»Ö»ºüÀê¾«¡£\n",me);
-  message_vision ("ºüÀê¾«ËÀÁË¡£\n",me);
+  message_vision ("\n$Nç¿»å€’åœ¨åœ°çŽ°äº†çœŸèº«ï¼Œæ˜¯ä¸€åªç‹ç‹¸ç²¾ã€‚\n",me);
+  message_vision ("ç‹ç‹¸ç²¾æ­»äº†ã€‚\n",me);
   corpse = CHAR_D->make_corpse(me,ob);
   corpse->move(environment(me));
   load_object("/obj/empty");
@@ -93,6 +93,3 @@ void kill_ob (object ob)
   set_temp("my_killer",ob);
   ::kill_ob(ob);
 }
-
-
-ÿ

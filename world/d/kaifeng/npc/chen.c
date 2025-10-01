@@ -7,35 +7,35 @@ inherit NPC;
 #include <reporting.c>
 
 string *strs = ({
-    "$NÈ¼ÆðÒ»¸ùÏã¼ÀìëÒ»·¬£¬¶Ô$nËµµÀ£º×æÁéÔÚÌì£¬ÇëÄúÈ¥°Ý¼û$w²¢Ñ¯ÎÊÓÐ¹Ø$oÒ»ÊÂ¡£\n",
-    "$N½«ÊÖÖÐÏãµãÈ¼¶Ô$nËµµÀ£ºÀÏ·ò¼À±Ï×æ×Ú£¬µÃÖªÓÐ$wÖªµÀ$oÖ®ÊÂ£¬Äú¿É·ñÈ¥Çë¼û£¿\n",
-    "$NÄéÏãÏò×æ×ÚÒ»°Ý£¬×ªÉí¶Ô$nËµµÀ£º¿É·ñÈ¥°Ý¼û$w£¬²¢¸æÖª$oÒ»ÊÂ£¿\n",
-    "$N½«ÏãµãÈ¼£¬¶Ô$nËµµÀ£ºÔÚÌì×æÁéÈÃÄú¾Í$oÒ»ÊÂ°Ý·Ã$w£¬Çë¾¡Ôç¶¯ÉíÒ²¡£\n",
-    "$N¶Ô$nËµµÀ£ºÀÏ·ò°ÝÁË×æ×Ú£¬ÕýÈ±ÈËÈ¥°Ý·Ã$w£¬¸æÖª$oÖ®ÊÂ¡£\n",
-    "$NÈ¼ÏãÍê±Ï£¬»ØÍ·¶Ô$nËµµÀ£º²»Öª¿É·ñÈ¥°Ý¼û$w£¬Ì½ÎÊ$oÒ»ÊÂ¡£\n",
-    "$NÔÚÏã»ðÖÐ»º»ºÏò×æ×ÚÒ»°Ý£¬ÔÙ¶Ô$nËµµÀ£º×æÁéÔÚÌìÇëÄúÈ¥°Ý¼û$w²¢¸æÖª$oÖ®ÊÂ¡£\n",
+    "$Nç‡ƒèµ·ä¸€æ ¹é¦™ç¥­ç¥€ä¸€ç•ªï¼Œå¯¹$nè¯´é“ï¼šç¥–çµåœ¨å¤©ï¼Œè¯·æ‚¨åŽ»æ‹œè§$wå¹¶è¯¢é—®æœ‰å…³$oä¸€äº‹ã€‚\n",
+    "$Nå°†æ‰‹ä¸­é¦™ç‚¹ç‡ƒå¯¹$nè¯´é“ï¼šè€å¤«ç¥­æ¯•ç¥–å®—ï¼Œå¾—çŸ¥æœ‰$wçŸ¥é“$oä¹‹äº‹ï¼Œæ‚¨å¯å¦åŽ»è¯·è§ï¼Ÿ\n",
+    "$Næ‹ˆé¦™å‘ç¥–å®—ä¸€æ‹œï¼Œè½¬èº«å¯¹$nè¯´é“ï¼šå¯å¦åŽ»æ‹œè§$wï¼Œå¹¶å‘ŠçŸ¥$oä¸€äº‹ï¼Ÿ\n",
+    "$Nå°†é¦™ç‚¹ç‡ƒï¼Œå¯¹$nè¯´é“ï¼šåœ¨å¤©ç¥–çµè®©æ‚¨å°±$oä¸€äº‹æ‹œè®¿$wï¼Œè¯·å°½æ—©åŠ¨èº«ä¹Ÿã€‚\n",
+    "$Nå¯¹$nè¯´é“ï¼šè€å¤«æ‹œäº†ç¥–å®—ï¼Œæ­£ç¼ºäººåŽ»æ‹œè®¿$wï¼Œå‘ŠçŸ¥$oä¹‹äº‹ã€‚\n",
+    "$Nç‡ƒé¦™å®Œæ¯•ï¼Œå›žå¤´å¯¹$nè¯´é“ï¼šä¸çŸ¥å¯å¦åŽ»æ‹œè§$wï¼ŒæŽ¢é—®$oä¸€äº‹ã€‚\n",
+    "$Nåœ¨é¦™ç«ä¸­ç¼“ç¼“å‘ç¥–å®—ä¸€æ‹œï¼Œå†å¯¹$nè¯´é“ï¼šç¥–çµåœ¨å¤©è¯·æ‚¨åŽ»æ‹œè§$wå¹¶å‘ŠçŸ¥$oä¹‹äº‹ã€‚\n",
   });  
 
 // mon 3/22/99
 string get_message(string str1, string str2)
 {
     string str;
-    string *msg1=({"$NÈ¼ÆðÒ»¸ùÏã¼ÀìëÒ»·¬£¬¶Ô$nËµµÀ£º×æÁéÔÚÌì£¬ÇëÄúÈ¥"});
-    string *msg2=({"°Ý¼û","³¯ÎÊ","ÎÊºò","°Ý·Ã","Çó¼û","¿´Íû","·ÃÎÊ","ÖÂÒâ",
-	    "ÎÊºòÒ»ÏÂ","°Ý·ÃÒ»´Î","°Ý¼ûÒ»´Î","ÎÊºòÒ»»Ø","¿´ÍûÒ»ÏÂ","Çó¼ûÒ»´Î",
-	    "·ÃÎÊÒ»´Î","·ÃÎÊÒ»»Ø","°Ý·ÃÒ»»Ø","ÖÂÒâÒ»´Î","°Ý·ÃÒ»ÏÂ","¿´ÍûÒ»ÏÂ",
-	    "°Ý¼û°Ý¼û","ÎÊºòÎÊºò","°Ý·Ã°Ý·Ã","¿´Íû¿´Íû"});
-    string *msg3=({"£¬Ë³Â·","£¬²¢","£¬²¢ÇÒ","£¬Ò»¶¨","£¬¾¡Á¦",
-	    "²¢","²¢ÇÒ",});
-    string *msg4=({"Ì½Ìý","Ë÷ÎÊ","ÇëÎÊ","´òÌý","Ì½ÎÊ","²éÑ¯","Ì½Öª","Ñ°²é",
-	           "Ì½·Ã","µ÷²é","²éÖª","Ì½·Ã","µ÷²é","¹ýÎÊ","´òÌ½","²éÃ÷",
-	    "Ì½·ÃÌ½·Ã","Ñ°²éÑ°²é","´òÌ½´òÌ½","Îñ±ØÌ½Ã÷","Ò»¶¨Ì½Öª","µ÷²éµ÷²é",
-	    "Ì½ÌýÓÐ¹Ø","´òÌ½ÓÐ¹Ø","´òÌýÓÐ¹Ø","²éÑ¯ÓÐ¹Ø","Ì½ÖªÓÐ¹Ø","Ì½ÎÊÓÐ¹Ø",
-            "Ì½Ìý¹ØÓÚ","´òÌ½¹ØÓÚ","´òÌý¹ØÓÚ","²éÑ¯¹ØÓÚ","Ì½Öª¹ØÓÚ","Ì½ÎÊ¹ØÓÚ",
-	    "²éÎÊÓÐ¹Ø","²éÎÊ¹ØÓÚ","µ÷²éÓÐ¹Ø","µ÷²é¹ØÓÚ","ÇëÎÊÓÐ¹Ø","ÇëÎÊ¹ØÓÚ",
-	    "Ì½ÌýÌ½Ìý","´òÌý´òÌý","Ì½ÎÊÌ½ÎÊ","²éÃ÷ÓÐ¹Ø","¹ýÎÊÓÐ¹Ø"});
-    string *msg5=({"Ò»ÊÂ","Ö®ÊÂ","µÄÏûÏ¢","µÄÇé¿ö","µÄÎÊÌâ",});
-    string *msg6=({"£¡","¡£","¡£¡£¡£",});
+    string *msg1=({"$Nç‡ƒèµ·ä¸€æ ¹é¦™ç¥­ç¥€ä¸€ç•ªï¼Œå¯¹$nè¯´é“ï¼šç¥–çµåœ¨å¤©ï¼Œè¯·æ‚¨åŽ»"});
+    string *msg2=({"æ‹œè§","æœé—®","é—®å€™","æ‹œè®¿","æ±‚è§","çœ‹æœ›","è®¿é—®","è‡´æ„",
+	    "é—®å€™ä¸€ä¸‹","æ‹œè®¿ä¸€æ¬¡","æ‹œè§ä¸€æ¬¡","é—®å€™ä¸€å›ž","çœ‹æœ›ä¸€ä¸‹","æ±‚è§ä¸€æ¬¡",
+	    "è®¿é—®ä¸€æ¬¡","è®¿é—®ä¸€å›ž","æ‹œè®¿ä¸€å›ž","è‡´æ„ä¸€æ¬¡","æ‹œè®¿ä¸€ä¸‹","çœ‹æœ›ä¸€ä¸‹",
+	    "æ‹œè§æ‹œè§","é—®å€™é—®å€™","æ‹œè®¿æ‹œè®¿","çœ‹æœ›çœ‹æœ›"});
+    string *msg3=({"ï¼Œé¡ºè·¯","ï¼Œå¹¶","ï¼Œå¹¶ä¸”","ï¼Œä¸€å®š","ï¼Œå°½åŠ›",
+	    "å¹¶","å¹¶ä¸”",});
+    string *msg4=({"æŽ¢å¬","ç´¢é—®","è¯·é—®","æ‰“å¬","æŽ¢é—®","æŸ¥è¯¢","æŽ¢çŸ¥","å¯»æŸ¥",
+	           "æŽ¢è®¿","è°ƒæŸ¥","æŸ¥çŸ¥","æŽ¢è®¿","è°ƒæŸ¥","è¿‡é—®","æ‰“æŽ¢","æŸ¥æ˜Ž",
+	    "æŽ¢è®¿æŽ¢è®¿","å¯»æŸ¥å¯»æŸ¥","æ‰“æŽ¢æ‰“æŽ¢","åŠ¡å¿…æŽ¢æ˜Ž","ä¸€å®šæŽ¢çŸ¥","è°ƒæŸ¥è°ƒæŸ¥",
+	    "æŽ¢å¬æœ‰å…³","æ‰“æŽ¢æœ‰å…³","æ‰“å¬æœ‰å…³","æŸ¥è¯¢æœ‰å…³","æŽ¢çŸ¥æœ‰å…³","æŽ¢é—®æœ‰å…³",
+            "æŽ¢å¬å…³äºŽ","æ‰“æŽ¢å…³äºŽ","æ‰“å¬å…³äºŽ","æŸ¥è¯¢å…³äºŽ","æŽ¢çŸ¥å…³äºŽ","æŽ¢é—®å…³äºŽ",
+	    "æŸ¥é—®æœ‰å…³","æŸ¥é—®å…³äºŽ","è°ƒæŸ¥æœ‰å…³","è°ƒæŸ¥å…³äºŽ","è¯·é—®æœ‰å…³","è¯·é—®å…³äºŽ",
+	    "æŽ¢å¬æŽ¢å¬","æ‰“å¬æ‰“å¬","æŽ¢é—®æŽ¢é—®","æŸ¥æ˜Žæœ‰å…³","è¿‡é—®æœ‰å…³"});
+    string *msg5=({"ä¸€äº‹","ä¹‹äº‹","çš„æ¶ˆæ¯","çš„æƒ…å†µ","çš„é—®é¢˜",});
+    string *msg6=({"ï¼","ã€‚","ã€‚ã€‚ã€‚",});
     
     if(random(10)<3)
       str = strs[random(sizeof(strs))];
@@ -61,9 +61,9 @@ void show_message(object who)
 	return;
     str=who->query("quest/pending/ask/message");
     if(!str) 
-      message_vision ("$N¶Ô$nËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-                    "£¬ÀÏ·ò²»ÊÇÇëÄúÈ¥¼û"+who->query("quest/pending/ask/name")+
-                    "Ñ¯ÎÊ"+who->query("quest/pending/ask/topic")+"Ò»ÊÂÂð£¿\n",
+      message_vision ("$Nå¯¹$nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+                    "ï¼Œè€å¤«ä¸æ˜¯è¯·æ‚¨åŽ»è§"+who->query("quest/pending/ask/name")+
+                    "è¯¢é—®"+who->query("quest/pending/ask/topic")+"ä¸€äº‹å—ï¼Ÿ\n",
 		    this_object(),who);
     else
       message_vision(str,this_object(),who);
@@ -73,10 +73,10 @@ int test_player();
 
 void create()
 {
-  set_name("³Â¹âÈï", ({"chen guangrui", "chen", "guangrui"}));
-  set("long", "³Â¹âÈïÄËÐþÞÊÖ®¸¸£¬µ±³¯´ó²û¶¼¸ÙÓù´Í×´Ôª¡£\n");
-  set("title", "´ó²û¶¼¸Ù");
-  set("gender", "ÄÐÐÔ");
+  set_name("é™ˆå…‰è•Š", ({"chen guangrui", "chen", "guangrui"}));
+  set("long", "é™ˆå…‰è•Šä¹ƒçŽ„å¥˜ä¹‹çˆ¶ï¼Œå½“æœå¤§é˜éƒ½çº²å¾¡èµçŠ¶å…ƒã€‚\n");
+  set("title", "å¤§é˜éƒ½çº²");
+  set("gender", "ç”·æ€§");
   set("age", 50);
   set("per", 35);
   set("attitude", "peaceful");
@@ -99,25 +99,25 @@ void create()
   set("force_factor",20);
   set("chat_chance",10);
   set("chat_msg",({
-    "¹âÈï´óÊ¦ËµµÀ£ºÉÆÔÕÉÆÔÕÄÄ¡£\n",
-    "¹âÈï´óÊ¦×ÔÓïµÀ£ºÊÀÉÏÏÍÈË£¬ÓÐÇó±ØÓ¦ÄÄ¡£\n",
-    "¹âÈï´óÊ¦ËµµÀ£º¼À×æÇóÏÍ£¬ÄËË®Â½´ó»áÇ°Ö®±ØÐèÒ²¡£\n",
-    "¹âÈï´óÊ¦Ì¾ÑÔµÀ£ºÌìÏÂÕÐÏÍ£¬Àû¹úÀûÃñÖ®´ó²ßÒ²¡£\n",
-    "¹âÈï´óÊ¦ËµµÀ£º°Ë·½ÇóÏÍÒ²¡£\n",
-    "¹âÈï´óÊ¦ËµµÀ£º·ÙÏã¼À×æ£¬ÒÔÕÐÌìÏÂÕÐÏÍÊ¿¡£\n",
+    "å…‰è•Šå¤§å¸ˆè¯´é“ï¼šå–„å“‰å–„å“‰å“ªã€‚\n",
+    "å…‰è•Šå¤§å¸ˆè‡ªè¯­é“ï¼šä¸–ä¸Šè´¤äººï¼Œæœ‰æ±‚å¿…åº”å“ªã€‚\n",
+    "å…‰è•Šå¤§å¸ˆè¯´é“ï¼šç¥­ç¥–æ±‚è´¤ï¼Œä¹ƒæ°´é™†å¤§ä¼šå‰ä¹‹å¿…éœ€ä¹Ÿã€‚\n",
+    "å…‰è•Šå¤§å¸ˆå¹è¨€é“ï¼šå¤©ä¸‹æ‹›è´¤ï¼Œåˆ©å›½åˆ©æ°‘ä¹‹å¤§ç­–ä¹Ÿã€‚\n",
+    "å…‰è•Šå¤§å¸ˆè¯´é“ï¼šå…«æ–¹æ±‚è´¤ä¹Ÿã€‚\n",
+    "å…‰è•Šå¤§å¸ˆè¯´é“ï¼šç„šé¦™ç¥­ç¥–ï¼Œä»¥æ‹›å¤©ä¸‹æ‹›è´¤å£«ã€‚\n",
   }));
   set("inquiry", ([
-        "here":   "´ËÄËÓíÍõÌ¨Ò²£¬Ë®Â½´ó»á½«²»ÆÚ¾ÙÐÐ£¬±¾×´ÔªÔÚ´ËÔ¤×ö·¨³¡ÒÔ¼À×æÇóÏÍ¡£\n",
-        "name":   "ÐþÞÊÖ®¸¸³Â¹âÈïÒ²£¬ÔÚ´Ë×ö·¨¼À×æÇóÏÍ¡£\n",
+        "here":   "æ­¤ä¹ƒç¦¹çŽ‹å°ä¹Ÿï¼Œæ°´é™†å¤§ä¼šå°†ä¸æœŸä¸¾è¡Œï¼Œæœ¬çŠ¶å…ƒåœ¨æ­¤é¢„åšæ³•åœºä»¥ç¥­ç¥–æ±‚è´¤ã€‚\n",
+        "name":   "çŽ„å¥˜ä¹‹çˆ¶é™ˆå…‰è•Šä¹Ÿï¼Œåœ¨æ­¤åšæ³•ç¥­ç¥–æ±‚è´¤ã€‚\n",
         "ask":   (: test_player() :),
-        "¼À×æ":   (: test_player() :),
-        "ÇóÏÍ":   (: test_player() :),
-        "ÕÐÏÍ":   (: test_player() :),
-        "ÏÍÈË":   (: test_player() :),
-        "ÏÍÊ¿":   (: test_player() :),
-        "ÉÆÔÕ":   (: test_player() :),
-        "ÕÐ":   (: test_player() :),
-        "Çó":   (: test_player() :),
+        "ç¥­ç¥–":   (: test_player() :),
+        "æ±‚è´¤":   (: test_player() :),
+        "æ‹›è´¤":   (: test_player() :),
+        "è´¤äºº":   (: test_player() :),
+        "è´¤å£«":   (: test_player() :),
+        "å–„å“‰":   (: test_player() :),
+        "æ‹›":   (: test_player() :),
+        "æ±‚":   (: test_player() :),
       ]));
   setup();
   carry_object("/d/obj/cloth/changpao")->wear();
@@ -133,11 +133,11 @@ void init ()
 int test_player()
 {
   string *acks = ({
-    "ÖªµÀÁË¡£\n",
-    "ÎÒÕâ¾Í»á¶¯Éí£¬ÄúÇëÏÈ»Ø°É¡£\n",
-    "ºÃµÄ¡£\n",
-    "¶àÐ»À´·Ã£¬ÎÒÕâ¾ÍÈ¥°ì¡£\n",
-    "ºÃ£¬ÎÒÂíÉÏ¾ÍÈ¥×¼±¸¡£\n",
+    "çŸ¥é“äº†ã€‚\n",
+    "æˆ‘è¿™å°±ä¼šåŠ¨èº«ï¼Œæ‚¨è¯·å…ˆå›žå§ã€‚\n",
+    "å¥½çš„ã€‚\n",
+    "å¤šè°¢æ¥è®¿ï¼Œæˆ‘è¿™å°±åŽ»åŠžã€‚\n",
+    "å¥½ï¼Œæˆ‘é©¬ä¸Šå°±åŽ»å‡†å¤‡ã€‚\n",
   });
   object me = this_object();
   object who = this_player();
@@ -149,8 +149,8 @@ int test_player()
 
   if (who->query("quest/reward") > 0)
   {
-    message_vision ("$N¶Ô$nËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-                    "£¬ÀÏ·ò¼ûÄãÉíÉÏÏéÔÆ»·ÈÆ£¬ºÎ²»È¥´ÓËÙ¸°³¤°²½ø¹¬ÇëÉÍ£¿\n",me,who);
+    message_vision ("$Nå¯¹$nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+                    "ï¼Œè€å¤«è§ä½ èº«ä¸Šç¥¥äº‘çŽ¯ç»•ï¼Œä½•ä¸åŽ»ä»Žé€Ÿèµ´é•¿å®‰è¿›å®«è¯·èµï¼Ÿ\n",me,who);
     return 1;
   }
 
@@ -158,9 +158,9 @@ int test_player()
   {
       call_out("show_message",1,who);
 
-//    message_vision ("$N¶Ô$nËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-//                    "£¬ÀÏ·ò²»ÊÇÇëÄúÈ¥¼û"+who->query("quest/pending/ask/name")+
-//                    "Ñ¯ÎÊ"+who->query("quest/pending/ask/topic")+"Ò»ÊÂÂð£¿\n",me,who);
+//    message_vision ("$Nå¯¹$nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+//                    "ï¼Œè€å¤«ä¸æ˜¯è¯·æ‚¨åŽ»è§"+who->query("quest/pending/ask/name")+
+//                    "è¯¢é—®"+who->query("quest/pending/ask/topic")+"ä¸€äº‹å—ï¼Ÿ\n",me,who);
     return 1;
   }
 
@@ -174,8 +174,8 @@ int test_player()
   i = quest_random_index (quest_keys, i, who, "quest/cache/ask");
   if (i == -1)
   {
-    message_vision ("$N¶Ô$nÌ¾ÆøËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-                    "¸Ã×öµÄÊÂ×öÁË²»ÉÙ£¬ÀÏ·ò¿´Äú»¹ÊÇÒÔºóÔÙÀ´°É¡£\n",me,who);
+    message_vision ("$Nå¯¹$nå¹æ°”è¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+                    "è¯¥åšçš„äº‹åšäº†ä¸å°‘ï¼Œè€å¤«çœ‹æ‚¨è¿˜æ˜¯ä»¥åŽå†æ¥å§ã€‚\n",me,who);
     return 1;
   }
   delay = MAXDELAY * i / sizeof(quest_keys) + DELAY_CONST + uptime();
@@ -216,8 +216,8 @@ void check_player (object who)
 
   if (who->query("quest/reward") > 0)
   {
-    message_vision ("$N¶Ô$nËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-                    "ÉíÉÏÏéÔÆ»·ÈÆ£¬ÇëËÙ¸°³¤°²½ø¹¬ÇëÉÍ£¡\n",me,who);
+    message_vision ("$Nå¯¹$nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+                    "èº«ä¸Šç¥¥äº‘çŽ¯ç»•ï¼Œè¯·é€Ÿèµ´é•¿å®‰è¿›å®«è¯·èµï¼\n",me,who);
     return;
   }
 
@@ -227,9 +227,9 @@ void check_player (object who)
   if (! who->query("quest/pending/ask/done"))
   {
       call_out("show_message",1,who);
-//    message_vision ("$N¶Ô$nËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who)+
-//                    "£¬ÀÏ·ò²»ÊÇËµ¹ýÇëÈ¥°Ý¼û"+who->query("quest/pending/ask/name")+
-//                    "²¢¸æÖ®"+who->query("quest/pending/ask/topic")+"Ò»ÊÂÂð£¿\n",me,who);
+//    message_vision ("$Nå¯¹$nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who)+
+//                    "ï¼Œè€å¤«ä¸æ˜¯è¯´è¿‡è¯·åŽ»æ‹œè§"+who->query("quest/pending/ask/name")+
+//                    "å¹¶å‘Šä¹‹"+who->query("quest/pending/ask/topic")+"ä¸€äº‹å—ï¼Ÿ\n",me,who);
     return;
   }
 
@@ -237,13 +237,13 @@ void check_player (object who)
 
   if (t >= uptime() && (t-MAXDELAY) <= uptime())
   {
-    message_vision ("$N¶Ô$n¾ªÌ¾µÀ£ºÄúÒÑ¾­»ØÀ´ÁË£¿²»»áÕâÃ´¿ì°É¡£\n",me,who);
-    message_vision ("$N¿´ÁËÒ»ÑÛÏãËµµÀ£ºÕâÏã»¹Ðè"+chinese_number((t-uptime())/60+1)+
-                    "·ÖÖÓ²ÅÈ¼¾¡£¬µ½Ê±ÄúÔÙÀ´°É¡£\n",me,who);
+    message_vision ("$Nå¯¹$næƒŠå¹é“ï¼šæ‚¨å·²ç»å›žæ¥äº†ï¼Ÿä¸ä¼šè¿™ä¹ˆå¿«å§ã€‚\n",me,who);
+    message_vision ("$Nçœ‹äº†ä¸€çœ¼é¦™è¯´é“ï¼šè¿™é¦™è¿˜éœ€"+chinese_number((t-uptime())/60+1)+
+                    "åˆ†é’Ÿæ‰ç‡ƒå°½ï¼Œåˆ°æ—¶æ‚¨å†æ¥å§ã€‚\n",me,who);
     if (! DEBUG)
       return 0;
     else
-      tell_object (who,"NOW DEBUG MODE: ÈÃ³Â¹âÈïÖ±½ÓÈÏ¿É¡£\n");
+      tell_object (who,"NOW DEBUG MODE: è®©é™ˆå…‰è•Šç›´æŽ¥è®¤å¯ã€‚\n");
   }
   rewarding (who);
 }
@@ -254,19 +254,16 @@ void rewarding (object who)
   string reason;
   int reward;
 
-  reason = "¼À×æ°ÝÏÍ£¬¾Í"+who->query("quest/pending/ask/topic")+
-           "Ò»ÊÂ°Ý¼ûÁË"+who->query("quest/pending/ask/name")+"£¬";
-  message_vision ("$N¶Ô$nËµµÀ£º¶àÐ»ÕâÎ»"+RANK_D->query_respect(who)+
-                  reason+"ÕæÊÇÆ·ÐÐ¿É¼ÎÒ²¡£\n",me,who);
+  reason = "ç¥­ç¥–æ‹œè´¤ï¼Œå°±"+who->query("quest/pending/ask/topic")+
+           "ä¸€äº‹æ‹œè§äº†"+who->query("quest/pending/ask/name")+"ï¼Œ";
+  message_vision ("$Nå¯¹$nè¯´é“ï¼šå¤šè°¢è¿™ä½"+RANK_D->query_respect(who)+
+                  reason+"çœŸæ˜¯å“è¡Œå¯å˜‰ä¹Ÿã€‚\n",me,who);
   reward = quest_reward(who, quests_ask, "ask");
   who->add("quest/reward",reward);
   who->set("quest/reason",reason);
   who->add("quest/ask/times",1);
   who->add("quest/ask/reward",reward);
-  reporting (who,reason, reward, "½±·Ö");
+  reporting (who,reason, reward, "å¥–åˆ†");
   who->delete("quest/pending/ask");
   quest_done(who);
 }
-
-
-ÿ

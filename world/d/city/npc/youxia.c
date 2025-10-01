@@ -49,4 +49,3 @@ int accept_fight(object me)
         message_vision("游侠儿看着$N笑了笑：阁下既是赐教，小生得罪了！\n", me);
         return 1;
 }
-

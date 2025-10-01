@@ -28,5 +28,3 @@ set("objects", ([ /* sizeof() == 2 */
         setup();
         replace_program(ROOM);
 }
-
-

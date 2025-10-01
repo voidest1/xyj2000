@@ -5,10 +5,10 @@ void consider();
 void create()
 {
 
-  set_name("Ö±½¡", ({ "zhi jian", "zhi", "jiangjun" }) );
-  set("gender", "ÄĞĞÔ" );
-  set("long", "Ö±½¡ÊÇÃ·É½ÆßĞÖµÜÖĞµÄÀÏÈı¡£\n");
-  set("title", "Ã·É½½«¾ü");
+  set_name("ç›´å¥", ({ "zhi jian", "zhi", "jiangjun" }) );
+  set("gender", "ç”·æ€§" );
+  set("long", "ç›´å¥æ˜¯æ¢…å±±ä¸ƒå…„å¼Ÿä¸­çš„è€ä¸‰ã€‚\n");
+  set("title", "æ¢…å±±å°†å†›");
   set("age", 45);
   set("attitude", "peaceful");
   set("str", 30);
@@ -68,7 +68,7 @@ int accept_fight(object me)
                 command("enable unarmed moyun-shou");
                 return 1;
         }
-        command("say ÎáÓĞ¹«ÎñÔÚÉí£¬Ë¡²»·îÅã£¡\n");
+        command("say å¾æœ‰å…¬åŠ¡åœ¨èº«ï¼Œæ•ä¸å¥‰é™ªï¼\n");
         return 0;
 }
 
@@ -83,12 +83,10 @@ void consider()
                 if( !living(enemy[i]) ) continue;
                         flag++;
                 if(     !query_temp("weapon") ) {
-                command("say ¸óÏÂ¹¦·ò³¬Èº£¬ÔÚÏÂ±ãÒ²²»¿ÍÆøÁË£¡\n");
+                command("say é˜ä¸‹åŠŸå¤«è¶…ç¾¤ï¼Œåœ¨ä¸‹ä¾¿ä¹Ÿä¸å®¢æ°”äº†ï¼\n");
                         command("wield staff");
                         command("enable unarmed moyun-shou");
                         break;
                 }
         }
 }
-
-ÿ

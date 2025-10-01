@@ -394,4 +394,3 @@ void create()
 		    
             if(!MISC_D->check_date()) {shutdown(-1);return;}
 }
-

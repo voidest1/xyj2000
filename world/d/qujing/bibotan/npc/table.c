@@ -255,4 +255,3 @@ int faint_him(object who)
 	who->unconcious();
 	return 1;
 }
-

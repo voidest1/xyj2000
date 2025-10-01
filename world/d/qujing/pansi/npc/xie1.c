@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("µÀÊ¿", ({"dao shi", "xie gong", "xie", "shi"}));
-  set("title", "¶¾Î²Ğ«¹«");
-  set("gender", "ÄĞĞÔ");
+  set_name("é“å£«", ({"dao shi", "xie gong", "xie", "shi"}));
+  set("title", "æ¯’å°¾èå…¬");
+  set("gender", "ç”·æ€§");
   set("age", 80);
   set("attitude", "aggressive");
   set("combat_exp", 3500000);
@@ -55,7 +55,7 @@ void unconcious()
   object shell = new ("/d/obj/misc/shell");
 
   shell->move(environment(this_object()));
-  message_vision ("\n$N»ëÉíÒ»ÈíÌ±ÔÚµØÉÏ£¬»¯×öÒ»¶Ñ¿Õ¿ÕµÄ³æ¿Ç¡£\n",
+  message_vision ("\n$Næµ‘èº«ä¸€è½¯ç˜«åœ¨åœ°ä¸Šï¼ŒåŒ–åšä¸€å †ç©ºç©ºçš„è™«å£³ã€‚\n",
                   this_object());
   destruct(this_object());
 }
@@ -65,9 +65,7 @@ void die()
   object shell = new ("/d/obj/misc/shell");
 
   shell->move(environment(this_object()));
-  message_vision ("\n$N»ëÉíÒ»ÈíÌ±ÔÚµØÉÏ£¬»¯×öÒ»¶Ñ¿Õ¿ÕµÄ³æ¿Ç¡£\n",
+  message_vision ("\n$Næµ‘èº«ä¸€è½¯ç˜«åœ¨åœ°ä¸Šï¼ŒåŒ–åšä¸€å †ç©ºç©ºçš„è™«å£³ã€‚\n",
                   this_object());
   destruct(this_object());
 }
-
-ÿ

@@ -34,6 +34,3 @@ me->move("/d/changan/phomes");
 message_vision("$N似乎被人一脚踢了出来，神色有点狼狈。\n", me);
 }
 }
-
-
-

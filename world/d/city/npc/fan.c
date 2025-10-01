@@ -3,12 +3,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("·¶ÇàÆÁ", ({"fan qingping", "fan"}));
+        set_name("èŒƒé’å±", ({"fan qingping", "fan"}));
         set("age", 72);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("long",
-"·¶ÀÏÈ­Ê¦×³ÄêÊ±Ò²ÊÇÏìµ±µ±µÄÓ¢ĞÛ£¬ÏÖÔÚËäÀÏÁË£¬ÊÖ½ÅÀûÂäÈ´²»Êäµ±Äê£®\n");
-	set("title", "È­¸ÇÈıÊ¡");
+"èŒƒè€æ‹³å¸ˆå£®å¹´æ—¶ä¹Ÿæ˜¯å“å½“å½“çš„è‹±é›„ï¼Œç°åœ¨è™½è€äº†ï¼Œæ‰‹è„šåˆ©è½å´ä¸è¾“å½“å¹´ï¼\n");
+	set("title", "æ‹³ç›–ä¸‰çœ");
         set("attitude", "friendly");
 	set("max_kee", 800);
 	set("max_sen", 700);
@@ -26,7 +26,7 @@ void create()
 	map_skill("unarmed", "changquan");
 	set("chat_chance",1);
         set("chat_msg", ({
-        "·¶ÇàÆÁÌ¾µÀ£ºÍÈ½Å²»ÀûÂäÁË£¬Ò²Ã»ÈËÈ¥¸øÎÒÌáÁıĞ¡¶şµÄ°ü×ÓÀ´¡£\n",
+        "èŒƒé’å±å¹é“ï¼šè…¿è„šä¸åˆ©è½äº†ï¼Œä¹Ÿæ²¡äººå»ç»™æˆ‘æç¬¼å°äºŒçš„åŒ…å­æ¥ã€‚\n",
 }));
 	setup();
         carry_object("/d/obj/cloth/choupao")->wear();
@@ -36,13 +36,10 @@ void create()
 int accept_object(object who,object ob)
 {
         if (ob->query("id")=="zhurou bao"){
-	command("say ºÙºÙ£¬ÀÏ¶şÕâ°ü×ÓÊÇÔ½×öÔ½Ğ¡ÁË¡£\n");
-	command("say ²»¹ı»¹ÊÇÒªĞ»Ğ»ÄãÑ½£¡\n");
+	command("say å˜¿å˜¿ï¼Œè€äºŒè¿™åŒ…å­æ˜¯è¶Šåšè¶Šå°äº†ã€‚\n");
+	command("say ä¸è¿‡è¿˜æ˜¯è¦è°¢è°¢ä½ å‘€ï¼\n");
 	command("give jing to " + who->query("id"));
 	return 1;
 	}
 	return 0;
 }
-
-
-ÿ

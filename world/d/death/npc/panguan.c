@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("´Þçå", ({"cui jue", "cui"}));
-	set("title", "ÅÐ¹Ù");
-       set("gender", "ÄÐÐÔ");
-	set("long", "´ÞÅÐ¹ÙÔ­ÊÇÑôÊÀÎª¹Ù£¬Òò¹ã»ýÒõµÂ£¬ËÀºó±»·âÎªÒõ¼äÅÐ¹Ù£®\n");
+       set_name("å´”ç", ({"cui jue", "cui"}));
+	set("title", "åˆ¤å®˜");
+       set("gender", "ç”·æ€§");
+	set("long", "å´”åˆ¤å®˜åŽŸæ˜¯é˜³ä¸–ä¸ºå®˜ï¼Œå› å¹¿ç§¯é˜´å¾·ï¼Œæ­»åŽè¢«å°ä¸ºé˜´é—´åˆ¤å®˜ï¼Ž\n");
        set("age", 30);
        set("attitude", "friendly");
        set("shen_type", 1);
@@ -35,5 +35,3 @@ setup();
 //        carry_object("/d/lingtai/obj/shoe")->wear();
         carry_object("/d/obj/weapon/sword/panguanbi")->wield();
 }
-
-ÿ

@@ -4,9 +4,9 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÓÎ·½É®ÈË", ({"monk"}));
-       set("gender", "ÄÐÐÔ");
-	set("long", "Ò»Î»°×¾»Á³µÄ´óºÍÉÐ¡£\n");
+       set_name("æ¸¸æ–¹åƒ§äºº", ({"monk"}));
+       set("gender", "ç”·æ€§");
+	set("long", "ä¸€ä½ç™½å‡€è„¸çš„å¤§å’Œå°šã€‚\n");
         set("combat_exp", 8000+random(2000));
   set("daoxing", 10000);
 
@@ -21,5 +21,3 @@ void create()
        add_money("coin", 20+random(50));
 	carry_object("/d/obj/cloth/sengyi")->wear();
 }
-
-ÿ

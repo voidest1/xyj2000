@@ -60,4 +60,3 @@ int do_jump(string arg)
            }
         return 1;
 }
-

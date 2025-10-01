@@ -1,14 +1,14 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 // sgzl
 #include <ansi.h>
-#define NAME "¶«º£ÁúÍõ"
+#define NAME "ä¸œæµ·é¾™çŽ‹"
 
 inherit NPC;
 
 void create()
 {
   set_name(NAME, ({"donghai longwang"}));
-  set("male", "ÄÐÐÔ");
+  set("male", "ç”·æ€§");
   set("age", 23);
 
   setup();
@@ -27,9 +27,7 @@ void announce_success(object who)
   who->add("dntg/number",1);
   who->set("dntg/donghai","done");
   who->add("daoxing",i+3000);
-  command("chat "+who->query("name")+"Äã¾¹¸ÒÄÃ×ßÎÒÁú¹¬µÄ¶¨º£ÉñÕëÌú£¬¿´ÎÒ²»È¥ÓñµÛÃæÇ°¸æÄã£¡");
-  tell_object(who,"ÄãÓ®µÃÁË"+chinese_number(3)+"Äê"+chinese_number(i/4)+"Ìì"+chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀÐÐ£¡\n");
+  command("chat "+who->query("name")+"ä½ ç«Ÿæ•¢æ‹¿èµ°æˆ‘é¾™å®«çš„å®šæµ·ç¥žé’ˆé“ï¼Œçœ‹æˆ‘ä¸åŽ»çŽ‰å¸é¢å‰å‘Šä½ ï¼");
+  tell_object(who,"ä½ èµ¢å¾—äº†"+chinese_number(3)+"å¹´"+chinese_number(i/4)+"å¤©"+chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
   who->save();
 }
-
-ÿÿ

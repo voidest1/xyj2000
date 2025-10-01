@@ -1,13 +1,13 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit NPC;
 string *namea= ({
-  "É½Ã¨¹Ö",
-  "²ÔÀÇ¹Ö",
-  "Ò°Öí¹Ö",
-  "×ØĞÜ¹Ö",
-  "»¨»¢¹Ö",
-  "ºÚòş¹Ö",
-  "¾ŞÔ³¹Ö",
+  "å±±çŒ«æ€ª",
+  "è‹ç‹¼æ€ª",
+  "é‡çŒªæ€ª",
+  "æ£•ç†Šæ€ª",
+  "èŠ±è™æ€ª",
+  "é»‘èŸ’æ€ª",
+  "å·¨çŒ¿æ€ª",
 });
 
 
@@ -21,7 +21,7 @@ void create()
 
 	i = random(5) + 6;
 	set("class", "yaomo");
-	set("gender", "ÄĞĞÔ");
+	set("gender", "ç”·æ€§");
 	set("attitude", "heroism");
 	set("per", 10);
 
@@ -70,7 +70,7 @@ void init()
 	}));
 
 	if(interactive(ob = this_player()) && 
-                (string)ob->query("family/family_name")!="»ğÔÆ¶´" ){
+                (string)ob->query("family/family_name")!="ç«äº‘æ´" ){
 		call_out("greeting", 10, ob);
 		return;
 	}
@@ -86,4 +86,3 @@ int greeting(object ob)
 	command("kill " + ob->query("id"));
 	return 1;
 }
-ÿ

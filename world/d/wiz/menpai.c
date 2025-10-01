@@ -119,5 +119,3 @@ void reset_long()
 
     set("long",long+"\n"+result);
 }
-
-

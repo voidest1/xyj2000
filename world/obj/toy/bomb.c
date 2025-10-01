@@ -216,10 +216,3 @@ void show_time(int d)
     tell_object(environment( this_object() ),HIY"\n"+chinese_number(d)+"\n"NOR);
 	return;}
 }
-
-
-
-
-
-
-

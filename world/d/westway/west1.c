@@ -23,9 +23,3 @@ LONG);
   set("objects", ([ "/d/obj/weapon/throwing/shi.c" : 1, ]));
   setup();
 }
-
-
-
-
-
-

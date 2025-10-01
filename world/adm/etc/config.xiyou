@@ -146,4 +146,3 @@ maximum call depth : 30
 # There is a hash table for living objects, used by find_living().
 # (unused currently)
 living hash table size : 100
-

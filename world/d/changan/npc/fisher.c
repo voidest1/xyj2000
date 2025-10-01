@@ -25,5 +25,3 @@ void create()
         carry_object("/d/ourhome/obj/linen")->wear();
         carry_object("/d/southern/jinghe/obj/yugan")->wield();
 }
-
-

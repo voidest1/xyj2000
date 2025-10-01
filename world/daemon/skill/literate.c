@@ -27,4 +27,3 @@ string level_description(int level)
 		grade = sizeof(level_desc)-1;
 	return level_desc[grade];
 }
-

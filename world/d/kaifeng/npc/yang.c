@@ -55,4 +55,3 @@ void reset_balance(object me)
   }
   return;
 }
-

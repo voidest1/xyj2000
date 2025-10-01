@@ -9,15 +9,15 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("Òõ³¤Éú", ({ "yin changsheng", "yin", "changsheng" }));
-        set("long","Òõ³¤Éú±¾ÊÇ¸öÂäµÜÐã²Å£¬ºóÔÚ·á¶¼É½ÐÞÁ·³ÉÏÉ£¬Óù·â¡¸ÒõÍõ¡¹¡£\n");
+        set_name("é˜´é•¿ç”Ÿ", ({ "yin changsheng", "yin", "changsheng" }));
+        set("long","é˜´é•¿ç”Ÿæœ¬æ˜¯ä¸ªè½å¼Ÿç§€æ‰ï¼ŒåŽåœ¨ä¸°éƒ½å±±ä¿®ç»ƒæˆä»™ï¼Œå¾¡å°ã€Œé˜´çŽ‹ã€ã€‚\n");
         set("attitude", "peaceful");
 	set("per", 30);
 	set("str", 25);
 	set("int", 25);
         set("age", 30);
-	set("title", "¼ÅÃðË¾Ö÷");
-	set("nickname", "ÒõÍõ");
+	set("title", "å¯‚ç­å¸ä¸»");
+	set("nickname", "é˜´çŽ‹");
         set("combat_exp", 800000);
   set("daoxing", 400000);
 
@@ -64,7 +64,7 @@ void create()
 	set_temp("apply/armor", 50);
 
 
-create_family("ÑÖÂÞµØ¸®", 2, "ÄãºÃ");
+create_family("é˜Žç½—åœ°åºœ", 2, "ä½ å¥½");
 
         setup();
 	carry_object("/d/obj/weapon/sword/qingfeng")->wield();
@@ -78,8 +78,8 @@ void attempt_apprentice()
 	me = this_player();
         command("grin");
 
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(me) +
-"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(me) +
+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
        command("recruit " + me->query("id") );
         me->set("class", "youling");
 	return;
@@ -89,8 +89,7 @@ int recruit_apprentice(object ob)
 {
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "youling");
-		ob->set("title", "µØ¸®ÕÐ»êË¾Òõ±ø");
+		ob->set("title", "åœ°åºœæ‹›é­‚å¸é˜´å…µ");
 }
 
 */
-ÿ

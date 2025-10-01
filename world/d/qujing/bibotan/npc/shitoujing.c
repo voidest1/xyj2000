@@ -1,16 +1,16 @@
 inherit NPC;
 void create()
 {
-        set_name("Ê¯Í·¾«", ({"shitou jing", "jing"}));
-        set("long", "Ò»¸ö¸ßÓÐÊýÕÉµÄ´óÍçÊ¯£¬Ö»ÊÇ¶à³öÁËÊÖ½ÅºÍÄÔ´ü¡£\n");
+        set_name("çŸ³å¤´ç²¾", ({"shitou jing", "jing"}));
+        set("long", "ä¸€ä¸ªé«˜æœ‰æ•°ä¸ˆçš„å¤§é¡½çŸ³ï¼Œåªæ˜¯å¤šå‡ºäº†æ‰‹è„šå’Œè„‘è¢‹ã€‚\n");
         set("age", 30);
         set("attitude", "herosim");
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "yaomo");
         set("str", 30);
         set("int", 20);
         set("per", 10);
-	set("looking", "»ëÉíÉÏÏÂ¾ÍÊÇÊ¯Í·£¬ÄÇÀïÓÐÊ²Ã´ÈÝÃ²¡£");
+	set("looking", "æµ‘èº«ä¸Šä¸‹å°±æ˜¯çŸ³å¤´ï¼Œé‚£é‡Œæœ‰ä»€ä¹ˆå®¹è²Œã€‚");
         set("con", 30);
         set("max_kee",800);
         set("max_sen", 800);
@@ -54,7 +54,7 @@ void leave()
 	
 	this_object()->add("time", 1);
 	if( (int)this_object()->query("time") >= 8 ) {
-        message("vision",name() + "ÉìÁË¸öÀÁÑü£¬ÓÖÌÉµ¹ÔÚµØÏÂ¡£\n", environment(),this_object() );
+        message("vision",name() + "ä¼¸äº†ä¸ªæ‡’è…°ï¼Œåˆèººå€’åœ¨åœ°ä¸‹ã€‚\n", environment(),this_object() );
 	seteuid(getuid());
 	if(stone=new("/d/qujing/bibotan/npc/stone"))
 	stone->move(environment(this_object()));
@@ -68,11 +68,9 @@ void relay_emote(object ob,string verb)
 {
         switch(verb) {
         case "kick":
-                        command("say »¹Ìß£¡£¿À´Óë´óÒ¯Õ½ÉÏÈý°Ù»ØºÏ¡£\n");
+                        command("say è¿˜è¸¢ï¼ï¼Ÿæ¥ä¸Žå¤§çˆ·æˆ˜ä¸Šä¸‰ç™¾å›žåˆã€‚\n");
 			this_object()->fight_ob(ob);
 			ob->fight_ob(this_object());
                 break;
         }
 }
-
-ÿ

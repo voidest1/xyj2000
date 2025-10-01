@@ -19,4 +19,3 @@ void create()
   init_hammer(1);
   setup();
 }
-

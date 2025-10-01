@@ -232,7 +232,3 @@ void rewarding (object who, object ob)
   who->delete("quest/pending/cloth");
   quest_done(who);
 }
-
-
-
-

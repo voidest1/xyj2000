@@ -88,4 +88,3 @@ int living(object ob)
                 return 0;
         return efun::living(ob);
 }
-

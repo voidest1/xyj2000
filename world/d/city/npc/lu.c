@@ -63,4 +63,3 @@ int accept_fight(object me)
         command("say 练练也好，也好！\n");
         return 1;
 }
-

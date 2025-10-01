@@ -24,5 +24,3 @@ set("exits", ([
 
 setup();
 }
-
-

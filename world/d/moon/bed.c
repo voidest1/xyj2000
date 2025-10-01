@@ -32,4 +32,3 @@ int do_sleep() {
   this_player()->start_busy(random(3));
   return 1;
 }
-

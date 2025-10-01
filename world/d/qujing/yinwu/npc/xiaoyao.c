@@ -7,10 +7,10 @@ void create()
 {
   string str;
   int i = random(5)+1;
-  set_name("Ð¡Ñý", ({"xiao yao","yao"}));
-  set("gender", "ÄÐÐÔ");
+  set_name("å°å¦–", ({"xiao yao","yao"}));
+  set("gender", "ç”·æ€§");
   set("age", 20*i);
-  set("long","Ò»¸ö¹íÍ·¹íÄÔµÄÐ¡Ñý¡£\n");
+  set("long","ä¸€ä¸ªé¬¼å¤´é¬¼è„‘çš„å°å¦–ã€‚\n");
   set("combat_exp", 10000*i);
   set("per", 15);
   set_skill("parry", 20*i);
@@ -41,4 +41,3 @@ void create()
   str[strlen(str)-1] = '0'+random(6);
   carry_object(str)->wield();
 }
-ÿ

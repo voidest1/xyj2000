@@ -4,17 +4,17 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("¾ÕÓ°",({"shade","juying", "fairy"}));
+       set_name("èŠå½±",({"shade","juying", "fairy"}));
        set("long",
-"ôæÈô¾ªºè£¬ÍñÈôÓÎÁú£¬ÈÙê×Çï¾Õ£¬»ªÃ¯´ºËÉ¡£·Â·ðÙâÈô
-ÇáÔÆÖ®±ÎÔÂ£¬Æ®Ò¡ÙâÈôÁ÷·çÖ®»ØÑ©¡£Ô¶¶øÍûÖ®£¬ð¨ÈôÌ«Ñô
-Éý³¯Ï¼¡£ÆÈ¶ø²ìÖ®£¬×ÆÈôÜ½Çþ³öÂÌ²¨¡£\n");
-       set("title", "ÔÂ¹¬ÎèÏÉ");
-       set("gender", "Å®ÐÔ");
+"ç¿©è‹¥æƒŠé¸¿ï¼Œå©‰è‹¥æ¸¸é¾™ï¼Œè£æ›œç§‹èŠï¼ŒåŽèŒ‚æ˜¥æ¾ã€‚ä»¿ä½›å…®è‹¥
+è½»äº‘ä¹‹è”½æœˆï¼Œé£˜æ‘‡å…®è‹¥æµé£Žä¹‹å›žé›ªã€‚è¿œè€Œæœ›ä¹‹ï¼ŒçšŽè‹¥å¤ªé˜³
+å‡æœéœžã€‚è¿«è€Œå¯Ÿä¹‹ï¼Œç¼è‹¥èŠ™æ¸ å‡ºç»¿æ³¢ã€‚\n");
+       set("title", "æœˆå®«èˆžä»™");
+       set("gender", "å¥³æ€§");
        set("age", 18);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 800);
@@ -47,12 +47,9 @@ void create()
         map_skill("parry", "snowsword");
         map_skill("dodge", "moondance");
 
-create_family("ÔÂ¹¬", 2, "µÜ×Ó");
+create_family("æœˆå®«", 2, "å¼Ÿå­");
 setup();
 
         carry_object("/d/obj/cloth/luoyi")->wear();
 	carry_object("/d/obj/weapon/sword/snow_sword")->wield();
 }
-
-
-ÿ

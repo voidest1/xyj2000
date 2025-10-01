@@ -46,4 +46,3 @@ void init()
     this_player()->delete_temp("last_fainted_from");
     this_player()->start_busy(2);
 }
-

@@ -59,4 +59,3 @@ int do_kan(string arg)
   return 1;
   }
 }
-

@@ -2575,4 +2575,3 @@ void check_wait(object who, int time)
 	call_out("check_wait",interval, who, time);
     }
 }
-

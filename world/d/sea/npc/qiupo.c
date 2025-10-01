@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("öúÆÅ", ({"qiupo"}));
+       set_name("é³…å©†", ({"qiupo"}));
 
-set("long","Ò»Î»ÀÏÆÅÆÅ£¬ÊÇÁúÅ®µÄÌùÉíÆÍÈË£®\n");
-       set("gender", "Å®ÐÔ");
+set("long","ä¸€ä½è€å©†å©†ï¼Œæ˜¯é¾™å¥³çš„è´´èº«ä»†äººï¼Ž\n");
+       set("gender", "å¥³æ€§");
        set("age", 56);
 	set("per", 20);
        set("attitude", "peaceful");
@@ -22,5 +22,3 @@ set("long","Ò»Î»ÀÏÆÅÆÅ£¬ÊÇÁúÅ®µÄÌùÉíÆÍÈË£®\n");
 //        carry_object("/d/gao/obj/blade")->wield();
 
 }
-
-ÿ

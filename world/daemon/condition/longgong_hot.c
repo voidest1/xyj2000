@@ -44,4 +44,3 @@ message("vision", me->name() + "嘴里喷出股浓烟，却依然昏迷不醒。
         if( !duration ) return 0;
         return CND_CONTINUE;
 }
-

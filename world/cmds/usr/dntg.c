@@ -120,4 +120,3 @@ int telling2 (object who)
   }
   return 1;
 }
-

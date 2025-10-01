@@ -27,4 +27,4 @@
 "no_drop"							(int string)
 
     表示物品是否可被丢弃，如果型态是 string, 则当有人企图丢弃这个物品时
-    会将该字串用 notify_fail 传回去。
+    会将该字串用 notify_fail 传回去�

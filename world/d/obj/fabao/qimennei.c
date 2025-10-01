@@ -152,4 +152,3 @@ int valid_leave(object me,string dir) {
     else me->start_busy(2);
   return 0;
 }
-

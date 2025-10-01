@@ -41,4 +41,3 @@ int accept_fight(object me)
         kill_ob(me);
         return 1;
 }
-

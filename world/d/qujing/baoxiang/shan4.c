@@ -72,4 +72,3 @@ void no_reappearing ()
 {
   remove_call_out ("appearing");
 }
-

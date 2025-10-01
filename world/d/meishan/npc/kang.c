@@ -4,10 +4,10 @@ inherit NPC;
 void create()
 {
 
-  set_name("¿µ°²Ô£", ({ "kang anyu", "kang", "taiwei" }) );
-  set("gender", "ÄÐÐÔ" );
-  set("long", "¿µ°²Ô£ÊÇÃ·É½ÆßÐÖµÜÖÐµÄÀÏËÄ¡£\n");
-  set("title", "Ã·É½Ì«Î¾");
+  set_name("åº·å®‰è£•", ({ "kang anyu", "kang", "taiwei" }) );
+  set("gender", "ç”·æ€§" );
+  set("long", "åº·å®‰è£•æ˜¯æ¢…å±±ä¸ƒå…„å¼Ÿä¸­çš„è€å››ã€‚\n");
+  set("title", "æ¢…å±±å¤ªå°‰");
   set("age", 35);
   set("attitude", "peaceful");
   set("str", 25);
@@ -30,5 +30,3 @@ void create()
   carry_object("/d/obj/armor/yinjia")->wear();
   carry_object("/d/obj/weapon/spear/tieqiang")->wield();
 }
-
-ÿ

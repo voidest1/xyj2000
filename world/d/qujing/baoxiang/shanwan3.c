@@ -41,4 +41,3 @@ void fall_down (object who, object where)
   who->move(where);
   who->unconcious();
 }
-

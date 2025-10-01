@@ -55,4 +55,3 @@ int do_he(string arg)
    destruct(me);
    return 1;
   }
-

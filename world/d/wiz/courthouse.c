@@ -71,4 +71,3 @@ int do_quit()
 	write("嘿嘿，想跑？回答出问题来就放了你。\n");
 	return 1;
 }
-

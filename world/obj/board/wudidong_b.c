@@ -5,10 +5,10 @@ inherit BULLETIN_BOARD;
 
 void create()
 {
-        set_name("帐本", ({ "board" }) );
+        set_name("甯愭湰", ({ "board" }) );
         set("location", "/d/qujing/wudidong/kitchen.c");
         set("board_id", "wudidong_b");
-        set("long", "这是无底洞的帐本，是厨子用来记下谁孝敬了新鲜人肉用的。\n");
+        set("long", "杩欐槸鏃犲簳娲炵殑甯愭湰锛屾槸鍘ㄥ瓙鐢ㄦ潵璁颁笅璋佸瓭鏁簡鏂伴矞浜鸿倝鐢ㄧ殑銆俓n");
         setup();
         set("capacity", 100);
         replace_program(BULLETIN_BOARD);

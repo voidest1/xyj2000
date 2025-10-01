@@ -31,4 +31,3 @@ create_door("west", "雕花木门", "east", DOOR_CLOSED);
 
 	setup();
 }
-

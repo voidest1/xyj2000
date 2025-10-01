@@ -8,8 +8,8 @@ void create()
 {
   string dir;
 
-  set_name("²òÁ¦´óÏÉ", ({"chaili daxian", "daxian"}));
-  set("gender", "ÄĞĞÔ");
+  set_name("è±ºåŠ›å¤§ä»™", ({"chaili daxian", "daxian"}));
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("attitude", "peaceful");
   set("combat_exp", 4200000+random(50000));
@@ -55,7 +55,7 @@ void unconcious()
   object bone = new ("/d/obj/misc/bone");
 
   bone->move(environment(this_object()));
-  message_vision ("\n$N»ëÉíÒ»ÈíÌ±ÔÚµØÉÏ£¬»¯×öÒ»¶ÑÁãÉ¢µÄÊŞ¹Ç¡£\n",
+  message_vision ("\n$Næµ‘èº«ä¸€è½¯ç˜«åœ¨åœ°ä¸Šï¼ŒåŒ–åšä¸€å †é›¶æ•£çš„å…½éª¨ã€‚\n",
                   this_object());
   destruct(this_object());
 }
@@ -65,9 +65,7 @@ void die()
   object bone = new ("/d/obj/misc/bone");
 
   bone->move(environment(this_object()));
-  message_vision ("\n$N»ëÉíÒ»ÈíÌ±ÔÚµØÉÏ£¬»¯×öÒ»¶ÑÁãÉ¢µÄÊŞ¹Ç¡£\n",
+  message_vision ("\n$Næµ‘èº«ä¸€è½¯ç˜«åœ¨åœ°ä¸Šï¼ŒåŒ–åšä¸€å †é›¶æ•£çš„å…½éª¨ã€‚\n",
                   this_object());
   destruct(this_object());
 }
-
-ÿ

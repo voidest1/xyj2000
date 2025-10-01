@@ -93,4 +93,3 @@ int check_leader(object who)
         }
         return 1;
 }
-

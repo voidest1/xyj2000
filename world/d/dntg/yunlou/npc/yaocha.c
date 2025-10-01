@@ -5,9 +5,9 @@ inherit NPC;
 void create()
 {
  
-        set_name("Ò©²æ½«", ({ "yaocha jiang", "jiang", "yaocha" }) );
-        set("gender", "ÄÐÐÔ" );
-        set("long","ÍÐËþÀîÌìÍõÕÊÏÂ´ó½«£¬°òÀ«ÑüÔ²£¬Á¦´óÎÞÇî¡£\n");
+        set_name("è¯å‰å°†", ({ "yaocha jiang", "jiang", "yaocha" }) );
+        set("gender", "ç”·æ€§" );
+        set("long","æ‰˜å¡”æŽå¤©çŽ‹å¸ä¸‹å¤§å°†ï¼Œè†€é˜”è…°åœ†ï¼ŒåŠ›å¤§æ— ç©·ã€‚\n");
         set("age",40);
         set("str", 30);
         set("int", 20);
@@ -39,5 +39,3 @@ void create()
 	carry_object("/d/obj/weapon/hammer/tongchui")->wield();
 }
  
-
-ÿ

@@ -46,4 +46,3 @@ int do_detect(string arg)
 
 	return 1;
 }
-

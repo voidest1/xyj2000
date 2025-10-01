@@ -118,5 +118,3 @@ int check_move(object me, string arg)
 
 	return 0;
 }
-
-

@@ -1,16 +1,16 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 // sgzl
 #include <ansi.h>
-#define NAME "ÂíÔªË§"
+#define NAME "é©¬å…ƒå¸…"
 
 inherit NPC;
 
 void create()
 {
   set_name(NAME, ({"ma yuanshuai"}));
-  set("male", "ÄĞĞÔ");
+  set("male", "ç”·æ€§");
   set("age", 23);
-  set("long", "Ò»Ö»´óÂíºï¡£\n");
+  set("long", "ä¸€åªå¤§é©¬çŒ´ã€‚\n");
   set("combat_exp", 1000000);
   set("daoxing", 1000000);
 
@@ -37,15 +37,15 @@ void announce_success(object who)
   int i;
 
   i = random(500);
-//  message_vision (HIY NAME+"ÅÜÁË¹ıÀ´¡£\n" NOR,who);
+//  message_vision (HIY NAME+"è·‘äº†è¿‡æ¥ã€‚\n" NOR,who);
   who->add("dntg/number",1);
   who->set("dntg/huaguo","done");
   who->add("daoxing",i+3000);
-  command("chat "+who->query("name")+"Õ¶ÁË°ÔÕ¼ÎÒÃÇË®Á±¶´µÄÄ§Í·£¬Ë³Àû´³¹ı´óÄÖÌì¹¬µÚÒ»¹Ø£¡");
-  command("chat ´Ó´ËÆßÊ®¶ş¶´¾«Áé½ÔÓ¦×ğ"+who->query("name")+"ÎªÍõ£¬ËæÊ±Ìıºòµ÷Ç²£¡");
-  tell_object(who,"ÄãÓ®µÃÁË"+chinese_number(3)+"Äê"+chinese_number(i/4)+"Ìì"+chinese_number((i-(i/4)*4)*3)+"Ê±³½µÄµÀĞĞ£¡\n");
-  message_vision (HIY NAME+"µãÍ·¹şÑüµÄ¶Ô$NËµµ½£ºÕâÊÇÎÒÃÇÖÚĞÖµÜµÄÒ»µã¶ùĞ¡ÒâË¼£¬²»³É¾´Òâ¡£\n" NOR,who);
-  tell_object(who,"ÂíÔªË§¸øÄãÒ»¸öÊ¯Í·ÅÌ×Ó¡£\n");
+  command("chat "+who->query("name")+"æ–©äº†éœ¸å æˆ‘ä»¬æ°´å¸˜æ´çš„é­”å¤´ï¼Œé¡ºåˆ©é—¯è¿‡å¤§é—¹å¤©å®«ç¬¬ä¸€å…³ï¼");
+  command("chat ä»æ­¤ä¸ƒåäºŒæ´ç²¾çµçš†åº”å°Š"+who->query("name")+"ä¸ºç‹ï¼Œéšæ—¶å¬å€™è°ƒé£ï¼");
+  tell_object(who,"ä½ èµ¢å¾—äº†"+chinese_number(3)+"å¹´"+chinese_number(i/4)+"å¤©"+chinese_number((i-(i/4)*4)*3)+"æ—¶è¾°çš„é“è¡Œï¼\n");
+  message_vision (HIY NAME+"ç‚¹å¤´å“ˆè…°çš„å¯¹$Nè¯´åˆ°ï¼šè¿™æ˜¯æˆ‘ä»¬ä¼—å…„å¼Ÿçš„ä¸€ç‚¹å„¿å°æ„æ€ï¼Œä¸æˆæ•¬æ„ã€‚\n" NOR,who);
+  tell_object(who,"é©¬å…ƒå¸…ç»™ä½ ä¸€ä¸ªçŸ³å¤´ç›˜å­ã€‚\n");
   who->save();
 }
 
@@ -54,9 +54,7 @@ void refuse_player(object who)
   string name;
   name = who->name();
 
-  message_vision (HIY NAME+"Í»È»ÅÜÁË¹ıÀ´$NÒ¡Ò¡Í·£º"+
-                  "ÎÒÃÇÕıÔÚÑ¡ºïÍõ£¬Ã»ÊÂ±ğÀ´µ·ÂÒ¡£\n" NOR,who);
-  message_vision (HIY "Ëµ°Õ"+NAME+"¼±´Ò´ÒµÄÀë¿ªÁË¡£\n" NOR,who);
+  message_vision (HIY NAME+"çªç„¶è·‘äº†è¿‡æ¥$Næ‘‡æ‘‡å¤´ï¼š"+
+                  "æˆ‘ä»¬æ­£åœ¨é€‰çŒ´ç‹ï¼Œæ²¡äº‹åˆ«æ¥æ£ä¹±ã€‚\n" NOR,who);
+  message_vision (HIY "è¯´ç½¢"+NAME+"æ€¥åŒ†åŒ†çš„ç¦»å¼€äº†ã€‚\n" NOR,who);
 }
-
-ÿÿ

@@ -156,4 +156,3 @@ void reward_player (object me, object who, object dachen)
   who->delete("quest/reward");
   who->interrupt_me();
 }
-

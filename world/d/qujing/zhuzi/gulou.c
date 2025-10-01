@@ -59,5 +59,3 @@ int do_jiebang (string arg)
   message_vision ("$N仔细地将榜揭下来。\n",this_player());
   return 1;
 }
-
-

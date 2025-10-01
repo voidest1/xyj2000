@@ -5,9 +5,9 @@ inherit "/d/dntg/hell/wang.c";
 
 void create()
 {
-       set_name("±å³ÇÍõ", ({"biancheng wang", "wang"}));
-       set("title", "Òõ¼äÊ®ÍõÖ®");
-       set("gender", "ÄÐÐÔ");
+       set_name("åžåŸŽçŽ‹", ({"biancheng wang", "wang"}));
+       set("title", "é˜´é—´åçŽ‹ä¹‹");
+       set("gender", "ç”·æ€§");
 	set("class", "youling");
        set("age", 50);
        set("attitude", "friendly");
@@ -54,5 +54,3 @@ setup();
 
         carry_object("/d/obj/cloth/mangpao")->wear();
 }
-
-ÿ

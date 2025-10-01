@@ -73,11 +73,3 @@ int accept_fight(object me)
   command("say 我生平最怕打架，"+RANK_D->query_respect(this_player())+"还是放我一马吧．．．");
   return 0;
 }
-
-
-
-
-
-
-
-

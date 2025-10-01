@@ -3,10 +3,10 @@ string clean_tower();
 inherit NPC;
 void create()
 {
-       set_name("¿àËŞìøÊ¦", ({"kusu chanshi", "chanshi"}));
-       set("gender", "ÄĞĞÔ");
+       set_name("è‹¦å®¿ç¦…å¸ˆ", ({"kusu chanshi", "chanshi"}));
+       set("gender", "ç”·æ€§");
        set("age", 80);
-        set("long", "Ò»¸öÉí²ÄÊİĞ¡µÄÀÏºÍÉĞ£¬Ò»Á³¿àÏà¡£\n");
+        set("long", "ä¸€ä¸ªèº«æç˜¦å°çš„è€å’Œå°šï¼Œä¸€è„¸è‹¦ç›¸ã€‚\n");
        set("attitude", "friendly");
        set("shen_type", 1);
        set("per", 18);
@@ -31,11 +31,11 @@ void create()
         set("max_mana", 40);
         set("mana", 30);
 set("inquiry", ([
-"here" : "´ËµØÄËÊÇ¼ÀÈü¹úÉâ½¨½ğ¹âËÂ¡£\n",
-"Ô©Í÷": "·ğ±¦Ê§ÇÔ£¬ÎÒµÈÔâ¹úÍõÑµ³â£¬¿à²»¿°ÑÔÄÇ£¡\n",
-"·ğ±¦": "·ğ±¦Ô­·ÅÔÚÁğÁ§ËşÉÏ¡£\n",
-"ÁğÁ§Ëş" : "ÁğÁ§Ëş±ãÔÚËÂÖĞºóÔº¡£\n",     
-"É¨Ëş" : (: clean_tower :),
+"here" : "æ­¤åœ°ä¹ƒæ˜¯ç¥­èµ›å›½èµ¦å»ºé‡‘å…‰å¯ºã€‚\n",
+"å†¤æ‰": "ä½›å®å¤±çªƒï¼Œæˆ‘ç­‰é­å›½ç‹è®­æ–¥ï¼Œè‹¦ä¸å ªè¨€é‚£ï¼\n",
+"ä½›å®": "ä½›å®åŸæ”¾åœ¨ç‰ç’ƒå¡”ä¸Šã€‚\n",
+"ç‰ç’ƒå¡”" : "ç‰ç’ƒå¡”ä¾¿åœ¨å¯ºä¸­åé™¢ã€‚\n",     
+"æ‰«å¡”" : (: clean_tower :),
 ]));
 
 setup();
@@ -49,16 +49,15 @@ string clean_tower()
 	obj=this_player();
 	env=environment(this_object());
 
-	if( (string)env->query("short")!="´óĞÛ±¦µî") {
-		command("say " + RANK_D->query_respect(obj) + "µÄÕâ·¬ºÃÒâ£¬ÀÏñÄĞÄÁìÁË£¬¿ÉÀÏñÄÏÖÒ²ÎŞÄÜÎªÁ¦£¡\n");
-		return "±§Ç¸¡£\n";
+	if( (string)env->query("short")!="å¤§é›„å®æ®¿") {
+		command("say " + RANK_D->query_respect(obj) + "çš„è¿™ç•ªå¥½æ„ï¼Œè€è¡²å¿ƒé¢†äº†ï¼Œå¯è€è¡²ç°ä¹Ÿæ— èƒ½ä¸ºåŠ›ï¼\n");
+		return "æŠ±æ­‰ã€‚\n";
 	}
 	if( env->query("exits/enter") ) {
-		command("say ÓĞÀÍ"  + RANK_D->query_respect(obj) + "ÁË£¬ÀïÃæÇë¡£\n");
-		return "ÕæÊÇºÃÈËÄÅ¡£\n";
+		command("say æœ‰åŠ³"  + RANK_D->query_respect(obj) + "äº†ï¼Œé‡Œé¢è¯·ã€‚\n");
+		return "çœŸæ˜¯å¥½äººå‘ã€‚\n";
 	}
 	command("touchy " + obj->query("id"));
 	env->open_down();
-	return"ÕæÊÇºÃÈËÄÅ¡£\n";
+	return"çœŸæ˜¯å¥½äººå‘ã€‚\n";
 }
-ÿ

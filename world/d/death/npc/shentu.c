@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÉñÝ±", ({"shen tu", "tu"}));
-	set("title", "ìë»§");
-       set("gender", "ÄÐÐÔ");
-	set("long", "Ò»¸ö°×Á³Ï²ÏàµÄÓÂÊ¿£¬Éí¸ß×ãÓÐÕÉÍâ£¬Õ¾ÔÚÄÇÀïÍþ·çÁÝÁÝ¡£\n");
+       set_name("ç¥žè¼", ({"shen tu", "tu"}));
+	set("title", "ç¥€æˆ·");
+       set("gender", "ç”·æ€§");
+	set("long", "ä¸€ä¸ªç™½è„¸å–œç›¸çš„å‹‡å£«ï¼Œèº«é«˜è¶³æœ‰ä¸ˆå¤–ï¼Œç«™åœ¨é‚£é‡Œå¨é£Žå‡›å‡›ã€‚\n");
        set("age", 30);
        set("attitude", "peaceful");
 
@@ -48,5 +48,3 @@ setup();
         carry_object("/d/obj/armor/gujia")->wear();
         carry_object("/d/obj/weapon/staff/budd_staff")->wield();
 }
-
-ÿ

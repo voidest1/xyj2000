@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("¹úÕÉ", ({"guo zhang", "zhang"}));
-  set("title", "ÓñÃæµÀÈË");
-  set("gender", "ÄÐÐÔ");
+  set_name("å›½ä¸ˆ", ({"guo zhang", "zhang"}));
+  set("title", "çŽ‰é¢é“äºº");
+  set("gender", "ç”·æ€§");
   set("age", 60);
   set("attitude", "peaceful");
   set("combat_exp", 1230000);
@@ -67,11 +67,11 @@ void move_to_cave (object me)
   object room = load_object("/d/qujing/biqiu/dong");
 
   if (! where ||
-      where->query("short") == "Çå»ª¶´")
+      where->query("short") == "æ¸…åŽæ´ž")
     return;
  
-  message_vision ("\nºöÈ»¼ä¿ñ·çËÄÆð£¬Ìì»èµØ°µ£¡\n",me);
-  message_vision ("µÈÄã»Ð»Ðã±ã±Õö¿ªÑÛÊ±£¬$NÒÑÎÞ×ÙÎÞÓ°£¡\n",me);
+  message_vision ("\nå¿½ç„¶é—´ç‹‚é£Žå››èµ·ï¼Œå¤©æ˜åœ°æš—ï¼\n",me);
+  message_vision ("ç­‰ä½ æææƒšæƒšçå¼€çœ¼æ—¶ï¼Œ$Nå·²æ— è¸ªæ— å½±ï¼\n",me);
   me->move(room);
 }
 
@@ -85,9 +85,9 @@ void unconcious()
     ob->set_temp("obstacle/biqiu_guozhang",1);
     call_out ("king_appearing",1,ob);
   }
-  message_vision ("\n$NÏÖÁËÔ­ÐÎ£¬¾¹ÊÇÒ»Ö»°×Â¹ÍùÌìÉÏ»Å»ÅÕÅÕÅµØ´ÚÈ¥¡£\n",
+  message_vision ("\n$NçŽ°äº†åŽŸå½¢ï¼Œç«Ÿæ˜¯ä¸€åªç™½é¹¿å¾€å¤©ä¸Šæ…Œæ…Œå¼ å¼ åœ°è¹¿åŽ»ã€‚\n",
                   me);
-  message_vision ("ÌìÉÏ´«À´ÄÏ¼«ÀÏÈËµÄÅ­³â£º¡°ÄõÂ¹£¡Á¬ÀÏ·òµÄ¹ÕÕÈÒ²ÍµÁËÈ¥£¡\n\n",
+  message_vision ("å¤©ä¸Šä¼ æ¥å—æžè€äººçš„æ€’æ–¥ï¼šâ€œå­½é¹¿ï¼è¿žè€å¤«çš„æ‹æ–ä¹Ÿå·äº†åŽ»ï¼\n\n",
                   me);
   load_object("/obj/empty");
   me->move("/obj/empty");
@@ -111,5 +111,3 @@ void die()
 {
   unconcious();
 }
-
-ÿ

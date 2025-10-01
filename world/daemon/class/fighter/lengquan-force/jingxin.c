@@ -48,4 +48,3 @@ void remove_effect(object me, int amount)
         tell_object(me,
 "你的静心诀运行一周天完毕，将内力收回丹田。\n");
 }
-

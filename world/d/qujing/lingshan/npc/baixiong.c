@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("°×ÐÛ×ðÕß", ({ "baixiong zunzhe", "baixiong", "zunzhe" }));
-  set("title", "ÁéÉ½");
-  set("gender", "ÄÐÐÔ");
+  set_name("ç™½é›„å°Šè€…", ({ "baixiong zunzhe", "baixiong", "zunzhe" }));
+  set("title", "çµå±±");
+  set("gender", "ç”·æ€§");
   set("age", 1000);
   set("attitude", "peaceful");
   set("str",40);
@@ -50,5 +50,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/jia_sha")->wear();
 }
-
-ÿ

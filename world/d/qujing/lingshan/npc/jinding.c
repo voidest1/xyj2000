@@ -5,9 +5,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("½ð¶¥´óÏÉ", ({ "jinding daxian", "jinding", "daxian" }));
-  set("title", "ÁéÉ½");
-  set("gender", "ÄÐÐÔ");
+  set_name("é‡‘é¡¶å¤§ä»™", ({ "jinding daxian", "jinding", "daxian" }));
+  set("title", "çµå±±");
+  set("gender", "ç”·æ€§");
   set("age", 100);
   set("attitude", "peaceful");
   set("str",40);
@@ -42,5 +42,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/daopao")->wear();
 }
-
-ÿ

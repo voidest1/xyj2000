@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("µÀÊ¿", ({"daoshi"}));
-  set("gender", "ÄÐÐÔ" );
+  set_name("é“å£«", ({"daoshi"}));
+  set("gender", "ç”·æ€§" );
   set("age", 43);
-  set("long", "ËûÕýÀÁÑóÑóµØÉ¹Ì«Ñô¡£¼ûÁËÄãÏÔ³öÒ»¸±°®´î²»ÀíµÄÑù×Ó¡£\n");
+  set("long", "ä»–æ­£æ‡’æ´‹æ´‹åœ°æ™’å¤ªé˜³ã€‚è§äº†ä½ æ˜¾å‡ºä¸€å‰¯çˆ±æ­ä¸ç†çš„æ ·å­ã€‚\n");
   set("class","taoist");
   set("combat_exp", 10000);
   set("daoxing", 20000);
@@ -25,5 +25,3 @@ void create()
   setup();
   carry_object("/d/obj/cloth/daopao")->wear();
 }
-
-ÿ

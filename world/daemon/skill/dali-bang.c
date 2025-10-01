@@ -98,4 +98,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("yaomo") + "/kusong/dali-bang/" + func;
 }
-

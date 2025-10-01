@@ -26,5 +26,3 @@ set("unwield_msg", "$N小心翼翼将$n别回腰间。\n");
          init_mace(65);
         setup();
 }
-
-

@@ -100,4 +100,3 @@ string perform_action_file(string func)
 {
 return CLASS_D("yaomo") + "/bibotan/huaxue-blade/" + func;
 }
-

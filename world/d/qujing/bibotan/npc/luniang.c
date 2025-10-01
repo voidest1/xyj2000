@@ -1,13 +1,13 @@
 inherit NPC;
 void create()
 {
-        set_name("Â«Äï", ({"lu niang"}));
+        set_name("èŠ¦å¨˜", ({"lu niang"}));
         set("long",
-"ËýÍ·ÉÏ²å×Å¼¸¶ä°×É«Â«»¨£¬ÈÝÑÕËäÈ»ÇÎÀö£¬È´ÑÚ²»×¡ÉíÉÏµÄÑýÆø¡£\n");
+"å¥¹å¤´ä¸Šæ’ç€å‡ æœµç™½è‰²èŠ¦èŠ±ï¼Œå®¹é¢œè™½ç„¶ä¿ä¸½ï¼Œå´æŽ©ä¸ä½èº«ä¸Šçš„å¦–æ°”ã€‚\n");
         set("age", 20);
-	set("title", "Â«»¨¾«");
+	set("title", "èŠ¦èŠ±ç²¾");
         set("attitude", "friendly");
-        set("gender", "Å®ÐÔ");
+        set("gender", "å¥³æ€§");
 	set("class", "yaomo");
         set("str", 20);
         set("int", 20);
@@ -60,19 +60,17 @@ void greeting(object ob)
 {
         if( !ob || !present(ob, environment(this_object())) ) return;
 	
-	if((string)ob->query("family/family_name")=="ÏÝ¿ÕÉ½ÎÞµ×¶´" 
-	&& (string)ob->query("family/family_name")=="ÂÒÊ¯É½±Ì²¨Ì¶"
-        && (string)ob->query("family/family_name")=="´óÑ©É½") {
+	if((string)ob->query("family/family_name")=="é™·ç©ºå±±æ— åº•æ´ž" 
+	&& (string)ob->query("family/family_name")=="ä¹±çŸ³å±±ç¢§æ³¢æ½­"
+        && (string)ob->query("family/family_name")=="å¤§é›ªå±±") {
 	command("xixi " + ob->query("id"));
 	return;
 	}
 	command("look " + ob->query("id") );
-	command("say ÓÖ°×ÓÖÅÖ£¬ÕýºÏÀÏÄïÎ¸¿Ú¡£");
+	command("say åˆç™½åˆèƒ–ï¼Œæ­£åˆè€å¨˜èƒƒå£ã€‚");
 	command("chan " + ob->query("id") );
 	kill_ob(ob);
 	ob->fight_ob(this_object());
 
 	return;
 }
-
-ÿ

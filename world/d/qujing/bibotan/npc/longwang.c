@@ -2,11 +2,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÍòÊ¥ÁúÍõ", ({"wansheng longwang", "longwang", "long"}));
-        set("long", "ËûÊÇÂÒÊ¯É½±Ì²¨Ì¶µÄÀÏÁúÍõ¡£\n");
+        set_name("ä¸‡åœ£é¾™çŽ‹", ({"wansheng longwang", "longwang", "long"}));
+        set("long", "ä»–æ˜¯ä¹±çŸ³å±±ç¢§æ³¢æ½­çš„è€é¾™çŽ‹ã€‚\n");
         set("age", 68);
         set("attitude", "peaceful");
-        set("gender", "ÄÐÐÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "dragon");
         set("str", 30);
         set("int", 30);
@@ -43,8 +43,8 @@ void unconcious()
         if( !me = query_temp("last_damage_from") )
 		me= this_player(1);
         if( environment() ) {
-        message("sound", "\n\nÍòÊ¥ÁúÍõÅ­µÀ£ºÄã¾¹¸ÒÆÛÈËÌ«Éõ£¡\n\n", environment());
-        message("sound", "\nÍòÊ¥ÁúÍõ°ë¿ÕÖÐÒ»×ª£¬ÏÖÁËÕæÉí£¡¾¹ÊÇÒ»ÌõÎå×¦½ðÁú£¡\n\n", environment());
+        message("sound", "\n\nä¸‡åœ£é¾™çŽ‹æ€’é“ï¼šä½ ç«Ÿæ•¢æ¬ºäººå¤ªç”šï¼\n\n", environment());
+        message("sound", "\nä¸‡åœ£é¾™çŽ‹åŠç©ºä¸­ä¸€è½¬ï¼ŒçŽ°äº†çœŸèº«ï¼ç«Ÿæ˜¯ä¸€æ¡äº”çˆªé‡‘é¾™ï¼\n\n", environment());
                 seteuid(getuid());
                 obj=new("/d/qujing/bibotan/npc/dragon"); 
                 obj->move(environment(me));
@@ -62,8 +62,8 @@ void die()
         if( !me = query_temp("last_damage_from") )
                 me= this_player(1);
         if(environment() ) {
-        message("sound", "\n\nÍòÊ¥ÁúÍõÅ­µÀ£ºÄã¾¹¸ÒÆÛÈËÌ«Éõ£¡\n\n", environment());
-        message("sound", "\nÍòÊ¥ÁúÍõ°ë¿ÕÖÐÒ»×ª£¬ÏÖÁËÕæÉí£¡¾¹ÊÇÒ»ÌõÎå×¦½ðÁú£¡\n\n", environment());
+        message("sound", "\n\nä¸‡åœ£é¾™çŽ‹æ€’é“ï¼šä½ ç«Ÿæ•¢æ¬ºäººå¤ªç”šï¼\n\n", environment());
+        message("sound", "\nä¸‡åœ£é¾™çŽ‹åŠç©ºä¸­ä¸€è½¬ï¼ŒçŽ°äº†çœŸèº«ï¼ç«Ÿæ˜¯ä¸€æ¡äº”çˆªé‡‘é¾™ï¼\n\n", environment());
                 seteuid(getuid());
                 obj=new("/d/qujing/bibotan/npc/dragon");
                 obj->move(environment(me));
@@ -73,5 +73,3 @@ void die()
 
         destruct(this_object());
 }
-
-ÿ

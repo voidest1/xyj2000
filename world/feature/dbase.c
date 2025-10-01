@@ -145,4 +145,3 @@ mapping query_entire_temp_dbase()
 
 	return tmp_dbase;
 }
-

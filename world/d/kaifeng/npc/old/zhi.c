@@ -185,5 +185,3 @@ void rewarding (object who)
   who->delete("quest/pending/kill");
   call_out ("quest_done",1,who);
 }
-
-

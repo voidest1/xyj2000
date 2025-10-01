@@ -5,15 +5,15 @@ inherit F_MASTER;
 
 void create()
 {
-        set_name("¹ãóÞ×Ó", ({"guang yunzi", "guang"}));
-        set("gender", "ÄÐÐÔ" );
+        set_name("å¹¿ç­ å­", ({"guang yunzi", "guang"}));
+        set("gender", "ç”·æ€§" );
         set("age", 43);
-        set("long", "·½´çÉ½ÈýÐÇ¶´µÚ¶þ´úµÜ×ÓÖÐµÄ½Ü³öÈËÎï£®\n");
+        set("long", "æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´žç¬¬äºŒä»£å¼Ÿå­ä¸­çš„æ°å‡ºäººç‰©ï¼Ž\n");
         set("combat_exp", 250000);
 	set("daoxing", 400000);
 
         set("attitude", "friendly");
-        create_family("·½´çÉ½ÈýÐÇ¶´", 2, "Ê×Í½");
+        create_family("æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´ž", 2, "é¦–å¾’");
 	set("int", 25);
 	set("class", "taoist");
 
@@ -62,11 +62,11 @@ void attempt_apprentice(object ob)
 {
 	if ( ((int)ob->query("combat_exp")+(int)ob->query("daoxing") < 30000)) {
 	command("say " + RANK_D->query_respect(ob) +
-"ÊÇ·ñ»¹Ó¦ÔÚµÀÐÐ¼°Îä¹¦·½Ãæ¶àÏÂÅ¬Á¦£¬À´ÈÕ·½³¤Âð£¡");
+"æ˜¯å¦è¿˜åº”åœ¨é“è¡ŒåŠæ­¦åŠŸæ–¹é¢å¤šä¸‹åŠªåŠ›ï¼Œæ¥æ—¥æ–¹é•¿å—ï¼");
 	return;
 	}
-        command("say ºÜºÃ£¬" + RANK_D->query_respect(ob) +
-"¶à¼ÓÅ¬Á¦£¬ËûÈÕ±Ø¶¨ÓÐ³É¡£\n");
+        command("say å¾ˆå¥½ï¼Œ" + RANK_D->query_respect(ob) +
+"å¤šåŠ åŠªåŠ›ï¼Œä»–æ—¥å¿…å®šæœ‰æˆã€‚\n");
         command("recruit " + ob->query("id") );
 }
 int recruit_apprentice(object ob)
@@ -74,5 +74,3 @@ int recruit_apprentice(object ob)
         if( ::recruit_apprentice(ob) )
                 ob->set("class", "taoist");
 }
-
-ÿ

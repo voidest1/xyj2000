@@ -244,8 +244,3 @@ int do_show(string arg)
     write(str);
     return 1;
 }
-
-
-
-
-

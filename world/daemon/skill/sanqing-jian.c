@@ -97,4 +97,3 @@ int practice_skill(object me)
 	write("你按着所学练了一遍三清剑法。\n");
 	return 1;
 }
-

@@ -156,4 +156,3 @@ void destroying(object me, object obj)
         destruct(obj);
         return;
 }
-

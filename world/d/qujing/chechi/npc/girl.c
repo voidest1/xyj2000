@@ -17,4 +17,3 @@ void create()
   setup();
   carry_object("/d/qujing/chechi/obj/gongqun")->wear();
 }
-

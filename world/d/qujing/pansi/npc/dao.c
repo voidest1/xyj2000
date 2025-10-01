@@ -5,10 +5,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("µÀÊ¿", ({ "dao shi", "dao", "shi" }));
-  set("title", "»Æ»¨Îå¹«");   
-  set("long", "Ò»Î»ÓûÉñÓûÏÉµÄ»Æ»¨¹ÛÎå¹«µÀÊ¿¡£");
-  set("gender", "ÄĞĞÔ");
+  set_name("é“å£«", ({ "dao shi", "dao", "shi" }));
+  set("title", "é»„èŠ±äº”å…¬");   
+  set("long", "ä¸€ä½æ¬²ç¥æ¬²ä»™çš„é»„èŠ±è§‚äº”å…¬é“å£«ã€‚");
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("attitude", "heroism");
   set("per", 29);
@@ -60,8 +60,8 @@ void die ()
   {
     call_out ("daogu_appearing",1,ob);
   }
-  message_vision ("\n$NÆËµ¹ÔÚ³¾°£Àï£¬ÏÖÉíÎªÒ»Æß³ßòÚò¼¾«¡£\n",me);
-  message_vision ("\nòÚò¼¾«»¯ÎªÒ»¹ÉÇàÑÌàáµØÏûÉ¢ÁË¡£\n",me);
+  message_vision ("\n$Næ‰‘å€’åœ¨å°˜åŸƒé‡Œï¼Œç°èº«ä¸ºä¸€ä¸ƒå°ºèœˆèš£ç²¾ã€‚\n",me);
+  message_vision ("\nèœˆèš£ç²¾åŒ–ä¸ºä¸€è‚¡é’çƒŸå™Œåœ°æ¶ˆæ•£äº†ã€‚\n",me);
   load_object("/obj/empty");
   me->move("/obj/empty");
   call_out ("destruct_me",3,me);
@@ -134,7 +134,7 @@ void recovering (object me, object ob)
        (me->query("kee") < (me->query("max_kee")*3/4) ||
         me->query("sen") < (me->query("max_sen")*3/4)))
   {
-    message_vision ("\n$NÉíÉÏÍòµÀ½ğ¹âÒ»ÉÁ£¬¶ÙÊ±¾«ÉñÆøÑª¾¡»Ø£¡\n",me);
+    message_vision ("\n$Nèº«ä¸Šä¸‡é“é‡‘å…‰ä¸€é—ªï¼Œé¡¿æ—¶ç²¾ç¥æ°”è¡€å°½å›ï¼\n",me);
     me->set("gin",me->query("max_gin"));
     me->set("kee",me->query("max_kee"));
     me->set("sen",me->query("max_sen"));
@@ -148,14 +148,14 @@ void recovering (object me, object ob)
 void hurting (object me, object ob)
 {
   string *msgs = ({
-    "$N½«ÒÂÒ»ÏÆ£¬ÎŞÊıµÀ½ğ¹âÏò$nÒ»Éä£¡\n",
-    "$NÒ»Ì§ÊÖ£¬Ğ²ÏÂÇ§Ö»ÑÛ¾¦½ğ¹âÉÁÉÁÉäÏò$n£¡\n",
-    "$NÏÆÆğ¸ì²²ÏÂÎŞÊıÖ»ÑÛ¾¦±Å³ö½ğ¹âÖ±ÉäÏò$n£¡\n",
+    "$Nå°†è¡£ä¸€æ€ï¼Œæ— æ•°é“é‡‘å…‰å‘$nä¸€å°„ï¼\n",
+    "$Nä¸€æŠ¬æ‰‹ï¼Œèƒä¸‹åƒåªçœ¼ç›é‡‘å…‰é—ªé—ªå°„å‘$nï¼\n",
+    "$Næ€èµ·èƒ³è†Šä¸‹æ— æ•°åªçœ¼ç›è¿¸å‡ºé‡‘å…‰ç›´å°„å‘$nï¼\n",
   });
   string *strs = ({
-    "( $NÒ»¸öôóôò²»ÓÉ×ÔÖ÷µØ²Ò½ĞÒ»Éù£¡ )\n",
-    "( $NÓ¦Éùµ¹ÏÂ£¬ÓÖÃãÇ¿ÅÀ½«ÆğÀ´£¡ )\n",
-    "( $NÍ´¿àµØ²Òº¿ÁËÒ»Éù£¡ )\n",
+    "( $Nä¸€ä¸ªè¶”è¶„ä¸ç”±è‡ªä¸»åœ°æƒ¨å«ä¸€å£°ï¼ )\n",
+    "( $Nåº”å£°å€’ä¸‹ï¼Œåˆå‹‰å¼ºçˆ¬å°†èµ·æ¥ï¼ )\n",
+    "( $Nç—›è‹¦åœ°æƒ¨åšäº†ä¸€å£°ï¼ )\n",
   });
   object needle;
   int damage;
@@ -188,10 +188,9 @@ void hurting (object me, object ob)
   }
   else
   {
-    message_vision ("µ«¼û$NÊÖÉÏĞå»¨ÕëÒ»ÉÁ£¬"+
-                    "$nº¿½ĞÒ»Éù£¬Ğ²ÏÂ¼¸Ö»ÑÛ¾¦¶ÙÊ±ÃğÈ¥£¡\n",ob,me);
+    message_vision ("ä½†è§$Næ‰‹ä¸Šç»£èŠ±é’ˆä¸€é—ªï¼Œ"+
+                    "$nåšå«ä¸€å£°ï¼Œèƒä¸‹å‡ åªçœ¼ç›é¡¿æ—¶ç­å»ï¼\n",ob,me);
   }
   remove_call_out ("hurting");  
   call_out ("hurting",random(10)+10,me,ob);  
 }
-ÿ

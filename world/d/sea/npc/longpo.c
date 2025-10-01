@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÁúÆÅ", ({"long po"}));
+       set_name("é¾™å©†", ({"long po"}));
 
-set("long","ÁúÍõµÄÀÏÆÅ£¬¶«º£µÄÌ«ºó£®\n");
-       set("gender", "Å®ÐÔ");
+set("long","é¾™çŽ‹çš„è€å©†ï¼Œä¸œæµ·çš„å¤ªåŽï¼Ž\n");
+       set("gender", "å¥³æ€§");
        set("age", 26);
 	set("per", 30);
        set("attitude", "peaceful");
@@ -27,5 +27,3 @@ set("long","ÁúÍõµÄÀÏÆÅ£¬¶«º£µÄÌ«ºó£®\n");
         carry_object("/d/obj/cloth/jinpao")->wear();
 
 }
-
-ÿ

@@ -9,7 +9,7 @@
 // Changed by vikee  ;)
 // 
 #define INTERMUD_MUD_NAME		"HUNDUN"
-#define INTERMUD_NAME                   "西游记混沌站"
+#define INTERMUD_NAME                   "瑗挎父璁版贩娌岀珯"
 
 #endif
 

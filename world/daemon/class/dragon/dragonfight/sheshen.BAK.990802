@@ -1,4 +1,4 @@
-// sheshen.c 		ÉáÉí¼¼
+// sheshen.c 		èˆèº«æŠ€
 
 #include <ansi.h>
 #include <combat.h>
@@ -21,24 +21,24 @@ int perform(object me, object target)
 	if( !target
 	||	!target->is_character()
 	||	!me->is_fighting(target) )
-		return notify_fail("²»ÔÚÕ½¶·ÖĞ£¬ÉáÊ²Ã´Éí£¿\n");
+		return notify_fail("ä¸åœ¨æˆ˜æ–—ä¸­ï¼Œèˆä»€ä¹ˆèº«ï¼Ÿ\n");
 
 	mydf=(int)me->query_skill("dragonfight",1);
 	if(mydf<100) 
-		return notify_fail("ÄãµÄĞŞÎª²»¹»Éî£¬»¹²»ÄÜÁìÎòÉáÉí¼¼µÄ¾«Ëè¡£\n");
+		return notify_fail("ä½ çš„ä¿®ä¸ºä¸å¤Ÿæ·±ï¼Œè¿˜ä¸èƒ½é¢†æ‚Ÿèˆèº«æŠ€çš„ç²¾é«“ã€‚\n");
 	mydf=(int)me->query_skill("dragonforce",1);
 	if(mydf<100) 
-		return notify_fail("ÄãµÄĞŞÎª²»¹»Éî£¬»¹²»ÄÜÁìÎòÉáÉí¼¼µÄ¾«Ëè¡£\n");
+		return notify_fail("ä½ çš„ä¿®ä¸ºä¸å¤Ÿæ·±ï¼Œè¿˜ä¸èƒ½é¢†æ‚Ÿèˆèº«æŠ€çš„ç²¾é«“ã€‚\n");
 	
 	if((int)me->query("force")<500) return
-	    notify_fail("ÄãµÄÄÚÁ¦²»¹»ÁË¡£\n");
+	    notify_fail("ä½ çš„å†…åŠ›ä¸å¤Ÿäº†ã€‚\n");
 
-	msg = CYN "$NÓÒÕÆ»Ó³ö£¬Õ¶Ïò$nµÄ×ó¼ç£¬\n";
+	msg = CYN "$Nå³æŒæŒ¥å‡ºï¼Œæ–©å‘$nçš„å·¦è‚©ï¼Œ\n";
 	mycor=me->query_cor();
 	youcps=target->query_cps();
 	ob=target->query_temp("weapon");
-	str="ÓÒÊÖ";
-	if(objectp(ob)) str="ÊÖÖĞµÄ"+ob->query("name");
+	str="å³æ‰‹";
+	if(objectp(ob)) str="æ‰‹ä¸­çš„"+ob->query("name");
 	ap=COMBAT_D->skill_power(me, "unarmed", SKILL_USAGE_ATTACK);
 	dp=COMBAT_D->skill_power(target,"dodge", SKILL_USAGE_DEFENSE);
 	dp/=2;	
@@ -50,49 +50,49 @@ int perform(object me, object target)
 	damage_bonus=mystr*(100+me->query("force_factor"))/100;
 
 	if( random(youcps) < 15 || random(ap+dp)>dp) {
-		msg += "$nÏëÓÃ"+str+"µ²¿ª£¬²»ÁÏÈ´±»$NÒ»°Ñ×¥×¡¡£\n";
-		msg += "$NË³ÊÆÉÏ²½£¬Ê¹³öÁË¡¸ÉáÉí¼¼¡¹£¡\n\n" NOR;
-		msg += CYN "$N×ó½Å²ùÏò$nÓÒÍÈÏ¥¸Ç£¬";
+		msg += "$næƒ³ç”¨"+str+"æŒ¡å¼€ï¼Œä¸æ–™å´è¢«$Nä¸€æŠŠæŠ“ä½ã€‚\n";
+		msg += "$Né¡ºåŠ¿ä¸Šæ­¥ï¼Œä½¿å‡ºäº†ã€Œèˆèº«æŠ€ã€ï¼\n\n" NOR;
+		msg += CYN "$Nå·¦è„šé“²å‘$nå³è…¿è†ç›–ï¼Œ";
 		if(random(ap+pp)>pp) {
-			msg += "½á¹ûÕı²ùÔÚ$nµÄĞ¡ÍÈÉÏ¡£\n" NOR;
+			msg += "ç»“æœæ­£é“²åœ¨$nçš„å°è…¿ä¸Šã€‚\n" NOR;
 			damage=calculate_damage(me, target, 100, damage_bonus);
 			wound=random(damage-(int)target->query_temp("apply/armor"));
 			if(damage>0) {
 				target->receive_damage("kee", damage, me);
 				if(wound>0) target->receive_wound("kee", wound, me);
-				msg+=COMBAT_D->damage_msg(damage, "ÄÚÉË");
+				msg+=COMBAT_D->damage_msg(damage, "å†…ä¼¤");
 			}
 		}
-		else msg+="½á¹û±»$nÌáÍÈµ²¿ªÁË¡£\n" NOR;
-		msg += CYN "\n½ô¸ú×Å$NÊÕ×ó½Å£¬Ìá×óÏ¥×²Ïò$nµÄÈíÀß£¬\n";
-		msg += "Í¬Ê±ÓÒÊÖÇúÖâ×²Ïò$nµÄÃæÃÅ£¬";
+		else msg+="ç»“æœè¢«$næè…¿æŒ¡å¼€äº†ã€‚\n" NOR;
+		msg += CYN "\nç´§è·Ÿç€$Næ”¶å·¦è„šï¼Œæå·¦è†æ’å‘$nçš„è½¯è‚‹ï¼Œ\n";
+		msg += "åŒæ—¶å³æ‰‹æ›²è‚˜æ’å‘$nçš„é¢é—¨ï¼Œ";
 		if(random(ap+pp)>pp) {
-			msg += "½á¹ûÕıÖĞ$n¡£\n" NOR;
+			msg += "ç»“æœæ­£ä¸­$nã€‚\n" NOR;
 			damage=calculate_damage(me, target, 120, damage_bonus);
 			wound=random(damage-(int)target->query_temp("apply/armor"));
 			if(damage>0) {
 				target->receive_damage("kee", damage, me);
 				if(wound>0) target->receive_wound("kee", wound, me);
-				msg+=COMBAT_D->damage_msg(damage, "ÄÚÉË");
+				msg+=COMBAT_D->damage_msg(damage, "å†…ä¼¤");
 			}
 		}
-		else msg+="½á¹û±»$nµ²¿ªÁË¡£\n" NOR;
-		msg += CYN "\n$N½Ó×ÅË³ÊÆÓÃÓÒÊÖ×¥×¡$nÓÒ±Û£¬°ë×ªÉí½«$nË¤ÁË³öÈ¥£¬";
+		else msg+="ç»“æœè¢«$næŒ¡å¼€äº†ã€‚\n" NOR;
+		msg += CYN "\n$Næ¥ç€é¡ºåŠ¿ç”¨å³æ‰‹æŠ“ä½$nå³è‡‚ï¼ŒåŠè½¬èº«å°†$næ‘”äº†å‡ºå»ï¼Œ";
 		if(random(ap+pp)>pp) {
-                        msg += "½á¹û$nÒ»¸úÍ·Ë¤ÔÚµØÉÏ¡£\n" NOR;
+                        msg += "ç»“æœ$nä¸€è·Ÿå¤´æ‘”åœ¨åœ°ä¸Šã€‚\n" NOR;
                         damage=calculate_damage(me, target, 150, damage_bonus);
 			wound=random(damage-(int)target->query_temp("apply/armor"));
                         if(damage>0) {
                                 target->receive_damage("kee", damage, me);
 				if(wound>0) target->receive_wound("kee", wound, me);
-                                msg+=COMBAT_D->damage_msg(damage, "ÄÚÉË");
+                                msg+=COMBAT_D->damage_msg(damage, "å†…ä¼¤");
                         }
                 }
-                else msg+="½á¹û±»$nÒ»¸öõÔõÄ£¬È´Ã»Ë¤µ¹¡£\n" NOR;
+                else msg+="ç»“æœè¢«$nä¸€ä¸ªè¸‰è·„ï¼Œå´æ²¡æ‘”å€’ã€‚\n" NOR;
 		message_vision(msg, me, target);
 		msg+=COMBAT_D->report_status(target, 0);
 	} else {
-		msg += "¿ÉÊÇ$p¿´ÆÆÁË$PµÄÆóÍ¼£¬ÏòºóÔ½¿ª¡£\n" NOR;
+		msg += "å¯æ˜¯$pçœ‹ç ´äº†$Pçš„ä¼å›¾ï¼Œå‘åè¶Šå¼€ã€‚\n" NOR;
 		message_vision(msg, me, target);
 	}
 	delay = random(6)+2;
@@ -119,4 +119,3 @@ int calculate_damage(object me, object target, int base_damage, int damage_bonus
 
 	return damage;
 }
-

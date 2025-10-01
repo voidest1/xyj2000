@@ -75,4 +75,3 @@ int do_eat(string arg)
   destruct(this_object());
   return 1;
 }
-

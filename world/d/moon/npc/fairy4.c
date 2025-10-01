@@ -5,16 +5,16 @@ inherit F_MASTER;
 
 void create()
 {
-       set_name("³úÒ©",({"chu yao","chu yao", "fairy"}));
+       set_name("é”„è¯",({"chu yao","chu yao", "fairy"}));
        set("long",
-"ÆäÅûÂÞÒÂÖ®è­ôÓÙâ£¬çíÑþ±ÌÖ®»ªè¢¡£´÷½ð´äÖ®Ê×ÊÎ£¬×ºÃ÷ÖéÒÔÒ«Çû¡£¼ù
-Ô¶ÓÎÖ®ÎÄÂÄ£¬Ò·Îíç¯Ö®ÇáñÕ¡£Î¢ÓÄÀ¼Ö®·¼°ªÙâ£¬²½õØõéÓÚÉ½Óç¡£\n");
-       set("title", "ÔÂ¹¬ËÅÅ®");
-       set("gender", "Å®ÐÔ");
+"å…¶æŠ«ç½—è¡£ä¹‹ç’€ç²²å…®ï¼Œç¥ç‘¶ç¢§ä¹‹åŽçšã€‚æˆ´é‡‘ç¿ ä¹‹é¦–é¥°ï¼Œç¼€æ˜Žç ä»¥è€€èº¯ã€‚è·µ
+è¿œæ¸¸ä¹‹æ–‡å±¥ï¼Œæ›³é›¾ç»¡ä¹‹è½»è£¾ã€‚å¾®å¹½å…°ä¹‹èŠ³è”¼å…®ï¼Œæ­¥è¸Ÿè¹°äºŽå±±éš…ã€‚\n");
+       set("title", "æœˆå®«ä¼ºå¥³");
+       set("gender", "å¥³æ€§");
        set("age", 18);
        set("class", "xian");
        set("attitude", "friendly");
-       set("rank_info/respect", "ÏÉ¹Ã");
+       set("rank_info/respect", "ä»™å§‘");
        set("per", 30);
 	set("int", 30);
        set("max_kee", 800);
@@ -37,11 +37,8 @@ void create()
        set_skill("sword", 80);
        set_skill("spells", 80);
 
-create_family("ÔÂ¹¬", 3, "µÜ×Ó");
+create_family("æœˆå®«", 3, "å¼Ÿå­");
 setup();
 
         carry_object("/d/obj/cloth/luoyi")->wear();
 }
-
-
-ÿ

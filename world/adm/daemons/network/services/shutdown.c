@@ -68,5 +68,5 @@ void send_shutdown(string host, int port)
 void create()
 {
   seteuid(ROOT_UID);
-  set("channel_id", "网路关闭精灵");
+  set("channel_id", "缃戣矾鍏抽棴绮剧伒");
 }

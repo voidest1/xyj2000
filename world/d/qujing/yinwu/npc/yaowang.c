@@ -6,9 +6,9 @@ inherit NPC;
 
 void create()
 {
-  set_name("ÑıÍõ", ({"yao wang", "wang"}));
-  set("title", "Á¬»·¶´");
-  set("gender", "ÄĞĞÔ");
+  set_name("å¦–ç‹", ({"yao wang", "wang"}));
+  set("title", "è¿ç¯æ´");
+  set("gender", "ç”·æ€§");
   set("age", 40);
   set("attitude", "peaceful");
   set("combat_exp", 600000);
@@ -70,8 +70,8 @@ void die()
     tudi->move(where);
     tudi->call_out_announce_success(ob);
   }
-  message_vision ("\n$NÌ±»¾ÔÚµØ£¬¾¹ÊÇÒ»Ö»°¬Ò¶»¨Æ¤±ª×Ó¡£\n",me);
-  me->set("name","°¬Ò¶»¨Æ¤±ª×Ó");
+  message_vision ("\n$Nç˜«ç—ªåœ¨åœ°ï¼Œç«Ÿæ˜¯ä¸€åªè‰¾å¶èŠ±çš®è±¹å­ã€‚\n",me);
+  me->set("name","è‰¾å¶èŠ±çš®è±¹å­");
   ::die();
 }
 
@@ -79,5 +79,3 @@ void unconcious()
 {
   die();
 }
-
-ÿ

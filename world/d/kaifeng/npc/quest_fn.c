@@ -158,5 +158,3 @@ mapping quests_furniture = ([
   200000 : ({ "find", "铁钥匙",       "tie yaoshi",         "", "1" }),
  1800000 : ({ "find", "黄金匣子",     "xiazi",              "", "1" }),
 ]);
-
-

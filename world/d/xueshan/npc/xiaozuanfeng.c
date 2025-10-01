@@ -77,4 +77,3 @@ int ask_name() {
   this_object()->command("shutup xiao zuanfeng");  
   return 1;
 }
-

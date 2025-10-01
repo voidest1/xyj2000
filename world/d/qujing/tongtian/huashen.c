@@ -4,22 +4,22 @@
 inherit NPC;
 
 string *names = ({
-	"Ì«°×½ğĞÇ",
-	"Ê±Öµ¹¦²Ü",
-	"ÈÕÖµ¹¦²Ü",
-	"ÔÂÖµ¹¦²Ü",
-	"ÄêÖµ¹¦²Ü",
-	"»İ°¶ĞĞÕß",
-	"¾»Æ¿Ê¹Õß",
-	"ÔÆÑôÕæÈË",
+	"å¤ªç™½é‡‘æ˜Ÿ",
+	"æ—¶å€¼åŠŸæ›¹",
+	"æ—¥å€¼åŠŸæ›¹",
+	"æœˆå€¼åŠŸæ›¹",
+	"å¹´å€¼åŠŸæ›¹",
+	"æƒ å²¸è¡Œè€…",
+	"å‡€ç“¶ä½¿è€…",
+	"äº‘é˜³çœŸäºº",
 });
 
 int tongtian(object who);
 void create()
 {
   string str;
-	set_name("»Æ·¢Ğ¡Í¯",({"xiao tong","tong"}));
-  set("gender", "ÄĞĞÔ");
+	set_name("é»„å‘å°ç«¥",({"xiao tong","tong"}));
+  set("gender", "ç”·æ€§");
   set("age", 13);
 	set("attitude", "friendly");
   set("combat_exp", 150000+random(70000));
@@ -44,8 +44,8 @@ void create()
   set("max_mana",700);
   set("force_factor",10);
 	set("inquiry",([
-	"Í¨ÌìºÓ" : (:tongtian:),
-	"½ğÁÛ¹Ö" : (:tongtian:),
+	"é€šå¤©æ²³" : (:tongtian:),
+	"é‡‘é³æ€ª" : (:tongtian:),
 	"tongtian": (:tongtian:),
 ]));
   setup();
@@ -55,14 +55,14 @@ int tongtian(object ob)
 {
 	object me = this_object();
 	object who = this_player();
-	string myname = names[random(sizeof(names))] + "µÄ»¯Éí";
-	string msg = "$NËµµÀ£ºÕâÎ»"+RANK_D->query_respect(who);
+	string myname = names[random(sizeof(names))] + "çš„åŒ–èº«";
+	string msg = "$Nè¯´é“ï¼šè¿™ä½"+RANK_D->query_respect(who);
 	if ( who->query("combat_exp") < 4000 ||
 			who->query("obstacle/tongtian") == "fight"   ) {
 	if(me->query("id")!="huashen") me->set_name(myname,({"huashen"}));
 	message_vision(msg + 
-"£¬È¡¾­Â·ÉÏ½µÑı³ıÄ§£¬ÒªÆ¾Õæ±¾ÊÂ°¡£¡\n",me);
-	message_vision("$N»¯×÷Ò»µÀ°×¹â²»¼ûÁË£®\n",me);
+"ï¼Œå–ç»è·¯ä¸Šé™å¦–é™¤é­”ï¼Œè¦å‡­çœŸæœ¬äº‹å•Šï¼\n",me);
+	message_vision("$NåŒ–ä½œä¸€é“ç™½å…‰ä¸è§äº†ï¼\n",me);
 	destruct(me);
 	return 1;
 	}
@@ -70,8 +70,8 @@ int tongtian(object ob)
 	if (me->query("id")!="huashen") 
 	  me->set_name(myname,({"huashen"}));
 {
-	 message_vision(msg + "ÓĞËù²»Öª£¬´Ë¹ÖÄËÎôÄêÄÏº£¹ÛÒôÁ«³ØÀïµÄ½ğÀğ£­£­
-	±»Ëü³ÉÁË¾«³öÀ´ÔÚÏÂ½çÎª¶ñ£®£®£®¹ÛÒô±ØÓĞ½µËüÖ®·¨Ò²£®\n",me);
+	 message_vision(msg + "æœ‰æ‰€ä¸çŸ¥ï¼Œæ­¤æ€ªä¹ƒæ˜”å¹´å—æµ·è§‚éŸ³è²æ± é‡Œçš„é‡‘é²¤ï¼ï¼
+	è¢«å®ƒæˆäº†ç²¾å‡ºæ¥åœ¨ä¸‹ç•Œä¸ºæ¶ï¼ï¼ï¼è§‚éŸ³å¿…æœ‰é™å®ƒä¹‹æ³•ä¹Ÿï¼\n",me);
 	 who->set("obstacle/tongtian", "guanyin");
 }
 	destruct(me);
@@ -83,12 +83,11 @@ void kill_ob(object ob)
 {
   object me = this_object();
 
-	string myname = names[random(sizeof(names))] + "µÄ»¯Éí";
+	string myname = names[random(sizeof(names))] + "çš„åŒ–èº«";
 	if(me->query("id")!="huashen")
 	{
 	 me->set_name(myname,({"huashen"}));
-	 message_vision("$NÒ»ÉùÀäĞ¦,É²ÄÇ¼ä¾Í²»¼ûÁËÈËÓ°£¡\n",me);
+	 message_vision("$Nä¸€å£°å†·ç¬‘,åˆ¹é‚£é—´å°±ä¸è§äº†äººå½±ï¼\n",me);
   }
 	destruct(me);
 }
-ÿ

@@ -40,4 +40,3 @@ int do_sign(string arg) {
    return 1;
 }
    
-

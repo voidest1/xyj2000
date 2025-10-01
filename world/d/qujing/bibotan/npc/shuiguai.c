@@ -1,11 +1,11 @@
 inherit NPC;
 void create()
 {
-        set_name("Ë®Éß¹Ö", ({"shuishe guai", "guai"}));
-        set("long", "Ò»¸öÉí²ÄÏ¸³¤µÄË®Éß¹Ö£¬ÍÂ×Å³ß³¤µÄĞ¾×Ó£¬»ëÉí·¢×Å¶ñ³ô¡£\n");
+        set_name("æ°´è›‡æ€ª", ({"shuishe guai", "guai"}));
+        set("long", "ä¸€ä¸ªèº«æç»†é•¿çš„æ°´è›‡æ€ªï¼Œåç€å°ºé•¿çš„èŠ¯å­ï¼Œæµ‘èº«å‘ç€æ¶è‡­ã€‚\n");
         set("age", 30);
         set("attitude", "aggressive");
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "yaomo");
         set("str", 20);
         set("int", 20);
@@ -53,11 +53,9 @@ void leave()
 	
 	this_object()->add("time", 1);
 	if( (int)this_object()->query("time") >= 6 ) {
-        message("vision",name() + "¡°àÛàÌ¡±Ò»Éù£¬Ìø»Øµ½Ë®ÖĞ¡£\n", environment(),this_object() );
+        message("vision",name() + "â€œå™—å—µâ€ä¸€å£°ï¼Œè·³å›åˆ°æ°´ä¸­ã€‚\n", environment(),this_object() );
         destruct(this_object());
 
 	}
 	return;
 }
-
-ÿ

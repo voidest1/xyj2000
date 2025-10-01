@@ -35,4 +35,3 @@ void create()
   set("no_sell",1);
   setup();
 }
-

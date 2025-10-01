@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit NPC;
-string *first_name = ({ "Çà", "»Æ", "°×", "×Ï", "Òø", "½ð"});
-string *name_words = ({ "±´¹¬Å®"});
+string *first_name = ({ "é’", "é»„", "ç™½", "ç´«", "é“¶", "é‡‘"});
+string *name_words = ({ "è´å®«å¥³"});
 
 void create()
 {
@@ -10,9 +10,9 @@ void create()
 	name += name_words[random(sizeof(name_words))];
 
        set_name(name, ({"gong nu", "nu"}));
-       set("gender", "Å®ÐÔ");
+       set("gender", "å¥³æ€§");
        set("age", 20+random(5));
-	set("long", "Ò»¸öÉíºó±³ÓÐ²Ê±´µÄ¹¬Å®¡£\n");
+	set("long", "ä¸€ä¸ªèº«åŽèƒŒæœ‰å½©è´çš„å®«å¥³ã€‚\n");
 	set("per", 30);
 	set("str", 20);
        set("attitude", "heroism");
@@ -37,5 +37,3 @@ void create()
         carry_object("/d/obj/cloth/skirt")->wear();
 	carry_object("/d/sea/obj/bei")->wear();
 }
-
-ÿ

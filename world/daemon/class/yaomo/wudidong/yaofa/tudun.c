@@ -69,4 +69,3 @@ int cast(object me, object target)
 	return 5+random(5);
 	//if failed, can't use for a while.
 }
-

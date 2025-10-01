@@ -6,10 +6,10 @@ string try_me(object me);
 
 void create()
 {
-        set_name("ğ«²»·Ö", ({"bo bufen", "bo"}));
-        set("gender", "ÄĞĞÔ" );
+        set_name("çš¤ä¸åˆ†", ({"bo bufen", "bo"}));
+        set("gender", "ç”·æ€§" );
         set("age", 33);
-        set("long", "Ò»¸öÅÖºõºõµÄµÀÊ¿£¬ÕıÉµºÇºÇµÄ²»ÖªĞ¦Ê²Ã´£®\n");
+        set("long", "ä¸€ä¸ªèƒ–ä¹ä¹çš„é“å£«ï¼Œæ­£å‚»å‘µå‘µçš„ä¸çŸ¥ç¬‘ä»€ä¹ˆï¼\n");
 	set("class", "taoist");
         set("combat_exp", 5000);
 	set("daoxing", 10000);
@@ -18,22 +18,22 @@ void create()
 
         set("chat_chance_combat", 50 );
         set("inquiry", ([
-"Ğ¦Ê²Ã´": "Ê¦¸¸¸Õ½ÌÎÒÒ»ÕĞÒÆĞĞ»»Î»£¬ÎûÎû£®£®£®\n",
-"ÒÆĞĞ»»Î»": "ÌıÊ¦¸¸Ëµ¿ÉÒÔ°ÑÈË´«µ½Ô¶´¦£¬ÄãÏëÊÔÊÔ¿´£¿\n",
-"ÊÔÊÔ": (: try_me :),
+"ç¬‘ä»€ä¹ˆ": "å¸ˆçˆ¶åˆšæ•™æˆ‘ä¸€æ‹›ç§»è¡Œæ¢ä½ï¼Œå˜»å˜»ï¼ï¼ï¼\n",
+"ç§»è¡Œæ¢ä½": "å¬å¸ˆçˆ¶è¯´å¯ä»¥æŠŠäººä¼ åˆ°è¿œå¤„ï¼Œä½ æƒ³è¯•è¯•çœ‹ï¼Ÿ\n",
+"è¯•è¯•": (: try_me :),
 ]) );
         setup();
 
 }
 string try_me(object me)
 {	me = this_player();
-        command ("say ÊÔÊÔÒ²ºÃ£®£®£®");
+        command ("say è¯•è¯•ä¹Ÿå¥½ï¼ï¼ï¼");
         command ("grin");
-message_vision("ğ«²»·ÖË«ÊÖÍù$NÍ·ÉÏÒ»°´£¬ÄîÁË¾äÖäÓï£®$NÃÔºıÖ®ÖĞºÃÏó·ÉÁË³öÈ¥£®£®£®\n",
+message_vision("çš¤ä¸åˆ†åŒæ‰‹å¾€$Nå¤´ä¸Šä¸€æŒ‰ï¼Œå¿µäº†å¥å’’è¯­ï¼$Nè¿·ç³Šä¹‹ä¸­å¥½è±¡é£äº†å‡ºå»ï¼ï¼ï¼\n",
 me);
     me->move("/d/qujing/wudidong/yadi");
  //   me->move("/d/qujing/firemount/huoyan");
-	return "¹ÖÁË£¬ÈËÔõÃ´²»¼ûÁË£¿";
+	return "æ€ªäº†ï¼Œäººæ€ä¹ˆä¸è§äº†ï¼Ÿ";
 }
 
 void init()
@@ -46,5 +46,3 @@ void init()
             (: random_move :)
         }) );
 }
-
-ÿ

@@ -27,4 +27,3 @@ LONG);
   set("valid_startroom",1);
   setup();
 }
-

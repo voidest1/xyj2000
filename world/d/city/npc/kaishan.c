@@ -3,13 +3,13 @@ inherit NPC;
 
 void create()
 {
-        set_name("Òó¿ªÉ½", ({ "yin kaishan", "yin", "kaishan" }));
-        set("title", "´ó×Ü¹Ü");
-        set("gender", "ÄĞĞÔ");
+        set_name("æ®·å¼€å±±", ({ "yin kaishan", "yin", "kaishan" }));
+        set("title", "å¤§æ€»ç®¡");
+        set("gender", "ç”·æ€§");
         set("age", 70);
         set("str", 20);
         set("dex", 20);
-        set("long", "Ëû¾ÍÊÇµ±³¯´ó×Ü¹ÜÒó¿ªÉ½£¬¾ÙÊÖÍ¶×ãÖ®¼ä£¬²»Å­×ÔÍş¡£\n");
+        set("long", "ä»–å°±æ˜¯å½“æœå¤§æ€»ç®¡æ®·å¼€å±±ï¼Œä¸¾æ‰‹æŠ•è¶³ä¹‹é—´ï¼Œä¸æ€’è‡ªå¨ã€‚\n");
         set("combat_exp", 80000);
   set("daoxing", 90000);
 
@@ -34,9 +34,9 @@ int accept_object(object who,object ob)
 	int val;
 	val = ob->value();
 	if( !val )
-                return notify_fail("Òó¿ªÉ½Ğ¦µÀ£ºÎÒÊÇ²»»áÊÕµÄ£¬ÄãÄÃ»ØÈ¥°É£¡\n");
+                return notify_fail("æ®·å¼€å±±ç¬‘é“ï¼šæˆ‘æ˜¯ä¸ä¼šæ”¶çš„ï¼Œä½ æ‹¿å›å»å§ï¼\n");
 	if (val < 5000) {
-	write("Òó¿ªÉ½Ğ¦µÀ£º¹ú×Ó¼àÃ¿ÔÂ²ñÓÍĞèÎåÊ®Á½°×Òø£¡\n");
+	write("æ®·å¼€å±±ç¬‘é“ï¼šå›½å­ç›‘æ¯æœˆæŸ´æ²¹éœ€äº”åä¸¤ç™½é“¶ï¼\n");
 	return 0;
 	}
         who->set("guozi/paid", 1);
@@ -49,5 +49,3 @@ void destroy(object ob)
         destruct(ob);
         return;
 }
-
-ÿ

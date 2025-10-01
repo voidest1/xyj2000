@@ -52,4 +52,3 @@ void finishing (object who)
   who->set_temp("kaifeng_jingxin",1);
   message_vision ("$N深深地吐出一口气，徐徐站了起来。\n",who);
 }
-

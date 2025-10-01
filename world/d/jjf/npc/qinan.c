@@ -68,4 +68,3 @@ string try_me(object dum)
 		me->save();
 		return ("月钱刚送过，怎么又来要了？\n");
 }
-

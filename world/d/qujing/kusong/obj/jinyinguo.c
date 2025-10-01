@@ -11,4 +11,3 @@ void create()
                 set("unit", "颗");
         }
 }
-

@@ -38,4 +38,3 @@ int valid_leave()
         return notify_fail("龙宫至宝不能随便带走！\n");
     return ::valid_leave();
 }
-

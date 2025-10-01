@@ -43,4 +43,3 @@ void destroy(object me)
         destruct(me);
         return;
 }
-

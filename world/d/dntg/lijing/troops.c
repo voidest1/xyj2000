@@ -63,5 +63,3 @@ void die() {
    query("master")->lose(me);
 
 }
-
-

@@ -49,5 +49,3 @@ int accept_fight(object me)
         command("say 我为殿前将军，岂能与你村野匹夫较艺！");
         return 0;
 }
-
-

@@ -18,4 +18,3 @@ void create()
         init_dagger(10);
         setup();
 }
-

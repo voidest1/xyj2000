@@ -34,4 +34,3 @@ LONG);
   set("no_give",1);
   setup();
 }
-

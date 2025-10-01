@@ -6,16 +6,16 @@ inherit NPC;
 int max_tea = 20;
 void create()
 {
-	set_name("Ã÷ÔÂ", ({"ming yue", "mingyue"}));
-	set("gender", "ÄĞĞÔ" );
+	set_name("æ˜æœˆ", ({"ming yue", "mingyue"}));
+	set("gender", "ç”·æ€§" );
 	set("age", 16);
-	set("long", "Ò»¸öÌÖÈËÏ²»¶µÄĞ¡ÏÉÍ¯¡£\n");
+	set("long", "ä¸€ä¸ªè®¨äººå–œæ¬¢çš„å°ä»™ç«¥ã€‚\n");
 	set("class", "xian");
 	set("combat_exp", 10000);
   set("daoxing", 20000);
 
 	set("attitude", "peaceful");
-	set("title", "Ğ¡ÏÉÍ¯");
+	set("title", "å°ä»™ç«¥");
 	set_skill("unarmed", 40);
 	set_skill("dodge", 40);
 	set_skill("parry", 40);
@@ -33,7 +33,7 @@ void init()
 
 	::init();
 
-	if ( ((int)ob->query("env/invisibility")  == 0) && ((string)environment(me)->query("short")=="¶«Æ«µî") )
+	if ( ((int)ob->query("env/invisibility")  == 0) && ((string)environment(me)->query("short")=="ä¸œåæ®¿") )
 	{
 		remove_call_out("greeting");
 		call_out("greeting", 1, ob);
@@ -69,4 +69,3 @@ void greeting(object ob)
 	else
 		return;
 }
-ÿ

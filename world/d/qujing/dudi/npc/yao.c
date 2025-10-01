@@ -4,18 +4,18 @@
 inherit NPC;
 
 string *names = ({
-  "ºûµû¾«",
-  "Ï¸Ñü·ä¾«",
-  "ÂéÎÃ¾«",
-  "»¨½ã¾«",
-  "²ÊÖë¾«",
+  "è´è¶ç²¾",
+  "ç»†è…°èœ‚ç²¾",
+  "éº»èšŠç²¾",
+  "èŠ±å§ç²¾",
+  "å½©è››ç²¾",
 });
 
 void create()
 {
   int i = random(4)+1;
   set_name(names[random(sizeof(names))], ({"yao jing", "jing", "jing"}));
-  set("gender", "Å®ÐÔ");
+  set("gender", "å¥³æ€§");
   set("age", 20);
   set("combat_exp", 50000*i);
   set("per", 10);
@@ -45,5 +45,3 @@ void create()
   carry_object("/d/qujing/dudi/obj/cloth")->wear();
   carry_object("/d/qujing/dudi/obj/fork")->wield();
 }
-
-ÿ

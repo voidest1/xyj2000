@@ -279,4 +279,3 @@ int ji (string target)
 	victim=present(target,environment(me));
 	return fabao->ji_ob(victim);
 }
-

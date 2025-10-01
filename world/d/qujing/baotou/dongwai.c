@@ -22,6 +22,3 @@ set("no_mieyao",1);
 
   setup();
 }
-
-
-

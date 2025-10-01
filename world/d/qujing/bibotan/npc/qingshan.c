@@ -2,12 +2,12 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ğ¦²¨¶ùÌì", ({"xiaoboer tian", "tian"}));
-        set("long", "ËûÊÇÂÒÊ¯É½±Ì²¨Ì¶µÄĞ¡Ñı¡£\n");
+        set_name("ç¬‘æ³¢å„¿å¤©", ({"xiaoboer tian", "tian"}));
+        set("long", "ä»–æ˜¯ä¹±çŸ³å±±ç¢§æ³¢æ½­çš„å°å¦–ã€‚\n");
         set("age", 30);
-	set("title", "Çà÷­¹Ö");
+	set("title", "é’é³æ€ª");
         set("attitude", "friendly");
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
 	set("class", "dragon");
         set("str", 30);
         set("int", 20);
@@ -34,7 +34,7 @@ void create()
 	map_skill("parry", "yueya-chan");
 	map_skill("fork", "yueya-chan");
 set("inquiry", ([
-"ºó»¨Ô°": "ÌıËµÕâºó»¨Ô°ÊÇ¸ö°ËØÔÕó£¬²»ÖªµÀ·½Î»µÄ£¬ºÙºÙ£®£®£®\n",
+"åèŠ±å›­": "å¬è¯´è¿™åèŠ±å›­æ˜¯ä¸ªå…«å¦é˜µï¼Œä¸çŸ¥é“æ–¹ä½çš„ï¼Œå˜¿å˜¿ï¼ï¼ï¼\n",
 ]) );
 
         setup();
@@ -50,27 +50,27 @@ int heal_up()
         if (objectp(present("xiao", environment(this_object())))) {
                 switch( random(6) ){
                         case 0:
-                                command("say Ìì²¨¶ùĞ¦£¬±ğÓÖË¯×ÅÁË£¡");
+                                command("say å¤©æ³¢å„¿ç¬‘ï¼Œåˆ«åˆç¡ç€äº†ï¼");
                                 command("wake xiao");
                         break;
                         case 1:
-                                command("say Ìì²¨¶ùĞ¦£¬ÌıËµÁúÍõÓÖÉÍÄãÁË¡£");
+                                command("say å¤©æ³¢å„¿ç¬‘ï¼Œå¬è¯´é¾™ç‹åˆèµä½ äº†ã€‚");
                                 command("consider xiao");
                         break;
                         case 2:
-                                command("say Ìì²¨¶ùĞ¦£¬ÏëÂïÄØ£¿");
+                                command("say å¤©æ³¢å„¿ç¬‘ï¼Œæƒ³å˜›å‘¢ï¼Ÿ");
                                 command("poke xiao");
                         break;
                         case 3:
-                                command("say Ìì²¨¶ùĞ¦£¬ÉÏÔÂÀ´µÄÄÇ¸öĞ¡¹¬¶ğ»¹ÕæÆ¯ÁÁ£¡");
+                                command("say å¤©æ³¢å„¿ç¬‘ï¼Œä¸Šæœˆæ¥çš„é‚£ä¸ªå°å®«å¨¥è¿˜çœŸæ¼‚äº®ï¼");
                                 command("grin xiao");
                         break;
                         case 4:
-                                command("say Ìì²¨¶ùĞ¦£¬¿´ºÃÁËÃÅ£¬±ğÈÃÈËÁï½øÈ¥£¡");
+                                command("say å¤©æ³¢å„¿ç¬‘ï¼Œçœ‹å¥½äº†é—¨ï¼Œåˆ«è®©äººæºœè¿›å»ï¼");
                                 command("kick xiao");
                         break; 
 			case 5:
-				command("say Ìì²¨¶ùĞ¦£¬¿ìÈ¥Ïò¹«Ö÷ÇëÊ¾·½Î»£¡");
+				command("say å¤©æ³¢å„¿ç¬‘ï¼Œå¿«å»å‘å…¬ä¸»è¯·ç¤ºæ–¹ä½ï¼");
 				command("lazy xiao");
 			break;
                 	}
@@ -79,5 +79,3 @@ int heal_up()
 	}
         return ::heal_up() + 1;
 }
-
-ÿ

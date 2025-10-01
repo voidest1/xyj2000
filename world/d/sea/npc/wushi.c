@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-       set_name("ÎäÊ¿", ({"wushi", "shi"}));
+       set_name("æ­¦å£«", ({"wushi", "shi"}));
 
-set("long","Ò»¸ö´©×Å¿ø¼×µÄ´óÏºÃ×£¬Õý×ßÀ´×ßÈ¥Î¬»¤ÖÈÐò£®\n");
-       set("gender", "ÄÐÐÔ");
+set("long","ä¸€ä¸ªç©¿ç€ç›”ç”²çš„å¤§è™¾ç±³ï¼Œæ­£èµ°æ¥èµ°åŽ»ç»´æŠ¤ç§©åºï¼Ž\n");
+       set("gender", "ç”·æ€§");
        set("age", 20+random(5));
 	set("per", 10);
 	set("str", 22);
@@ -27,5 +27,3 @@ set("long","Ò»¸ö´©×Å¿ø¼×µÄ´óÏºÃ×£¬Õý×ßÀ´×ßÈ¥Î¬»¤ÖÈÐò£®\n");
         carry_object("/d/obj/armor/tiejia")->wear();
 
 }
-
-ÿ

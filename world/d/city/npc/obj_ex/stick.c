@@ -24,4 +24,3 @@ void create()
         init_stick(60);
         setup();
 }
-

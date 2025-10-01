@@ -20,4 +20,3 @@ string exert_function_file(string func)
 {
         return CLASS_D("zhenyuan") + "/zhenyuan-force/" + func;
 }
-

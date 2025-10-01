@@ -32,4 +32,3 @@ int valid_leave (object who, string dir)
     return 0;
   return ::valid_leave(who,dir);
 }
-

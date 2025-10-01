@@ -19,4 +19,3 @@ set("long","一位中年妇女，是龙女的贴身仆人．\n");
         add_money("silver", 1);
 
 }
-

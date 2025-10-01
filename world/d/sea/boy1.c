@@ -23,4 +23,3 @@ set("objects", ([
 //
         setup();
 }
-

@@ -16,5 +16,3 @@ void create()
   carry_object("/d/obj/cloth/pink_cloth")->wear();
   carry_object("/d/obj/cloth/shoes")->wear();
 }
-
-

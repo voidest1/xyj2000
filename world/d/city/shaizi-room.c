@@ -707,8 +707,3 @@ int do_look(string arg)
 	}
 	return 0;	
 }
-
-
-
-
-

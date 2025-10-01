@@ -35,4 +35,3 @@ void create()
   }
   set("long", "一金碗天上才有的仙肴珍馐－－"+names[i]+"。\n");
 }
-

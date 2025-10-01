@@ -4,10 +4,10 @@ inherit NPC;
 
 void create()
 {
-  set_name("Íõºó", ({"wang hou", "hou", "queen"}));
-  set ("long", "ÎÚ¼¦¹úµÄÍõºó£¬ÖÕÈÕ³îÃ¼¿àÁ³£¬ÐÄË¼ÖØÖØ¡£\n");
-  set("title", "ÎÚ¼¦¹ú");
-  set("gender", "Å®ÐÔ");
+  set_name("çŽ‹åŽ", ({"wang hou", "hou", "queen"}));
+  set ("long", "ä¹Œé¸¡å›½çš„çŽ‹åŽï¼Œç»ˆæ—¥æ„çœ‰è‹¦è„¸ï¼Œå¿ƒæ€é‡é‡ã€‚\n");
+  set("title", "ä¹Œé¸¡å›½");
+  set("gender", "å¥³æ€§");
   set("age", 40);
   set("combat_exp", 100000);
   set("daoxing", 50000);
@@ -36,7 +36,7 @@ int accept_object (object who, object ob)
 
   remove_call_out ("telling");
   call_out ("telling",1,me,who,ob);
-  message_vision ("$N¿´¼û$nÒ»Õú£¬¶ÙÊ±Á³É«°µÏÂÀ´¡£\n",me,ob);
+  message_vision ("$Nçœ‹è§$nä¸€æ€”ï¼Œé¡¿æ—¶è„¸è‰²æš—ä¸‹æ¥ã€‚\n",me,ob);
   command ("shake");
   who->set_temp("obstacle/wuji_queen",1);
   return 1;
@@ -51,9 +51,7 @@ void telling (object me, object who, object ob)
     yugui = new ("/d/qujing/wuji/obj/jade");       
     yugui->move(me);
   }
-  message_vision ("Íõºó¶Ô$NËµ£º»¹ÊÇÈ¥¼ûÌ«×Ó°Õ¡£\n",who);
+  message_vision ("çŽ‹åŽå¯¹$Nè¯´ï¼šè¿˜æ˜¯åŽ»è§å¤ªå­ç½¢ã€‚\n",who);
   me->command_function("sigh");
   me->command_function("give "+who->query("id")+" yu gui");
 }
-
-ÿ

@@ -5,17 +5,17 @@ inherit NPC;
 
 void create()
 {
-        set_name("»Û¸Ù", ({"hui gang"}));
-        set("gender", "ÄÐÐÔ" );
+        set_name("æ…§çº²", ({"hui gang"}));
+        set("gender", "ç”·æ€§" );
         set("age", 33);
-        set("long", "Ò»¸öÏàÃ²ÌÃÌÃµÄµÀÊ¿£®");
+        set("long", "ä¸€ä¸ªç›¸è²Œå ‚å ‚çš„é“å£«ï¼Ž");
         set("combat_exp", 40000);
   set("daoxing", 60000);
 
-	set("title", "µÀ³¤");
+	set("title", "é“é•¿");
 	set("class", "taoist");
         set("attitude", "peaceful");
-        create_family("·½´çÉ½ÈýÐÇ¶´", 4, "µÜ×Ó");
+        create_family("æ–¹å¯¸å±±ä¸‰æ˜Ÿæ´ž", 4, "å¼Ÿå­");
         set_skill("unarmed", 30);
         set_skill("dodge", 40);
         set_skill("parry", 40);
@@ -40,5 +40,3 @@ void create()
         setup();
         carry_object("/d/lingtai/obj/cloth")->wear();
 }
-
-ÿ

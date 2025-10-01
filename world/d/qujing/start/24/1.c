@@ -105,4 +105,3 @@ int lost(object who)
 {
 
 }
-

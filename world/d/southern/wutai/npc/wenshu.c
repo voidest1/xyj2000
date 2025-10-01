@@ -61,10 +61,3 @@ LONG );
   setup();
   carry_object("/d/obj/cloth/hufa-jiasha")->wear();
 }
-	
-
-
-
-
-
-

@@ -3,10 +3,10 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÆßĞŞÊŞ", ({ "qixiu shou", "shou" }) );
-        set("race", "Ò°ÊŞ");
+        set_name("ä¸ƒä¿®å…½", ({ "qixiu shou", "shou" }) );
+        set("race", "é‡å…½");
         set("age", 50);
-        set("long", "Ò»Ö»»ëÉíÉÏÏÂÅû×ÅÒøÓğµÄÃÍ»¢£¬Ò»Ë«ÑÛ¾¦Õı¶ñºİºİµØµÉÖøÄã¡£\n");
+        set("long", "ä¸€åªæµ‘èº«ä¸Šä¸‹æŠ«ç€é“¶ç¾½çš„çŒ›è™ï¼Œä¸€åŒçœ¼ç›æ­£æ¶ç‹ ç‹ åœ°çªè‘—ä½ ã€‚\n");
         set("attitude", "aggressive");
         set("bellicosity", 8000);
         set("str", 30);
@@ -25,7 +25,7 @@ void create()
 	set_skill("dodge", 200);
 	set_skill("parry", 200);
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Ç°½Å", "áá½Å"}) );
+        set("limbs", ({ "å¤´éƒ¨", "èº«ä½“", "å‰è„š", "å¾Œè„š"}) );
         set("verbs", ({ "bite", "claw" }) );
 
         set("combat_exp", 800000);
@@ -37,5 +37,3 @@ void create()
 
         setup();
 }
-
-ÿ

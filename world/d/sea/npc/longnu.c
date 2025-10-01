@@ -9,18 +9,18 @@ string expell_me(object me);
 
 void create()
 {
-       set_name("ÁúÅ®", ({"long nu","gongzhu","long","princess"}));
+       set_name("é¾™å¥³", ({"long nu","gongzhu","long","princess"}));
 
-	set("long","×ÏÔÆ¹¬Ö÷ÈË£¬ÁúÍõµÄÅ®¶ù£®\n");
-       set("gender", "Å®ĞÔ");
+	set("long","ç´«äº‘å®«ä¸»äººï¼Œé¾™ç‹çš„å¥³å„¿ï¼\n");
+       set("gender", "å¥³æ€§");
        set("age", 20);
 	set("int", 25+random(5));
-        set("title", "×ÏÔÆ¹«Ö÷");
+        set("title", "ç´«äº‘å…¬ä¸»");
        set("attitude", "peaceful");
         set("combat_exp", 350000);
   set("daoxing", 100000);
 
-       set("rank_info/respect", "¹«Ö÷µîÏÂ");
+       set("rank_info/respect", "å…¬ä¸»æ®¿ä¸‹");
        set("class","dragon");
        set("per", 30);
        set("max_kee", 900);
@@ -50,10 +50,10 @@ void create()
         map_skill("parry", "fengbo-cha");
         map_skill("dodge", "dragonstep");
 
-        set("inquiry", ([ "Àë¹¬": (: expell_me :),
+        set("inquiry", ([ "ç¦»å®«": (: expell_me :),
                 "leave": (: expell_me :), ]) );
 
-    create_family("¶«º£Áú¹¬", 2, "Ë®×å");
+    create_family("ä¸œæµ·é¾™å®«", 2, "æ°´æ—");
 	setup();
 
         carry_object("/d/obj/cloth/pinkskirt")->wear();
@@ -63,7 +63,7 @@ void create()
 void attempt_apprentice(object ob)
 {
         command("jump");
-	command("say ÎÒÓÖ¶àÁËÒ»¸öµÜ×ÓÒ®£¡\n");
+	command("say æˆ‘åˆå¤šäº†ä¸€ä¸ªå¼Ÿå­è€¶ï¼\n");
         command("recruit " + ob->query("id") );
         return;
 }
@@ -76,11 +76,10 @@ int recruit_apprentice(object ob)
 string expell_me(object me)
 {
   me=this_player();
-  if((string)me->query("family/family_name")=="¶«º£Áú¹¬")
+  if((string)me->query("family/family_name")=="ä¸œæµ·é¾™å®«")
     {
-      message_vision("×ÏÔÆ¹«Ö÷ÄÑ¹ıµØÍû×Å$N£¬ÓûÑÔÓÖÖ¹¡£\n", me);
-      return ("ÄãÈ¥ÎÊÎÒ¸¸Íõ°É¡£\n");
+      message_vision("ç´«äº‘å…¬ä¸»éš¾è¿‡åœ°æœ›ç€$Nï¼Œæ¬²è¨€åˆæ­¢ã€‚\n", me);
+      return ("ä½ å»é—®æˆ‘çˆ¶ç‹å§ã€‚\n");
     }
-  return ("È¥ÎÊÎÊ±ğÈË°É£¡ÎÒÔõÃ´»áÖªµÀ£¡\n");
+  return ("å»é—®é—®åˆ«äººå§ï¼æˆ‘æ€ä¹ˆä¼šçŸ¥é“ï¼\n");
 }
-ÿ

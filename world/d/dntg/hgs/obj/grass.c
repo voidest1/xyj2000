@@ -36,4 +36,3 @@ int do_eat(string arg)
         return 1;
 
 }
-

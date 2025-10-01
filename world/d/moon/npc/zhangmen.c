@@ -779,5 +779,3 @@ string zname(object ob)
 */
 	return "广寒宫传人"; //for moon only, others use above.
 }
-
-

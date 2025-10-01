@@ -60,4 +60,3 @@ int cast(object me, object target)
 	me->start_busy(1+random(2));
 	return 3+random(5);
 }
-

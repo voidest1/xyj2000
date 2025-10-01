@@ -69,5 +69,3 @@ LONG);
 	carry_object("/d/obj/cloth/linen")->wear();
 	carry_object("/d/obj/weapon/stick/bintiegun")->wield();
 }
-
-

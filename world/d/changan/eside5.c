@@ -68,7 +68,3 @@ int regenerate()
 	where->add("have_qiuyin",1);
    return 1;
 }
-
-
-
-
