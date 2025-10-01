@@ -3,7 +3,7 @@
 
 inherit NPC;
 
-#include <greeting.h>
+#include "greeting.h"
 
 void create()
 {

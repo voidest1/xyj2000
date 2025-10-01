@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit NPC;
 
-#include <greeting.h>
+#include "greeting.h"
 
 void create()
 {
