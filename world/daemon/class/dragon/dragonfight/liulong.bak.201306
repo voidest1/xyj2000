@@ -1,0 +1,135 @@
+// add by hexiu 6/09/2013    this pfm ignore dodge
+
+
+#include <ansi.h>
+#include <combat.h>
+
+inherit SSERVER;
+
+//int calculate_damage(object me, object target, int base_damage, int damge_bonus);
+int perform(object me, object target)
+{
+/*	string msg, str;
+	int mydf;
+	int ap, dp, pp;
+	int yourint, myint, mystr, youstr;
+	int damage_bonus, damage, wound;
+	int delay;
+	object ob;
+*/
+	int mydf;
+
+	if( !target ) target = offensive_target(me);
+
+	if( !target
+	||	!target->is_character()
+	||	!me->is_fighting(target) )
+		return notify_fail("不在战斗中，回什么回？\n");
+
+	mydf=(int)me->query_skill("dragonfight",1);
+	if(mydf<150) 
+		return notify_fail("你的修为不够深，还不能领六龙回日的精髓。\n");
+	mydf=(int)me->query_skill("dragonforce",1);
+	if(mydf<150) 
+		return notify_fail("你的修为不够深，还不能领六龙回日的精髓。\n");
+	if( me->query("sea_liulong") != 1 )
+		return notify_fail("你还不会六龙回日。\n");
+
+	if(me->query("family/family_name") != "东海龙宫")
+                return notify_fail("六龙回日是东海龙宫不传之密！\n");
+	
+	if((int)me->query("force")<500) return
+	    notify_fail("你的内力不够了。\n");
+
+	if (me->query_temp("liulong_pfm_busy")) return notify_fail("绝招用的太多太滥就不灵了。\n");
+
+//	me->delete("env/brief_message");
+//	target->delete("env/brief_message");
+        message_vision(HIY"\n$N运足精神，一声龙吟，连续向$n攻出了六招！\n"NOR,me,target);
+        message_vision(HIY"\n$n只觉得心中一颤，一个趔怯，跌在地下！\n"NOR,me,target);
+
+	target->set_temp("no_dodge", 1);
+        call_out("no_dodge_end", 6+random(3), target);
+
+        me->set_temp("df_pfm", 5);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
+
+        me->set_temp("df_pfm", 1);  
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon")); 
+
+        me->set_temp("df_pfm", 2);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
+
+        me->set_temp("df_pfm", 3);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
+
+               me->set_temp("df_pfm", 4);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon")); 
+
+        me->set_temp("df_pfm", 5);
+        COMBAT_D->do_attack(me, target, me->query_temp("weapon"));
+
+
+        me->delete_temp("df_pfm");
+
+        me->receive_damage("sen", 100);
+        me->add("force", -100);
+           tell_object(me, HIY"\n你的六龙回日一式六招，一气呵成。\n\n"NOR);
+
+        if( !target->is_fighting(me) ) {
+                if( living(target) ) {
+                        if( userp(target) ) target->fight_ob(me);
+                        else target->kill_ob(me);
+                }
+        }
+
+//        me->start_busy(3);
+      me->set_temp("liulong_pfm_busy",1);
+  me->set_temp("no_move",1);
+  call_out("remove_no_move",3,me);
+        call_out("remove_effect",10+random(3),me);
+        return 1;
+}
+
+/* int calculate_damage(object me, object target, int base_damage, int damage_bonus)
+{
+	int damage;
+	int myexp, youexp;
+	int yourdefense;
+
+	damage=base_damage+(damage_bonus+random(damage_bonus))/2;
+
+	myexp=me->query("combat_exp");
+	youexp=target->query("combat_exp");
+	if(random(youexp)>myexp*2/3) {
+		damage-=damage/5;
+	}
+
+	yourdefense=target->query_temp("apply/armor")/5;
+	damage-=yourdefense;
+	if(damage<0) damage=20;
+
+	if (wizardp(me) && me->query("env/combat")=="verbose")
+		tell_object(me, sprintf(GRN "damage: %d\n" NOR, damage));
+
+	return damage;
+}
+*/
+
+void remove_effect(object me) {
+  if (!me) return;
+  me->delete_temp("liulong_pfm_busy");
+}
+
+void remove_no_move(object me) {
+  if (me) me->delete_temp("no_move");
+}
+
+
+void no_dodge_end(object target)
+{
+	if (!target) return;
+	target->delete_temp("no_dodge");
+        message_vision(HIY"\n$N拍拍身的土，爬了起来！\n"NOR,target);
+	return;
+}
