@@ -140,7 +140,7 @@ void log_error(string file, string message)
 	if (name) home = user_path(name);
 	else home = LOG_DIR;
 
-	if(this_player(1)) {
+	if(!is_warning && this_player(1)) {
 	    if(wizardp(this_player(1)))
 		efun::write("编译时段错误：" + message+"\n");
 	    else if(!is_warning)

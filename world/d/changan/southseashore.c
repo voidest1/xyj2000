@@ -20,7 +20,7 @@ LONG);
   "east" : __DIR__"seashore1",
 ]));
   set("outdoors", 1);
-set("objects", ([ "/obj/toy/carrier.c" : 1, ]));
+// set("objects", ([ "/obj/toy/carrier.c" : 1, ]));
 
   setup();
 }
