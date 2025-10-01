@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-// bonze.c ºÍÉĞº
+// bonze.c å’Œå°šï¿½
 // By Dream Dec. 20, 1996
 
 inherit NPC;
@@ -7,8 +7,8 @@ inherit F_MASTER;
 
 void create()
 {
-	set_name("ºÍÉĞ", ({ "heshang", "bonze" }));
-	set("gender", "ÄĞĞÔ");
+	set_name("å’Œå°š", ({ "heshang", "bonze" }));
+	set("gender", "ç”·æ€§");
 	set("age", 30);
 	set("attitude", "peaceful");
 	set("class", "bonze");
@@ -58,7 +58,7 @@ void create()
 		(: random_move :)
 	}) );
         
-	create_family("ÄÏº£ÆÕÍÓÉ½", 3, "µÜ×Ó");
+	create_family("å—æµ·æ™®é™€å±±", 3, "å¼Ÿå­");
 	
 	setup();
 	carry_object("/obj/money/silver");
@@ -68,7 +68,7 @@ void create()
 void attempt_apprentice(object ob)
 {
 	command("smile");
-	command("say ºÜºÃ£¬Æ¶É®¾ÍÊÕÏÂÄã£¬Ï£ÍûÄã¶à¼ÓÅ¬Á¦£¬Ôç³ÉÕı¹û¡£\n");
+	command("say å¾ˆå¥½ï¼Œè´«åƒ§å°±æ”¶ä¸‹ä½ ï¼Œå¸Œæœ›ä½ å¤šåŠ åŠªåŠ›ï¼Œæ—©æˆæ­£æœã€‚\n");
 
 	command("recruit " + ob->query("id") );
 	return;
