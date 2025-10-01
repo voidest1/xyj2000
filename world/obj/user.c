@@ -17,14 +17,14 @@ int last_age_set;
 void create()
 {
 	::create();
-	set_name("使锟斤拷锟斤拷锟斤拷锟舰, ({ "user object", "user", "object" }) );
+	set_name("使用者物件", ({ "user object", "user", "object" }) );
 }
 
 void terminal_type(string term_type)
 {
 	set_temp("terminal_type", term_type);
-	message("system", "锟秸端伙拷锟斤拷态锟借定为 " + term_type + "锟斤拷\n", this_object());
-	this_object()->trace("锟秸端伙拷锟斤拷态锟借定为 " + term_type + "\n");
+	message("system", "终端机型态设定为 " + term_type + "。\n", this_object());
+	this_object()->trace("终端机型态设定为 " + term_type + "\n");
 }
 
 void telnet_suboption(string arg)
@@ -74,14 +74,18 @@ string query_save_file()
 // used by /feature/vendor_sale.
 // normal save should use save() or save(0).
 // mon 5/12/98
-int save(int raw)
+int save()
 {
 	int res;
 
-	if(!raw) save_autoload();
+	save_autoload();
 	res = ::save();
-	if(!raw) clean_up_autoload();		// To save memory
+	clean_up_autoload();		// To save memory
 	return res;
+}
+int save_raw()
+{
+	return ::save();
 }
 
 int backup()
@@ -156,7 +160,7 @@ void setup()
             newob->set("owner_id", query("id"));
             newob->set("series_no", fabao_map[fabao_list[i]]);
             if( !newob->restore() )   {
-				tell_object(this_object(), "锟斤拷锟斤拷 restore fabao. \n");
+				tell_object(this_object(), "不能 restore fabao. \n");
 				destruct(newob);
 				continue;
 			}
@@ -192,19 +196,19 @@ private void user_dump(int type)
 		case DUMP_NET_DEAD:
 		    if(!query("env/invisibility") ||
 			    !wizardp(this_object()) )
-			tell_room( environment(), query("name") + "锟斤拷锟竭筹拷锟斤拷"
+			tell_room( environment(), query("name") + "断线超过"
 				+ chinese_number(NET_DEAD_TIMEOUT/60)
-			       	+ "锟斤拷锟接ｏ拷锟皆讹拷锟剿筹拷锟斤拷锟斤拷锟斤拷纭＼n");
+			       	+ "分钟，自动退出这个世界。\n");
 		//	command("quit");
 			// mon 7/5/98 to force quit.
 			QUIT_CMD->main(this_object(),"",1);
 			break;
 		case DUMP_IDLE:
 		      if(!wizardp(this_object())){
-			tell_object( this_object(), "锟皆诧拷锟斤拷锟斤拷锟窖撅拷锟斤拷锟斤拷锟斤拷锟斤拷 " 
-				+ IDLE_TIMEOUT/60 + " 锟斤拷锟斤拷锟剿ｏ拷锟斤拷锟铰达拷锟斤拷锟斤拷锟斤拷\n");
-			tell_room( environment(), "一锟斤拷绱碉拷锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷械锟舰 + query("name")
-				+ "锟斤拷为一锟窖飞灰ｏ拷锟斤拷失锟剿★拷\n", ({this_object()}));
+			tell_object( this_object(), "对不起，您已经发呆超过 " 
+				+ IDLE_TIMEOUT/60 + " 分钟了，请下次再来。\n");
+			tell_room( environment(), "一阵风吹来，将发呆中的" + query("name")
+				+ "化为一堆飞灰，消失了。\n", ({this_object()}));
 			//command("quit");
 			// mon 7/5/98
 			QUIT_CMD->main(this_object(),"",1);
@@ -230,7 +234,7 @@ private void net_dead()
         }
 
 	if( userp(this_object()) ) 
-	    CHANNEL_D->do_channel(this_object(), "sys", "锟斤拷锟斤拷锟剿★拷",0,1);
+	    CHANNEL_D->do_channel(this_object(), "sys", "断线了。",0,1);
 
 	// used in logind for IP check
 	set_temp("netdead_ip", query_ip_number(this_object()));
@@ -264,7 +268,7 @@ private void do_net_dead()
 	if( userp(this_object()) ) {
 	    call_out("user_dump", NET_DEAD_TIMEOUT, DUMP_NET_DEAD);
 	    if (!this_object()->query("env/invisibility"))
-	        tell_room(environment(), query("name") + "锟斤拷锟斤拷锟剿★拷\n", this_object());
+	        tell_room(environment(), query("name") + "断线了。\n", this_object());
 	} else {
 		command("quit");
 	}
@@ -278,7 +282,7 @@ void reconnect()
 	remove_netdead_enemy();
 	remove_call_out("user_dump");
 	remove_call_out("do_net_dead");
-	tell_object(this_object(), "锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷稀锟杰n");
+	tell_object(this_object(), "重新连线完毕。\n");
 }
 
 void trace(string msg)

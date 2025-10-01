@@ -6,7 +6,7 @@
 
 name : 西游记
 port number : 2000
-mudlib directory : /data/mud/xyj2000/world/
+mudlib directory : /data/mud/xyj2000/world
 
 # debug.log and author/domain stats are stored here
 log directory : /log
