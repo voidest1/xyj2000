@@ -1,9 +1,9 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 #include <localtime.h>
 
-//static string *week_day = ({ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" });
-static string *week_day = ({ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" });
-static string *month = ({ "Jan", "Feb", "Mar", "Apr", "May", 
+//string *week_day = ({ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" });
+string *week_day = ({ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" });
+string *month = ({ "Jan", "Feb", "Mar", "Apr", "May", 
  "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" });
 
 int main()

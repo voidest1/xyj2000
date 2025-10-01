@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 // char.c
 
-#pragma save_binary
+
 
 #include <action.h>
 #include <ansi.h>
@@ -34,7 +34,7 @@ inherit F_SKILL;
 inherit F_TEAM;
 
 // Use a tick with longer period than heart beat to save cpu's work
-static int tick;
+int tick;
 
 void create()
 {

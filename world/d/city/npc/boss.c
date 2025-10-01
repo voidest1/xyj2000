@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit F_VENDOR_SALE;
 
-static int base_price=50000;
+int base_price=50000;
 
 int ask_party();
 int ask_money();

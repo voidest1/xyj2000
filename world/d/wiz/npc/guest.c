@@ -7,7 +7,7 @@ inherit NPC_SAVE;
 mapping list=([]);
 // notified is set as static so that it will not
 // be saved or restored.
-static string *notified=({});
+string *notified=({});
 
 int do_help(string arg);
 void clear_enter(string id);
