@@ -21,7 +21,7 @@ int main(object me, string str)
 int help(object me)
 {
 write(@HELP
-鎸囦护鏍煎紡 : eval <command>
+指令格式 : eval <command>
 
 This command will return the evaluation cost for <command>.
 

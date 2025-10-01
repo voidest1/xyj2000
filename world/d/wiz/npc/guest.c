@@ -7,7 +7,7 @@ inherit NPC_SAVE;
 mapping list=([]);
 // notified is set as static so that it will not
 // be saved or restored.
-string *notified=({});
+static string *notified=({});
 
 int do_help(string arg);
 void clear_enter(string id);
@@ -22,9 +22,9 @@ void relay_channel(object ob, string channel, string msg);
 
 void create()
 {
-        set_name("仙童", ({ "xian tong","tong" }));
+        set_name("��ͯ", ({ "xian tong","tong" }));
         set("long", "");
-        set("gender", "男性");
+        set("gender", "����");
         set("age", 15);
         set("attitude", "friendly");
         set("str", 30);
@@ -79,14 +79,14 @@ void init()
           }   
           
           write(ob->query("name")+
-            "，请等候巫师批准您进入西游记世界！\n");
+            "����Ⱥ���ʦ��׼���������μ����磡\n");
             
           if(approve>0)  
-            write("如果没有巫师在线，您将在"+
+            write("���û����ʦ���ߣ�������"+
               chinese_number(remain_time(approve))+
-              "小时后自动获得许可。\n");  
+              "Сʱ���Զ�������ɡ�\n");  
               
-          write("请耐心等候，谢谢！\n");
+          write("�����ĵȺ�лл��\n");
              
           if(approve==-1) return;
           
@@ -114,17 +114,17 @@ int do_help(string arg)
   if(arg) return 0;
   
   write("\n");
-  write("你可以在这里处理由banned_sites连线玩家的进入请求，不\n");
-  write("管玩家目前正在迎客厅或已经退出均可以。如果不作处理，\n");
-  write("则该玩家将在四十八小时后自动获准进入游戏。\n\n");
-  write("approve id      准许指定玩家进入游戏。(即使不在list\n");
-  write("                中也可以)\n");
-  write("approve -all    准许所有申请中玩家进入游戏。\n");
-  write("decline id      不准指定玩家进入游戏。如果该玩家是\n");
-  write("                newbie，将可能被purge；否则将被禁\n");
-  write("                闭于迎客厅，直到有巫师approve为止。\n");
-  write("decline -all    同上，不准所有申请中玩家进入游戏。\n");
-  write("list            列出所有正在申请中的玩家。\n");
+  write("����������ﴦ����banned_sites������ҵĽ������󣬲�\n");
+  write("�����Ŀǰ����ӭ�������Ѿ��˳������ԡ��������������\n");
+  write("�����ҽ�����ʮ��Сʱ���Զ���׼������Ϸ��\n\n");
+  write("approve id      ׼��ָ����ҽ�����Ϸ��(��ʹ����list\n");
+  write("                ��Ҳ����)\n");
+  write("approve -all    ׼��������������ҽ�����Ϸ��\n");
+  write("decline id      ��׼ָ����ҽ�����Ϸ������������\n");
+  write("                newbie�������ܱ�purge�����򽫱���\n");
+  write("                ����ӭ������ֱ������ʦapproveΪֹ��\n");
+  write("decline -all    ͬ�ϣ���׼������������ҽ�����Ϸ��\n");
+  write("list            �г��������������е���ҡ�\n");
   write("\n");
   return 1;
 }
@@ -139,7 +139,7 @@ void clear_enter(string id)
     who=find_player(id);
     if(who) { //player online now.
       if(!present(who)) {
-        if(objp) write(id+"目前不在迎客厅。\n");
+        if(objp) write(id+"Ŀǰ����ӭ������\n");
         return;
       }  
       online=1;
@@ -147,7 +147,7 @@ void clear_enter(string id)
       who=new(USER_OB);
       who->set("id",id);
       if(!who->restore()) {
-        if(objp) write("没有"+id+"这个玩家或文件出错。\n");
+        if(objp) write("û��"+id+"�����һ��ļ�������\n");
 	destruct(who);
 
   if(!undefinedp(list[id])) {
@@ -163,7 +163,7 @@ void clear_enter(string id)
     who->set("banned_approved",-1);
     who->save_raw();
     if(objp)
-      tell_object(this_player(),"您不批准"+who->query("name")+"进入西游记世界！\n");
+      tell_object(this_player(),"������׼"+who->query("name")+"�������μ����磡\n");
     if(objp)
       log_file("banned_approve","["+ctime(time())+"]"+
         this_player()->query("id")+" declines "+who->query("id")+
@@ -174,7 +174,7 @@ void clear_enter(string id)
 	" is declined to enter.\n");
 	
   } else {
-    if(objp) write("玩家"+id+"不在待批准之列。\n");
+    if(objp) write("���"+id+"���ڴ���׼֮�С�\n");
   }    
   
   if(online==1) {
@@ -198,7 +198,7 @@ void allow_enter(string id)
     who=find_player(id);
     if(who) { //player online now.
       if(!present(who)) {
-        if(objp) write(id+"现在不在迎客厅。\n");
+        if(objp) write(id+"���ڲ���ӭ������\n");
         return;
       }  
       online=1;
@@ -206,7 +206,7 @@ void allow_enter(string id)
       who=new(USER_OB);
       who->set("id",id);
       if(!who->restore()) {
-        if(objp) write("没有"+id+"这个玩家或文件出错。\n");
+        if(objp) write("û��"+id+"�����һ��ļ�������\n");
 	destruct(who);
 
   if(!undefinedp(list[id])) {
@@ -223,7 +223,7 @@ void allow_enter(string id)
     who->set("startroom","/d/city/kezhan");
     who->save_raw();
     if(objp)
-      tell_object (this_player(),"您批准"+who->query("name")+"进入西游记世界！\n");
+      tell_object (this_player(),"����׼"+who->query("name")+"�������μ����磡\n");
     if(objp)
       log_file("banned_approve","["+ctime(time())+"]"+
         this_player()->query("id")+" allows "+who->query("id")+
@@ -233,7 +233,7 @@ void allow_enter(string id)
         who->query("id")+
 	" is allowed to enter.\n");
   } else {
-    if(objp) write("玩家"+id+"不在待批准之列。\n");
+    if(objp) write("���"+id+"���ڴ���׼֮�С�\n");
   }    
   
   if(online==1) {
@@ -241,7 +241,7 @@ void allow_enter(string id)
 	who->move(DEATH_ROOM);
     else
         who->move("/d/city/kezhan");
-    tell_object (who,"欢迎您进入西游记世界！\n");
+    tell_object (who,"��ӭ���������μ����磡\n");
   } else {
     destruct(who);
   } 
@@ -267,7 +267,7 @@ int remain_time(int approve)
 void inform_wiz (object who)
 {
   tell_object (who,who->query("name")+
-    "，你可以使用help来查看可用指令。\n");
+    "�������ʹ��help���鿴����ָ�\n");
 }
 
 //do not auto permission entry of a player.
@@ -281,7 +281,7 @@ int do_clear(string arg)
   int size, i;
 
   if (!arg)
-    return notify_fail ("不批准谁？\n");
+    return notify_fail ("����׼˭��\n");
     
   if(arg=="-all") { //decline all pending players.
     key=keys(list);
@@ -292,7 +292,7 @@ int do_clear(string arg)
     }
   } else {  //decline only one player. 
     if (arg == me->query("id")) {
-      write("不批准您自己？\n");
+      write("����׼���Լ���\n");
       return 1;
     }
     clear_enter(arg);
@@ -310,24 +310,24 @@ int do_list()
    key=keys(list);
    size=sizeof(key);
    if(size>0) {
-     write("等待批准进入游戏的玩家有：\n");
+     write("�ȴ���׼������Ϸ������У�\n");
      for(i=0;i<size;i++) {
        int j=remain_time(list[key[i]]["time"]);
        
        write(list[key[i]]["name"]+"("+
-         key[i]+")由"+
+         key[i]+")��"+
          list[key[i]]["ip"]+
-         "连线，");
+         "���ߣ�");
        if(j>0)
-         write("将于"+j+"小时后自动获准进入游戏。\n");
+         write("����"+j+"Сʱ���Զ���׼������Ϸ��\n");
        else if(j==0) {//should not happen.           
-         write("自动获准进入游戏。\n");
+         write("�Զ���׼������Ϸ��\n");
          allow_enter(key[i]);
        } else //j<0
-         write("必须经巫师批准才能进入游戏。\n");
+         write("���뾭��ʦ��׼���ܽ�����Ϸ��\n");
      }
    } else
-     write("目前没有等待批准进入游戏的玩家。\n");
+     write("Ŀǰû�еȴ���׼������Ϸ����ҡ�\n");
      
    return 1;
 }
@@ -341,7 +341,7 @@ int do_approve (string arg)
   int size, i;
 
   if (!arg)
-    return notify_fail ("批准谁？\n");
+    return notify_fail ("��׼˭��\n");
     
   if(arg=="-all") { //allow all pending players.
     key=keys(list);
@@ -352,7 +352,7 @@ int do_approve (string arg)
     }
   } else {  //allow only one player. 
     if (arg == me->query("id")) {
-      write("批准您自己？\n");
+      write("��׼���Լ���\n");
       return 1;
     }
     allow_enter(arg);
@@ -378,7 +378,7 @@ void relay_channel(object ob, string channel, string msg)
 	// Don't process our own speech.
 	if( ob==this_object() ) return;
 	
-	if(sscanf(msg,"%*s(%s)由%*s连线进入。",wizid)!=3) return;
+	if(sscanf(msg,"%*s(%s)��%*s���߽��롣",wizid)!=3) return;
 	
 	wizid=lower_case(wizid);
 	if(!(wiz=find_player(wizid))) return;
@@ -386,8 +386,8 @@ void relay_channel(object ob, string channel, string msg)
 	
 	if(member_array(wizid,notified)==-1) { //not notified yet.
 	  //notify login wiz about pending players in the guest room.
-	  tell_object(wiz,"现在有"+chinese_number(size)+
-	    "位玩家在迎客厅等候批准，请您处理。(/d/wiz/guest)\n");
+	  tell_object(wiz,"������"+chinese_number(size)+
+	    "λ�����ӭ�����Ⱥ���׼������������(/d/wiz/guest)\n");
           notified+=({wizid});
         } //each wiz will only be notified once.
 }

@@ -4,7 +4,7 @@
 #include <login.h>
 
 #define NL "/log/NAMELIST"
-#define GROUP_NAME "鏈府"
+#define GROUP_NAME "本帮"
 
 string get_status(mixed ob);
 int get_member_level(object ob);

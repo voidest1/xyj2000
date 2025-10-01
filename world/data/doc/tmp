@@ -1,2 +1,2 @@
 #!/bin/csh -f
-grep 二十八宿 */*.o
+grep 浜屽崄鍏 */*.o

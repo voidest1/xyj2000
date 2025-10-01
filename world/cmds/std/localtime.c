@@ -1,9 +1,9 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 #include <localtime.h>
 
-//string *week_day = ({ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" });
-string *week_day = ({ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" });
-string *month = ({ "Jan", "Feb", "Mar", "Apr", "May", 
+//static string *week_day = ({ "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun" });
+static string *week_day = ({ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" });
+static string *month = ({ "Jan", "Feb", "Mar", "Apr", "May", 
  "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" });
 
 int main()
@@ -29,7 +29,7 @@ int main()
     else 
 	   sec = sprintf("%d", lt[LT_SEC]);
 
-	output = sprintf("鐜板湪鏃堕棿 %s %s %d %s:%s:%s %s %d\n",
+	output = sprintf("现在时间 %s %s %d %s:%s:%s %s %d\n",
 	  week_day[ lt[LT_WDAY] ], month[ lt[LT_MON] ], lt[LT_MDAY],
 	  hr, min, sec, lt[LT_ZONE], lt[LT_YEAR] );
 	write( output );

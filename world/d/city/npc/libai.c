@@ -6,10 +6,10 @@ void do_drink();
 void create()
 {
         seteuid(getuid());
-        set_name("���", ({"li bai", "li"}));
-        set("long", "��ʫ����ף����Ʈ�ݣ�����ͨ��\n");
-        set("gender","����");
-	set("title", "ʫ��");
+        set_name("李白", ({"li bai", "li"}));
+        set("long", "大诗人李白，清高飘逸，剑术通神。\n");
+        set("gender","男性");
+	set("title", "诗仙");
 	set("class", "scholar");
         set("age",37);
         set("con",30);
@@ -20,21 +20,21 @@ void create()
         set("attitude","heroism");
         set("chat_chance",20);
         set("chat_msg", ({
-        "��׵�����������Σ¥�߰ٳߣ��ֿ�ժ�ǳ���\n",
-        "��׵����������������ǧ�꣬�����غ�ͨ���̡�\n",
-        "��׹ĸ����裺��������ȥ��������������\n",
+        "李白低声长吟道：危楼高百尺，手可摘星辰。\n",
+        "李白低吟道：而来四万八千岁，不与秦汉通人烟。\n",
+        "李白鼓腹而歌：挥手自兹去，萧萧班马鸣。\n",
 
-"��׻��ڶ��裺�Կ��Ϻ�ӧ���⹳˪ѩ���������հ�������������ǡ�\n",
+"李白击节而歌：赵客缦湖缨，吴钩霜雪明。银鞍照白马，飒沓如流星。\n",
         (: do_drink :),
-        "��׵�������������ߣ�����֮���á������ߣ��ٴ�֮���͡�\n",
+        "李白低吟道：夫天地者，万物之逆旅。光阴者，百代之过客。\n",
 
-"��׻��ڶ��裺����л���죬���������ݡ���ڼ����գ��������켦��\n",
-        "����������·�ԶӰ�̿վ���Ψ�������������\n",
-        "����������������֮�ѣ����������죬������������ൡ�\n",
+"李白击节而歌：脚着谢公屐，身登青云梯。半壁见海日，空中闻天鸡。\n",
+        "李白吟道：孤帆远影碧空尽，唯见长江天际流。\n",
+        "李白朗声吟道：蜀道之难，难于上青天，侧身西望长咨嗟。\n",
         (: do_drink :),
-        "��׵������������������ᣬ���������ơ�\n",
-        "�����̬��¶��������������������ñ���谮�����ˡ�\n",
-        "��׳���������������������գ��������ڡ�\n",
+        "李白低声长吟：红颜弃轩冕，白首卧松云。\n",
+        "李白醉态毕露，朗声长吟：醉看风落帽，舞爱月流人。\n",
+        "李白长吟道：音尘绝，西风残照，汉家陵阙。\n",
 	(: random_move :)
         }));
 
@@ -81,7 +81,7 @@ void do_drink()
     }
     else {
         command("sigh");
-        command("say �ƣ��������Ҿƣ�����");
+        command("say 酒．．．给我酒．．．");
     }
     return;
 }
@@ -94,35 +94,35 @@ int accept_object(object who, object ob)
         if ((int)ob->query("liquid/remaining") == 0)
         {
             command("shake");
-            command("say �յ��Ҳ�Ҫ������");
-            return notify_fail("������ײ��������õģ���Ҫ��ƿ�ӡ�\n");
+            command("say 空的我不要．．．");
+            return notify_fail("好象李白不是收破烂的，不要空瓶子。\n");
         }
         else
-                if ( (string)ob->name()=="ţƤ�ƴ�" )
+                if ( (string)ob->name()=="牛皮酒袋" )
                 {
                         command ("frown");
-                        command ("say ��ƻ����������Լ��Ȱɡ�");
+                        command ("say 这酒还是您留着自己喝吧。");
                         return
-notify_fail("������׿�����������ľơ�\n");
+notify_fail("好象李白看不起你给他的酒。\n");
                 }
                 else
                 {
                         command("smile");
-                        command("say ��л!");
-			if ((int)who->query_temp("mark/���") < 1){
-			who->set_temp("mark/���", 1 ); 
+                        command("say 多谢!");
+			if ((int)who->query_temp("mark/李白") < 1){
+			who->set_temp("mark/李白", 1 ); 
 			}
                         if(present("jian pu", this_object())) {
 			return 0;
 			}
-                        who->add_temp("mark/���", 1 );
+                        who->add_temp("mark/李白", 1 );
                         call_out("destroy", 1, ob);
-                if ((int)who->query_temp("mark/���") >= 5+random(5))
+                if ((int)who->query_temp("mark/李白") >= 5+random(5))
                         {
 command ( "whisper " + who->query("id") + 
-" �ҿ���Ҳ��λ����ϰ����ˣ�Ҳ��������Ե���Ȿ���׾��͸�����ȥ�ж��ɡ�\n");
+" 我看您也是位练功习武的人，也算咱们有缘，这本剑谱就送给你拿去研读吧。\n");
 				m->move(who);
-                                who->set_temp("mark/���", 0 );
+                                who->set_temp("mark/李白", 0 );
 				return 1;
                         }
                         return 1;

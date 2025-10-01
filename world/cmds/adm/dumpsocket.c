@@ -16,7 +16,7 @@ int main(object me,string arg)
 int help(object me)
 {
 	write(@HELP
-鎸囦护鏍煎紡 : dump
+指令格式 : dump
  
 dump the stats of all objects to a file in root dir 
 named OBJ_DUMP.

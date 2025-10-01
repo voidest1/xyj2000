@@ -8,12 +8,12 @@ string level_description(int level)
 {
 	int grade;
 	string *level_desc = ({
-		BLU "璐煎ご璐艰剳" NOR,     
-		HIB "璐兼墜璐艰剼" NOR,
-		HIB "蹇墜蹇剼" NOR,     
-		CYN "鍑烘墜濡傞" NOR,
-		HIC "鎵嬪埌鎿掓潵" NOR,     
-		HIW "濡欐墜绁炲伔" NOR,
+		BLU "鐠愮厧銇旂拹鑹板壋" NOR,     
+		HIB "鐠愬吋澧滅拹鑹板壖" NOR,
+		HIB "韫囶偅澧滆箛顐ュ壖" NOR,     
+		CYN "閸戠儤澧滄俊鍌烆棑" NOR,
+		HIC "閹靛鍩岄幙鎺撴降" NOR,     
+		HIW "婵℃瑦澧滅粊鐐蹭紨" NOR,
 	});
 
 	grade = level / 10;

@@ -13,7 +13,7 @@ int main(object me, string arg)
 int help (object me)
 {
         write(@HELP
-鎸囦护鏍煎紡: profile
+指令格式: profile
  
 turns on command profiling, the result will be saved to /PROFILE
  

@@ -15,7 +15,7 @@ int main(object me, string arg)
 
 	seteuid(geteuid(me));
 
-        if (!arg) return notify_fail("你想要将谁送入监牢？\n");
+        if (!arg) return notify_fail("锟斤拷锟斤拷要锟斤拷谁锟斤拷锟斤拷锟斤拷危锟杰n");
 	arg=replace_string(arg,"#"," ");
 	arg=replace_string(arg,"."," ");
 
@@ -23,14 +23,14 @@ int main(object me, string arg)
 	if(who) { //player online now.
 	    online=1;
 	    if(env=environment(who))
-		message_vision("天空中探出一只大手将$N抓起来不见了。\n",
+		message_vision("锟斤拷锟斤拷锟教斤拷锟揭恢伙拷锟斤拷纸锟饯N抓锟斤拷锟斤拷锟斤拷锟斤拷锟剿★拷\n",
 			who);
 	    who->move(JAIL);
 	} else {
 	    who=new(USER_OB);
 	    who->set("id",arg);
 	    if(!who->restore()) {
-		write("没有"+arg+"这个玩家或文件出错。\n");
+		write("没锟斤拷"+arg+"锟斤拷锟斤拷锟揭伙拷锟侥硷拷锟斤拷锟斤拷锟斤拷\n");
 		if(who) destruct(who);
 		return 1;
 	    }
@@ -42,7 +42,7 @@ int main(object me, string arg)
 	log_file("to_jail","["+ctime(time())+"]"+
 		this_player()->query("id")+" send "+who->query("id")+
 		" to jail.\n");
-	write("你将"+who->query("name")+"("+arg+")送进了监牢。\n");
+	write("锟姐将"+who->query("name")+"("+arg+")锟酵斤拷锟剿硷拷锟轿★拷\n");
 
 	if(!online) {
 	    destruct(who);
@@ -54,7 +54,7 @@ int main(object me, string arg)
 int help(object me)
 {
 write(@HELP
-指令格式：tojail id 
+指锟斤拷锟绞斤拷锟紧ojail id 
 
 Send <id> to xyj jail.
 HELP

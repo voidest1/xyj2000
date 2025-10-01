@@ -79,4 +79,4 @@ void init()
        my_armor1->set("name",HIY"流云"NOR);
   if (my_armor2=present(armor2_id, me))
        my_armor2->set("name",HIY"秋风"NOR);
-}�
+}

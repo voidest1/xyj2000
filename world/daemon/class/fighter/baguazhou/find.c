@@ -8,12 +8,12 @@ int scribe(object me,object ob)
 	object seal;
 
 	if( (int)me->query("mana") < 100)
-		return notify_fail("浣犵殑娉曞姏涓嶈冻銆俓n");
+		return notify_fail("娴ｇ姷娈戝▔鏇炲娑撳秷鍐婚妴淇搉");
 	if( (int)me->query("sen") < 100)
-		return notify_fail("浣犵殑绮剧鏃犳硶闆嗕腑銆俓n");
+		return notify_fail("娴ｇ姷娈戠划鍓ь殻閺冪姵纭堕梿鍡曡厬閵嗕繐n");
 	
 	
-	message_vision("$N鍜牬鎵嬫寚锛屼几鎵嬪湪妗冪绾镐笂鐢讳簡鍑犱笅銆俓n", me);
+	message_vision("$N閸滎剛鐗幍瀣瘹閿涘奔鍑犻幍瀣躬濡楀啰顑佺痪闀愮瑐閻㈣绨￠崙鐘辩瑓閵嗕繐n", me);
 	
 	destruct(ob);
 

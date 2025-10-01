@@ -10,7 +10,7 @@ inherit "/d/wiz/no_get";
 
 void create()
 {
-        set("short", "搴婁笂");
+        set("short", "床上");
         set("long", @LONG
 
 LONG

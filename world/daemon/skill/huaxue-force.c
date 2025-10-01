@@ -10,7 +10,7 @@ int valid_learn(object me) { return 1; }
 
 int practice_skill(object me)
 {
-        return notify_fail("鍖栬绁炲姛鍙兘鍚戝笀鐖跺锛屾垨鏄粠杩愮敤(exert)涓鍔犵啛缁冨害銆俓n");
+        return notify_fail("閸栨牞顢呯粊鐐插閸欘亣鍏橀崥鎴濈瑎閻栬泛顒熼敍灞惧灗閺勵垯绮犳潻鎰暏(exert)娑擃厼顤冮崝鐘靛暃缂佸啫瀹抽妴淇搉");
 }
 string exert_function_file(string func)
 {

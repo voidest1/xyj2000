@@ -88,7 +88,7 @@ mixed *generate_room(string room_name)
 
 void create ()
 {
-    set_name("杩峰",({"maze generator","maze"})); 
+    set_name("迷宫",({"maze generator","maze"})); 
     set("env/invisibility",1);
     set("no_get",1);
 //    set ("short", "maze");

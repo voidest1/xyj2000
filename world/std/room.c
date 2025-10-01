@@ -1,7 +1,7 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 // room.c
 
-
+#pragma save_binary
 
 #include <dbase.h>
 #include <room.h>
@@ -9,7 +9,7 @@
 inherit F_DBASE;
 inherit F_CLEAN_UP;
 
-mapping doors;
+static mapping doors;
 
 int query_max_encumbrance() { return 100000000000; }
 int query_max_items() {return 30;}

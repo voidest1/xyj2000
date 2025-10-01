@@ -36,7 +36,7 @@ int sort_user(object ob1, object ob2)
 int help(object me)
 {
 write(@HELP
-鎸囦护鏍煎紡 : cmd [threshold]
+指令格式 : cmd [threshold]
 
 List the average number of commands a player typed per second recently.
 If a "threshold" is given, only number>threshold will be shown.

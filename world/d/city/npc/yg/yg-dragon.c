@@ -11,7 +11,7 @@ void set_skills(int j, int level)
         object me=this_object();
         object weapon;
 
-        me->set("title","姒瑥顔傞幀顏嗗⒖");
+        me->set("title","龙宫怪物");
         me->set_skill("unarmed", j);
         me->set_skill("dodge", j);
         me->set_skill("parry", j);

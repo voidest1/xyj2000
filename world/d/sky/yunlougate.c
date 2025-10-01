@@ -44,4 +44,4 @@ int valid_leave(object me, string dir)
 	  }
         }   
         return ::valid_leave(me, dir);
-aè
+aè

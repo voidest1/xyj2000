@@ -19,7 +19,7 @@ void receive_message(string msgclass, string msg)
 	//added by mon 11/13/97 trying to prevent crash.
 
 	if(len>8000) 
-	  msg=msg[0..8000]+"\n\n锛庯紟锛嶾n";
+	  msg=msg[0..8000]+"\n\n閿涘函绱熼敍宥緉";
 	  //added by mon 11/13/97 trying to prevent crash.
 
 	msg = CONVERT_D->output(msg,this_object());
@@ -57,7 +57,7 @@ void receive_message(string msgclass, string msg)
 
 void write_prompt()
 {
-        string msg = "[杈撳叆鏃舵殏瀛樿鎭痌\n" ;
+        string msg = "[鏉堟挸鍙嗛弮鑸垫畯鐎涙ǹ顔嗛幁鐥孿n" ;
 
 	msg = CONVERT_D->output(msg,this_object());
 

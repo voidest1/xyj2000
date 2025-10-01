@@ -5,10 +5,10 @@ inherit ROOM;
 
 void create ()
 {
-  set ("short", "鍥炲粖");
+  set ("short", "回廊");
   set ("long", @LONG
 
-鏇叉姌娓稿粖锛岄樁涓嬬煶瀛愭极鎴愮敩璺紝鏈夊崈鐧剧繝绔归伄鏄狅紟
+曲折游廊，阶下石子漫成甬路，有千百翠竹遮映．
 LONG);
 
   set("exits", ([ /* sizeof() == 2 */

@@ -108,12 +108,12 @@ int main(object me, string arg)
  
 //  This function is used to sort the key array.
  
-int sort_keys(string one, string two) {
+static int sort_keys(string one, string two) {
    return strcmp(one, two);  }
  
 //  This function strips out the secured props from the data array.
  
-int filter_props(string prop, object target) {
+static int filter_props(string prop, object target) {
  
 //   if(member_array((int)target->query_permission(prop),
 //	({ MASTER_ONLY, PRIVATE, OWNER_ONLY })) != -1)   return 0;

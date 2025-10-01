@@ -6,7 +6,7 @@ inherit ROOM;
 
 void create()
 {
-set("short", "鐏甸渼瀹濇");
+set("short", "灵霄宝殿");
 set("long", @LONG
     
 LONG );

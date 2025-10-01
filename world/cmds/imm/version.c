@@ -11,9 +11,9 @@ int main(object me, string arg)
 int help(object me)
 {
   write(@HELP
-鎸囦护鏍煎紡 : version
+指令格式 : version
  
-杩欎釜鎸囦护浼氭樉绀烘父鎴忕洰鍓嶆墍鐢ㄧ殑 MudOS driver 鐗堟湰.
+这个指令会显示游戏目前所用的 MudOS driver 版本.
  
 HELP
     );

@@ -6,5 +6,5 @@ inherit "/d/dntg/laojunlu/laojunlu.c";
 void create()
 {
   ::create();
-  set("short", "鑹");
+  set("short", "艮宫");
 }

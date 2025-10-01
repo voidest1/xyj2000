@@ -1,18 +1,18 @@
 // cracked by vikee 2/09/2002   vikee@263.net
 inherit F_VENDOR_SALE;
 
-int base_price=50000;
+static int base_price=50000;
 
 int ask_party();
 int ask_money();
 void create()
 {
 	reload("xifuhui");
-        set_name("�Ϻ���", ({"xifuhui boss","boss" }));
-	set("title", "ϲ�����ϰ���");
+        set_name("老害虫", ({"xifuhui boss","boss" }));
+	set("title", "喜福会老板娘");
 	
         set("age", 32);
-        set("gender", "Ů��");
+        set("gender", "女性");
         set("attitude", "friendly");
 
         set("combat_exp", 50000);
@@ -25,12 +25,12 @@ void create()
 	set("per", 20);
 
 set("inquiry", ([
-"name": "���±���������ϰ塣\n",
-"here": "������ϲ���ᣬ���д��˼ҽ�鶼Ҫ�������ϲ������\n",
-"��" : (: ask_party :),
-"ϲ��" : (: ask_party :),
-"ϯ" : (: ask_party :),
-"��ϯ" : (: ask_party :),
+"name": "在下便是这里的老板。\n",
+"here": "这里是喜福会，城中大户人家结婚都要来这里摆喜宴哩。\n",
+"宴" : (: ask_party :),
+"喜宴" : (: ask_party :),
+"席" : (: ask_party :),
+"酒席" : (: ask_party :),
 "party" : (: ask_party :),
 "money": (: ask_money :),
 ]) );
@@ -59,41 +59,41 @@ int ask_party()
 	me=this_object();
 	who=this_player();
 //	if( !who->query("married") ) {
-//		message_vision("$N����$n��Ц�������㻹û����أ���ʲôϲ�磡\n", me, who);
+//		message_vision("$N看着$n大笑起来：你还没结婚呢，开什么喜宴！\n", me, who);
 //		return 1;
 //	}
 //	if( who->query("married_party") ) {
-//		message_vision("$N����$n���ɵ��ʵ����㲻���Ѿ�����ϲ������\n", me, who);
+//		message_vision("$N看着$n迟疑的问道：你不是已经开过喜宴了吗？\n", me, who);
 //		return 1;
 //	}
 	if( who->query_temp("host_of_party") ) {
-		message_vision("$N��$n˵���ⲻ��������ϲ������\n", me, who);
+		message_vision("$N对$n说：这不是正开着喜宴呢吗？\n", me, who);
 		return 1;
 	}
-//	if( (string)who->query("gender")=="Ů��" ) {
-//		message_vision("$N������ü����$n˵�������ǽ�����ɷ���������°ɣ�\n", me,who);
+//	if( (string)who->query("gender")=="女性" ) {
+//		message_vision("$N皱了皱眉，对$n说道：还是叫你的丈夫来办这件事吧！\n", me,who);
 //		return 1;
 //	}
 //	if( !objectp(wife=present(who->query("couple/id"), environment(who))) ) {
-//		message_vision("$N��$n˵�������Ӷ�û������ϲ����ô����\n", me, who);
+//		message_vision("$N对$n说：新娘子都没来，这喜宴怎么开？\n", me, who);
 //		return 1;
 //	}
 	if( me->query_temp("ready_to_party") ) {
-		message_vision("$N��$n������˼��˵������������һϯ�أ�Ҫ�������������ɣ�\n", me, who);
+		message_vision("$N对$n不好意思的说：我这正开着一席呢，要不您明儿再来吧！\n", me, who);
 		return 1;
 	}
-	if( (string)environment(me)->query("short")!="ϲ����" ) {
-		message_vision("$N��$nΪ�ѵ�˵����������Ҳû׼��������������������\n", me, who);
+	if( (string)environment(me)->query("short")!="喜福会" ) {
+		message_vision("$N对$n为难的说：现在这里也没准备，我是难以相助啊！\n", me, who);
 		return 1;
 	}
 	if( who->query_temp("ready_to_pay") ) {
-		message_vision("$N��$n���η���˵��������ô�ʸ�û�꣡\n", me, who);
+		message_vision("$N对$n不奈烦的说道：你怎么问个没完！\n", me, who);
 		return 1;
 	}
 	if( !who->query_temp("party_paid") ) {
-		message_vision("$N��$n˵����һ��ϲ���𣬿�Ҫ����"+
+		message_vision("$N对$n说：这一次喜宴吗，可要花费"+
 			price_string(base_price*query_price()/10)+
-			"�أ�\n", me, who);
+			"呢！\n", me, who);
 		who->set_temp("ready_to_pay", 1);
 		return 1;
 	}
@@ -107,16 +107,16 @@ int accept_object(object who, object ob)
 	value=ob->value();
 
 	if( !who->query_temp("ready_to_pay") )
-		return notify_fail(name()+"���ɵĿ����㣬��֪�������ʲô��\n");
+		return notify_fail(name()+"迟疑的看着你，不知道你想干什么！\n");
 
 	if( !value )
-		return notify_fail(name()+"��ֵĿ�����˵���������ʲô��\n");
+		return notify_fail(name()+"奇怪的看着你说：给我这干什么？\n");
 
 	price=base_price*query_price()/10;
 
 	if( value < price )
-		return notify_fail(name()+"˵����Щ�Ĺ�ѽ��Ҫ"+
-			price_string(price)+"���У�\n");
+		return notify_fail(name()+"说：这些哪够呀，要"+
+			price_string(price)+"才行！\n");
 	if(!take_money(value, base_price))
 	    return 0;
 	this_object()->save();
@@ -138,8 +138,8 @@ int ask_money()
 		command("dunno");
 		return 1;
 	}
-	command("whisper bula ��������ⲻ���������ڹ�׬��"
-+chinese_number(i)+"�������ˡ�\n");
+	command("whisper bula 这个月生意不错，到现在共赚了"
++chinese_number(i)+"两金子了。\n");
 	return 1;
 }
 void destroy(object ob)
@@ -149,8 +149,8 @@ void destroy(object ob)
 }
 void count_money(object who)
 {
-	message_vision("\n$N��$n����Ǯ��ϸ�������һ�顣\n\n", this_object(), who);
-	message_vision("$Nʹ���˵����ϯ��\n", this_object() );
+	message_vision("\n$N把$n给的钱仔细的清点了一遍。\n\n", this_object(), who);
+	message_vision("$N痛快的说：开席！\n", this_object() );
 
 }
 
@@ -158,9 +158,9 @@ void start_party(object who)
 {
 	object me=this_object();
 	command("chat* "+name()+
-	       "����λ��ү̫̫��үС�㣬����" + who->query("name") +  
-"��ϲ����󿪾�ϯ����ӭ��λǰ��������");
-	command("say ��Ҫ��ʼ(start)���ұ㿪ϯ����Ҫ�ϲ�(serve)���Ҿ��ϲˣ������Ա��ˣ������ˣ��۾ͽ���(finish)��");
+	       "：各位老爷太太少爷小姐，今日" + who->query("name") +  
+"在喜福会大开酒席，欢迎各位前来捧场！");
+	command("say 您要开始(start)，我便开席。您要上菜(serve)，我就上菜，等您吃饱了，玩腻了，咱就结束(finish)。");
 	me->set_temp("ready_to_party", 1);
 }
 int do_start()
@@ -171,17 +171,17 @@ int do_start()
 	object *list;
 	object girla,girlb,girlc,girld,cup;
 	if( !who->query_temp("host_of_party") )
-		return notify_fail(name()+"����˵�����ֲ������ɹ٣�\n");
+		return notify_fail(name()+"对你说：你又不是新郎官！\n");
 	if( !me->query_temp("ready_to_party") )
-		return notify_fail(name()+"����˵����ʼʲôѽ��������û�˽�飡\n");
+		return notify_fail(name()+"对你说：开始什么呀，现在又没人结婚！\n");
 	if( me->query_temp("party_start_already") )
-		return notify_fail(name()+"�����Ķ���˵���ⲻ���Ѿ���ʼ���\n");
+		return notify_fail(name()+"生气的对你说：这不是已经开始了嘛！\n");
 
-	message_vision("$N������$n˵���ϰ壬��ϯ��\n\n", who, me);
-	message_vision("$N�������ţ�������ϯ����ඡ���\n\n", me);
+	message_vision("$N大声对$n说：老板，开席！\n\n", who, me);
+	message_vision("$N大声喊着：开～～席～～喽～～\n\n", me);
 	me->set_temp("party_start_already", 1);
 	me->delete_temp("ready_to_party");
-	tell_room( environment(who), "�Ա��ĸ������ִ����Ĵ����˻�������š�\n");	
+	tell_room( environment(who), "旁边四个唢呐手大声的吹起了欢快的唢呐。\n");	
 
 	// mon
 	environment(me)->set("resource/nuerhong",1);
@@ -210,8 +210,8 @@ int do_start()
         if(girld=new("/d/city/npc/girld"))
         girld->move(environment(me));
 
-	tell_room(environment(who), "�����߳�����Ư����С���\n");
-	tell_room(environment(who), "��õ���һ�������յ��\n");
+	tell_room(environment(who), "内堂走出几个漂亮的小姑娘。\n");
+	tell_room(environment(who), "你得到了一个白玉酒盏。\n");
 	call_out("finish_party", 500, who);
 	return 1;
 }
@@ -221,16 +221,16 @@ int do_serve()
 	object who=this_player();
 	object food;
 	if( !who->query_temp("host_of_party") )
-		return notify_fail(name()+"�����µ������˻�û˵�������¸�ʲô����\n");
+		return notify_fail(name()+"对你嚷道：主人还没说话，你嚷个什么劲！\n");
 	if( !me->query_temp("party_start_already") )
-		return notify_fail(name()+"����˵���㻹û������ʼ(start)����ô�ϲ��أ�\n");
+		return notify_fail(name()+"对你说：你还没宣布开始(start)，怎么上菜呢？\n");
 	if ( (present("food 2", environment(me))) )
-		return notify_fail(name()+"����˵�������ԣ�������Ȼ������ϲˡ�\n");
+		return notify_fail(name()+"对你说：慢慢吃，吃完自然会给你上菜。\n");
 
-	message_vision("$N���������ţ��ϲˣ��ϲˣ�\n", who);
+	message_vision("$N大声嚷嚷着：上菜，上菜！\n", who);
 
-	tell_room(environment(me), "�������ܳ������С��ƣ��ֽ������Ľ����ϵ�ʣ�˷�������ȥ��\n");
-	tell_room(environment(me), "С����ִ����ó�����������һ���µľ�ϯ��\n");
+	tell_room(environment(me), "从内堂跑出四五个小伙计，手脚麻利的将桌上的剩菜饭端了下去。\n");
+	tell_room(environment(me), "小伙计又从内堂出来，端上了一桌新的酒席。\n");
         if(food=new("/d/obj/food/dishes/food"))
         food->move(environment(me));
 	if(food=new("/d/obj/food/dishes/food"))
@@ -247,11 +247,11 @@ int do_finish()
 	object who=this_player();
 
 	if( !who->query_temp("host_of_party") )
-		return notify_fail(name()+"������һ�ۣ�����˵����\n");
+		return notify_fail(name()+"瞪了你一眼：别乱说话！\n");
 
 	if( !me->query_temp("party_start_already") )
-		return notify_fail(name()+"������һ�ۣ������Ѿ���������\n");
-	message_vision("$N��$n˵�����Ա����㣬��л�ϰ��д���\n", who, me);
+		return notify_fail(name()+"瞪了你一眼：不是已经结束了吗！\n");
+	message_vision("$N对$n说道：吃饱喝足，多谢老板招待！\n", who, me);
 	remove_call_out("finish_party");
 	call_out("finish_party", 3, who);
 	return 1;
@@ -262,7 +262,7 @@ void finish_party(object who)
         int i;
         object *list;
 
-	message_vision("$N����˵������ϯ�ʹ˽�������л��ҹ��٣�\n", me);
+	message_vision("$N大声说道：宴席就此结束，多谢大家光临！\n", me);
 
 	// mon
 	environment(me)->set("resource/nuerhong",0);
@@ -286,8 +286,8 @@ int do_fight(string arg)
 {
         object who = this_player();
         object me = this_object();
-        message_vision("$N��ɫ����ԣ�������ɱ����\n", who);
-        message_vision("$N��$nֱҡͷ�����ϲ�����Ӷ�ʲô��ǹ����\n", me, who);
+        message_vision("$N脸色不大对，好象动了杀机！\n", who);
+        message_vision("$N对$n直摇头：这大喜的日子动什么刀枪啊！\n", me, who);
         return 1;
 }
 
@@ -298,40 +298,40 @@ int do_kill(string arg)
 
 	if(!arg || present(arg,environment(me))!=me) return 0;
 
-	message_vision("$N��ɫ����ԣ�������ɱ����\n", who);
-	message_vision("$N��$nֱҡͷ�����ϲ�����Ӷ�ʲô��ǹ����\n", me, who);
+	message_vision("$N脸色不大对，好象动了杀机！\n", who);
+	message_vision("$N对$n直摇头：这大喜的日子动什么刀枪啊！\n", me, who);
 	return 1;
 }
 int do_cast(string arg)
 {
         object who = this_player();
         object me = this_object(); 
-	message_vision("$N�ſ��죬���ɰɵ����˼������\n", who);
-        message_vision ("$N��$nֱҡͷ�����ϲ�����ӣ������������䰡��\n", me, who);
+	message_vision("$N张开嘴，结结吧吧地念了几声咒语。\n", who);
+        message_vision ("$N对$n直摇头：这大喜的日子，你念哪门子咒啊！\n", me, who);
         return 1;
 }        
 int do_exert(string arg)
 {               
         object who = this_player();
         object me = this_object();
-	message_vision("$N���������һ������\n",who);
-        message_vision("$N��$n������ͷ��˵���ճԹ�������Ҫ�����ڹ���\n", me, who);
+	message_vision("$N鬼鬼祟祟地一运气。\n",who);
+        message_vision("$N对$n吐吐舌头，说：刚吃过饭，不要乱用内功！\n", me, who);
         return 1;
 }
 int do_perform(string arg)
 {
         object who = this_player();
         object me = this_object();
-	message_vision("$N��ɫ����ԣ�������ɱ����\n", who);
-        message_vision ("$N��$nֱҡͷ�����ϲ�����Ӷ�ʲô��ǹ����\n", me, who);  
+	message_vision("$N脸色不大对，好象动了杀机！\n", who);
+        message_vision ("$N对$n直摇头：这大喜的日子动什么刀枪啊！\n", me, who);  
         return 1;
 }        
 int do_steal(string arg)
 {       
         object who = this_player();
         object me = this_object();
-	message_vision("$N����֣���Ҫ͵��ʲô��\n", who);
-        message_vision ("$N��$n��������������컯��ʩ�����ԣ�\n",me,who);
+	message_vision("$N伸出手，想要偷点什么。\n", who);
+        message_vision ("$N对$n骂道：怎可随便光天化日施盗行窃！\n",me,who);
   	return 1;
 }
 
@@ -339,9 +339,7 @@ int do_bian(string arg)
 {
   	object who = this_player();
   	object me = this_object();
-	message_vision("$N�������������ʲô������\n",who);
-	message_vision("$N��$n˵������ϲ�磬��������仯��\n",me,who);
+	message_vision("$N鬼鬼祟祟地想变成什么东西。\n",who);
+	message_vision("$N对$n说：这是喜宴，不可随意变化！\n",me,who);
         return 1;
 }
-
-�

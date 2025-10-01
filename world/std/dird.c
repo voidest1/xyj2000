@@ -1,5 +1,5 @@
 // cracked by vikee 2/09/2002   vikee@263.net
-mapping opp_dir = ([
+static mapping opp_dir = ([
   "east"        :       "west",
   "west"        :       "east",
   "north"       :       "south",
@@ -20,7 +20,7 @@ mapping opp_dir = ([
   "down"        :       "up",
 ]);
 
-mapping chinese_dir = ([
+static mapping chinese_dir = ([
         "north":                "北边",
         "south":                "南边",
         "east":                 "东边",
@@ -42,7 +42,7 @@ mapping chinese_dir = ([
         "out":                  "外面",
 ]);
 
-mapping abbr_dir = ([
+static mapping abbr_dir = ([
         "n"     :       "north",
         "s"     :       "south",
         "e"     :       "east",

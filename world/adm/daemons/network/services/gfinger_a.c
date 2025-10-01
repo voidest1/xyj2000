@@ -40,7 +40,7 @@ void incoming_request(mapping info)
 		  message("finger", "\n"+
 		    ((!mudinfo || undefinedp(mudinfo["MUDNAME"]))?
 		      upper_case(info["NAME"]):mudinfo["MUDNAME"])+
-		      "鍛婅瘔浣狅細\n"+info["MSG"],ob);
+		      "閸涘﹨鐦旀担鐙呯窗\n"+info["MSG"],ob);
 		}      
 	}
 }
